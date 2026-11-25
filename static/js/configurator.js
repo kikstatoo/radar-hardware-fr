@@ -287,6 +287,11 @@
       var done = doneSet(), groups = {};
       basket.lines.forEach(function (l) { (groups[l.mi] = groups[l.mi] || []).push(l); });
       var h = document.createElement("h3"); h.textContent = basket.merchants === 1 ? "Une seule commande" : basket.merchants + " commandes à passer"; bl.appendChild(h);
+      if (document.body.getAttribute("data-demo")) {
+        var dn = document.createElement("p"); dn.className = "cfg-ship";
+        dn.textContent = "Mode démonstration : prix estimés, chaque lien ouvre la recherche du marchand où le prix exact fait foi.";
+        bl.appendChild(dn);
+      }
       Object.keys(groups).forEach(function (mi) {
         var g = groups[mi], sub = g.reduce(function (s, l) { return s + l.p; }, 0), ship = shipFor(+mi, sub);
         var box2 = document.createElement("div"); box2.className = "cfg-merchant";

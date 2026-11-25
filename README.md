@@ -133,3 +133,12 @@ Secrets optionnels (Settings, Secrets and variables, Actions) :
 - EAN : seuls certains produits en ont un vérifié. Ajoute ceux des autres pour un rapprochement parfait avec les flux.
 - Frais de port et adresses de recherche des marchands.
 - La mention d'affiliation du pied de page est obligatoire : garde-la.
+
+## Prix exacts et liens directs vers la fiche produit
+
+En mode démonstration, les prix sont des estimations et chaque bouton indique « Rechercher chez … » : il ouvre la recherche du marchand (par EAN ou référence fabricant quand elle est connue). Dès qu'une vraie source est branchée, le site bascule tout seul en mode réel : prix relevés, bouton « Voir l'offre » vers la fiche exacte.
+
+1. **Tag Amazon Partenaires** : remplace `ton-tag-21` dans `config/affiliates.json` (`amazon_tag`, `amazon_tag_de`, `amazon_tag_es`). Tant que la valeur d'exemple est là, aucun tag n'est ajouté aux liens.
+2. **Flux Awin / Effinity** (LDLC, Materiel.net, Rue du Commerce, Fnac, Cdiscount…) : colle l'URL de chaque flux produit dans `config/feeds.json`. Chaque ligne du flux fournit le lien profond vers la fiche, le prix et les frais de port.
+3. **Amazon Creators API** (accessible après 10 ventes qualifiées sur 30 jours) : crée un identifiant dans Associates Central, puis ajoute les secrets `AMAZON_CREATORS_CLIENT_ID` et `AMAZON_CREATORS_CLIENT_SECRET` au dépôt. Le robot récupère alors chaque heure le prix de la Buy Box et le lien `detailPageURL`, et retrouve tout seul l'ASIN des produits qui n'en ont pas (cache `data/asin_cache.json`).
+4. **ASIN manuels** : un ASIN vérifié peut être ajouté dans `data/products.json` (`"asin": {"amazon_fr": "B0…"}`) pour obtenir un lien `/dp/` direct même en mode démo.

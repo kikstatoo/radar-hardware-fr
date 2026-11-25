@@ -46,21 +46,25 @@
 {% set s = it.s %}
 <div class="pblock only-eu">
   {% if it.best_view %}
-  <div class="pblock-row"><span class="price {{ size }}">{{ it.best_view.price|price }}</span>{{ mbadge(it.best_view) }}</div>
+  <div class="pblock-row"><span class="price {{ size }}">{{ it.best_view.price|price }}</span>{{ mbadge(it.best_view) }}{{ est_tag(it.best_view) }}</div>
   {% if s.savings_eur >= 1 %}<p class="saving"><s>{{ s.price_avg_30d|price }}</s><span class="saving-amt">−{{ s.savings_eur|price }}</span></p>{% endif %}
   {% else %}<p class="muted">Rupture de stock</p>{% endif %}
 </div>
 <div class="pblock only-fr">
   {% if it.best_fr %}
-  <div class="pblock-row"><span class="price {{ size }}">{{ it.best_fr.price|price }}</span>{{ mbadge(it.best_fr) }}</div>
+  <div class="pblock-row"><span class="price {{ size }}">{{ it.best_fr.price|price }}</span>{{ mbadge(it.best_fr) }}{{ est_tag(it.best_fr) }}</div>
   {% if it.best_fr.saving >= 1 %}<p class="saving"><s>{{ s.price_avg_30d|price }}</s><span class="saving-amt">−{{ it.best_fr.saving|price }}</span></p>{% endif %}
   {% else %}<p class="muted">Pas d'offre en stock en France</p>{% endif %}
 </div>
 {% endmacro %}
 
+{% macro go_label(o, label="Voir l'offre") %}{% if o.link == 'product' %}{{ label }}{% else %}Rechercher chez {{ o.merchant_name }}{% endif %}{% endmacro %}
+
+{% macro est_tag(o) %}{% if demo or o.source == 'simulation' %}<span class="est-tag" title="Prix simulé en mode démonstration : le prix réel est affiché chez le marchand">Estimation</span>{% endif %}{% endmacro %}
+
 {% macro cta_pair(it, label="Voir l'offre", cls="") %}
-{% if it.best_view %}<a class="btn btn-primary only-eu {{ cls }}" href="{{ it.best_view.url }}" rel="nofollow sponsored noopener" target="_blank">{{ label }}{{ ui('arrow', 16) }}</a>{% else %}<span class="btn btn-disabled only-eu {{ cls }}">Rupture</span>{% endif %}
-{% if it.best_fr %}<a class="btn btn-primary only-fr {{ cls }}" href="{{ it.best_fr.url }}" rel="nofollow sponsored noopener" target="_blank">{{ label }}{{ ui('arrow', 16) }}</a>{% else %}<span class="btn btn-disabled only-fr {{ cls }}">Rupture en France</span>{% endif %}
+{% if it.best_view %}<a class="btn btn-primary only-eu {{ cls }}" href="{{ it.best_view.url }}" rel="nofollow sponsored noopener" target="_blank">{{ go_label(it.best_view, label) }}{{ ui('arrow', 16) }}</a>{% else %}<span class="btn btn-disabled only-eu {{ cls }}">Rupture</span>{% endif %}
+{% if it.best_fr %}<a class="btn btn-primary only-fr {{ cls }}" href="{{ it.best_fr.url }}" rel="nofollow sponsored noopener" target="_blank">{{ go_label(it.best_fr, label) }}{{ ui('arrow', 16) }}</a>{% else %}<span class="btn btn-disabled only-fr {{ cls }}">Rupture en France</span>{% endif %}
 {% endmacro %}
 
 {% macro product_card(it, root) %}

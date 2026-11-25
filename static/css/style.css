@@ -356,3 +356,4 @@ input[type=range]{width:100%;accent-color:var(--green);height:40px;margin:0}
 .cfg-merchant label a{flex:1;display:flex;justify-content:space-between;gap:10px;padding:0}
 .cfg-merchant label.done a{color:var(--muted);text-decoration:line-through}
 .cfg-ship{font-size:.72rem;color:var(--muted);margin:2px 0 4px}
+.est-tag{display:inline-flex;align-items:center;margin-left:.4rem;padding:.1rem .45rem;border:1px dashed var(--line);border-radius:999px;font-size:.68rem;font-weight:600;letter-spacing:.02em;color:var(--muted, #9CA3AF);text-transform:uppercase;white-space:nowrap}

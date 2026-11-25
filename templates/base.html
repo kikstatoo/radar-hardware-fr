@@ -31,9 +31,9 @@
 <script src="{{ root }}assets/js/app.js" defer></script>
 {% block head %}{% endblock %}
 </head>
-<body data-region="eu" data-root="{{ root }}">
+<body data-region="eu" data-root="{{ root }}"{% if demo %} data-demo="1"{% endif %}>
 <a class="skip" href="#contenu">Aller au contenu</a>
-{% if demo %}<div class="demo-bar" role="status">{{ ui('alert', 15) }}<span><strong>Mode démonstration</strong> — prix simulés pour tester le site, sans valeur commerciale.</span></div>{% endif %}
+{% if demo %}<div class="demo-bar" role="status">{{ ui('alert', 15) }}<span><strong>Mode démonstration</strong> — prix estimés, pas encore relevés en temps réel. Les boutons ouvrent la recherche du marchand, où le prix exact fait foi.</span></div>{% endif %}
 <header class="topbar">
   <div class="wrap topbar-in">
     <a class="logo" href="{{ root }}index.html" aria-label="{{ site_name }}, accueil">

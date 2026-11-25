@@ -36,6 +36,10 @@ jobs:
 
       - name: 1. Collecte des prix
         run: python scripts/fetch_prices.py
+        env:
+          # Optionnel : prix Amazon réels + lien direct vers la fiche (Creators API, après 10 ventes)
+          AMAZON_CREATORS_CLIENT_ID: ${{ secrets.AMAZON_CREATORS_CLIENT_ID }}
+          AMAZON_CREATORS_CLIENT_SECRET: ${{ secrets.AMAZON_CREATORS_CLIENT_SECRET }}
 
       - name: 2. Mise en cache des images produits (flux marchands et catalogue)
         continue-on-error: true   # une image indisponible ne bloque jamais le site (visuel neutre affiché)
@@ -61,6 +65,7 @@ jobs:
           git config user.name "radar-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/price_history.json data/alerts_sent.json data/offers_latest.json data/sim_state.json data/site_stats.json assets/products
+          [ -f data/asin_cache.json ] && git add data/asin_cache.json || true
           if git diff --cached --quiet; then
             echo "Aucune donnée modifiée."
           else

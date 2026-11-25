@@ -165,7 +165,10 @@ def fmt_pct(value: float | None, decimals: int = 0) -> str:
 def _is_placeholder(value) -> bool:
     """Un identifiant vide ou composé uniquement de zéros est considéré non configuré."""
     v = str(value or "").strip()
-    return not v or set(v) <= {"0"}
+    if not v or set(v) <= {"0"}:
+        return True
+    low = v.lower()
+    return any(k in low for k in ("ton-tag", "votre", "your-tag", "xxxx", "changeme"))
 
 
 def _with_query_param(url: str, key: str, value: str) -> str:
@@ -180,9 +183,41 @@ def merchant_search_url(merchant_key: str, product: dict, affiliates: dict) -> s
     merchant = affiliates.get("merchants", {}).get(merchant_key, {})
     template = merchant.get("search_url", "https://www.google.com/search?q={query}")
     query = product.get("search_query") or product["name"]
+    if merchant.get("network") == "amazon":
+        # Recherche par code-barres ou référence fabricant : Amazon tombe en général sur la fiche exacte
+        query = product.get("ean") or product.get("mpn") or query
     if "wholesale-{query}" in template:
         return template.replace("{query}", quote(query.replace(" ", "-")))
     return template.replace("{query}", quote_plus(query))
+
+
+AMAZON_DOMAINS = {"amazon_fr": "www.amazon.fr", "amazon_de": "www.amazon.de", "amazon_es": "www.amazon.es",
+                  "amazon_it": "www.amazon.it"}
+
+
+def product_asin(product: dict, merchant_key: str) -> str:
+    """ASIN vérifié du produit pour une place de marché Amazon (champ `asin` : texte ou {merchant: ASIN})."""
+    a = product.get("asin")
+    if isinstance(a, dict):
+        a = a.get(merchant_key) or a.get("default")
+    a = str(a or "").strip().upper()
+    return a if re.fullmatch(r"B0[0-9A-Z]{8}", a) else ""
+
+
+def merchant_link(merchant_key: str, product: dict, affiliates: dict) -> tuple:
+    """Meilleur lien connu sans flux temps réel : (url, kind).
+
+    kind = "product" quand l'URL mène à la fiche exacte (ASIN Amazon vérifié ou URL produit
+    renseignée dans `product_urls`), "search" sinon (page de recherche du marchand).
+    """
+    direct = (product.get("product_urls") or {}).get(merchant_key)
+    if direct:
+        return direct, "product"
+    if merchant_key in AMAZON_DOMAINS:
+        asin = product_asin(product, merchant_key)
+        if asin:
+            return f"https://{AMAZON_DOMAINS[merchant_key]}/dp/{asin}", "product"
+    return merchant_search_url(merchant_key, product, affiliates), "search"
 
 
 def affiliate_url(merchant_key: str, url: str, affiliates: dict, already_affiliate: bool = False) -> str:
@@ -201,7 +236,7 @@ def affiliate_url(merchant_key: str, url: str, affiliates: dict, already_affilia
 
     if network == "amazon":
         tag = affiliates.get(merchant.get("amazon_tag_key", "amazon_tag"), "")
-        return _with_query_param(url, "tag", tag) if tag else url
+        return url if _is_placeholder(tag) else _with_query_param(url, "tag", tag)
 
     if network == "awin":
         mid, pub = merchant.get("awin_mid"), affiliates.get("awin_publisher_id")
@@ -247,7 +282,8 @@ def shipping_cost(merchant: dict, item_price: float) -> float | None:
 def with_delivery(offer: dict, affiliates: dict) -> dict:
     """Ajoute item_price, shipping et remplace price par le prix total livré en France."""
     item = offer.get("item_price", offer["price"])
-    ship = shipping_cost(affiliates.get("merchants", {}).get(offer["merchant"], {}), item)
+    ship = 0.0 if offer.get("free_shipping") else \
+        shipping_cost(affiliates.get("merchants", {}).get(offer["merchant"], {}), item)
     return {**offer, "item_price": round(item, 2), "shipping": ship,
             "price": round(item + (ship or 0), 2)}
 

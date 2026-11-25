@@ -26,7 +26,7 @@ from email.utils import parsedate_to_datetime
 
 from common import (with_delivery, HISTORY_FILE, OFFERS_FILE, SIM_STATE_FILE, affiliate_url, http_get,
                     load_affiliates, load_catalog, load_feeds, load_json, load_settings, log,
-                    merchant_search_url, normalize, normalize_code, now_ts, parse_price, iso,
+                    merchant_search_url, merchant_link, normalize, normalize_code, now_ts, parse_price, iso,
                     save_json)
 
 csv.field_size_limit(min(sys.maxsize, 2**31 - 1))
@@ -158,7 +158,7 @@ def fetch_product_feeds(feeds_cfg: dict, products: list[dict], settings: dict, a
                     "price": round(price, 2),
                     "in_stock": in_stock,
                     "url": affiliate_url(merchant, link, affiliates, feed.get("url_is_affiliate", False)),
-                    "source": "feed",
+                    "source": "feed", "link": "product",
                 }
                 image = row.get(fields.get("image", "image"), "")
                 if image.startswith("https://"):
@@ -226,7 +226,7 @@ def fetch_rss_deals(feeds_cfg: dict, products: list[dict], settings: dict, affil
             merchant = next((k for name, k in merchant_names.items() if name and name in n_title), "bonplan")
             offers.setdefault(product["slug"], []).append({
                 "merchant": merchant, "price": round(price, 2), "in_stock": True,
-                "url": affiliate_url(merchant, link, affiliates), "source": "rss",
+                "url": affiliate_url(merchant, link, affiliates), "source": "rss", "link": "product",
             })
             count += 1
         log(f"  OK - {count} bons plans rapprochés du catalogue")
@@ -332,8 +332,11 @@ def run_simulation(products, settings, affiliates):
     offers = {}
     for slug, items in raw.items():
         product = by_slug[slug]
-        offers[slug] = [{**o, "url": affiliate_url(o["merchant"], merchant_search_url(o["merchant"], product, affiliates), affiliates),
-                         "source": "simulation"} for o in items]
+        offers[slug] = []
+        for o in items:
+            link, kind = merchant_link(o["merchant"], product, affiliates)
+            offers[slug].append({**o, "url": affiliate_url(o["merchant"], link, affiliates), "link": kind,
+                                 "source": "simulation"})
     return offers
 
 
@@ -345,6 +348,14 @@ def has_real_sources(feeds_cfg: dict) -> bool:
     return any((f.get("url") or "").strip() and f.get("enabled", True) for f in all_feeds)
 
 
+def amazon_live(affiliates: dict) -> bool:
+    try:
+        import amazon_creators
+        return amazon_creators.enabled(affiliates)
+    except Exception:
+        return False
+
+
 def main() -> int:
     settings, affiliates, feeds_cfg = load_settings(), load_affiliates(), load_feeds()
     products = load_catalog().get("products", [])
@@ -352,10 +363,18 @@ def main() -> int:
         log("ERREUR - Catalogue vide (data/products.json).")
         return 1
 
-    if has_real_sources(feeds_cfg):
+    if has_real_sources(feeds_cfg) or amazon_live(affiliates):
         mode = "live"
-        log("Mode RÉEL : lecture des flux marchands et RSS.")
-        offers, feeds_ok = fetch_product_feeds(feeds_cfg, products, settings, affiliates)
+        log("Mode RÉEL : flux marchands, Amazon Creators API et RSS.")
+        offers, feeds_ok = fetch_product_feeds(feeds_cfg, products, settings, affiliates) \
+            if has_real_sources(feeds_cfg) else ({}, True)
+        if amazon_live(affiliates):
+            import amazon_creators
+            try:
+                for slug, extra in amazon_creators.fetch_offers(products, affiliates).items():
+                    offers.setdefault(slug, []).extend(extra)
+            except Exception as e:
+                log(f"ATTENTION - Amazon Creators API indisponible : {e}")
         for slug, extra in fetch_rss_deals(feeds_cfg, products, settings, affiliates).items():
             offers.setdefault(slug, []).extend(extra)
         previous = load_json(OFFERS_FILE, {}) or {}

@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import ui, light, mbadge, deal_badges, pimg, price_block, cta_pair with context %}
+{% from "_macros.html" import ui, light, mbadge, deal_badges, pimg, price_block, cta_pair, go_label with context %}
 {% set og_type = "product" %}
 {% block content %}
 <div class="wrap">
@@ -17,8 +17,8 @@
         {{ price_block(it, "price-hero") }}
         {% if it.best_view %}<p class="breakdown only-eu">Article <span class="mono">{{ it.best_view.item_price|price }}</span> · Livraison <span class="{{ 'ok' if it.best_view.ship_free }}">{{ it.best_view.ship_label }}</span></p>{% endif %}
         {% if it.best_fr %}<p class="breakdown only-fr">Article <span class="mono">{{ it.best_fr.item_price|price }}</span> · Livraison <span class="{{ 'ok' if it.best_fr.ship_free }}">{{ it.best_fr.ship_label }}</span></p>{% endif %}
-        {% if it.best_view %}<a class="btn btn-primary btn-lg btn-block only-eu" href="{{ it.best_view.url }}" rel="nofollow sponsored noopener" target="_blank">Acheter chez {{ it.best_view.merchant_name }}{{ ui('external', 17) }}</a>{% endif %}
-        {% if it.best_fr %}<a class="btn btn-primary btn-lg btn-block only-fr" href="{{ it.best_fr.url }}" rel="nofollow sponsored noopener" target="_blank">Acheter chez {{ it.best_fr.merchant_name }}{{ ui('external', 17) }}</a>{% endif %}
+        {% if it.best_view %}<a class="btn btn-primary btn-lg btn-block only-eu" href="{{ it.best_view.url }}" rel="nofollow sponsored noopener" target="_blank">{{ go_label(it.best_view, "Acheter chez " ~ it.best_view.merchant_name) }}{{ ui('external', 17) }}</a>{% endif %}
+        {% if it.best_fr %}<a class="btn btn-primary btn-lg btn-block only-fr" href="{{ it.best_fr.url }}" rel="nofollow sponsored noopener" target="_blank">{{ go_label(it.best_fr, "Acheter chez " ~ it.best_fr.merchant_name) }}{{ ui('external', 17) }}</a>{% endif %}
         {% if it.best_fr and it.best_view and it.best_view.country != 'FR' %}
         <p class="alt-fr only-eu">Meilleur prix chez un marchand français : <b class="mono">{{ it.best_fr.price|price }}</b> chez {{ it.best_fr.merchant_name }} (+{{ (it.best_fr.price - it.best_view.price)|price }})</p>
         {% endif %}
@@ -48,13 +48,13 @@
             <td class="hide-sm mono nowrap">{{ o.item_price|price }}</td>
             <td class="hide-sm nowrap {{ 'ok' if o.ship_free else 'muted' }}">{{ o.ship_label }}</td>
             <td class="nowrap"><b class="mono total">{{ o.price|price }}</b></td>
-            <td class="ta-r"><a class="btn {{ 'btn-primary' if o.in_stock else 'btn-ghost' }} btn-sm" href="{{ o.url }}" rel="nofollow sponsored noopener" target="_blank">Voir chez {{ o.merchant_name }}</a></td>
+            <td class="ta-r"><a class="btn {{ 'btn-primary' if o.in_stock else 'btn-ghost' }} btn-sm" href="{{ o.url }}" rel="nofollow sponsored noopener" target="_blank">{{ go_label(o, "Voir chez " ~ o.merchant_name) }}</a></td>
           </tr>
         {% endfor %}
         </tbody>
       </table>
     </div>
-    <p class="note">Frais de port vers la France estimés à titre indicatif. Vérifiez le montant exact et les délais sur le site du marchand.</p>
+    <p class="note">{% if demo %}Mode démonstration : les prix ci-dessus sont des estimations simulées et les boutons « Rechercher chez » ouvrent la recherche du marchand. Le prix exact et le lien direct vers la fiche s'affichent automatiquement dès que les flux marchands sont connectés. {% endif %}Frais de port vers la France estimés à titre indicatif. Vérifiez le montant exact et les délais sur le site du marchand.</p>
   </section>
 
   <div class="two-col">

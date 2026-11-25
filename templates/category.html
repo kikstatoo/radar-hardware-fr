@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import ui, product_card, toolbar, light, mbadge, pimg with context %}
+{% from "_macros.html" import ui, product_card, toolbar, light, mbadge, pimg, go_label with context %}
 {% block content %}
 <div class="wrap">
   <nav class="crumbs" aria-label="Fil d'Ariane"><a href="{{ root }}index.html">Accueil</a>{{ ui('chev-r', 14) }}<span>{{ cat.label }}</span></nav>
@@ -23,7 +23,7 @@
           <td>{{ light(it.s, "sm") }}</td>
           <td class="nowrap"><span class="mono strong">{{ it.s.price_current|price }}</span>{% if it.best_view %}<br>{{ mbadge(it.best_view) }}{% endif %}</td>
           {% if has_perf %}<td class="mono hide-sm">{{ it.p.perf_score }}</td><td class="mono nowrap">{{ it.s.price_per_perf|price }}</td>{% endif %}
-          <td>{% if it.best_view %}<a class="btn btn-primary btn-sm" href="{{ it.best_view.url }}" rel="nofollow sponsored noopener" target="_blank">Voir</a>{% endif %}</td>
+          <td>{% if it.best_view %}<a class="btn btn-primary btn-sm" href="{{ it.best_view.url }}" rel="nofollow sponsored noopener" target="_blank">{{ go_label(it.best_view, "Voir") if it.best_view.link == 'product' else "Rechercher" }}</a>{% endif %}</td>
         </tr>
       {% endfor %}
       </tbody>
