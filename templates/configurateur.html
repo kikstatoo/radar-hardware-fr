@@ -2,10 +2,10 @@
 {% from "_macros.html" import ui with context %}
 {% block content %}
 <div class="wrap">
-  <nav class="crumbs" aria-label="Fil d'Ariane"><a href="{{ root }}index.html">Accueil</a>{{ ui('chev-r', 14) }}<span>Configurateur PC</span></nav>
+  <nav class="crumbs" aria-label="Fil d'Ariane"><a href="{{ root }}index.html">Accueil</a>{{ ui('chev-r', 14) }}<span>BuildRadar</span></nav>
   <header class="page-head"><span class="page-ico">{{ ui('wrench', 26) }}</span><div>
-    <h1>Configurateur PC</h1>
-    <p class="muted">Choisis tes composants étape par étape. Les pièces incompatibles avec ta sélection sont masquées automatiquement, et chaque pièce est proposée au meilleur prix livré en France.</p>
+    <h1>BuildRadar</h1>
+    <p class="muted">Le configurateur PC de Radar Hardware. Choisis tes composants étape par étape : les pièces incompatibles sont masquées, chaque choix est noté (meilleur prix, populaire, recommandé pour ta config) et BuildRadar calcule le panier le plus simple à commander.</p>
   </div></header>
   <div class="cfg">
     <ol class="cfg-steps" id="cfg-steps">
@@ -41,6 +41,12 @@
           <div><dt>Alimentation conseillée</dt><dd id="cfg-psu" class="mono">—</dd></div>
         </dl>
         <ul class="cfg-checks" id="cfg-checks"></ul>
+        <div class="basket" id="cfg-basket" hidden>
+          <p class="cfg-total-label">Comment commander</p>
+          <button type="button" class="basket-opt" data-mode="cheap" aria-pressed="true"><span class="radio"></span><span><b>Le moins cher</b><small></small></span><span class="mono"></span></button>
+          <button type="button" class="basket-opt" data-mode="two" aria-pressed="false"><span class="radio"></span><span><b>2 marchands maximum</b><small></small></span><span class="mono"></span></button>
+          <button type="button" class="basket-opt" data-mode="one" aria-pressed="false"><span class="radio"></span><span><b>Tout chez un seul marchand</b><small></small></span><span class="mono"></span></button>
+        </div>
         <button type="button" class="btn btn-primary btn-block" id="cfg-buy" disabled>{{ ui('cart', 17) }}Acheter chaque pièce au meilleur prix</button>
         <button type="button" class="btn btn-ghost btn-block" id="cfg-share" disabled>{{ ui('share', 16) }}Partager ma config</button>
         <button type="button" class="linkbtn small" id="cfg-reset">Recommencer</button>

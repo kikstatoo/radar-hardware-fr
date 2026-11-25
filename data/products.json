@@ -115,7 +115,8 @@
     "ram": [
      "DDR4"
     ]
-   }
+   },
+   "popular": true
   },
   {
    "slug": "ryzen-5-5600x",
@@ -175,7 +176,8 @@
     "ram": [
      "DDR4"
     ]
-   }
+   },
+   "popular": false
   },
   {
    "slug": "ryzen-7-5700x3d",
@@ -235,7 +237,8 @@
     "ram": [
      "DDR4"
     ]
-   }
+   },
+   "popular": true
   },
   {
    "slug": "ryzen-7-5800x3d",
@@ -295,7 +298,8 @@
     "ram": [
      "DDR4"
     ]
-   }
+   },
+   "popular": false
   },
   {
    "slug": "ryzen-5-7500f",
@@ -355,7 +359,8 @@
     "ram": [
      "DDR5"
     ]
-   }
+   },
+   "popular": true
   },
   {
    "slug": "ryzen-5-7600",
@@ -417,7 +422,8 @@
     "ram": [
      "DDR5"
     ]
-   }
+   },
+   "popular": false
   },
   {
    "slug": "ryzen-5-7600x",
@@ -478,7 +484,8 @@
     "ram": [
      "DDR5"
     ]
-   }
+   },
+   "popular": false
   },
   {
    "slug": "ryzen-7-7700x",
@@ -538,7 +545,8 @@
     "ram": [
      "DDR5"
     ]
-   }
+   },
+   "popular": false
   },
   {
    "slug": "ryzen-7-7800x3d",
@@ -597,7 +605,8 @@
     "ram": [
      "DDR5"
     ]
-   }
+   },
+   "popular": true
   },
   {
    "slug": "ryzen-9-7950x3d",
@@ -658,7 +667,8 @@
     "ram": [
      "DDR5"
     ]
-   }
+   },
+   "popular": false
   },
   {
    "slug": "ryzen-5-9500f",
@@ -718,7 +728,8 @@
     "ram": [
      "DDR5"
     ]
-   }
+   },
+   "popular": false
   },
   {
    "slug": "ryzen-5-9600x",
@@ -777,7 +788,8 @@
     "ram": [
      "DDR5"
     ]
-   }
+   },
+   "popular": true
   },
   {
    "slug": "ryzen-7-9700x",
@@ -834,7 +846,8 @@
     "ram": [
      "DDR5"
     ]
-   }
+   },
+   "popular": false
   },
   {
    "slug": "ryzen-7-9800x3d",
@@ -894,7 +907,8 @@
     "ram": [
      "DDR5"
     ]
-   }
+   },
+   "popular": true
   },
   {
    "slug": "ryzen-9-9900x",
@@ -955,7 +969,8 @@
     "ram": [
      "DDR5"
     ]
-   }
+   },
+   "popular": false
   },
   {
    "slug": "ryzen-9-9950x",
@@ -1014,7 +1029,8 @@
     "ram": [
      "DDR5"
     ]
-   }
+   },
+   "popular": false
   },
   {
    "slug": "core-i5-12400f",
@@ -1074,7 +1090,8 @@
      "DDR4",
      "DDR5"
     ]
-   }
+   },
+   "popular": false
   },
   {
    "slug": "core-i5-13400f",
@@ -1134,7 +1151,8 @@
      "DDR4",
      "DDR5"
     ]
-   }
+   },
+   "popular": false
   },
   {
    "slug": "core-i5-14400f",
@@ -1195,7 +1213,8 @@
      "DDR4",
      "DDR5"
     ]
-   }
+   },
+   "popular": false
   },
   {
    "slug": "core-i5-13600kf",
@@ -1257,7 +1276,8 @@
      "DDR4",
      "DDR5"
     ]
-   }
+   },
+   "popular": false
   },
   {
    "slug": "core-i5-14600k",
@@ -1320,7 +1340,8 @@
      "DDR4",
      "DDR5"
     ]
-   }
+   },
+   "popular": false
   },
   {
    "slug": "core-i7-14700k",
@@ -1380,7 +1401,8 @@
      "DDR4",
      "DDR5"
     ]
-   }
+   },
+   "popular": false
   },
   {
    "slug": "core-ultra-5-245kf",
@@ -1442,7 +1464,8 @@
     "ram": [
      "DDR5"
     ]
-   }
+   },
+   "popular": false
   },
   {
    "slug": "core-ultra-7-265k",
@@ -1504,7 +1527,8 @@
     "ram": [
      "DDR5"
     ]
-   }
+   },
+   "popular": false
   },
   {
    "slug": "core-ultra-9-285k",
@@ -1564,7 +1588,8 @@
     "ram": [
      "DDR5"
     ]
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rtx-3050-6-go",
@@ -1618,7 +1643,8 @@
    "compat": {
     "power_w": 70,
     "length_mm": 170
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rtx-3060-12-go",
@@ -1674,7 +1700,8 @@
    "compat": {
     "power_w": 170,
     "length_mm": 242
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rtx-3060-ti",
@@ -1727,7 +1754,8 @@
    "compat": {
     "power_w": 200,
     "length_mm": 242
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rtx-3070",
@@ -1780,7 +1808,8 @@
    "compat": {
     "power_w": 220,
     "length_mm": 242
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rtx-4060",
@@ -1835,7 +1864,8 @@
    "compat": {
     "power_w": 115,
     "length_mm": 240
-   }
+   },
+   "popular": true
   },
   {
    "slug": "rtx-4060-ti-8-go",
@@ -1892,7 +1922,8 @@
    "compat": {
     "power_w": 160,
     "length_mm": 244
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rtx-4060-ti-16-go",
@@ -1948,7 +1979,8 @@
    "compat": {
     "power_w": 165,
     "length_mm": 244
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rtx-4070",
@@ -2004,7 +2036,8 @@
    "compat": {
     "power_w": 200,
     "length_mm": 244
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rtx-4070-super",
@@ -2058,7 +2091,8 @@
    "compat": {
     "power_w": 220,
     "length_mm": 244
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rtx-4070-ti",
@@ -2112,7 +2146,8 @@
    "compat": {
     "power_w": 285,
     "length_mm": 285
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rtx-4070-ti-super",
@@ -2166,7 +2201,8 @@
    "compat": {
     "power_w": 285,
     "length_mm": 285
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rtx-4080-super",
@@ -2218,7 +2254,8 @@
    "compat": {
     "power_w": 320,
     "length_mm": 304
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rtx-4090",
@@ -2273,7 +2310,8 @@
    "compat": {
     "power_w": 450,
     "length_mm": 304
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rtx-5060-8go",
@@ -2328,7 +2366,8 @@
    "compat": {
     "power_w": 145,
     "length_mm": 240
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rtx-5060-ti-8go",
@@ -2385,7 +2424,8 @@
    "compat": {
     "power_w": 180,
     "length_mm": 244
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rtx-5060-ti-16go",
@@ -2441,7 +2481,8 @@
    "compat": {
     "power_w": 180,
     "length_mm": 244
-   }
+   },
+   "popular": true
   },
   {
    "slug": "rtx-5070-12go",
@@ -2496,7 +2537,8 @@
    "compat": {
     "power_w": 250,
     "length_mm": 242
-   }
+   },
+   "popular": true
   },
   {
    "slug": "rtx-5070-ti-16go",
@@ -2549,7 +2591,8 @@
    "compat": {
     "power_w": 300,
     "length_mm": 304
-   }
+   },
+   "popular": true
   },
   {
    "slug": "rtx-5080-16go",
@@ -2601,7 +2644,8 @@
    "compat": {
     "power_w": 360,
     "length_mm": 304
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rx-6600",
@@ -2655,7 +2699,8 @@
    "compat": {
     "power_w": 132,
     "length_mm": 190
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rx-6650-xt",
@@ -2710,7 +2755,8 @@
    "compat": {
     "power_w": 180,
     "length_mm": 240
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rx-6700-xt",
@@ -2762,7 +2808,8 @@
    "compat": {
     "power_w": 230,
     "length_mm": 267
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rx-6750-xt",
@@ -2814,7 +2861,8 @@
    "compat": {
     "power_w": 250,
     "length_mm": 267
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rx-7600",
@@ -2868,7 +2916,8 @@
    "compat": {
     "power_w": 165,
     "length_mm": 204
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rx-7600-xt",
@@ -2922,7 +2971,8 @@
    "compat": {
     "power_w": 190,
     "length_mm": 250
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rx-7700-xt",
@@ -2974,7 +3024,8 @@
    "compat": {
     "power_w": 245,
     "length_mm": 267
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rx-7800-xt",
@@ -3028,7 +3079,8 @@
    "compat": {
     "power_w": 263,
     "length_mm": 267
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rx-7900-gre",
@@ -3081,7 +3133,8 @@
    "compat": {
     "power_w": 260,
     "length_mm": 276
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rx-7900-xt",
@@ -3136,7 +3189,8 @@
    "compat": {
     "power_w": 315,
     "length_mm": 276
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rx-7900-xtx",
@@ -3189,7 +3243,8 @@
    "compat": {
     "power_w": 355,
     "length_mm": 287
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rx-9060-xt-8-go",
@@ -3243,7 +3298,8 @@
    "compat": {
     "power_w": 150,
     "length_mm": 240
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rx-9060-xt-16go",
@@ -3299,7 +3355,8 @@
    "compat": {
     "power_w": 160,
     "length_mm": 240
-   }
+   },
+   "popular": true
   },
   {
    "slug": "rx-9070-16go",
@@ -3353,7 +3410,8 @@
    "compat": {
     "power_w": 220,
     "length_mm": 290
-   }
+   },
+   "popular": false
   },
   {
    "slug": "rx-9070-xt-16go",
@@ -3405,7 +3463,8 @@
    "compat": {
     "power_w": 304,
     "length_mm": 300
-   }
+   },
+   "popular": true
   },
   {
    "slug": "rx-9070-gre-12-go",
@@ -3460,7 +3519,8 @@
    "compat": {
     "power_w": 220,
     "length_mm": 280
-   }
+   },
+   "popular": false
   },
   {
    "slug": "msi-mag-b550-tomahawk",
@@ -3513,8 +3573,11 @@
    "compat": {
     "socket": "AM4",
     "ram": "DDR4",
-    "form": "ATX"
-   }
+    "form": "ATX",
+    "chipset": "AMD B550",
+    "wifi": false
+   },
+   "popular": true
   },
   {
    "slug": "asus-tuf-gaming-b550-plus-wifi-ii",
@@ -3570,8 +3633,11 @@
    "compat": {
     "socket": "AM4",
     "ram": "DDR4",
-    "form": "ATX"
-   }
+    "form": "ATX",
+    "chipset": "AMD B550",
+    "wifi": true
+   },
+   "popular": false
   },
   {
    "slug": "gigabyte-b550m-ds3h",
@@ -3625,8 +3691,11 @@
    "compat": {
     "socket": "AM4",
     "ram": "DDR4",
-    "form": "Micro-ATX"
-   }
+    "form": "Micro-ATX",
+    "chipset": "AMD B550",
+    "wifi": false
+   },
+   "popular": false
   },
   {
    "slug": "asrock-b550m-pro4",
@@ -3679,8 +3748,11 @@
    "compat": {
     "socket": "AM4",
     "ram": "DDR4",
-    "form": "Micro-ATX"
-   }
+    "form": "Micro-ATX",
+    "chipset": "AMD B550",
+    "wifi": false
+   },
+   "popular": false
   },
   {
    "slug": "asus-rog-strix-b550-i-gaming",
@@ -3732,8 +3804,11 @@
    "compat": {
     "socket": "AM4",
     "ram": "DDR4",
-    "form": "Mini-ITX"
-   }
+    "form": "Mini-ITX",
+    "chipset": "AMD B550",
+    "wifi": true
+   },
+   "popular": false
   },
   {
    "slug": "msi-mag-x570s-tomahawk-max-wifi",
@@ -3787,8 +3862,11 @@
    "compat": {
     "socket": "AM4",
     "ram": "DDR4",
-    "form": "ATX"
-   }
+    "form": "ATX",
+    "chipset": "AMD X570",
+    "wifi": true
+   },
+   "popular": false
   },
   {
    "slug": "msi-b650-gaming-plus-wifi",
@@ -3843,8 +3921,11 @@
    "compat": {
     "socket": "AM5",
     "ram": "DDR5",
-    "form": "ATX"
-   }
+    "form": "ATX",
+    "chipset": "AMD B650",
+    "wifi": true
+   },
+   "popular": true
   },
   {
    "slug": "asus-tuf-gaming-b650-plus-wifi",
@@ -3899,8 +3980,11 @@
    "compat": {
     "socket": "AM5",
     "ram": "DDR5",
-    "form": "ATX"
-   }
+    "form": "ATX",
+    "chipset": "AMD B650",
+    "wifi": true
+   },
+   "popular": false
   },
   {
    "slug": "gigabyte-b650m-aorus-elite-ax",
@@ -3953,8 +4037,11 @@
    "compat": {
     "socket": "AM5",
     "ram": "DDR5",
-    "form": "Micro-ATX"
-   }
+    "form": "Micro-ATX",
+    "chipset": "AMD B650",
+    "wifi": true
+   },
+   "popular": true
   },
   {
    "slug": "asrock-b650i-lightning-wifi",
@@ -4008,8 +4095,11 @@
    "compat": {
     "socket": "AM5",
     "ram": "DDR5",
-    "form": "Mini-ITX"
-   }
+    "form": "Mini-ITX",
+    "chipset": "AMD B650",
+    "wifi": true
+   },
+   "popular": false
   },
   {
    "slug": "msi-b850-gaming-plus-wifi",
@@ -4066,8 +4156,11 @@
    "compat": {
     "socket": "AM5",
     "ram": "DDR5",
-    "form": "ATX"
-   }
+    "form": "ATX",
+    "chipset": "AMD B850",
+    "wifi": true
+   },
+   "popular": true
   },
   {
    "slug": "gigabyte-b850-aorus-elite-wifi7",
@@ -4122,8 +4215,11 @@
    "compat": {
     "socket": "AM5",
     "ram": "DDR5",
-    "form": "ATX"
-   }
+    "form": "ATX",
+    "chipset": "AMD B850",
+    "wifi": true
+   },
+   "popular": false
   },
   {
    "slug": "msi-mag-b850m-mortar-wifi",
@@ -4174,8 +4270,11 @@
    "compat": {
     "socket": "AM5",
     "ram": "DDR5",
-    "form": "Micro-ATX"
-   }
+    "form": "Micro-ATX",
+    "chipset": "AMD B850",
+    "wifi": true
+   },
+   "popular": false
   },
   {
    "slug": "asus-rog-strix-x670e-e-gaming-wifi",
@@ -4227,8 +4326,11 @@
    "compat": {
     "socket": "AM5",
     "ram": "DDR5",
-    "form": "ATX"
-   }
+    "form": "ATX",
+    "chipset": "AMD X670E",
+    "wifi": true
+   },
+   "popular": false
   },
   {
    "slug": "asus-tuf-gaming-x870-plus-wifi",
@@ -4279,8 +4381,11 @@
    "compat": {
     "socket": "AM5",
     "ram": "DDR5",
-    "form": "ATX"
-   }
+    "form": "ATX",
+    "chipset": "AMD X870",
+    "wifi": true
+   },
+   "popular": false
   },
   {
    "slug": "msi-mag-x870-tomahawk-wifi",
@@ -4335,8 +4440,11 @@
    "compat": {
     "socket": "AM5",
     "ram": "DDR5",
-    "form": "ATX"
-   }
+    "form": "ATX",
+    "chipset": "AMD X870",
+    "wifi": true
+   },
+   "popular": false
   },
   {
    "slug": "msi-pro-b760m-a-wifi-ddr4",
@@ -4390,8 +4498,11 @@
    "compat": {
     "socket": "LGA 1700",
     "ram": "DDR4",
-    "form": "Micro-ATX"
-   }
+    "form": "Micro-ATX",
+    "chipset": "Intel B760",
+    "wifi": true
+   },
+   "popular": false
   },
   {
    "slug": "asus-tuf-gaming-b760-plus-wifi",
@@ -4447,8 +4558,11 @@
    "compat": {
     "socket": "LGA 1700",
     "ram": "DDR5",
-    "form": "ATX"
-   }
+    "form": "ATX",
+    "chipset": "Intel B760",
+    "wifi": true
+   },
+   "popular": false
   },
   {
    "slug": "gigabyte-b760i-aorus-pro-ddr4",
@@ -4501,8 +4615,11 @@
    "compat": {
     "socket": "LGA 1700",
     "ram": "DDR4",
-    "form": "Mini-ITX"
-   }
+    "form": "Mini-ITX",
+    "chipset": "Intel B760",
+    "wifi": true
+   },
+   "popular": false
   },
   {
    "slug": "msi-mag-z790-tomahawk-wifi",
@@ -4558,8 +4675,11 @@
    "compat": {
     "socket": "LGA 1700",
     "ram": "DDR5",
-    "form": "ATX"
-   }
+    "form": "ATX",
+    "chipset": "Intel Z790",
+    "wifi": true
+   },
+   "popular": false
   },
   {
    "slug": "asus-rog-strix-z790-a-gaming-wifi-ii",
@@ -4611,8 +4731,11 @@
    "compat": {
     "socket": "LGA 1700",
     "ram": "DDR5",
-    "form": "ATX"
-   }
+    "form": "ATX",
+    "chipset": "Intel Z790",
+    "wifi": true
+   },
+   "popular": false
   },
   {
    "slug": "msi-pro-b860-p-wifi",
@@ -4666,8 +4789,11 @@
    "compat": {
     "socket": "LGA 1851",
     "ram": "DDR5",
-    "form": "ATX"
-   }
+    "form": "ATX",
+    "chipset": "Intel B860",
+    "wifi": true
+   },
+   "popular": false
   },
   {
    "slug": "asus-tuf-gaming-b860m-plus-wifi",
@@ -4718,8 +4844,11 @@
    "compat": {
     "socket": "LGA 1851",
     "ram": "DDR5",
-    "form": "Micro-ATX"
-   }
+    "form": "Micro-ATX",
+    "chipset": "Intel B860",
+    "wifi": true
+   },
+   "popular": false
   },
   {
    "slug": "gigabyte-z890-aorus-elite-wifi7",
@@ -4771,8 +4900,11 @@
    "compat": {
     "socket": "LGA 1851",
     "ram": "DDR5",
-    "form": "ATX"
-   }
+    "form": "ATX",
+    "chipset": "Intel Z890",
+    "wifi": true
+   },
+   "popular": false
   },
   {
    "slug": "asus-rog-strix-z890-i-gaming-wifi",
@@ -4825,8 +4957,11 @@
    "compat": {
     "socket": "LGA 1851",
     "ram": "DDR5",
-    "form": "Mini-ITX"
-   }
+    "form": "Mini-ITX",
+    "chipset": "Intel Z890",
+    "wifi": true
+   },
+   "popular": false
   },
   {
    "slug": "corsair-vengeance-lpx-16-go-2x8-go-ddr4-3200-mhz-cl16",
@@ -4881,8 +5016,11 @@
     "Profils": "Intel XMP 2.0"
    },
    "compat": {
-    "ram": "DDR4"
-   }
+    "ram": "DDR4",
+    "gb": 16,
+    "mhz": 3200
+   },
+   "popular": false
   },
   {
    "slug": "corsair-vengeance-lpx-32-go-2x16-go-ddr4-3200-mhz-cl16",
@@ -4936,8 +5074,11 @@
     "Profils": "Intel XMP 2.0"
    },
    "compat": {
-    "ram": "DDR4"
-   }
+    "ram": "DDR4",
+    "gb": 32,
+    "mhz": 3200
+   },
+   "popular": true
   },
   {
    "slug": "g-skill-ripjaws-v-16-go-2x8-go-ddr4-3600-mhz-cl16",
@@ -4992,8 +5133,11 @@
     "Profils": "Intel XMP 2.0"
    },
    "compat": {
-    "ram": "DDR4"
-   }
+    "ram": "DDR4",
+    "gb": 16,
+    "mhz": 3600
+   },
+   "popular": false
   },
   {
    "slug": "g-skill-ripjaws-v-32-go-2x16-go-ddr4-3600-mhz-cl18",
@@ -5046,8 +5190,11 @@
     "Profils": "Intel XMP 2.0"
    },
    "compat": {
-    "ram": "DDR4"
-   }
+    "ram": "DDR4",
+    "gb": 32,
+    "mhz": 3600
+   },
+   "popular": false
   },
   {
    "slug": "kingston-fury-beast-16-go-2x8-go-ddr4-3200-mhz-cl16",
@@ -5102,8 +5249,11 @@
     "Profils": "Intel XMP 2.0"
    },
    "compat": {
-    "ram": "DDR4"
-   }
+    "ram": "DDR4",
+    "gb": 16,
+    "mhz": 3200
+   },
+   "popular": false
   },
   {
    "slug": "kingston-fury-beast-32-go-2x16-go-ddr4-3600-mhz-cl18",
@@ -5159,8 +5309,11 @@
     "Profils": "Intel XMP 2.0"
    },
    "compat": {
-    "ram": "DDR4"
-   }
+    "ram": "DDR4",
+    "gb": 32,
+    "mhz": 3600
+   },
+   "popular": false
   },
   {
    "slug": "crucial-pro-32-go-2x16-go-ddr4-3200-mhz-cl22",
@@ -5216,8 +5369,11 @@
     "Profils": "JEDEC"
    },
    "compat": {
-    "ram": "DDR4"
-   }
+    "ram": "DDR4",
+    "gb": 32,
+    "mhz": 3200
+   },
+   "popular": false
   },
   {
    "slug": "corsair-vengeance-32go-ddr5-6000-cl30",
@@ -5273,8 +5429,11 @@
     "Profils": "Intel XMP 3.0"
    },
    "compat": {
-    "ram": "DDR5"
-   }
+    "ram": "DDR5",
+    "gb": 32,
+    "mhz": 6000
+   },
+   "popular": true
   },
   {
    "slug": "gskill-trident-z5-neo-rgb-32go-ddr5-6000-cl30",
@@ -5329,8 +5488,11 @@
     "Profils": "AMD EXPO"
    },
    "compat": {
-    "ram": "DDR5"
-   }
+    "ram": "DDR5",
+    "gb": 32,
+    "mhz": 6000
+   },
+   "popular": false
   },
   {
    "slug": "kingston-fury-beast-32go-ddr5-6000-cl30",
@@ -5386,8 +5548,11 @@
     "Profils": "AMD EXPO + Intel XMP 3.0"
    },
    "compat": {
-    "ram": "DDR5"
-   }
+    "ram": "DDR5",
+    "gb": 32,
+    "mhz": 6000
+   },
+   "popular": true
   },
   {
    "slug": "g-skill-flare-x5-32-go-2x16-go-ddr5-6000-mhz-cl30",
@@ -5441,8 +5606,11 @@
     "Profils": "AMD EXPO"
    },
    "compat": {
-    "ram": "DDR5"
-   }
+    "ram": "DDR5",
+    "gb": 32,
+    "mhz": 6000
+   },
+   "popular": false
   },
   {
    "slug": "corsair-vengeance-rgb-32-go-2x16-go-ddr5-6000-mhz-cl36",
@@ -5495,8 +5663,11 @@
     "Profils": "Intel XMP 3.0"
    },
    "compat": {
-    "ram": "DDR5"
-   }
+    "ram": "DDR5",
+    "gb": 32,
+    "mhz": 6000
+   },
+   "popular": false
   },
   {
    "slug": "kingston-fury-beast-32-go-2x16-go-ddr5-5600-mhz-cl36",
@@ -5549,8 +5720,11 @@
     "Profils": "Intel XMP 3.0"
    },
    "compat": {
-    "ram": "DDR5"
-   }
+    "ram": "DDR5",
+    "gb": 32,
+    "mhz": 5600
+   },
+   "popular": false
   },
   {
    "slug": "crucial-pro-32-go-2x16-go-ddr5-5600-mhz-cl46",
@@ -5605,8 +5779,11 @@
     "Profils": "JEDEC + XMP/EXPO"
    },
    "compat": {
-    "ram": "DDR5"
-   }
+    "ram": "DDR5",
+    "gb": 32,
+    "mhz": 5600
+   },
+   "popular": false
   },
   {
    "slug": "g-skill-trident-z5-rgb-32-go-2x16-go-ddr5-6400-mhz-cl32",
@@ -5659,8 +5836,11 @@
     "Profils": "Intel XMP 3.0"
    },
    "compat": {
-    "ram": "DDR5"
-   }
+    "ram": "DDR5",
+    "gb": 32,
+    "mhz": 6400
+   },
+   "popular": false
   },
   {
    "slug": "corsair-dominator-titanium-32-go-2x16-go-ddr5-6000-mhz-cl30",
@@ -5712,8 +5892,11 @@
     "Profils": "AMD EXPO + Intel XMP 3.0"
    },
    "compat": {
-    "ram": "DDR5"
-   }
+    "ram": "DDR5",
+    "gb": 32,
+    "mhz": 6000
+   },
+   "popular": false
   },
   {
    "slug": "corsair-vengeance-64-go-2x32-go-ddr5-6000-mhz-cl30",
@@ -5768,8 +5951,11 @@
     "Profils": "Intel XMP 3.0"
    },
    "compat": {
-    "ram": "DDR5"
-   }
+    "ram": "DDR5",
+    "gb": 64,
+    "mhz": 6000
+   },
+   "popular": false
   },
   {
    "slug": "g-skill-trident-z5-rgb-64-go-2x32-go-ddr5-6400-mhz-cl32",
@@ -5823,8 +6009,11 @@
     "Profils": "Intel XMP 3.0"
    },
    "compat": {
-    "ram": "DDR5"
-   }
+    "ram": "DDR5",
+    "gb": 64,
+    "mhz": 6400
+   },
+   "popular": false
   },
   {
    "slug": "kingston-fury-beast-64-go-2x32-go-ddr5-5600-mhz-cl36",
@@ -5878,8 +6067,11 @@
     "Profils": "Intel XMP 3.0"
    },
    "compat": {
-    "ram": "DDR5"
-   }
+    "ram": "DDR5",
+    "gb": 64,
+    "mhz": 5600
+   },
+   "popular": false
   },
   {
    "slug": "crucial-pro-64-go-2x32-go-ddr5-5600-mhz-cl46",
@@ -5934,8 +6126,11 @@
     "Profils": "JEDEC + XMP/EXPO"
    },
    "compat": {
-    "ram": "DDR5"
-   }
+    "ram": "DDR5",
+    "gb": 64,
+    "mhz": 5600
+   },
+   "popular": false
   },
   {
    "slug": "samsung-990-pro-1-to",
@@ -5988,8 +6183,10 @@
     "Format": "M.2 2280"
    },
    "compat": {
-    "interface": "PCIe 4.0 x4"
-   }
+    "interface": "PCIe 4.0 x4",
+    "tb": 1
+   },
+   "popular": false
   },
   {
    "slug": "samsung-990-pro-2to",
@@ -6041,8 +6238,10 @@
     "Format": "M.2 2280"
    },
    "compat": {
-    "interface": "PCIe 4.0 x4"
-   }
+    "interface": "PCIe 4.0 x4",
+    "tb": 2
+   },
+   "popular": true
   },
   {
    "slug": "samsung-990-pro-4-to",
@@ -6095,8 +6294,10 @@
     "Format": "M.2 2280"
    },
    "compat": {
-    "interface": "PCIe 4.0 x4"
-   }
+    "interface": "PCIe 4.0 x4",
+    "tb": 4
+   },
+   "popular": false
   },
   {
    "slug": "samsung-9100-pro-2-to",
@@ -6148,8 +6349,10 @@
     "Format": "M.2 2280"
    },
    "compat": {
-    "interface": "PCIe 5.0 x4"
-   }
+    "interface": "PCIe 5.0 x4",
+    "tb": 2
+   },
+   "popular": false
   },
   {
    "slug": "wd-black-sn850x-1-to",
@@ -6200,8 +6403,10 @@
     "Format": "M.2 2280"
    },
    "compat": {
-    "interface": "PCIe 4.0 x4"
-   }
+    "interface": "PCIe 4.0 x4",
+    "tb": 1
+   },
+   "popular": false
   },
   {
    "slug": "wd-black-sn850x-2to",
@@ -6255,8 +6460,10 @@
     "Format": "M.2 2280"
    },
    "compat": {
-    "interface": "PCIe 4.0 x4"
-   }
+    "interface": "PCIe 4.0 x4",
+    "tb": 2
+   },
+   "popular": true
   },
   {
    "slug": "wd-black-sn850x-4-to",
@@ -6309,8 +6516,10 @@
     "Format": "M.2 2280"
    },
    "compat": {
-    "interface": "PCIe 4.0 x4"
-   }
+    "interface": "PCIe 4.0 x4",
+    "tb": 4
+   },
+   "popular": false
   },
   {
    "slug": "wd-black-sn8100-2-to",
@@ -6364,8 +6573,10 @@
     "Format": "M.2 2280"
    },
    "compat": {
-    "interface": "PCIe 5.0 x4"
-   }
+    "interface": "PCIe 5.0 x4",
+    "tb": 2
+   },
+   "popular": false
   },
   {
    "slug": "crucial-t500-1-to",
@@ -6418,8 +6629,10 @@
     "Format": "M.2 2280"
    },
    "compat": {
-    "interface": "PCIe 4.0 x4"
-   }
+    "interface": "PCIe 4.0 x4",
+    "tb": 1
+   },
+   "popular": false
   },
   {
    "slug": "crucial-t500-2to",
@@ -6470,8 +6683,10 @@
     "Format": "M.2 2280"
    },
    "compat": {
-    "interface": "PCIe 4.0 x4"
-   }
+    "interface": "PCIe 4.0 x4",
+    "tb": 2
+   },
+   "popular": false
   },
   {
    "slug": "crucial-t705-2-to",
@@ -6523,8 +6738,10 @@
     "Format": "M.2 2280"
    },
    "compat": {
-    "interface": "PCIe 5.0 x4"
-   }
+    "interface": "PCIe 5.0 x4",
+    "tb": 2
+   },
+   "popular": false
   },
   {
    "slug": "kingston-kc3000-2-to",
@@ -6576,8 +6793,10 @@
     "Format": "M.2 2280"
    },
    "compat": {
-    "interface": "PCIe 4.0 x4"
-   }
+    "interface": "PCIe 4.0 x4",
+    "tb": 2
+   },
+   "popular": false
   },
   {
    "slug": "kingston-fury-renegade-2-to",
@@ -6630,8 +6849,10 @@
     "Format": "M.2 2280"
    },
    "compat": {
-    "interface": "PCIe 4.0 x4"
-   }
+    "interface": "PCIe 4.0 x4",
+    "tb": 2
+   },
+   "popular": false
   },
   {
    "slug": "lexar-nm790-2-to",
@@ -6683,8 +6904,10 @@
     "Format": "M.2 2280"
    },
    "compat": {
-    "interface": "PCIe 4.0 x4"
-   }
+    "interface": "PCIe 4.0 x4",
+    "tb": 2
+   },
+   "popular": true
   },
   {
    "slug": "lexar-nm790-4-to",
@@ -6736,8 +6959,10 @@
     "Format": "M.2 2280"
    },
    "compat": {
-    "interface": "PCIe 4.0 x4"
-   }
+    "interface": "PCIe 4.0 x4",
+    "tb": 4
+   },
+   "popular": false
   },
   {
    "slug": "thermalright-peerless-assassin-120-se",
@@ -6781,7 +7006,8 @@
     "Type": "Ventirad",
     "Description": "Double tour, 2 x 120 mm",
     "Sockets compatibles": "AM4, AM5, LGA 1700, LGA 1851",
-    "Hauteur": "155 mm"
+    "Hauteur": "155 mm",
+    "Capacité de dissipation (estimée)": "245 W"
    },
    "compat": {
     "kind": "air",
@@ -6792,8 +7018,10 @@
      "AM5",
      "LGA 1700",
      "LGA 1851"
-    ]
-   }
+    ],
+    "capacity_w": 245
+   },
+   "popular": true
   },
   {
    "slug": "thermalright-phantom-spirit-120-se",
@@ -6837,7 +7065,8 @@
     "Type": "Ventirad",
     "Description": "Double tour, 2 x 120 mm",
     "Sockets compatibles": "AM4, AM5, LGA 1700, LGA 1851",
-    "Hauteur": "154 mm"
+    "Hauteur": "154 mm",
+    "Capacité de dissipation (estimée)": "245 W"
    },
    "compat": {
     "kind": "air",
@@ -6848,8 +7077,10 @@
      "AM5",
      "LGA 1700",
      "LGA 1851"
-    ]
-   }
+    ],
+    "capacity_w": 245
+   },
+   "popular": false
   },
   {
    "slug": "noctua-nh-d15-g2",
@@ -6892,7 +7123,8 @@
     "Type": "Ventirad",
     "Description": "Double tour, 2 x 140 mm",
     "Sockets compatibles": "AM4, AM5, LGA 1700, LGA 1851",
-    "Hauteur": "168 mm"
+    "Hauteur": "168 mm",
+    "Capacité de dissipation (estimée)": "260 W"
    },
    "compat": {
     "kind": "air",
@@ -6903,8 +7135,10 @@
      "AM5",
      "LGA 1700",
      "LGA 1851"
-    ]
-   }
+    ],
+    "capacity_w": 260
+   },
+   "popular": false
   },
   {
    "slug": "noctua-nh-u12s-redux",
@@ -6947,7 +7181,8 @@
     "Type": "Ventirad",
     "Description": "Tour simple, 1 x 120 mm",
     "Sockets compatibles": "AM4, AM5, LGA 1700, LGA 1851",
-    "Hauteur": "158 mm"
+    "Hauteur": "158 mm",
+    "Capacité de dissipation (estimée)": "180 W"
    },
    "compat": {
     "kind": "air",
@@ -6958,8 +7193,10 @@
      "AM5",
      "LGA 1700",
      "LGA 1851"
-    ]
-   }
+    ],
+    "capacity_w": 180
+   },
+   "popular": false
   },
   {
    "slug": "be-quiet-dark-rock-pro-5",
@@ -7002,7 +7239,8 @@
     "Type": "Ventirad",
     "Description": "Double tour, 2 ventilateurs",
     "Sockets compatibles": "AM4, AM5, LGA 1700, LGA 1851",
-    "Hauteur": "168 mm"
+    "Hauteur": "168 mm",
+    "Capacité de dissipation (estimée)": "270 W"
    },
    "compat": {
     "kind": "air",
@@ -7013,8 +7251,10 @@
      "AM5",
      "LGA 1700",
      "LGA 1851"
-    ]
-   }
+    ],
+    "capacity_w": 270
+   },
+   "popular": false
   },
   {
    "slug": "be-quiet-dark-rock-5",
@@ -7057,7 +7297,8 @@
     "Type": "Ventirad",
     "Description": "Tour simple, 1 x 135 mm",
     "Sockets compatibles": "AM4, AM5, LGA 1700, LGA 1851",
-    "Hauteur": "161 mm"
+    "Hauteur": "161 mm",
+    "Capacité de dissipation (estimée)": "210 W"
    },
    "compat": {
     "kind": "air",
@@ -7068,8 +7309,10 @@
      "AM5",
      "LGA 1700",
      "LGA 1851"
-    ]
-   }
+    ],
+    "capacity_w": 210
+   },
+   "popular": false
   },
   {
    "slug": "be-quiet-pure-rock-2",
@@ -7112,7 +7355,8 @@
     "Type": "Ventirad",
     "Description": "Tour simple, 1 x 120 mm",
     "Sockets compatibles": "AM4, AM5, LGA 1700, LGA 1851",
-    "Hauteur": "155 mm"
+    "Hauteur": "155 mm",
+    "Capacité de dissipation (estimée)": "150 W"
    },
    "compat": {
     "kind": "air",
@@ -7123,8 +7367,10 @@
      "AM5",
      "LGA 1700",
      "LGA 1851"
-    ]
-   }
+    ],
+    "capacity_w": 150
+   },
+   "popular": false
   },
   {
    "slug": "arctic-freezer-36",
@@ -7166,7 +7412,8 @@
     "Type": "Ventirad",
     "Description": "Tour simple, 2 x 120 mm push-pull",
     "Sockets compatibles": "AM4, AM5, LGA 1700, LGA 1851",
-    "Hauteur": "159 mm"
+    "Hauteur": "159 mm",
+    "Capacité de dissipation (estimée)": "200 W"
    },
    "compat": {
     "kind": "air",
@@ -7177,8 +7424,10 @@
      "AM5",
      "LGA 1700",
      "LGA 1851"
-    ]
-   }
+    ],
+    "capacity_w": 200
+   },
+   "popular": false
   },
   {
    "slug": "deepcool-ak620",
@@ -7222,7 +7471,8 @@
     "Type": "Ventirad",
     "Description": "Double tour, 2 x 120 mm",
     "Sockets compatibles": "AM4, AM5, LGA 1700, LGA 1851",
-    "Hauteur": "160 mm"
+    "Hauteur": "160 mm",
+    "Capacité de dissipation (estimée)": "260 W"
    },
    "compat": {
     "kind": "air",
@@ -7233,8 +7483,10 @@
      "AM5",
      "LGA 1700",
      "LGA 1851"
-    ]
-   }
+    ],
+    "capacity_w": 260
+   },
+   "popular": false
   },
   {
    "slug": "arctic-liquid-freezer-iii-240",
@@ -7278,7 +7530,8 @@
     "Type": "Watercooling AIO",
     "Description": "Watercooling AIO 240 mm",
     "Sockets compatibles": "AM4, AM5, LGA 1700, LGA 1851",
-    "Radiateur": "240 mm"
+    "Radiateur": "240 mm",
+    "Capacité de dissipation (estimée)": "260 W"
    },
    "compat": {
     "kind": "aio",
@@ -7289,8 +7542,10 @@
      "AM5",
      "LGA 1700",
      "LGA 1851"
-    ]
-   }
+    ],
+    "capacity_w": 260
+   },
+   "popular": false
   },
   {
    "slug": "arctic-liquid-freezer-iii-360",
@@ -7333,7 +7588,8 @@
     "Type": "Watercooling AIO",
     "Description": "Watercooling AIO 360 mm",
     "Sockets compatibles": "AM4, AM5, LGA 1700, LGA 1851",
-    "Radiateur": "360 mm"
+    "Radiateur": "360 mm",
+    "Capacité de dissipation (estimée)": "320 W"
    },
    "compat": {
     "kind": "aio",
@@ -7344,8 +7600,10 @@
      "AM5",
      "LGA 1700",
      "LGA 1851"
-    ]
-   }
+    ],
+    "capacity_w": 320
+   },
+   "popular": true
   },
   {
    "slug": "corsair-nautilus-360-rs",
@@ -7389,7 +7647,8 @@
     "Type": "Watercooling AIO",
     "Description": "Watercooling AIO 360 mm",
     "Sockets compatibles": "AM4, AM5, LGA 1700, LGA 1851",
-    "Radiateur": "360 mm"
+    "Radiateur": "360 mm",
+    "Capacité de dissipation (estimée)": "300 W"
    },
    "compat": {
     "kind": "aio",
@@ -7400,8 +7659,10 @@
      "AM5",
      "LGA 1700",
      "LGA 1851"
-    ]
-   }
+    ],
+    "capacity_w": 300
+   },
+   "popular": false
   },
   {
    "slug": "nzxt-kraken-240",
@@ -7445,7 +7706,8 @@
     "Type": "Watercooling AIO",
     "Description": "Watercooling AIO 240 mm, écran LCD",
     "Sockets compatibles": "AM4, AM5, LGA 1700, LGA 1851",
-    "Radiateur": "240 mm"
+    "Radiateur": "240 mm",
+    "Capacité de dissipation (estimée)": "250 W"
    },
    "compat": {
     "kind": "aio",
@@ -7456,8 +7718,10 @@
      "AM5",
      "LGA 1700",
      "LGA 1851"
-    ]
-   }
+    ],
+    "capacity_w": 250
+   },
+   "popular": false
   },
   {
    "slug": "msi-mag-coreliquid-e360",
@@ -7501,7 +7765,8 @@
     "Type": "Watercooling AIO",
     "Description": "Watercooling AIO 360 mm",
     "Sockets compatibles": "AM4, AM5, LGA 1700, LGA 1851",
-    "Radiateur": "360 mm"
+    "Radiateur": "360 mm",
+    "Capacité de dissipation (estimée)": "300 W"
    },
    "compat": {
     "kind": "aio",
@@ -7512,8 +7777,10 @@
      "AM5",
      "LGA 1700",
      "LGA 1851"
-    ]
-   }
+    ],
+    "capacity_w": 300
+   },
+   "popular": false
   },
   {
    "slug": "corsair-icue-link-titan-360-rx",
@@ -7557,7 +7824,8 @@
     "Type": "Watercooling AIO",
     "Description": "Watercooling AIO 360 mm",
     "Sockets compatibles": "AM4, AM5, LGA 1700, LGA 1851",
-    "Radiateur": "360 mm"
+    "Radiateur": "360 mm",
+    "Capacité de dissipation (estimée)": "320 W"
    },
    "compat": {
     "kind": "aio",
@@ -7568,8 +7836,10 @@
      "AM5",
      "LGA 1700",
      "LGA 1851"
-    ]
-   }
+    ],
+    "capacity_w": 320
+   },
+   "popular": false
   },
   {
    "slug": "corsair-4000d-airflow",
@@ -7625,7 +7895,8 @@
     "max_gpu_mm": 360,
     "max_cooler_mm": 170,
     "max_radiator_mm": 360
-   }
+   },
+   "popular": true
   },
   {
    "slug": "nzxt-h5-flow",
@@ -7679,7 +7950,8 @@
     "max_gpu_mm": 365,
     "max_cooler_mm": 165,
     "max_radiator_mm": 280
-   }
+   },
+   "popular": false
   },
   {
    "slug": "nzxt-h6-flow",
@@ -7732,7 +8004,8 @@
     "max_gpu_mm": 365,
     "max_cooler_mm": 163,
     "max_radiator_mm": 360
-   }
+   },
+   "popular": false
   },
   {
    "slug": "nzxt-h9-flow",
@@ -7788,7 +8061,8 @@
     "max_gpu_mm": 435,
     "max_cooler_mm": 165,
     "max_radiator_mm": 360
-   }
+   },
+   "popular": false
   },
   {
    "slug": "lian-li-lancool-216",
@@ -7843,7 +8117,8 @@
     "max_gpu_mm": 392,
     "max_cooler_mm": 180,
     "max_radiator_mm": 360
-   }
+   },
+   "popular": true
   },
   {
    "slug": "lian-li-lancool-207",
@@ -7898,7 +8173,8 @@
     "max_gpu_mm": 375,
     "max_cooler_mm": 170,
     "max_radiator_mm": 360
-   }
+   },
+   "popular": false
   },
   {
    "slug": "lian-li-o11-dynamic-evo",
@@ -7954,7 +8230,8 @@
     "max_gpu_mm": 426,
     "max_cooler_mm": 167,
     "max_radiator_mm": 360
-   }
+   },
+   "popular": false
   },
   {
    "slug": "fractal-design-north",
@@ -8010,7 +8287,8 @@
     "max_gpu_mm": 355,
     "max_cooler_mm": 170,
     "max_radiator_mm": 360
-   }
+   },
+   "popular": false
   },
   {
    "slug": "fractal-design-pop-air",
@@ -8064,7 +8342,8 @@
     "max_gpu_mm": 405,
     "max_cooler_mm": 170,
     "max_radiator_mm": 360
-   }
+   },
+   "popular": false
   },
   {
    "slug": "montech-air-903-max",
@@ -8120,7 +8399,8 @@
     "max_gpu_mm": 400,
     "max_cooler_mm": 180,
     "max_radiator_mm": 360
-   }
+   },
+   "popular": true
   },
   {
    "slug": "lian-li-a3-matx",
@@ -8176,7 +8456,8 @@
     "max_gpu_mm": 415,
     "max_cooler_mm": 165,
     "max_radiator_mm": 360
-   }
+   },
+   "popular": false
   },
   {
    "slug": "fractal-design-pop-mini-air",
@@ -8231,7 +8512,8 @@
     "max_gpu_mm": 405,
     "max_cooler_mm": 170,
     "max_radiator_mm": 280
-   }
+   },
+   "popular": false
   },
   {
    "slug": "jonsbo-d31-mesh",
@@ -8286,7 +8568,8 @@
     "max_gpu_mm": 400,
     "max_cooler_mm": 168,
     "max_radiator_mm": 360
-   }
+   },
+   "popular": false
   },
   {
    "slug": "cooler-master-nr200p-v2",
@@ -8339,7 +8622,8 @@
     "max_gpu_mm": 336,
     "max_cooler_mm": 155,
     "max_radiator_mm": 280
-   }
+   },
+   "popular": false
   },
   {
    "slug": "corsair-2000d-airflow",
@@ -8394,7 +8678,8 @@
     "max_gpu_mm": 365,
     "max_cooler_mm": 170,
     "max_radiator_mm": 360
-   }
+   },
+   "popular": false
   },
   {
    "slug": "fractal-design-terra",
@@ -8447,7 +8732,8 @@
     "max_gpu_mm": 322,
     "max_cooler_mm": 77,
     "max_radiator_mm": 0
-   }
+   },
+   "popular": false
   },
   {
    "slug": "be-quiet-system-power-10-550w",
@@ -8495,8 +8781,11 @@
     "Câblage": "Non modulaire"
    },
    "compat": {
-    "watts": 550
-   }
+    "watts": 550,
+    "gold": false,
+    "atx3": false
+   },
+   "popular": false
   },
   {
    "slug": "msi-mag-a650bn",
@@ -8543,8 +8832,11 @@
     "Câblage": "Non modulaire"
    },
    "compat": {
-    "watts": 650
-   }
+    "watts": 650,
+    "gold": false,
+    "atx3": false
+   },
+   "popular": false
   },
   {
    "slug": "corsair-cx650",
@@ -8589,8 +8881,11 @@
     "Câblage": "Non modulaire"
    },
    "compat": {
-    "watts": 650
-   }
+    "watts": 650,
+    "gold": false,
+    "atx3": false
+   },
+   "popular": false
   },
   {
    "slug": "corsair-rm650e",
@@ -8637,8 +8932,11 @@
     "Câblage": "Modulaire"
    },
    "compat": {
-    "watts": 650
-   }
+    "watts": 650,
+    "gold": true,
+    "atx3": true
+   },
+   "popular": false
   },
   {
    "slug": "corsair-rm750e",
@@ -8686,8 +8984,11 @@
     "Câblage": "Modulaire"
    },
    "compat": {
-    "watts": 750
-   }
+    "watts": 750,
+    "gold": true,
+    "atx3": true
+   },
+   "popular": true
   },
   {
    "slug": "msi-mag-a750gl-pcie5",
@@ -8733,8 +9034,11 @@
     "Câblage": "Modulaire"
    },
    "compat": {
-    "watts": 750
-   }
+    "watts": 750,
+    "gold": true,
+    "atx3": true
+   },
+   "popular": false
   },
   {
    "slug": "be-quiet-pure-power-12-750w",
@@ -8782,8 +9086,11 @@
     "Câblage": "Semi-modulaire"
    },
    "compat": {
-    "watts": 750
-   }
+    "watts": 750,
+    "gold": true,
+    "atx3": true
+   },
+   "popular": false
   },
   {
    "slug": "seasonic-focus-gx-750-atx-3",
@@ -8829,8 +9136,11 @@
     "Câblage": "Modulaire"
    },
    "compat": {
-    "watts": 750
-   }
+    "watts": 750,
+    "gold": true,
+    "atx3": true
+   },
+   "popular": false
   },
   {
    "slug": "corsair-rm850e",
@@ -8877,8 +9187,11 @@
     "Câblage": "Modulaire"
    },
    "compat": {
-    "watts": 850
-   }
+    "watts": 850,
+    "gold": true,
+    "atx3": true
+   },
+   "popular": true
   },
   {
    "slug": "msi-mag-a850gl-pcie5",
@@ -8924,8 +9237,11 @@
     "Câblage": "Modulaire"
    },
    "compat": {
-    "watts": 850
-   }
+    "watts": 850,
+    "gold": true,
+    "atx3": true
+   },
+   "popular": true
   },
   {
    "slug": "be-quiet-pure-power-12-850w",
@@ -8973,8 +9289,11 @@
     "Câblage": "Semi-modulaire"
    },
    "compat": {
-    "watts": 850
-   }
+    "watts": 850,
+    "gold": true,
+    "atx3": true
+   },
+   "popular": false
   },
   {
    "slug": "seasonic-focus-gx-850-atx-3",
@@ -9019,8 +9338,11 @@
     "Câblage": "Modulaire"
    },
    "compat": {
-    "watts": 850
-   }
+    "watts": 850,
+    "gold": true,
+    "atx3": true
+   },
+   "popular": false
   },
   {
    "slug": "corsair-rm1000e",
@@ -9066,8 +9388,11 @@
     "Câblage": "Modulaire"
    },
    "compat": {
-    "watts": 1000
-   }
+    "watts": 1000,
+    "gold": true,
+    "atx3": true
+   },
+   "popular": false
   },
   {
    "slug": "msi-mpg-a1000g-pcie5",
@@ -9114,8 +9439,11 @@
     "Câblage": "Modulaire"
    },
    "compat": {
-    "watts": 1000
-   }
+    "watts": 1000,
+    "gold": true,
+    "atx3": true
+   },
+   "popular": false
   },
   {
    "slug": "seasonic-vertex-gx-1000",
@@ -9160,8 +9488,12 @@
     "Câblage": "Modulaire"
    },
    "compat": {
-    "watts": 1000
-   }
+    "watts": 1000,
+    "gold": true,
+    "atx3": true
+   },
+   "popular": false
   }
- ]
+ ],
+ "_aide_populaire": "popular : sélection éditoriale des références les plus demandées (badge « Populaire » dans BuildRadar). À remplacer par des données de ventes réelles quand un flux en fournit."
 }

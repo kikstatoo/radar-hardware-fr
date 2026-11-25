@@ -37,8 +37,8 @@ except Exception:  # tzdata absent : on reste en UTC
     PARIS = timezone.utc
 
 COLORS = {
-    "bg": "#090B10", "surface": "#111622", "border": "#1E293B", "text": "#E2E8F0",
-    "muted": "#94A3B8", "green": "#00E599", "cyan": "#38BDF8", "amber": "#F59E0B", "rose": "#F43F5E",
+    "bg": "#08070B", "surface": "#121019", "border": "#231F2E", "text": "#F5F3FF",
+    "muted": "#A1A1AA", "green": "#C4B5FD", "cyan": "#8B5CF6", "amber": "#F59E0B", "rose": "#EC4899",
 }
 
 
@@ -193,8 +193,8 @@ def chart_svg(entry: dict, stats: dict) -> tuple[str, str]:
     svg = (f'<svg class="chart" viewBox="0 0 {W} {H}" preserveAspectRatio="none" role="img" '
            f'aria-label="Évolution du meilleur prix sur 30 jours" data-l="{L}" data-r="{R}" data-t="{T}" data-b="{B}" '
            f'data-lo="{lo:.2f}" data-hi="{hi:.2f}">'
-           f'<defs><linearGradient id="chg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#10B981" stop-opacity=".28"/>'
-           f'<stop offset="1" stop-color="#10B981" stop-opacity="0"/></linearGradient></defs>'
+           f'<defs><linearGradient id="chg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8B5CF6" stop-opacity=".28"/>'
+           f'<stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/></linearGradient></defs>'
            f'{grid}<polygon points="{area}" fill="url(#chg)"/>{avg_line}'
            f'<polyline points="{line}" class="ch-line"/>'
            f'<circle cx="{X(pts[i_min][0]):.1f}" cy="{Y(ys[i_min]):.1f}" r="4.5" class="ch-min"/>'
@@ -288,7 +288,7 @@ def sparkline_svg(entry: dict, w: int = 120, h: int = 36) -> str:
     span = (hi - lo) or 1
     pts = " ".join(f"{i * w / (len(ys) - 1):.1f},{h - 3 - (v - lo) / span * (h - 6):.1f}" for i, v in enumerate(ys))
     return (f'<svg class="spark" viewBox="0 0 {w} {h}" width="{w}" height="{h}" aria-hidden="true" focusable="false">'
-            f'<polyline fill="none" stroke="#38BDF8" stroke-width="2" stroke-linejoin="round" '
+            f'<polyline fill="none" stroke="#A78BFA" stroke-width="2" stroke-linejoin="round" '
             f'stroke-linecap="round" points="{pts}"/></svg>')
 
 
@@ -460,7 +460,7 @@ def main() -> int:
                                 "ship_label": label, "ship_free": free,
                                 "item_price": o.get("item_price", o["price"]),
                                 "saving": round(s["price_avg_30d"] - o["price"], 2) if s["price_avg_30d"] and o["price"] < s["price_avg_30d"] - 0.5 else 0,
-                                "color": m.get("color", "#38BDF8"), "is_best": bo is not None and o is bo})
+                                "color": m.get("color", "#A78BFA"), "is_best": bo is not None and o is bo})
         fr_offers = [o for o in offers_view if o["in_stock"] and o["country"] == "FR"]
         best_fr = min(fr_offers, key=lambda o: o["price"]) if fr_offers else None
         best_view = next((o for o in offers_view if o["is_best"]), None)
@@ -623,6 +623,9 @@ def main() -> int:
     # --- Configurateur PC : données compactes embarquées dans la page ---
     steps = [("cpu", "Processeur"), ("motherboard", "Carte mère"), ("ram", "Mémoire vive"), ("gpu", "Carte graphique"),
              ("ssd", "Stockage SSD"), ("cooler", "Refroidissement"), ("case", "Boîtier"), ("psu", "Alimentation")]
+    mkeys = list(merchants)
+    cfg_merchants = [[k, m["name"], m.get("country", "FR"), (m.get("shipping_fr") or {}).get("cost"),
+                      (m.get("shipping_fr") or {}).get("free_from")] for k, m in merchants.items()]
     cfg_items = []
     for it in items:
         bv, bf = it["best_view"], it["best_fr"]
@@ -630,9 +633,14 @@ def main() -> int:
                           "u": it["url"], "i": it["image"], "k": it["p"].get("compat", {}),
                           "e": [bv["price"], bv["merchant_name"], bv["country"], bv["url"]] if bv else None,
                           "f": [bf["price"], bf["merchant_name"], bf["country"], bf["url"]] if bf else None,
-                          "a": it["s"]["price_avg_30d"], "l": it["s"]["light"]})
-    render("configurateur.html", "configurateur.html", 0, steps=steps, cfg_json=json_ld({"steps": steps, "items": cfg_items}),
-           page_title=f"Configurateur PC gamer : compatibilité et meilleurs prix européens ({month_year_fr(build_dt)})",
+                          "a": it["s"]["price_avg_30d"], "l": it["s"]["light"], "pp": it["p"].get("perf_score"),
+                          "pop": bool(it["p"].get("popular")),
+                          # offres en stock : [indice marchand, prix article, lien] pour l'optimiseur de panier
+                          "o": [[mkeys.index(o["merchant"]), o["item_price"], o["url"]] for o in it["offers"]
+                                if o["in_stock"] and o["merchant"] in mkeys]})
+    render("configurateur.html", "configurateur.html", 0, steps=steps,
+           cfg_json=json_ld({"steps": steps, "items": cfg_items, "merchants": cfg_merchants}),
+           page_title=f"BuildRadar, le configurateur PC : compatibilité et meilleurs prix européens ({month_year_fr(build_dt)})",
            meta_description=("Assemblez votre PC pièce par pièce : vérification automatique de compatibilité (socket, RAM, format, "
                              "dimensions, alimentation) et meilleur prix livré en France pour chaque composant."),
            og_image=None, page_kind="config")
