@@ -95,6 +95,17 @@
       state.minDiscount = +heroCta.dataset.minDiscount || 10;
       sort.value = "discount";
       apply();
+      // Aucune baisse de 10 % aujourd'hui : repli sur les vraies promos, puis sur les plus fortes baisses
+      var note = "";
+      if (empty.hidden === false) {
+        state.minDiscount = 0; state.profile = "deals"; apply();
+        note = "Aucune baisse de 10 % ou plus aujourd'hui : voici les vraies promos (−8 % min).";
+        if (empty.hidden === false) {
+          state.profile = ""; apply();
+          note = "Aucune vraie promo aujourd'hui : voici les plus fortes baisses actuelles.";
+        }
+        count.textContent = note + " " + count.textContent;
+      }
       var target = $("tous");
       if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
     });
