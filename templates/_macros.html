@@ -1,0 +1,91 @@
+{% macro badges(s, threshold) %}
+{% if s.is_all_time_low %}
+<span class="badge badge-atl">Plus bas historique</span>
+{% endif %}
+{% if s.is_true_deal %}
+<span class="badge badge-deal">Vraie promo -{{ s.discount_vs_avg|num(0) }}&nbsp;%</span>
+{% endif %}
+{% endmacro %}
+
+{% macro score_ring(score, level) %}
+<div class="score score-{{ level }}" role="img" aria-label="Score Vraie Promo : {{ score }} sur 100" style="--v: {{ score }}">
+  <span class="mono">{{ score }}</span>
+</div>
+{% endmacro %}
+
+{% macro cta(offer, label="Voir l'offre →", cls="") %}
+{% if offer %}
+<a class="btn btn-cta {{ cls }}" href="{{ offer.url }}" rel="nofollow sponsored noopener" target="_blank">{{ label }}</a>
+{% else %}
+<span class="btn btn-disabled">Rupture de stock</span>
+{% endif %}
+{% endmacro %}
+
+{% macro product_card(it, root, threshold) %}
+{% set s = it.s %}
+<article class="card product-card"
+  data-name="{{ it.p.name|lower }}" data-cat="{{ it.p.category }}" data-brand="{{ it.p.brand }}"
+  data-price="{{ s.price_current or 0 }}" data-deal="{{ 1 if s.is_true_deal else 0 }}"
+  data-discount="{{ s.discount_vs_avg }}" data-ratio="{{ s.price_per_perf or 999999 }}" data-score="{{ s.true_deal_score }}">
+  <div class="card-top">
+    <span class="chip">{{ it.cat.label }}</span>
+    {{ score_ring(s.true_deal_score, s.verdict_level) }}
+  </div>
+  <h3 class="card-title"><a href="{{ root }}{{ it.url }}">{{ it.p.name }}</a></h3>
+  <div class="badges">{{ badges(s, threshold) }}</div>
+  <div class="card-price">
+    <span class="price mono">{{ s.price_current|price }}</span>
+    {% if s.discount_vs_avg >= 1 %}<s class="old mono" title="Prix moyen sur 30 jours">{{ s.price_avg_30d|price }}</s>{% endif %}
+  </div>
+  <div class="card-meta small muted">
+    <span>{{ it.best_merchant }}</span>
+    {% if s.price_per_perf %}<span class="mono" title="Prix par point de performance">{{ s.price_per_perf|price }}/pt</span>{% endif %}
+  </div>
+  {{ it.spark|safe }}
+  <div class="card-actions">
+    {{ cta(s.best_offer, "Voir l'offre →") }}
+    <a class="btn btn-ghost" href="{{ root }}{{ it.url }}">Historique</a>
+  </div>
+</article>
+{% endmacro %}
+
+{% macro filters(brands, max_price, show_category=true, categories=None) %}
+<form class="filters card" id="filters" role="search" onsubmit="return false">
+  <div class="field field-search">
+    <label for="f-q">Rechercher un composant</label>
+    <input id="f-q" type="search" placeholder="Ex : RTX 5070, 9800X3D, 990 PRO…" autocomplete="off">
+  </div>
+  {% if show_category %}
+  <div class="field">
+    <label for="f-cat">Catégorie</label>
+    <select id="f-cat">
+      <option value="">Toutes</option>
+      {% for key, c in categories.items() %}<option value="{{ key }}">{{ c.label }}</option>{% endfor %}
+    </select>
+  </div>
+  {% endif %}
+  <div class="field">
+    <label for="f-brand">Marque</label>
+    <select id="f-brand">
+      <option value="">Toutes</option>
+      {% for b in brands %}<option value="{{ b }}">{{ b }}</option>{% endfor %}
+    </select>
+  </div>
+  <div class="field">
+    <label for="f-price">Budget max : <output id="f-price-out" class="mono">{{ max_price }} €</output></label>
+    <input id="f-price" type="range" min="0" max="{{ max_price }}" step="10" value="{{ max_price }}">
+  </div>
+  <div class="field">
+    <label for="f-sort">Trier par</label>
+    <select id="f-sort">
+      <option value="score">Score Vraie Promo</option>
+      <option value="discount">Plus grosse baisse</option>
+      <option value="ratio">Meilleur prix / perf</option>
+      <option value="price-asc">Prix croissant</option>
+      <option value="price-desc">Prix décroissant</option>
+    </select>
+  </div>
+  <label class="check"><input id="f-deals" type="checkbox"> Uniquement les vraies promos</label>
+  <p class="small muted results-count" id="f-count" aria-live="polite"></p>
+</form>
+{% endmacro %}

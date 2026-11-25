@@ -1,0 +1,84 @@
+# Radar Hardware FR — mise à jour automatique H24 (gratuite sur dépôt public)
+name: Mise à jour des prix & déploiement
+
+on:
+  schedule:
+    - cron: '0 * * * *'        # toutes les heures (heure UTC)
+  workflow_dispatch:            # bouton « Run workflow » dans l'onglet Actions
+  push:
+    branches: [main]            # déploie aussi après chacun de tes pushs (les commits du bot portent [skip ci])
+
+permissions:
+  contents: write               # commit des fichiers data/
+  pages: write                  # publication GitHub Pages
+  id-token: write               # authentification du déploiement Pages
+
+concurrency:
+  group: radar-auto-update
+  cancel-in-progress: false     # on n'interrompt jamais une mise à jour en cours
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Récupération du dépôt
+        uses: actions/checkout@v4
+
+      - name: Installation de Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Installation des dépendances
+        run: pip install -r requirements.txt
+
+      - name: 1. Collecte des prix
+        run: python scripts/fetch_prices.py
+
+      - name: 2. Analyse, graphiques et génération du site
+        run: python scripts/build_site.py
+
+      - name: 3. Alertes Discord / Telegram / X
+        continue-on-error: true   # une API sociale en panne ne doit jamais bloquer le site
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+        run: python scripts/notify.py
+
+      - name: Sauvegarde des données dans le dépôt
+        run: |
+          git config user.name "radar-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/price_history.json data/alerts_sent.json data/offers_latest.json data/sim_state.json data/site_stats.json
+          if git diff --cached --quiet; then
+            echo "Aucune donnée modifiée."
+          else
+            git commit -m "Mise à jour des prix $(date -u +'%Y-%m-%d %H:%M') UTC [skip ci]"
+            for i in 1 2 3; do
+              git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && break
+              echo "Push refusé, nouvelle tentative ($i)…"; sleep 5
+            done
+          fi
+
+      - name: Préparation de l'artefact GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Déploiement sur GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,969 @@
+{
+  "_aide": "Catalogue initial. price_ref = prix de référence en euros (point de départ de la simulation). perf_score = indice de performance gaming dans la catégorie (le modèle de référence = 100). EAN et MPN vérifiés auprès de revendeurs européens (nov. 2026). Matching des flux : EAN ('ean' puis liste 'eans'), puis MPN, puis mots-clés. price_ref ne sert qu'à la simulation.",
+  "categories": {
+    "cpu": {
+      "label": "Processeurs",
+      "slug": "processeurs",
+      "singular": "processeur",
+      "perf_label": "Indice gaming 1080p (9800X3D = 100)"
+    },
+    "gpu": {
+      "label": "Cartes graphiques",
+      "slug": "cartes-graphiques",
+      "singular": "carte graphique",
+      "perf_label": "Indice gaming 1440p (RTX 5080 = 100)"
+    },
+    "ram": {
+      "label": "RAM DDR5",
+      "slug": "ram-ddr5",
+      "singular": "kit mémoire",
+      "perf_label": "Indice mémoire (Corsair 6000 CL30 = 100)"
+    },
+    "ssd": {
+      "label": "SSD NVMe",
+      "slug": "ssd-nvme",
+      "singular": "SSD",
+      "perf_label": "Indice stockage (990 PRO = 100)"
+    },
+    "motherboard": {
+      "label": "Cartes mères",
+      "slug": "cartes-meres",
+      "singular": "carte mère",
+      "perf_label": "Indice équipement (B850 Gaming Plus = 100)"
+    }
+  },
+  "products": [
+    {
+      "slug": "ryzen-7-9800x3d",
+      "name": "AMD Ryzen 7 9800X3D",
+      "category": "cpu",
+      "brand": "AMD",
+      "mpn": "100-100001084WOF",
+      "ean": "0730143315289",
+      "ean_note": "",
+      "eans": [],
+      "price_ref": 449,
+      "perf_score": 100,
+      "merchants": [
+        "amazon",
+        "topachat",
+        "rueducommerce",
+        "cdiscount",
+        "fnac",
+        "aliexpress"
+      ],
+      "search_query": "AMD Ryzen 7 9800X3D",
+      "match_keywords": [
+        "9800x3d"
+      ],
+      "exclude_keywords": [
+        "pc gamer",
+        "pc complet",
+        "ordinateur",
+        "laptop",
+        "portable"
+      ],
+      "specs": {
+        "Cœurs / Threads": "8 / 16",
+        "Fréquence de base": "4,7 GHz",
+        "Fréquence boost": "5,2 GHz",
+        "Cache L3": "96 Mo (3D V-Cache 2e gén.)",
+        "Socket": "AM5",
+        "TDP": "120 W",
+        "iGPU": "Radeon (2 CU)"
+      }
+    },
+    {
+      "slug": "ryzen-7-9700x",
+      "name": "AMD Ryzen 7 9700X",
+      "category": "cpu",
+      "brand": "AMD",
+      "mpn": "100-100001404WOF",
+      "ean": "0730143315593",
+      "ean_note": "",
+      "eans": [],
+      "price_ref": 289,
+      "perf_score": 78,
+      "merchants": [
+        "amazon",
+        "topachat",
+        "rueducommerce",
+        "cdiscount",
+        "fnac",
+        "aliexpress"
+      ],
+      "search_query": "AMD Ryzen 7 9700X",
+      "match_keywords": [
+        "9700x"
+      ],
+      "exclude_keywords": [
+        "pc gamer",
+        "pc complet",
+        "ordinateur",
+        "laptop",
+        "portable"
+      ],
+      "specs": {
+        "Cœurs / Threads": "8 / 16",
+        "Fréquence de base": "3,8 GHz",
+        "Fréquence boost": "5,5 GHz",
+        "Cache L3": "32 Mo",
+        "Socket": "AM5",
+        "TDP": "65 W",
+        "iGPU": "Radeon (2 CU)"
+      }
+    },
+    {
+      "slug": "ryzen-7-7800x3d",
+      "name": "AMD Ryzen 7 7800X3D",
+      "category": "cpu",
+      "brand": "AMD",
+      "mpn": "100-100000910WOF",
+      "ean": "0730143314930",
+      "ean_note": "",
+      "eans": [],
+      "price_ref": 349,
+      "perf_score": 88,
+      "merchants": [
+        "amazon",
+        "topachat",
+        "rueducommerce",
+        "cdiscount",
+        "fnac",
+        "aliexpress"
+      ],
+      "search_query": "AMD Ryzen 7 7800X3D",
+      "match_keywords": [
+        "7800x3d"
+      ],
+      "exclude_keywords": [
+        "pc gamer",
+        "pc complet",
+        "ordinateur",
+        "laptop",
+        "portable"
+      ],
+      "specs": {
+        "Cœurs / Threads": "8 / 16",
+        "Fréquence de base": "4,2 GHz",
+        "Fréquence boost": "5,0 GHz",
+        "Cache L3": "96 Mo (3D V-Cache)",
+        "Socket": "AM5",
+        "TDP": "120 W",
+        "iGPU": "Radeon (2 CU)"
+      }
+    },
+    {
+      "slug": "ryzen-5-9600x",
+      "name": "AMD Ryzen 5 9600X",
+      "category": "cpu",
+      "brand": "AMD",
+      "mpn": "100-100001405WOF",
+      "ean": "0730143315609",
+      "ean_note": "",
+      "eans": [],
+      "price_ref": 199,
+      "perf_score": 74,
+      "merchants": [
+        "amazon",
+        "topachat",
+        "rueducommerce",
+        "cdiscount",
+        "fnac",
+        "aliexpress"
+      ],
+      "search_query": "AMD Ryzen 5 9600X",
+      "match_keywords": [
+        "9600x"
+      ],
+      "exclude_keywords": [
+        "pc gamer",
+        "pc complet",
+        "ordinateur",
+        "laptop",
+        "portable",
+        "9600x3d"
+      ],
+      "specs": {
+        "Cœurs / Threads": "6 / 12",
+        "Fréquence de base": "3,9 GHz",
+        "Fréquence boost": "5,4 GHz",
+        "Cache L3": "32 Mo",
+        "Socket": "AM5",
+        "TDP": "65 W",
+        "iGPU": "Radeon (2 CU)"
+      }
+    },
+    {
+      "slug": "ryzen-5-9500f",
+      "name": "AMD Ryzen 5 9500F",
+      "category": "cpu",
+      "brand": "AMD",
+      "mpn": "100-000001406",
+      "ean": "",
+      "ean_note": "Vendu uniquement en version tray en Europe : pas d'EAN fabricant unique (chaque distributeur a le sien). Matching par MPN 100-000001406.",
+      "eans": [],
+      "price_ref": 159,
+      "perf_score": 69,
+      "merchants": [
+        "amazon",
+        "topachat",
+        "rueducommerce",
+        "cdiscount",
+        "fnac",
+        "aliexpress"
+      ],
+      "search_query": "AMD Ryzen 5 9500F",
+      "match_keywords": [
+        "9500f"
+      ],
+      "exclude_keywords": [
+        "pc gamer",
+        "pc complet",
+        "ordinateur",
+        "laptop",
+        "portable"
+      ],
+      "specs": {
+        "Cœurs / Threads": "6 / 12",
+        "Fréquence de base": "3,8 GHz",
+        "Fréquence boost": "5,0 GHz",
+        "Cache L3": "32 Mo",
+        "Socket": "AM5",
+        "TDP": "65 W",
+        "iGPU": "Non"
+      }
+    },
+    {
+      "slug": "core-ultra-7-265k",
+      "name": "Intel Core Ultra 7 265K",
+      "category": "cpu",
+      "brand": "Intel",
+      "mpn": "BX80768265K",
+      "ean": "5032037282062",
+      "ean_note": "",
+      "eans": [],
+      "price_ref": 289,
+      "perf_score": 80,
+      "merchants": [
+        "amazon",
+        "topachat",
+        "rueducommerce",
+        "cdiscount",
+        "fnac"
+      ],
+      "search_query": "Intel Core Ultra 7 265K",
+      "match_keywords": [
+        "ultra 7",
+        "265k"
+      ],
+      "exclude_keywords": [
+        "pc gamer",
+        "pc complet",
+        "ordinateur",
+        "laptop",
+        "portable",
+        "265kf"
+      ],
+      "specs": {
+        "Cœurs / Threads": "20 (8P + 12E) / 20",
+        "Fréquence de base": "3,9 GHz (P-core)",
+        "Fréquence boost": "5,5 GHz",
+        "Cache L3": "30 Mo (Smart Cache)",
+        "Socket": "LGA 1851",
+        "TDP": "125 W",
+        "iGPU": "Intel Graphics (4 Xe)"
+      }
+    },
+    {
+      "slug": "core-ultra-5-245kf",
+      "name": "Intel Core Ultra 5 245KF",
+      "category": "cpu",
+      "brand": "Intel",
+      "mpn": "BX80768245KF",
+      "ean": "5032037282109",
+      "ean_note": "",
+      "eans": [],
+      "price_ref": 189,
+      "perf_score": 72,
+      "merchants": [
+        "amazon",
+        "topachat",
+        "rueducommerce",
+        "cdiscount",
+        "fnac"
+      ],
+      "search_query": "Intel Core Ultra 5 245KF",
+      "match_keywords": [
+        "ultra 5",
+        "245kf"
+      ],
+      "exclude_keywords": [
+        "pc gamer",
+        "pc complet",
+        "ordinateur",
+        "laptop",
+        "portable"
+      ],
+      "specs": {
+        "Cœurs / Threads": "14 (6P + 8E) / 14",
+        "Fréquence de base": "4,2 GHz (P-core)",
+        "Fréquence boost": "5,2 GHz",
+        "Cache L3": "24 Mo (Smart Cache)",
+        "Socket": "LGA 1851",
+        "TDP": "125 W",
+        "iGPU": "Non"
+      }
+    },
+    {
+      "slug": "rtx-5080-16go",
+      "name": "NVIDIA GeForce RTX 5080 16 Go",
+      "category": "gpu",
+      "brand": "NVIDIA",
+      "mpn": "",
+      "ean": "",
+      "ean_note": "Pas d'EAN unique : chaque fabricant de carte (ASUS, MSI, Gigabyte…) a son propre EAN. Matching par mots-clés, ou ajoute les EAN des modèles voulus dans 'eans'.",
+      "eans": [],
+      "price_ref": 1099,
+      "perf_score": 100,
+      "merchants": [
+        "amazon",
+        "topachat",
+        "rueducommerce",
+        "cdiscount",
+        "fnac"
+      ],
+      "search_query": "NVIDIA GeForce RTX 5080 16 Go",
+      "match_keywords": [
+        "5080"
+      ],
+      "exclude_keywords": [
+        "pc gamer",
+        "pc complet",
+        "ordinateur",
+        "laptop",
+        "portable",
+        "5080 super"
+      ],
+      "specs": {
+        "Unités de calcul": "10 752 cœurs CUDA",
+        "Mémoire vidéo": "16 Go GDDR7",
+        "Bus mémoire": "256 bits",
+        "Consommation (TGP)": "360 W",
+        "Architecture": "Blackwell"
+      }
+    },
+    {
+      "slug": "rtx-5070-ti-16go",
+      "name": "NVIDIA GeForce RTX 5070 Ti 16 Go",
+      "category": "gpu",
+      "brand": "NVIDIA",
+      "mpn": "",
+      "ean": "",
+      "ean_note": "Pas d'EAN unique : chaque fabricant de carte (ASUS, MSI, Gigabyte…) a son propre EAN. Matching par mots-clés, ou ajoute les EAN des modèles voulus dans 'eans'.",
+      "eans": [],
+      "price_ref": 799,
+      "perf_score": 85,
+      "merchants": [
+        "amazon",
+        "topachat",
+        "rueducommerce",
+        "cdiscount",
+        "fnac"
+      ],
+      "search_query": "NVIDIA GeForce RTX 5070 Ti 16 Go",
+      "match_keywords": [
+        "5070 ti"
+      ],
+      "exclude_keywords": [
+        "pc gamer",
+        "pc complet",
+        "ordinateur",
+        "laptop",
+        "portable",
+        "super"
+      ],
+      "specs": {
+        "Unités de calcul": "8 960 cœurs CUDA",
+        "Mémoire vidéo": "16 Go GDDR7",
+        "Bus mémoire": "256 bits",
+        "Consommation (TGP)": "300 W",
+        "Architecture": "Blackwell"
+      }
+    },
+    {
+      "slug": "rtx-5070-12go",
+      "name": "NVIDIA GeForce RTX 5070 12 Go",
+      "category": "gpu",
+      "brand": "NVIDIA",
+      "mpn": "",
+      "ean": "",
+      "ean_note": "Pas d'EAN unique : chaque fabricant de carte (ASUS, MSI, Gigabyte…) a son propre EAN. Matching par mots-clés, ou ajoute les EAN des modèles voulus dans 'eans'.",
+      "eans": [],
+      "price_ref": 559,
+      "perf_score": 68,
+      "merchants": [
+        "amazon",
+        "topachat",
+        "rueducommerce",
+        "cdiscount",
+        "fnac"
+      ],
+      "search_query": "NVIDIA GeForce RTX 5070 12 Go",
+      "match_keywords": [
+        "5070"
+      ],
+      "exclude_keywords": [
+        "pc gamer",
+        "pc complet",
+        "ordinateur",
+        "laptop",
+        "portable",
+        "5070 ti",
+        "super"
+      ],
+      "specs": {
+        "Unités de calcul": "6 144 cœurs CUDA",
+        "Mémoire vidéo": "12 Go GDDR7",
+        "Bus mémoire": "192 bits",
+        "Consommation (TGP)": "250 W",
+        "Architecture": "Blackwell"
+      }
+    },
+    {
+      "slug": "rtx-5060-ti-16go",
+      "name": "NVIDIA GeForce RTX 5060 Ti 16 Go",
+      "category": "gpu",
+      "brand": "NVIDIA",
+      "mpn": "",
+      "ean": "",
+      "ean_note": "Pas d'EAN unique : chaque fabricant de carte (ASUS, MSI, Gigabyte…) a son propre EAN. Matching par mots-clés, ou ajoute les EAN des modèles voulus dans 'eans'.",
+      "eans": [],
+      "price_ref": 449,
+      "perf_score": 52,
+      "merchants": [
+        "amazon",
+        "topachat",
+        "rueducommerce",
+        "cdiscount",
+        "fnac"
+      ],
+      "search_query": "NVIDIA GeForce RTX 5060 Ti 16 Go",
+      "match_keywords": [
+        "5060 ti",
+        "16"
+      ],
+      "exclude_keywords": [
+        "pc gamer",
+        "pc complet",
+        "ordinateur",
+        "laptop",
+        "portable",
+        "8 go",
+        "8go",
+        "8gb"
+      ],
+      "specs": {
+        "Unités de calcul": "4 608 cœurs CUDA",
+        "Mémoire vidéo": "16 Go GDDR7",
+        "Bus mémoire": "128 bits",
+        "Consommation (TGP)": "180 W",
+        "Architecture": "Blackwell"
+      }
+    },
+    {
+      "slug": "rtx-5060-ti-8go",
+      "name": "NVIDIA GeForce RTX 5060 Ti 8 Go",
+      "category": "gpu",
+      "brand": "NVIDIA",
+      "mpn": "",
+      "ean": "",
+      "ean_note": "Pas d'EAN unique : chaque fabricant de carte (ASUS, MSI, Gigabyte…) a son propre EAN. Matching par mots-clés, ou ajoute les EAN des modèles voulus dans 'eans'.",
+      "eans": [],
+      "price_ref": 389,
+      "perf_score": 48,
+      "merchants": [
+        "amazon",
+        "topachat",
+        "rueducommerce",
+        "cdiscount",
+        "fnac"
+      ],
+      "search_query": "NVIDIA GeForce RTX 5060 Ti 8 Go",
+      "match_keywords": [
+        "5060 ti",
+        "8"
+      ],
+      "exclude_keywords": [
+        "pc gamer",
+        "pc complet",
+        "ordinateur",
+        "laptop",
+        "portable",
+        "16 go",
+        "16go",
+        "16gb"
+      ],
+      "specs": {
+        "Unités de calcul": "4 608 cœurs CUDA",
+        "Mémoire vidéo": "8 Go GDDR7",
+        "Bus mémoire": "128 bits",
+        "Consommation (TGP)": "180 W",
+        "Architecture": "Blackwell"
+      }
+    },
+    {
+      "slug": "rtx-5060-8go",
+      "name": "NVIDIA GeForce RTX 5060 8 Go",
+      "category": "gpu",
+      "brand": "NVIDIA",
+      "mpn": "",
+      "ean": "",
+      "ean_note": "Pas d'EAN unique : chaque fabricant de carte (ASUS, MSI, Gigabyte…) a son propre EAN. Matching par mots-clés, ou ajoute les EAN des modèles voulus dans 'eans'.",
+      "eans": [],
+      "price_ref": 309,
+      "perf_score": 42,
+      "merchants": [
+        "amazon",
+        "topachat",
+        "rueducommerce",
+        "cdiscount",
+        "fnac"
+      ],
+      "search_query": "NVIDIA GeForce RTX 5060 8 Go",
+      "match_keywords": [
+        "5060"
+      ],
+      "exclude_keywords": [
+        "pc gamer",
+        "pc complet",
+        "ordinateur",
+        "laptop",
+        "portable",
+        "5060 ti"
+      ],
+      "specs": {
+        "Unités de calcul": "3 840 cœurs CUDA",
+        "Mémoire vidéo": "8 Go GDDR7",
+        "Bus mémoire": "128 bits",
+        "Consommation (TGP)": "145 W",
+        "Architecture": "Blackwell"
+      }
+    },
+    {
+      "slug": "rx-9070-xt-16go",
+      "name": "AMD Radeon RX 9070 XT 16 Go",
+      "category": "gpu",
+      "brand": "AMD",
+      "mpn": "",
+      "ean": "",
+      "ean_note": "Pas d'EAN unique : chaque fabricant de carte (ASUS, MSI, Gigabyte…) a son propre EAN. Matching par mots-clés, ou ajoute les EAN des modèles voulus dans 'eans'.",
+      "eans": [],
+      "price_ref": 669,
+      "perf_score": 82,
+      "merchants": [
+        "amazon",
+        "topachat",
+        "rueducommerce",
+        "cdiscount",
+        "fnac"
+      ],
+      "search_query": "AMD Radeon RX 9070 XT 16 Go",
+      "match_keywords": [
+        "9070 xt"
+      ],
+      "exclude_keywords": [
+        "pc gamer",
+        "pc complet",
+        "ordinateur",
+        "laptop",
+        "portable"
+      ],
+      "specs": {
+        "Unités de calcul": "64 CU / 4 096 processeurs de flux",
+        "Mémoire vidéo": "16 Go GDDR6",
+        "Bus mémoire": "256 bits",
+        "Consommation (TGP)": "304 W",
+        "Architecture": "RDNA 4"
+      }
+    },
+    {
+      "slug": "rx-9070-16go",
+      "name": "AMD Radeon RX 9070 16 Go",
+      "category": "gpu",
+      "brand": "AMD",
+      "mpn": "",
+      "ean": "",
+      "ean_note": "Pas d'EAN unique : chaque fabricant de carte (ASUS, MSI, Gigabyte…) a son propre EAN. Matching par mots-clés, ou ajoute les EAN des modèles voulus dans 'eans'.",
+      "eans": [],
+      "price_ref": 589,
+      "perf_score": 74,
+      "merchants": [
+        "amazon",
+        "topachat",
+        "rueducommerce",
+        "cdiscount",
+        "fnac"
+      ],
+      "search_query": "AMD Radeon RX 9070 16 Go",
+      "match_keywords": [
+        "9070"
+      ],
+      "exclude_keywords": [
+        "pc gamer",
+        "pc complet",
+        "ordinateur",
+        "laptop",
+        "portable",
+        "9070 xt",
+        "9070xt",
+        "gre"
+      ],
+      "specs": {
+        "Unités de calcul": "56 CU / 3 584 processeurs de flux",
+        "Mémoire vidéo": "16 Go GDDR6",
+        "Bus mémoire": "256 bits",
+        "Consommation (TGP)": "220 W",
+        "Architecture": "RDNA 4"
+      }
+    },
+    {
+      "slug": "rx-9060-xt-16go",
+      "name": "AMD Radeon RX 9060 XT 16 Go",
+      "category": "gpu",
+      "brand": "AMD",
+      "mpn": "",
+      "ean": "",
+      "ean_note": "Pas d'EAN unique : chaque fabricant de carte (ASUS, MSI, Gigabyte…) a son propre EAN. Matching par mots-clés, ou ajoute les EAN des modèles voulus dans 'eans'.",
+      "eans": [],
+      "price_ref": 379,
+      "perf_score": 50,
+      "merchants": [
+        "amazon",
+        "topachat",
+        "rueducommerce",
+        "cdiscount",
+        "fnac"
+      ],
+      "search_query": "AMD Radeon RX 9060 XT 16 Go",
+      "match_keywords": [
+        "9060 xt",
+        "16"
+      ],
+      "exclude_keywords": [
+        "pc gamer",
+        "pc complet",
+        "ordinateur",
+        "laptop",
+        "portable",
+        "8 go",
+        "8go",
+        "8gb"
+      ],
+      "specs": {
+        "Unités de calcul": "32 CU / 2 048 processeurs de flux",
+        "Mémoire vidéo": "16 Go GDDR6",
+        "Bus mémoire": "128 bits",
+        "Consommation (TGP)": "160 W",
+        "Architecture": "RDNA 4"
+      }
+    },
+    {
+      "slug": "corsair-vengeance-32go-ddr5-6000-cl30",
+      "name": "Corsair Vengeance 32 Go (2x16 Go) DDR5 6000 MHz CL30",
+      "category": "ram",
+      "brand": "Corsair",
+      "mpn": "CMK32GX5M2B6000C30",
+      "ean": "0840006671350",
+      "ean_note": "",
+      "eans": [],
+      "price_ref": 549,
+      "perf_score": 100,
+      "merchants": [
+        "amazon",
+        "topachat",
+        "rueducommerce",
+        "cdiscount",
+        "fnac",
+        "aliexpress"
+      ],
+      "search_query": "Corsair Vengeance 32 Go (2x16 Go) DDR5 6000 MHz CL30",
+      "match_keywords": [
+        "vengeance",
+        "32",
+        "6000",
+        "cl30"
+      ],
+      "exclude_keywords": [
+        "rgb"
+      ],
+      "specs": {
+        "Capacité": "32 Go (2 x 16 Go)",
+        "Fréquence": "6000 MHz",
+        "Latence": "CL30-36-36-76",
+        "Tension": "1,40 V",
+        "RGB": "Non",
+        "Profils": "Intel XMP 3.0"
+      }
+    },
+    {
+      "slug": "gskill-trident-z5-neo-rgb-32go-ddr5-6000-cl30",
+      "name": "G.Skill Trident Z5 Neo RGB 32 Go DDR5 6000 MHz CL30",
+      "category": "ram",
+      "brand": "G.Skill",
+      "mpn": "F5-6000J3038F16GX2-TZ5NR",
+      "ean": "4713294232625",
+      "ean_note": "",
+      "eans": [],
+      "price_ref": 569,
+      "perf_score": 101,
+      "merchants": [
+        "amazon",
+        "topachat",
+        "rueducommerce",
+        "cdiscount",
+        "fnac",
+        "aliexpress"
+      ],
+      "search_query": "G.Skill Trident Z5 Neo RGB 32 Go DDR5 6000 MHz CL30",
+      "match_keywords": [
+        "trident",
+        "neo",
+        "rgb",
+        "32",
+        "6000"
+      ],
+      "exclude_keywords": [],
+      "specs": {
+        "Capacité": "32 Go (2 x 16 Go)",
+        "Fréquence": "6000 MHz",
+        "Latence": "CL30-38-38-96",
+        "Tension": "1,35 V",
+        "RGB": "Oui",
+        "Profils": "AMD EXPO"
+      }
+    },
+    {
+      "slug": "kingston-fury-beast-32go-ddr5-6000-cl30",
+      "name": "Kingston Fury Beast 32 Go DDR5 6000 MHz CL30",
+      "category": "ram",
+      "brand": "Kingston",
+      "mpn": "KF560C30BBEK2-32",
+      "ean": "0740617342994",
+      "ean_note": "",
+      "eans": [],
+      "price_ref": 539,
+      "perf_score": 100,
+      "merchants": [
+        "amazon",
+        "topachat",
+        "rueducommerce",
+        "cdiscount",
+        "fnac",
+        "aliexpress"
+      ],
+      "search_query": "Kingston Fury Beast 32 Go DDR5 6000 MHz CL30",
+      "match_keywords": [
+        "fury beast",
+        "32",
+        "6000",
+        "cl30"
+      ],
+      "exclude_keywords": [
+        "rgb"
+      ],
+      "specs": {
+        "Capacité": "32 Go (2 x 16 Go)",
+        "Fréquence": "6000 MHz",
+        "Latence": "CL30-36-36",
+        "Tension": "1,40 V",
+        "RGB": "Non",
+        "Profils": "AMD EXPO + Intel XMP 3.0"
+      }
+    },
+    {
+      "slug": "samsung-990-pro-2to",
+      "name": "Samsung 990 PRO 2 To PCIe 4.0",
+      "category": "ssd",
+      "brand": "Samsung",
+      "mpn": "MZ-V9P2T0BW",
+      "ean": "8806094215038",
+      "ean_note": "",
+      "eans": [],
+      "price_ref": 399,
+      "perf_score": 100,
+      "merchants": [
+        "amazon",
+        "topachat",
+        "rueducommerce",
+        "cdiscount",
+        "fnac",
+        "aliexpress"
+      ],
+      "search_query": "Samsung 990 PRO 2 To PCIe 4.0",
+      "match_keywords": [
+        "990 pro",
+        "2"
+      ],
+      "exclude_keywords": [
+        "heatsink",
+        "dissipateur"
+      ],
+      "specs": {
+        "Capacité": "2 To",
+        "Interface": "PCIe 4.0 x4 NVMe 2.0",
+        "Lecture séquentielle": "7 450 Mo/s",
+        "Écriture séquentielle": "6 900 Mo/s",
+        "Endurance": "1 200 To écrits",
+        "Format": "M.2 2280"
+      }
+    },
+    {
+      "slug": "wd-black-sn850x-2to",
+      "name": "WD_BLACK SN850X 2 To PCIe 4.0",
+      "category": "ssd",
+      "brand": "Western Digital",
+      "mpn": "WDS200T2X0E",
+      "ean": "0718037891408",
+      "ean_note": "",
+      "eans": [],
+      "price_ref": 349,
+      "perf_score": 98,
+      "merchants": [
+        "amazon",
+        "topachat",
+        "rueducommerce",
+        "cdiscount",
+        "fnac",
+        "aliexpress"
+      ],
+      "search_query": "WD_BLACK SN850X 2 To PCIe 4.0",
+      "match_keywords": [
+        "sn850x",
+        "2"
+      ],
+      "exclude_keywords": [
+        "heatsink",
+        "dissipateur"
+      ],
+      "specs": {
+        "Capacité": "2 To",
+        "Interface": "PCIe 4.0 x4 NVMe",
+        "Lecture séquentielle": "7 300 Mo/s",
+        "Écriture séquentielle": "6 600 Mo/s",
+        "Endurance": "1 200 To écrits",
+        "Format": "M.2 2280"
+      }
+    },
+    {
+      "slug": "crucial-t500-2to",
+      "name": "Crucial T500 2 To PCIe 4.0",
+      "category": "ssd",
+      "brand": "Crucial",
+      "mpn": "CT2000T500SSD8",
+      "ean": "0649528939234",
+      "ean_note": "",
+      "eans": [],
+      "price_ref": 329,
+      "perf_score": 95,
+      "merchants": [
+        "amazon",
+        "topachat",
+        "rueducommerce",
+        "cdiscount",
+        "fnac",
+        "aliexpress"
+      ],
+      "search_query": "Crucial T500 2 To PCIe 4.0",
+      "match_keywords": [
+        "t500",
+        "2"
+      ],
+      "exclude_keywords": [
+        "heatsink",
+        "dissipateur"
+      ],
+      "specs": {
+        "Capacité": "2 To",
+        "Interface": "PCIe 4.0 x4 NVMe 2.0",
+        "Lecture séquentielle": "7 400 Mo/s",
+        "Écriture séquentielle": "7 000 Mo/s",
+        "Endurance": "1 200 To écrits",
+        "Format": "M.2 2280"
+      }
+    },
+    {
+      "slug": "msi-b850-gaming-plus-wifi",
+      "name": "MSI B850 Gaming Plus WiFi",
+      "category": "motherboard",
+      "brand": "MSI",
+      "mpn": "7E56-001R",
+      "ean": "4711377285438",
+      "ean_note": "",
+      "eans": [],
+      "price_ref": 219,
+      "perf_score": 100,
+      "merchants": [
+        "amazon",
+        "topachat",
+        "rueducommerce",
+        "cdiscount",
+        "fnac"
+      ],
+      "search_query": "MSI B850 Gaming Plus WiFi",
+      "match_keywords": [
+        "b850",
+        "gaming plus"
+      ],
+      "exclude_keywords": [
+        "b850m",
+        "max",
+        "wifi6e"
+      ],
+      "specs": {
+        "Socket": "AM5",
+        "Chipset": "AMD B850",
+        "Format": "ATX",
+        "Mémoire": "4 x DDR5 (jusqu'à 256 Go)",
+        "Emplacements M.2": "3 (1x PCIe 5.0 x4, 1x PCIe 4.0 x4, 1x PCIe 4.0 x2)",
+        "Réseau": "Wi-Fi 7 + Bluetooth 5.4, LAN 5 Gb/s"
+      }
+    },
+    {
+      "slug": "asus-tuf-gaming-b650-plus-wifi",
+      "name": "ASUS TUF Gaming B650-Plus WiFi",
+      "category": "motherboard",
+      "brand": "ASUS",
+      "mpn": "90MB1BZ0-M0EAY0",
+      "ean": "4711081912651",
+      "ean_note": "",
+      "eans": [],
+      "price_ref": 189,
+      "perf_score": 95,
+      "merchants": [
+        "amazon",
+        "topachat",
+        "rueducommerce",
+        "cdiscount",
+        "fnac"
+      ],
+      "search_query": "ASUS TUF Gaming B650-Plus WiFi",
+      "match_keywords": [
+        "tuf",
+        "b650-plus",
+        "wifi"
+      ],
+      "exclude_keywords": [
+        "b650m"
+      ],
+      "specs": {
+        "Socket": "AM5",
+        "Chipset": "AMD B650",
+        "Format": "ATX",
+        "Mémoire": "4 x DDR5 (jusqu'à 128 Go)",
+        "Emplacements M.2": "3 (1x PCIe 5.0, 2x PCIe 4.0)",
+        "Réseau": "Wi-Fi 6, LAN 2,5 Gb/s"
+      }
+    }
+  ]
+}

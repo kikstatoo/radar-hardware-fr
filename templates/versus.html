@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% from "_macros.html" import badges, cta, score_ring with context %}
+{% block content %}
+<div class="wrap">
+  <nav class="crumbs small" aria-label="Fil d'Ariane"><a href="{{ root }}index.html">Accueil</a> › <a href="{{ root }}categorie/{{ cat.slug }}.html">{{ cat.label }}</a> › <span>Comparatif</span></nav>
+  <h1>{{ a.p.name }} vs {{ b.p.name }} : lequel choisir en {{ month_year }} ?</h1>
+  <p class="lead">Duel chiffré entre deux {{ cat.label|lower }} populaires : prix du jour chez les marchands français, performances ({{ cat.perf_label }}) et rapport prix / performance.</p>
+
+  <div class="vs-cards">
+    {% for side in [a, b] %}
+    <article class="card vs-card{% if side is sameas v.winner %} is-winner{% endif %}">
+      {% if side is sameas v.winner %}<span class="badge badge-best">Meilleur rapport prix / perf</span>{% endif %}
+      <h2 class="card-title"><a href="{{ root }}{{ side.url }}">{{ side.p.name }}</a></h2>
+      <div class="badges">{{ badges(side.s, threshold) }}</div>
+      <p class="price price-xl mono">{{ side.s.price_current|price }}</p>
+      <p class="small muted">chez {{ side.best_merchant }}</p>
+      {{ cta(side.s.best_offer, "Voir l'offre →", "btn-block") }}
+    </article>
+    {% if loop.first %}<div class="vs-sep mono" aria-hidden="true">VS</div>{% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="table-wrap card">
+    <table class="table vs-table">
+      <thead><tr><th scope="col">Critère</th><th scope="col">{{ a.p.name }}</th><th scope="col">{{ b.p.name }}</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Prix actuel</th>
+          <td class="mono{% if (a.s.price_current or 1e9) <= (b.s.price_current or 1e9) %} win{% endif %}">{{ a.s.price_current|price }}</td>
+          <td class="mono{% if (b.s.price_current or 1e9) < (a.s.price_current or 1e9) %} win{% endif %}">{{ b.s.price_current|price }}</td></tr>
+        <tr><th scope="row">{{ cat.perf_label }}</th>
+          <td class="mono{% if a.p.perf_score >= b.p.perf_score %} win{% endif %}">{{ a.p.perf_score }}</td>
+          <td class="mono{% if b.p.perf_score > a.p.perf_score %} win{% endif %}">{{ b.p.perf_score }}</td></tr>
+        <tr><th scope="row">Prix par point de perf.</th>
+          <td class="mono{% if a is sameas v.winner %} win{% endif %}">{{ a.s.price_per_perf|price }}</td>
+          <td class="mono{% if b is sameas v.winner %} win{% endif %}">{{ b.s.price_per_perf|price }}</td></tr>
+        <tr><th scope="row">Moyenne 30 jours</th><td class="mono">{{ a.s.price_avg_30d|price }}</td><td class="mono">{{ b.s.price_avg_30d|price }}</td></tr>
+        <tr><th scope="row">Plus bas historique</th><td class="mono">{{ a.s.price_min_all_time|price }}</td><td class="mono">{{ b.s.price_min_all_time|price }}</td></tr>
+        <tr><th scope="row">Score Vraie Promo</th>
+          <td class="mono{% if a.s.true_deal_score >= b.s.true_deal_score %} win{% endif %}">{{ a.s.true_deal_score }}/100</td>
+          <td class="mono{% if b.s.true_deal_score > a.s.true_deal_score %} win{% endif %}">{{ b.s.true_deal_score }}/100</td></tr>
+        {% for k in v.spec_keys %}
+        <tr><th scope="row">{{ k }}</th><td>{{ a.p.specs.get(k, '—') }}</td><td>{{ b.p.specs.get(k, '—') }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <section class="card prose">
+    <h2>Verdict</h2>
+    <p>Au prix du jour, le <strong>{{ v.winner.p.name }}</strong> offre le meilleur rapport prix / performance ({{ v.winner.s.price_per_perf|price }} par point).
+    {% if v.faster is sameas v.winner %}Il est aussi le plus performant des deux : c'est le choix le plus logique.{% else %}Le <strong>{{ v.faster.p.name }}</strong> reste plus performant ({{ v.faster.p.perf_score }} contre {{ v.winner.p.perf_score }}) : à privilégier si votre budget le permet.{% endif %}</p>
+    {% set diff = ((a.s.price_current or 0) - (b.s.price_current or 0))|abs %}
+    <p>L'écart de prix actuel entre les deux modèles est de <span class="mono">{{ diff|price }}</span>. Les prix sont mis à jour toutes les heures : ce verdict peut évoluer avec les promotions.</p>
+  </section>
+</div>
+{% endblock %}

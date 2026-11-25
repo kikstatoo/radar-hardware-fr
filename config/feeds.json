@@ -1,0 +1,67 @@
+{
+  "_aide": "Tant qu'aucune 'url' n'est renseignée ci-dessous, le site tourne en MODE DÉMO (prix simulés, alertes sociales coupées, pages en noindex). Dès qu'une URL de flux est remplie, le mode RÉEL s'active et l'historique simulé est effacé.",
+  "_comment_coller_un_flux": "Dans Awin : Outils > Create-a-Feed > sélectionne le marchand > format CSV, compression gzip > copie l'URL générée dans le champ 'url' du marchand ci-dessous.",
+  "_champs": "'fields' fait correspondre les colonnes du flux. Les valeurs par défaut sont les noms de colonnes Awin (aw_deep_link, product_name, search_price, ean, mpn, in_stock). 'url_is_affiliate': true signifie que le lien du flux contient déjà ton tracking.",
+  "_rss": "rss_feeds : flux RSS publics de bons plans (optionnel). Le prix est extrait du titre.",
+  "product_feeds": [
+    {
+      "merchant": "topachat",
+      "enabled": true,
+      "url": "",
+      "format": "csv",
+      "delimiter": ",",
+      "compression": "auto",
+      "fields": {
+        "ean": "ean",
+        "mpn": "mpn",
+        "name": "product_name",
+        "price": "search_price",
+        "url": "aw_deep_link",
+        "in_stock": "in_stock"
+      },
+      "url_is_affiliate": true
+    },
+    {
+      "merchant": "rueducommerce",
+      "enabled": true,
+      "url": "",
+      "format": "csv",
+      "delimiter": ",",
+      "compression": "auto",
+      "fields": {
+        "ean": "ean",
+        "mpn": "mpn",
+        "name": "product_name",
+        "price": "search_price",
+        "url": "aw_deep_link",
+        "in_stock": "in_stock"
+      },
+      "url_is_affiliate": true
+    },
+    {
+      "merchant": "fnac",
+      "enabled": true,
+      "url": "",
+      "format": "xml",
+      "item_tag": "product",
+      "compression": "auto",
+      "fields": {
+        "ean": "ean",
+        "mpn": "mpn",
+        "name": "name",
+        "price": "price",
+        "url": "url",
+        "in_stock": "availability"
+      },
+      "url_is_affiliate": false
+    }
+  ],
+  "rss_feeds": [
+    {
+      "name": "Flux bons plans hardware",
+      "enabled": true,
+      "url": "",
+      "max_age_hours": 48
+    }
+  ]
+}

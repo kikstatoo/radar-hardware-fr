@@ -1,0 +1,17 @@
+# Site généré (reconstruit à chaque exécution par GitHub Actions)
+dist/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.tmp
+
+# Système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secrets locaux éventuels
+.env

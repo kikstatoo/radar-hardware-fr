@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% from "_macros.html" import product_card, filters, badges, cta with context %}
+{% block content %}
+<section class="hero wrap">
+  <div class="hero-text">
+    <p class="eyebrow mono">● RADAR ACTIF — MIS À JOUR TOUTES LES HEURES</p>
+    <h1>Comparateur de prix hardware PC Gamer : les <span class="accent">vraies promos</span>, pas les faux prix barrés</h1>
+    <p class="lead">Nous comparons {{ items|length }} composants stars chez Amazon, TopAchat, Rue du Commerce, Cdiscount et Fnac, avec historique 30 jours et score anti-arnaque. <strong class="mono">{{ deals_count }}</strong> vraie{{ 's' if deals_count > 1 }} promo{{ 's' if deals_count > 1 }} détectée{{ 's' if deals_count > 1 }} en ce moment.</p>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="deals-title">
+  <div class="section-head">
+    <h2 id="deals-title">Meilleurs deals du moment</h2>
+    <p class="muted small">Top 4 des plus fortes baisses par rapport à la moyenne des 30 derniers jours.</p>
+  </div>
+  <div class="deal-grid">
+    {% for it in hero %}
+    {% set s = it.s %}
+    <article class="card deal-card{% if s.is_true_deal %} is-deal{% endif %}">
+      <div class="badges">{{ badges(s, threshold) }}{% if not s.is_true_deal %}<span class="badge badge-neutral">Suivi</span>{% endif %}</div>
+      <h3 class="card-title"><a href="{{ root }}{{ it.url }}">{{ it.p.name }}</a></h3>
+      {{ it.spark|safe }}
+      <div class="card-price">
+        <span class="price price-xl mono">{{ s.price_current|price }}</span>
+        {% if s.savings_eur > 0 %}<s class="old mono">{{ s.price_avg_30d|price }}</s>{% endif %}
+      </div>
+      <p class="small">{% if s.savings_eur > 0 %}<span class="save mono">−{{ s.savings_eur|price }}</span> vs moyenne 30 j · {% endif %}<span class="muted">{{ it.best_merchant }}</span></p>
+      {{ cta(s.best_offer, "Voir l'offre →", "btn-block") }}
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="all-title">
+  <div class="section-head">
+    <h2 id="all-title">Tous les composants suivis</h2>
+  </div>
+  {{ filters(brands, max_price, true, categories) }}
+  <div class="product-grid" id="grid">
+    {% for it in items %}{{ product_card(it, root, threshold) }}{% endfor %}
+  </div>
+  <p class="empty muted" id="empty" hidden>Aucun composant ne correspond à ces filtres.</p>
+</section>
+
+<section class="wrap cat-tiles" aria-labelledby="cats-title">
+  <h2 id="cats-title">Comparatifs prix / performance par catégorie</h2>
+  <div class="tiles">
+    {% for key, c in categories.items() %}
+    <a class="card tile" href="{{ root }}categorie/{{ c.slug }}.html">
+      <span class="tile-title">{{ c.label }}</span>
+      <span class="small muted">{{ by_cat.get(key, [])|length }} composants · classement €/perf</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+{% if versus %}
+<section class="wrap" aria-labelledby="vs-title">
+  <h2 id="vs-title">Duels populaires</h2>
+  <ul class="vs-list">
+    {% for v in versus %}<li><a href="{{ root }}{{ v.url }}">{{ v.a.p.name }} <span class="vs mono">VS</span> {{ v.b.p.name }}</a></li>{% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+<section class="wrap method card" aria-labelledby="method-title">
+  <h2 id="method-title">Comment fonctionne le score « Vraie Promo » ?</h2>
+  <div class="method-grid">
+    <div><p class="mono accent big">55 pts</p><p class="small">Écart réel entre le prix actuel et la <strong>médiane des 30 derniers jours</strong> (le prix barré du marchand est ignoré).</p></div>
+    <div><p class="mono amber big">30 pts</p><p class="small">Proximité du <strong>plus bas historique</strong> enregistré par notre radar.</p></div>
+    <div><p class="mono cyan big">15 pts</p><p class="small"><strong>Anti-gonflage</strong> : le prix était-il vraiment plus élevé la majeure partie du mois ?</p></div>
+  </div>
+  <p class="small muted">Le badge « Vraie promo » n'apparaît que si le prix est au moins {{ threshold|num(0) }}&nbsp;% sous la moyenne 30 jours.</p>
+</section>
+{% endblock %}

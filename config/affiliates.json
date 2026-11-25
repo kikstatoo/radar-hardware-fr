@@ -1,0 +1,54 @@
+{
+  "_aide": "Remplace les valeurs d'exemple par tes vrais identifiants. Un identifiant laissé à zéro (\"0000\", \"000000\") désactive l'enrobage d'affiliation pour ce marchand : le lien reste direct et fonctionnel.",
+  "_etape_1": "base_url : l'adresse de ton site GitHub Pages (laisse la valeur d'exemple : elle est déduite automatiquement du nom du dépôt).",
+  "_etape_2": "amazon_tag : ton identifiant Amazon Partenaires (se termine par -21). Il est ajouté automatiquement (?tag=) à tous les liens Amazon.",
+  "_etape_3": "awin_publisher_id : ton ID éditeur Awin, puis l'awin_mid de chaque marchand (visible dans l'espace Awin > Annonceurs > fiche du programme).",
+  "_etape_4": "effiliation_id_compteur (Cdiscount) et aliexpress_aff_short_key : optionnels.",
+  "site_name": "Radar Hardware FR",
+  "base_url": "https://votre-pseudo.github.io/radar-hardware-fr",
+  "amazon_tag": "ton-tag-21",
+  "awin_publisher_id": "000000",
+  "effiliation_id_compteur": "0000",
+  "aliexpress_aff_short_key": "",
+  "merchants": {
+    "amazon": {
+      "name": "Amazon.fr",
+      "network": "amazon",
+      "search_url": "https://www.amazon.fr/s?k={query}",
+      "color": "#FF9900"
+    },
+    "topachat": {
+      "name": "TopAchat",
+      "network": "awin",
+      "awin_mid": "0000",
+      "search_url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc={query}",
+      "color": "#E30613"
+    },
+    "rueducommerce": {
+      "name": "Rue du Commerce",
+      "network": "awin",
+      "awin_mid": "0000",
+      "search_url": "https://www.rueducommerce.fr/r/{query}",
+      "color": "#E2001A"
+    },
+    "cdiscount": {
+      "name": "Cdiscount",
+      "network": "effiliation",
+      "search_url": "https://www.cdiscount.com/search/10/{query}.html",
+      "color": "#0F4C81"
+    },
+    "fnac": {
+      "name": "Fnac",
+      "network": "awin",
+      "awin_mid": "0000",
+      "search_url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search={query}",
+      "color": "#E1A925"
+    },
+    "aliexpress": {
+      "name": "AliExpress",
+      "network": "aliexpress",
+      "search_url": "https://fr.aliexpress.com/w/wholesale-{query}.html",
+      "color": "#FF4747"
+    }
+  }
+}

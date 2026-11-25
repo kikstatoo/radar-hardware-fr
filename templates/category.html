@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% from "_macros.html" import product_card, filters, badges, cta with context %}
+{% block content %}
+<div class="wrap">
+  <nav class="crumbs small" aria-label="Fil d'Ariane"><a href="{{ root }}index.html">Accueil</a> › <span>{{ cat.label }}</span></nav>
+  <h1>{{ cat.label }} gaming : comparatif prix / performance ({{ month_year }})</h1>
+  <p class="lead">Classement des {{ items|length }} {{ cat.label|lower }} les plus populaires selon leur coût par point de performance ({{ cat.perf_label }}). Plus le prix par point est bas, plus le composant est rentable.</p>
+
+  <div class="table-wrap card">
+    <table class="table">
+      <caption class="sr-only">Classement prix / performance — {{ cat.label }}</caption>
+      <thead><tr><th scope="col">#</th><th scope="col">Composant</th><th scope="col">Prix</th><th scope="col">Perf.</th><th scope="col">€ / point</th><th scope="col">Score</th><th scope="col"><span class="sr-only">Action</span></th></tr></thead>
+      <tbody>
+      {% for it in ranked %}
+        <tr{% if loop.first %} class="row-best"{% endif %}>
+          <td class="mono">{{ loop.index }}</td>
+          <td><a href="{{ root }}{{ it.url }}">{{ it.p.name }}</a><div class="badges">{{ badges(it.s, threshold) }}{% if loop.first %}<span class="badge badge-best">Meilleur ratio</span>{% endif %}</div></td>
+          <td class="mono nowrap">{{ it.s.price_current|price }}</td>
+          <td class="mono">{{ it.p.perf_score }}</td>
+          <td class="mono nowrap">{{ it.s.price_per_perf|price }}</td>
+          <td class="mono">{{ it.s.true_deal_score }}</td>
+          <td>{{ cta(it.s.best_offer, "Voir →", "btn-sm") }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Filtrer les {{ cat.label|lower }}</h2>
+  {{ filters(brands, max_price, false) }}
+  <div class="product-grid" id="grid">
+    {% for it in items %}{{ product_card(it, root, threshold) }}{% endfor %}
+  </div>
+  <p class="empty muted" id="empty" hidden>Aucun composant ne correspond à ces filtres.</p>
+
+  {% if versus %}
+  <h2>Comparatifs {{ cat.label|lower }}</h2>
+  <ul class="vs-list">
+    {% for v in versus %}<li><a href="{{ root }}{{ v.url }}">{{ v.a.p.name }} <span class="vs mono">VS</span> {{ v.b.p.name }}</a></li>{% endfor %}
+  </ul>
+  {% endif %}
+</div>
+{% endblock %}
