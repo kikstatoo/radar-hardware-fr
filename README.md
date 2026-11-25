@@ -1,6 +1,6 @@
-# 📡 Radar Hardware FR
+# 📡 Radar Hardware Europe
 
-Comparateur de prix **hardware PC Gamer** pour la France, mis à jour **toutes les heures** et **100 % gratuit à faire tourner** (GitHub Actions + GitHub Pages, aucune base de données, aucune API payante).
+Comparateur de prix **hardware PC Gamer** pour la France et l'Europe (14 marchands 🇫🇷 🇩🇪 🇪🇸 🇳🇱, prix **livrés en France**), mis à jour **toutes les heures** et **100 % gratuit à faire tourner** (GitHub Actions + GitHub Pages, aucune base de données, aucune API payante).
 
 - **Score Vraie Promo (0-100)** : prix actuel comparé à la moyenne, à la médiane 30 jours et au plus bas historique. Les badges « VRAIE PROMO » et « PLUS BAS HISTORIQUE » ne s'affichent que si le prix est au moins 8 % sous la moyenne 30 jours.
 - **Ratio prix / performance** : chaque composant a un `perf_score`, ce qui permet de trier par € par point de performance.
@@ -15,7 +15,7 @@ Comparateur de prix **hardware PC Gamer** pour la France, mis à jour **toutes l
 radar-hardware-fr/
 ├── .github/workflows/auto-update.yml   ← automatisation horaire + déploiement Pages
 ├── config/
-│   ├── affiliates.json   ← TES identifiants d'affiliation + URL du site
+│   ├── affiliates.json   ← identifiants d'affiliation, marchands FR/EU, frais de port estimés
 │   ├── settings.json     ← seuils (promo 8 %, alerte 10 %, cooldown 24 h…)
 │   └── feeds.json        ← URLs des flux marchands (vide = mode démo)
 ├── data/
@@ -29,6 +29,7 @@ radar-hardware-fr/
 │   ├── common.py         ← fonctions partagées (affiliation, JSON, HTTP…)
 │   ├── fetch_prices.py   ← étape 1 : collecte des prix (flux CSV/XML, RSS, simulation)
 │   ├── build_site.py     ← étape 2 : stats, graphiques, pages HTML, SEO
+│   ├── visuals.py        ← visuels produits générés (SVG) quand aucune image officielle n'existe
 │   └── notify.py         ← étape 3 : alertes Discord / Telegram / X
 ├── templates/            ← gabarits HTML (Jinja2)
 ├── static/               ← CSS, JavaScript (recherche instantanée), favicon

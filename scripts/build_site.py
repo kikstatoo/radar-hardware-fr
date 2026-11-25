@@ -27,7 +27,9 @@ import matplotlib.ticker  # noqa: E402
 from jinja2 import Environment, FileSystemLoader, select_autoescape  # noqa: E402
 from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
-from common import (CONFIG_DIR, DIST_DIR, HISTORY_FILE, OFFERS_FILE, SITE_STATS_FILE, STATIC_DIR,  # noqa: E402
+from visuals import product_svg  # noqa: E402
+
+from common import (FLAGS, DIST_DIR, HISTORY_FILE, OFFERS_FILE, SITE_STATS_FILE, STATIC_DIR,  # noqa: E402
                     TEMPLATES_DIR, date_fr, fmt_pct, fmt_price, get_base_url, iso, load_affiliates,
                     load_catalog, load_json, load_settings, log, month_year_fr, now_ts, save_json)
 
@@ -292,7 +294,7 @@ def seo_paragraphs(p: dict, s: dict, cat: dict, merchant_name: str) -> list[str]
     avg, d = s["price_avg_30d"], s["discount_vs_avg"]
     out = []
     if d >= 0.5:
-        out.append(f"Le {name} est actuellement affiché à {fmt_price(cur)} chez {merchant_name}, soit "
+        out.append(f"Le {name} est actuellement affiché à {fmt_price(cur)} livré en France chez {merchant_name}, soit "
                    f"{fmt_pct(d, 1)} en dessous de sa moyenne des 30 derniers jours ({fmt_price(avg)}).")
     elif d <= -0.5:
         out.append(f"Le {name} est actuellement affiché à {fmt_price(cur)} chez {merchant_name}, soit "
@@ -322,7 +324,7 @@ def seo_paragraphs(p: dict, s: dict, cat: dict, merchant_name: str) -> list[str]
         out.append("Le prix est resté stable ces 7 derniers jours.")
     if s.get("price_per_perf"):
         out.append(f"Côté rentabilité, il revient à {fmt_price(s['price_per_perf'])} par point de performance "
-                   f"({cat['perf_label']}), comparé chez {s['offer_count']} marchands français.")
+                   f"({cat['perf_label']}), comparé chez {s['offer_count']} marchands français et européens, livraison en France comprise.")
     return out
 
 
@@ -357,15 +359,12 @@ def faq_items(p: dict, s: dict, merchant_name: str, best_cat: dict | None) -> li
     return items
 
 
-def shipping_info(merchant: dict, price: float) -> dict:
-    """Estimation des frais de port selon les règles de config/affiliates.json."""
-    rule = merchant.get("shipping") or {}
-    free_from, base = rule.get("free_from"), rule.get("from")
-    if base == 0 or (free_from is not None and price >= free_from):
-        return {"free": True, "label": "Livraison gratuite"}
-    if base is None:
-        return {"free": False, "label": "Frais de port : voir le site"}
-    return {"free": False, "label": f"Livraison dès {fmt_price(base)}"}
+def shipping_label(ship) -> tuple[str, bool]:
+    if ship is None:
+        return "Port : voir le site", False
+    if ship == 0:
+        return "Livraison FR incluse", True
+    return f"+{fmt_price(ship)}", False
 
 
 def json_ld(data) -> str:
@@ -424,7 +423,7 @@ def main() -> int:
     # --- Préparation du dossier dist/ ---
     if DIST_DIR.exists():
         shutil.rmtree(DIST_DIR)
-    for sub in ("assets/charts", "assets/social", "assets/css", "assets/js", "produit", "categorie", "comparatif"):
+    for sub in ("assets/charts", "assets/social", "assets/products", "assets/css", "assets/js", "produit", "categorie", "comparatif"):
         (DIST_DIR / sub).mkdir(parents=True, exist_ok=True)
     shutil.copy(STATIC_DIR / "css" / "style.css", DIST_DIR / "assets/css/style.css")
     shutil.copy(STATIC_DIR / "js" / "app.js", DIST_DIR / "assets/js/app.js")
@@ -438,17 +437,29 @@ def main() -> int:
         s = compute_stats(p, offers, entry, settings)
         cat = categories.get(p["category"], {"label": p["category"], "slug": p["category"],
                                               "singular": "composant", "perf_label": "Indice"})
-        best_merchant = mname(s["best_offer"]["merchant"]) if s["best_offer"] else "—"
+        bo = s["best_offer"]
+        best_merchant = mname(bo["merchant"]) if bo else "—"
         p["_merchant_names"] = [mname(m) for m in p.get("merchants", [])]
         offers_view = []
         for o in sorted(offers, key=lambda o: (not o["in_stock"], o["price"])):
-            ship = shipping_info(merchants.get(o["merchant"], {}), o["price"])
-            offers_view.append({**o, "merchant_name": mname(o["merchant"]), "shipping": ship,
+            m = merchants.get(o["merchant"], {})
+            label, free = shipping_label(o.get("shipping"))
+            offers_view.append({**o, "merchant_name": mname(o["merchant"]), "country": m.get("country", "FR"),
+                                "flag": FLAGS.get(m.get("country", "FR"), "🇪🇺"), "ship_label": label, "ship_free": free,
+                                "item_price": o.get("item_price", o["price"]),
                                 "saving": round(s["price_avg_30d"] - o["price"], 2) if s["price_avg_30d"] and o["price"] < s["price_avg_30d"] - 0.5 else 0,
-                                "color": merchants.get(o["merchant"], {}).get("color", "#38BDF8"),
-                                "is_best": s["best_offer"] is not None and o is s["best_offer"]})
+                                "color": m.get("color", "#38BDF8"), "is_best": bo is not None and o is bo})
+        fr_offers = [o for o in offers_view if o["in_stock"] and o["country"] == "FR"]
+        best_fr = min(fr_offers, key=lambda o: o["price"]) if fr_offers else None
+        best_view = next((o for o in offers_view if o["is_best"]), None)
+        # Image : officielle (catalogue ou flux marchand) sinon visuel généré
+        image = p.get("image_url") if str(p.get("image_url", "")).startswith("https://") else ""
+        image = image or next((o["image"] for o in offers if o.get("image")), "")
+        if not image:
+            (DIST_DIR / "assets/products" / f"{p['slug']}.svg").write_text(product_svg(p), encoding="utf-8")
         items.append({"p": p, "s": s, "cat": cat, "offers": offers_view, "entry": entry,
-                      "best_merchant": best_merchant, "spark": sparkline_svg(entry),
+                      "best_merchant": best_merchant, "best_view": best_view, "best_fr": best_fr,
+                      "image": image, "image_local": not image, "spark": sparkline_svg(entry),
                       "url": f"produit/{p['slug']}.html"})
         make_chart(p, entry, s, DIST_DIR / "assets/charts" / f"{p['slug']}.png")
         make_social_image(p, entry, s, best_merchant, site_name, DIST_DIR / "assets/social" / f"{p['slug']}-alert.png")
@@ -486,7 +497,7 @@ def main() -> int:
 
     # --- Hero : Top 4 des plus grosses baisses réelles ---
     with_price = [i for i in items if i["s"]["price_current"] is not None]
-    hero = sorted(with_price, key=lambda i: (i["s"]["is_true_deal"], i["s"]["discount_vs_avg"]), reverse=True)[:4]
+    hero = sorted(with_price, key=lambda i: (i["s"]["is_true_deal"], i["s"]["discount_vs_avg"]), reverse=True)[:5]
     deals_count = sum(1 for i in items if i["s"]["is_true_deal"])
 
     # --- Rendu Jinja ---
@@ -502,13 +513,12 @@ def main() -> int:
         "threshold": settings.get("deal_threshold_percent", 8.0),
         "amazon_enabled": bool(affiliates.get("amazon_tag")),
     }
-    noblika_cfg = load_json(CONFIG_DIR / "noblika.json", {}) or {}
-    common_ctx["noblika"] = None
-    if noblika_cfg.get("enabled"):
-        picks = [by_slug[sl] for sl in noblika_cfg.get("products", []) if sl in by_slug]
-        if picks:
-            common_ctx["noblika"] = {"title": noblika_cfg.get("title", ""), "description": noblika_cfg.get("description", ""),
-                                     "picks": picks, "total": round(sum(i["s"]["price_current"] or 0 for i in picks), 2)}
+    common_ctx["search_index"] = json_ld([{"n": i["p"]["name"], "u": i["url"], "c": i["cat"]["label"],
+                                           "p": fmt_price(i["s"]["price_current"]), "l": i["s"]["light"]} for i in items])
+    common_ctx["amazon_enabled"] = any(affiliates.get(k) for k in ("amazon_tag", "amazon_tag_de", "amazon_tag_es"))
+    common_ctx["merchant_count"] = len(merchants)
+    common_ctx["merchant_list"] = [{"name": m["name"], "flag": FLAGS.get(m.get("country", "FR"), "🇪🇺"), "color": m.get("color")}
+                                   for m in merchants.values()]
     pages = []
 
     def render(template: str, rel_path: str, depth: int, **ctx):
@@ -521,13 +531,15 @@ def main() -> int:
         pages.append(rel_path)
 
     brands = sorted({i["p"]["brand"] for i in items})
-    max_price = max((i["s"]["price_current"] or 0 for i in items), default=1000)
+    def top_price(lst):
+        return max((o["price"] for i in lst for o in (i["best_view"], i["best_fr"]) if o), default=1000)
+    max_price = top_price(items)
     render("index.html", "index.html", 0, items=items, hero=hero, brands=brands, max_price=int(max_price // 10 + 1) * 10,
            deals_count=deals_count, versus=versus[:12], by_cat=by_cat,
-           page_title="Comparateur Prix Hardware PC Gamer France - Meilleurs Tarifs & Historique",
-           meta_description=(f"Comparez les prix des processeurs, cartes graphiques, RAM DDR5 et SSD chez Amazon, TopAchat, "
-                             f"Cdiscount, Fnac et Rue du Commerce. Historique 30 jours et détection des vraies promos "
-                             f"({month_year_fr(build_dt)})."),
+           page_title="Comparateur Prix Hardware PC Gamer France & Europe - Meilleurs Tarifs & Historique",
+           meta_description=(f"Comparez les prix livrés en France des processeurs, cartes graphiques, RAM DDR5, SSD et cartes mères "
+                             f"chez {len(merchants)} marchands français et européens (Amazon, LDLC, Alternate, Caseking…). "
+                             f"Historique 30 jours et détection des vraies promos ({month_year_fr(build_dt)})."),
            og_image=f"{base_url}/assets/social/{hero[0]['p']['slug']}-alert.png" if hero else None)
 
     for ck, cat in categories.items():
@@ -535,7 +547,7 @@ def main() -> int:
         ranked = sorted(lst, key=lambda i: i["s"]["price_per_perf"] or 1e9)
         cat_brands = sorted({i["p"]["brand"] for i in lst})
         render("category.html", f"categorie/{cat['slug']}.html", 1, cat=cat, cat_key=ck, items=lst, ranked=ranked,
-               brands=cat_brands, max_price=int(max((i["s"]["price_current"] or 0 for i in lst), default=1000) // 10 + 1) * 10,
+               brands=cat_brands, max_price=int(top_price(lst) // 10 + 1) * 10,
                versus=[v for v in versus if v["a"]["p"]["category"] == ck],
                page_title=f"{cat['label']} gaming : comparatif prix / performance ({month_year_fr(build_dt)}) | {site_name}",
                meta_description=(f"Meilleurs {cat['label'].lower()} pour PC gamer classés par rapport prix/performance. "

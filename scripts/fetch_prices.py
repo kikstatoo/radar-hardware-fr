@@ -24,7 +24,7 @@ import zipfile
 import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
 
-from common import (HISTORY_FILE, OFFERS_FILE, SIM_STATE_FILE, affiliate_url, http_get,
+from common import (with_delivery, HISTORY_FILE, OFFERS_FILE, SIM_STATE_FILE, affiliate_url, http_get,
                     load_affiliates, load_catalog, load_feeds, load_json, load_settings, log,
                     merchant_search_url, normalize, normalize_code, now_ts, parse_price, iso,
                     save_json)
@@ -160,6 +160,9 @@ def fetch_product_feeds(feeds_cfg: dict, products: list[dict], settings: dict, a
                     "url": affiliate_url(merchant, link, affiliates, feed.get("url_is_affiliate", False)),
                     "source": "feed",
                 }
+                image = row.get(fields.get("image", "image"), "")
+                if image.startswith("https://"):
+                    offer["image"] = image  # image officielle fournie (sous licence) par le marchand
                 bucket = offers.setdefault(product["slug"], [])
                 existing = next((o for o in bucket if o["merchant"] == merchant), None)
                 if existing is None:
@@ -293,7 +296,7 @@ def best_in_stock(offers: list[dict]) -> float | None:
     return min(prices) if prices else None
 
 
-def seed_simulated_history(products: list[dict], sim_cfg: dict, settings: dict, rng: random.Random) -> dict:
+def seed_simulated_history(products: list[dict], sim_cfg: dict, settings: dict, rng: random.Random, affiliates: dict) -> dict:
     """Pré-remplit 30 jours d'historique horaire simulé (premier lancement uniquement)."""
     days = int(sim_cfg.get("seed_days", 30))
     max_points = int(settings.get("history_max_points", 720))
@@ -305,7 +308,7 @@ def seed_simulated_history(products: list[dict], sim_cfg: dict, settings: dict, 
         ts = end - h * 3600
         step = simulate_step(products, state, sim_cfg, rng)
         for slug, offers in step.items():
-            price = best_in_stock(offers)
+            price = best_in_stock([with_delivery(o, affiliates) for o in offers])
             entry = history["products"].setdefault(slug, {"points": [], "all_time_min": None})
             entry["points"].append([ts, price])
             if price is not None and (entry["all_time_min"] is None or price < entry["all_time_min"]["price"]):
@@ -321,7 +324,7 @@ def run_simulation(products, settings, affiliates):
     state = load_json(SIM_STATE_FILE, None)
     if not history or not history.get("products") or history.get("mode") != "simulation" or not state:
         log("Premier lancement en mode démo : génération de 30 jours d'historique simulé…")
-        history, state = seed_simulated_history(products, sim_cfg, settings, rng)
+        history, state = seed_simulated_history(products, sim_cfg, settings, rng, affiliates)
         save_json(HISTORY_FILE, history, compact=True)
     raw = simulate_step(products, state, sim_cfg, rng)
     save_json(SIM_STATE_FILE, state, compact=True)
@@ -373,6 +376,8 @@ def main() -> int:
         offers = run_simulation(products, settings, affiliates)
 
     ts = now_ts()
+    # Prix total livré en France (article + frais de port estimés) : base de tous les classements
+    offers = {slug: [with_delivery(o, affiliates) for o in items] for slug, items in offers.items()}
     for items in offers.values():
         items.sort(key=lambda o: (not o["in_stock"], o["price"]))
     save_json(OFFERS_FILE, {"generated_at": ts, "generated_at_iso": iso(ts), "mode": mode, "products": offers})

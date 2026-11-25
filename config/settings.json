@@ -23,12 +23,20 @@
     "out_of_stock_probability": 0.01,
     "back_in_stock_probability": 0.15,
     "merchant_bias": {
-      "amazon": -0.03,
+      "amazon_fr": -0.03,
       "topachat": -0.01,
       "rueducommerce": 0.01,
+      "ldlc": 0.02,
+      "materielnet": 0.01,
       "cdiscount": -0.02,
       "fnac": 0.03,
-      "aliexpress": -0.06
+      "amazon_de": -0.06,
+      "amazon_es": -0.05,
+      "alternate": -0.04,
+      "caseking": -0.05,
+      "computeruniverse": -0.07,
+      "pccomponentes": -0.06,
+      "megekko": -0.06
     }
   },
   "network": {

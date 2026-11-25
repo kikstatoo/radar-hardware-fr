@@ -45,12 +45,20 @@
       "price_ref": 449,
       "perf_score": 100,
       "merchants": [
-        "amazon",
+        "amazon_fr",
         "topachat",
         "rueducommerce",
+        "ldlc",
+        "materielnet",
         "cdiscount",
         "fnac",
-        "aliexpress"
+        "amazon_de",
+        "amazon_es",
+        "alternate",
+        "caseking",
+        "computeruniverse",
+        "pccomponentes",
+        "megekko"
       ],
       "search_query": "AMD Ryzen 7 9800X3D",
       "match_keywords": [
@@ -74,7 +82,8 @@
       },
       "profiles": [
         "sans-compromis"
-      ]
+      ],
+      "image_url": ""
     },
     {
       "slug": "ryzen-7-9700x",
@@ -88,12 +97,19 @@
       "price_ref": 289,
       "perf_score": 78,
       "merchants": [
-        "amazon",
+        "amazon_fr",
         "topachat",
         "rueducommerce",
+        "ldlc",
         "cdiscount",
         "fnac",
-        "aliexpress"
+        "amazon_de",
+        "amazon_es",
+        "alternate",
+        "caseking",
+        "computeruniverse",
+        "pccomponentes",
+        "megekko"
       ],
       "search_query": "AMD Ryzen 7 9700X",
       "match_keywords": [
@@ -117,7 +133,8 @@
       },
       "profiles": [
         "upgrade"
-      ]
+      ],
+      "image_url": ""
     },
     {
       "slug": "ryzen-7-7800x3d",
@@ -131,12 +148,19 @@
       "price_ref": 349,
       "perf_score": 88,
       "merchants": [
-        "amazon",
+        "amazon_fr",
         "topachat",
         "rueducommerce",
+        "ldlc",
+        "materielnet",
         "cdiscount",
-        "fnac",
-        "aliexpress"
+        "amazon_de",
+        "amazon_es",
+        "alternate",
+        "caseking",
+        "computeruniverse",
+        "pccomponentes",
+        "megekko"
       ],
       "search_query": "AMD Ryzen 7 7800X3D",
       "match_keywords": [
@@ -160,7 +184,8 @@
       },
       "profiles": [
         "sans-compromis"
-      ]
+      ],
+      "image_url": ""
     },
     {
       "slug": "ryzen-5-9600x",
@@ -174,12 +199,19 @@
       "price_ref": 199,
       "perf_score": 74,
       "merchants": [
-        "amazon",
+        "amazon_fr",
         "topachat",
         "rueducommerce",
+        "ldlc",
+        "materielnet",
         "cdiscount",
         "fnac",
-        "aliexpress"
+        "amazon_de",
+        "alternate",
+        "caseking",
+        "computeruniverse",
+        "pccomponentes",
+        "megekko"
       ],
       "search_query": "AMD Ryzen 5 9600X",
       "match_keywords": [
@@ -204,7 +236,8 @@
       },
       "profiles": [
         "upgrade"
-      ]
+      ],
+      "image_url": ""
     },
     {
       "slug": "ryzen-5-9500f",
@@ -218,12 +251,19 @@
       "price_ref": 159,
       "perf_score": 69,
       "merchants": [
-        "amazon",
+        "amazon_fr",
         "topachat",
         "rueducommerce",
+        "ldlc",
+        "materielnet",
         "cdiscount",
         "fnac",
-        "aliexpress"
+        "amazon_de",
+        "amazon_es",
+        "alternate",
+        "computeruniverse",
+        "pccomponentes",
+        "megekko"
       ],
       "search_query": "AMD Ryzen 5 9500F",
       "match_keywords": [
@@ -247,7 +287,8 @@
       },
       "profiles": [
         "upgrade"
-      ]
+      ],
+      "image_url": ""
     },
     {
       "slug": "core-ultra-7-265k",
@@ -261,11 +302,18 @@
       "price_ref": 289,
       "perf_score": 80,
       "merchants": [
-        "amazon",
+        "amazon_fr",
         "topachat",
         "rueducommerce",
+        "ldlc",
+        "materielnet",
         "cdiscount",
-        "fnac"
+        "fnac",
+        "amazon_de",
+        "amazon_es",
+        "alternate",
+        "computeruniverse",
+        "megekko"
       ],
       "search_query": "Intel Core Ultra 7 265K",
       "match_keywords": [
@@ -291,7 +339,8 @@
       },
       "profiles": [
         "upgrade"
-      ]
+      ],
+      "image_url": ""
     },
     {
       "slug": "core-ultra-5-245kf",
@@ -305,11 +354,19 @@
       "price_ref": 189,
       "perf_score": 72,
       "merchants": [
-        "amazon",
+        "amazon_fr",
         "topachat",
         "rueducommerce",
-        "cdiscount",
-        "fnac"
+        "ldlc",
+        "materielnet",
+        "fnac",
+        "amazon_de",
+        "amazon_es",
+        "alternate",
+        "caseking",
+        "computeruniverse",
+        "pccomponentes",
+        "megekko"
       ],
       "search_query": "Intel Core Ultra 5 245KF",
       "match_keywords": [
@@ -334,7 +391,8 @@
       },
       "profiles": [
         "upgrade"
-      ]
+      ],
+      "image_url": ""
     },
     {
       "slug": "rtx-5080-16go",
@@ -348,11 +406,16 @@
       "price_ref": 1099,
       "perf_score": 100,
       "merchants": [
-        "amazon",
+        "amazon_fr",
         "topachat",
         "rueducommerce",
+        "ldlc",
         "cdiscount",
-        "fnac"
+        "fnac",
+        "amazon_es",
+        "computeruniverse",
+        "pccomponentes",
+        "megekko"
       ],
       "search_query": "NVIDIA GeForce RTX 5080 16 Go",
       "match_keywords": [
@@ -375,7 +438,8 @@
       },
       "profiles": [
         "sans-compromis"
-      ]
+      ],
+      "image_url": ""
     },
     {
       "slug": "rtx-5070-ti-16go",
@@ -389,11 +453,17 @@
       "price_ref": 799,
       "perf_score": 85,
       "merchants": [
-        "amazon",
+        "amazon_fr",
         "topachat",
         "rueducommerce",
+        "ldlc",
+        "materielnet",
         "cdiscount",
-        "fnac"
+        "amazon_de",
+        "amazon_es",
+        "caseking",
+        "pccomponentes",
+        "megekko"
       ],
       "search_query": "NVIDIA GeForce RTX 5070 Ti 16 Go",
       "match_keywords": [
@@ -416,7 +486,8 @@
       },
       "profiles": [
         "sans-compromis"
-      ]
+      ],
+      "image_url": ""
     },
     {
       "slug": "rtx-5070-12go",
@@ -430,11 +501,18 @@
       "price_ref": 559,
       "perf_score": 68,
       "merchants": [
-        "amazon",
+        "amazon_fr",
         "topachat",
         "rueducommerce",
+        "ldlc",
         "cdiscount",
-        "fnac"
+        "amazon_de",
+        "amazon_es",
+        "alternate",
+        "caseking",
+        "computeruniverse",
+        "pccomponentes",
+        "megekko"
       ],
       "search_query": "NVIDIA GeForce RTX 5070 12 Go",
       "match_keywords": [
@@ -458,7 +536,8 @@
       },
       "profiles": [
         "sans-compromis"
-      ]
+      ],
+      "image_url": ""
     },
     {
       "slug": "rtx-5060-ti-16go",
@@ -472,11 +551,18 @@
       "price_ref": 449,
       "perf_score": 52,
       "merchants": [
-        "amazon",
+        "amazon_fr",
         "topachat",
-        "rueducommerce",
+        "ldlc",
+        "materielnet",
         "cdiscount",
-        "fnac"
+        "fnac",
+        "amazon_de",
+        "amazon_es",
+        "alternate",
+        "caseking",
+        "computeruniverse",
+        "megekko"
       ],
       "search_query": "NVIDIA GeForce RTX 5060 Ti 16 Go",
       "match_keywords": [
@@ -502,7 +588,8 @@
       },
       "profiles": [
         "upgrade"
-      ]
+      ],
+      "image_url": ""
     },
     {
       "slug": "rtx-5060-ti-8go",
@@ -516,11 +603,19 @@
       "price_ref": 389,
       "perf_score": 48,
       "merchants": [
-        "amazon",
+        "amazon_fr",
         "topachat",
         "rueducommerce",
+        "ldlc",
+        "materielnet",
         "cdiscount",
-        "fnac"
+        "fnac",
+        "amazon_de",
+        "amazon_es",
+        "alternate",
+        "computeruniverse",
+        "pccomponentes",
+        "megekko"
       ],
       "search_query": "NVIDIA GeForce RTX 5060 Ti 8 Go",
       "match_keywords": [
@@ -546,7 +641,8 @@
       },
       "profiles": [
         "upgrade"
-      ]
+      ],
+      "image_url": ""
     },
     {
       "slug": "rtx-5060-8go",
@@ -560,11 +656,19 @@
       "price_ref": 309,
       "perf_score": 42,
       "merchants": [
-        "amazon",
+        "amazon_fr",
         "topachat",
-        "rueducommerce",
+        "ldlc",
+        "materielnet",
         "cdiscount",
-        "fnac"
+        "fnac",
+        "amazon_de",
+        "amazon_es",
+        "alternate",
+        "caseking",
+        "computeruniverse",
+        "pccomponentes",
+        "megekko"
       ],
       "search_query": "NVIDIA GeForce RTX 5060 8 Go",
       "match_keywords": [
@@ -587,7 +691,8 @@
       },
       "profiles": [
         "upgrade"
-      ]
+      ],
+      "image_url": ""
     },
     {
       "slug": "rx-9070-xt-16go",
@@ -601,11 +706,17 @@
       "price_ref": 669,
       "perf_score": 82,
       "merchants": [
-        "amazon",
+        "amazon_fr",
         "topachat",
         "rueducommerce",
+        "ldlc",
         "cdiscount",
-        "fnac"
+        "fnac",
+        "amazon_de",
+        "amazon_es",
+        "alternate",
+        "computeruniverse",
+        "pccomponentes"
       ],
       "search_query": "AMD Radeon RX 9070 XT 16 Go",
       "match_keywords": [
@@ -627,7 +738,8 @@
       },
       "profiles": [
         "sans-compromis"
-      ]
+      ],
+      "image_url": ""
     },
     {
       "slug": "rx-9070-16go",
@@ -641,11 +753,17 @@
       "price_ref": 589,
       "perf_score": 74,
       "merchants": [
-        "amazon",
+        "amazon_fr",
         "topachat",
         "rueducommerce",
-        "cdiscount",
-        "fnac"
+        "ldlc",
+        "materielnet",
+        "amazon_de",
+        "amazon_es",
+        "alternate",
+        "caseking",
+        "computeruniverse",
+        "pccomponentes"
       ],
       "search_query": "AMD Radeon RX 9070 16 Go",
       "match_keywords": [
@@ -670,7 +788,8 @@
       },
       "profiles": [
         "sans-compromis"
-      ]
+      ],
+      "image_url": ""
     },
     {
       "slug": "rx-9060-xt-16go",
@@ -684,11 +803,18 @@
       "price_ref": 379,
       "perf_score": 50,
       "merchants": [
-        "amazon",
+        "amazon_fr",
         "topachat",
         "rueducommerce",
+        "ldlc",
+        "materielnet",
         "cdiscount",
-        "fnac"
+        "amazon_es",
+        "alternate",
+        "caseking",
+        "computeruniverse",
+        "pccomponentes",
+        "megekko"
       ],
       "search_query": "AMD Radeon RX 9060 XT 16 Go",
       "match_keywords": [
@@ -714,7 +840,8 @@
       },
       "profiles": [
         "upgrade"
-      ]
+      ],
+      "image_url": ""
     },
     {
       "slug": "corsair-vengeance-32go-ddr5-6000-cl30",
@@ -728,12 +855,19 @@
       "price_ref": 549,
       "perf_score": 100,
       "merchants": [
-        "amazon",
+        "amazon_fr",
         "topachat",
         "rueducommerce",
+        "ldlc",
+        "materielnet",
         "cdiscount",
         "fnac",
-        "aliexpress"
+        "amazon_de",
+        "amazon_es",
+        "alternate",
+        "caseking",
+        "computeruniverse",
+        "megekko"
       ],
       "search_query": "Corsair Vengeance 32 Go (2x16 Go) DDR5 6000 MHz CL30",
       "match_keywords": [
@@ -755,7 +889,8 @@
       },
       "profiles": [
         "upgrade"
-      ]
+      ],
+      "image_url": ""
     },
     {
       "slug": "gskill-trident-z5-neo-rgb-32go-ddr5-6000-cl30",
@@ -769,12 +904,18 @@
       "price_ref": 569,
       "perf_score": 101,
       "merchants": [
-        "amazon",
+        "amazon_fr",
         "topachat",
         "rueducommerce",
+        "ldlc",
         "cdiscount",
         "fnac",
-        "aliexpress"
+        "amazon_de",
+        "amazon_es",
+        "alternate",
+        "caseking",
+        "computeruniverse",
+        "pccomponentes"
       ],
       "search_query": "G.Skill Trident Z5 Neo RGB 32 Go DDR5 6000 MHz CL30",
       "match_keywords": [
@@ -795,7 +936,8 @@
       },
       "profiles": [
         "upgrade"
-      ]
+      ],
+      "image_url": ""
     },
     {
       "slug": "kingston-fury-beast-32go-ddr5-6000-cl30",
@@ -809,12 +951,19 @@
       "price_ref": 539,
       "perf_score": 100,
       "merchants": [
-        "amazon",
+        "amazon_fr",
         "topachat",
         "rueducommerce",
+        "ldlc",
+        "materielnet",
         "cdiscount",
         "fnac",
-        "aliexpress"
+        "amazon_de",
+        "alternate",
+        "caseking",
+        "computeruniverse",
+        "pccomponentes",
+        "megekko"
       ],
       "search_query": "Kingston Fury Beast 32 Go DDR5 6000 MHz CL30",
       "match_keywords": [
@@ -836,7 +985,8 @@
       },
       "profiles": [
         "upgrade"
-      ]
+      ],
+      "image_url": ""
     },
     {
       "slug": "samsung-990-pro-2to",
@@ -850,12 +1000,18 @@
       "price_ref": 399,
       "perf_score": 100,
       "merchants": [
-        "amazon",
+        "amazon_fr",
         "topachat",
         "rueducommerce",
+        "ldlc",
+        "materielnet",
         "cdiscount",
         "fnac",
-        "aliexpress"
+        "amazon_es",
+        "alternate",
+        "caseking",
+        "pccomponentes",
+        "megekko"
       ],
       "search_query": "Samsung 990 PRO 2 To PCIe 4.0",
       "match_keywords": [
@@ -876,7 +1032,8 @@
       },
       "profiles": [
         "upgrade"
-      ]
+      ],
+      "image_url": ""
     },
     {
       "slug": "wd-black-sn850x-2to",
@@ -890,12 +1047,20 @@
       "price_ref": 349,
       "perf_score": 98,
       "merchants": [
-        "amazon",
+        "amazon_fr",
         "topachat",
         "rueducommerce",
+        "ldlc",
+        "materielnet",
         "cdiscount",
         "fnac",
-        "aliexpress"
+        "amazon_de",
+        "amazon_es",
+        "alternate",
+        "caseking",
+        "computeruniverse",
+        "pccomponentes",
+        "megekko"
       ],
       "search_query": "WD_BLACK SN850X 2 To PCIe 4.0",
       "match_keywords": [
@@ -916,7 +1081,8 @@
       },
       "profiles": [
         "upgrade"
-      ]
+      ],
+      "image_url": ""
     },
     {
       "slug": "crucial-t500-2to",
@@ -930,12 +1096,17 @@
       "price_ref": 329,
       "perf_score": 95,
       "merchants": [
-        "amazon",
+        "amazon_fr",
         "topachat",
         "rueducommerce",
+        "ldlc",
+        "materielnet",
         "cdiscount",
         "fnac",
-        "aliexpress"
+        "amazon_de",
+        "caseking",
+        "pccomponentes",
+        "megekko"
       ],
       "search_query": "Crucial T500 2 To PCIe 4.0",
       "match_keywords": [
@@ -956,7 +1127,8 @@
       },
       "profiles": [
         "upgrade"
-      ]
+      ],
+      "image_url": ""
     },
     {
       "slug": "msi-b850-gaming-plus-wifi",
@@ -970,11 +1142,19 @@
       "price_ref": 219,
       "perf_score": 100,
       "merchants": [
-        "amazon",
+        "amazon_fr",
         "topachat",
         "rueducommerce",
+        "ldlc",
+        "materielnet",
         "cdiscount",
-        "fnac"
+        "fnac",
+        "amazon_de",
+        "amazon_es",
+        "alternate",
+        "caseking",
+        "computeruniverse",
+        "megekko"
       ],
       "search_query": "MSI B850 Gaming Plus WiFi",
       "match_keywords": [
@@ -996,7 +1176,8 @@
       },
       "profiles": [
         "upgrade"
-      ]
+      ],
+      "image_url": ""
     },
     {
       "slug": "asus-tuf-gaming-b650-plus-wifi",
@@ -1010,11 +1191,18 @@
       "price_ref": 189,
       "perf_score": 95,
       "merchants": [
-        "amazon",
+        "amazon_fr",
         "topachat",
         "rueducommerce",
+        "ldlc",
+        "materielnet",
         "cdiscount",
-        "fnac"
+        "fnac",
+        "amazon_es",
+        "alternate",
+        "computeruniverse",
+        "pccomponentes",
+        "megekko"
       ],
       "search_query": "ASUS TUF Gaming B650-Plus WiFi",
       "match_keywords": [
@@ -1035,8 +1223,10 @@
       },
       "profiles": [
         "upgrade"
-      ]
+      ],
+      "image_url": ""
     }
   ],
-  "_aide_profils": "profiles : 'upgrade' (Upgrade Gaming 1080p/1440p) et/ou 'sans-compromis' (Config Sans Compromis). Utilisé par les filtres rapides de l'accueil."
+  "_aide_profils": "profiles : 'upgrade' (Upgrade Gaming 1080p/1440p) et/ou 'sans-compromis' (Config Sans Compromis). Utilisé par les filtres rapides de l'accueil.",
+  "_aide_images": "image_url : URL d'une image produit sous licence (ex. image fournie par le flux Awin du marchand). Laisse vide : le site utilise automatiquement l'image du flux marchand si disponible, sinon un visuel généré (jamais d'image cassée)."
 }

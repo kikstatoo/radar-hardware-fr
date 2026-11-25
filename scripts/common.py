@@ -200,7 +200,7 @@ def affiliate_url(merchant_key: str, url: str, affiliates: dict, already_affilia
     network = merchant.get("network", "direct")
 
     if network == "amazon":
-        tag = affiliates.get("amazon_tag", "")
+        tag = affiliates.get(merchant.get("amazon_tag_key", "amazon_tag"), "")
         return _with_query_param(url, "tag", tag) if tag else url
 
     if network == "awin":
@@ -225,6 +225,31 @@ def affiliate_url(merchant_key: str, url: str, affiliates: dict, already_affilia
                 f"&dl_target={quote(url, safe='')}")
 
     return url
+
+
+FLAGS = {"FR": "🇫🇷", "DE": "🇩🇪", "ES": "🇪🇸", "NL": "🇳🇱", "IT": "🇮🇹", "BE": "🇧🇪"}
+
+
+def shipping_cost(merchant: dict, item_price: float) -> float | None:
+    """Frais de port ESTIMÉS vers la France (config/affiliates.json > shipping_fr).
+    None = inconnu (le prix total est alors le prix de l'article)."""
+    rule = merchant.get("shipping_fr")
+    if not rule:
+        return None
+    cost, free_from = rule.get("cost"), rule.get("free_from")
+    if cost is None:
+        return None
+    if free_from is not None and item_price >= free_from:
+        return 0.0
+    return float(cost)
+
+
+def with_delivery(offer: dict, affiliates: dict) -> dict:
+    """Ajoute item_price, shipping et remplace price par le prix total livré en France."""
+    item = offer.get("item_price", offer["price"])
+    ship = shipping_cost(affiliates.get("merchants", {}).get(offer["merchant"], {}), item)
+    return {**offer, "item_price": round(item, 2), "shipping": ship,
+            "price": round(item + (ship or 0), 2)}
 
 
 def get_base_url(affiliates: dict) -> str:
