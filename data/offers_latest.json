@@ -1,47 +1,47 @@
 {
-  "generated_at": 1795568874,
-  "generated_at_iso": "2026-11-25T01:07:54+00:00",
+  "generated_at": 1795569004,
+  "generated_at_iso": "2026-11-25T01:10:04+00:00",
   "mode": "simulation",
   "products": {
     "ryzen-7-9800x3d": [
       {
         "merchant": "aliexpress",
-        "price": 421.9,
+        "price": 417.9,
         "in_stock": true,
         "url": "https://fr.aliexpress.com/w/wholesale-AMD-Ryzen-7-9800X3D.html",
         "source": "simulation"
       },
       {
         "merchant": "amazon",
-        "price": 429.9,
+        "price": 432.99,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=AMD+Ryzen+7+9800X3D&tag=ton-tag-21",
         "source": "simulation"
       },
       {
         "merchant": "topachat",
-        "price": 438.99,
+        "price": 442.99,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=AMD+Ryzen+7+9800X3D",
         "source": "simulation"
       },
       {
         "merchant": "cdiscount",
-        "price": 439.9,
+        "price": 443.9,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/AMD+Ryzen+7+9800X3D.html",
         "source": "simulation"
       },
       {
         "merchant": "rueducommerce",
-        "price": 442.99,
+        "price": 446.99,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/AMD+Ryzen+7+9800X3D",
         "source": "simulation"
       },
       {
         "merchant": "fnac",
-        "price": 460.99,
+        "price": 463.9,
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=AMD+Ryzen+7+9800X3D",
         "source": "simulation"
@@ -57,35 +57,35 @@
       },
       {
         "merchant": "amazon",
-        "price": 284.99,
+        "price": 285.9,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=AMD+Ryzen+7+9700X&tag=ton-tag-21",
         "source": "simulation"
       },
       {
         "merchant": "cdiscount",
-        "price": 286.99,
+        "price": 288.99,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/AMD+Ryzen+7+9700X.html",
         "source": "simulation"
       },
       {
         "merchant": "topachat",
-        "price": 288.99,
+        "price": 289.9,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=AMD+Ryzen+7+9700X",
         "source": "simulation"
       },
       {
         "merchant": "rueducommerce",
-        "price": 295.9,
+        "price": 297.9,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/AMD+Ryzen+7+9700X",
         "source": "simulation"
       },
       {
         "merchant": "fnac",
-        "price": 300.99,
+        "price": 302.99,
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=AMD+Ryzen+7+9700X",
         "source": "simulation"
@@ -94,35 +94,35 @@
     "ryzen-7-7800x3d": [
       {
         "merchant": "aliexpress",
-        "price": 341.9,
+        "price": 338.99,
         "in_stock": true,
         "url": "https://fr.aliexpress.com/w/wholesale-AMD-Ryzen-7-7800X3D.html",
         "source": "simulation"
       },
       {
         "merchant": "cdiscount",
-        "price": 351.9,
+        "price": 350.99,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/AMD+Ryzen+7+7800X3D.html",
         "source": "simulation"
       },
       {
-        "merchant": "amazon",
-        "price": 353.9,
-        "in_stock": true,
-        "url": "https://www.amazon.fr/s?k=AMD+Ryzen+7+7800X3D&tag=ton-tag-21",
-        "source": "simulation"
-      },
-      {
         "merchant": "topachat",
-        "price": 355.9,
+        "price": 354.99,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=AMD+Ryzen+7+7800X3D",
         "source": "simulation"
       },
       {
+        "merchant": "amazon",
+        "price": 356.99,
+        "in_stock": true,
+        "url": "https://www.amazon.fr/s?k=AMD+Ryzen+7+7800X3D&tag=ton-tag-21",
+        "source": "simulation"
+      },
+      {
         "merchant": "rueducommerce",
-        "price": 364.99,
+        "price": 366.99,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/AMD+Ryzen+7+7800X3D",
         "source": "simulation"
@@ -152,21 +152,21 @@
       },
       {
         "merchant": "cdiscount",
-        "price": 189.9,
+        "price": 188.99,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/AMD+Ryzen+5+9600X.html",
         "source": "simulation"
       },
       {
         "merchant": "topachat",
-        "price": 192.99,
+        "price": 194.99,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=AMD+Ryzen+5+9600X",
         "source": "simulation"
       },
       {
         "merchant": "rueducommerce",
-        "price": 194.99,
+        "price": 196.99,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/AMD+Ryzen+5+9600X",
         "source": "simulation"
@@ -182,28 +182,28 @@
     "ryzen-5-9500f": [
       {
         "merchant": "aliexpress",
-        "price": 154.99,
+        "price": 155.9,
         "in_stock": true,
         "url": "https://fr.aliexpress.com/w/wholesale-AMD-Ryzen-5-9500F.html",
         "source": "simulation"
       },
       {
         "merchant": "amazon",
-        "price": 157.9,
+        "price": 159.9,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=AMD+Ryzen+5+9500F&tag=ton-tag-21",
         "source": "simulation"
       },
       {
         "merchant": "cdiscount",
-        "price": 158.99,
+        "price": 159.9,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/AMD+Ryzen+5+9500F.html",
         "source": "simulation"
       },
       {
         "merchant": "topachat",
-        "price": 159.9,
+        "price": 161.9,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=AMD+Ryzen+5+9500F",
         "source": "simulation"
@@ -233,7 +233,7 @@
       },
       {
         "merchant": "cdiscount",
-        "price": 285.9,
+        "price": 283.9,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/Intel+Core+Ultra+7+265K.html",
         "source": "simulation"
@@ -247,7 +247,7 @@
       },
       {
         "merchant": "rueducommerce",
-        "price": 293.9,
+        "price": 292.99,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/Intel+Core+Ultra+7+265K",
         "source": "simulation"
@@ -263,7 +263,7 @@
     "core-ultra-5-245kf": [
       {
         "merchant": "amazon",
-        "price": 186.99,
+        "price": 185.9,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=Intel+Core+Ultra+5+245KF&tag=ton-tag-21",
         "source": "simulation"
@@ -277,14 +277,14 @@
       },
       {
         "merchant": "cdiscount",
-        "price": 190.99,
+        "price": 189.9,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/Intel+Core+Ultra+5+245KF.html",
         "source": "simulation"
       },
       {
         "merchant": "rueducommerce",
-        "price": 192.99,
+        "price": 191.9,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/Intel+Core+Ultra+5+245KF",
         "source": "simulation"
@@ -307,7 +307,7 @@
       },
       {
         "merchant": "cdiscount",
-        "price": 1089.99,
+        "price": 1099.99,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/NVIDIA+GeForce+RTX+5080+16+Go.html",
         "source": "simulation"
@@ -321,7 +321,7 @@
       },
       {
         "merchant": "amazon",
-        "price": 1059.99,
+        "price": 1069.99,
         "in_stock": false,
         "url": "https://www.amazon.fr/s?k=NVIDIA+GeForce+RTX+5080+16+Go&tag=ton-tag-21",
         "source": "simulation"
@@ -337,35 +337,35 @@
     "rtx-5070-ti-16go": [
       {
         "merchant": "amazon",
-        "price": 790.99,
+        "price": 783.9,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=NVIDIA+GeForce+RTX+5070+Ti+16+Go&tag=ton-tag-21",
         "source": "simulation"
       },
       {
         "merchant": "topachat",
-        "price": 792.99,
+        "price": 785.9,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=NVIDIA+GeForce+RTX+5070+Ti+16+Go",
         "source": "simulation"
       },
       {
         "merchant": "cdiscount",
-        "price": 803.9,
+        "price": 797.9,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/NVIDIA+GeForce+RTX+5070+Ti+16+Go.html",
         "source": "simulation"
       },
       {
         "merchant": "rueducommerce",
-        "price": 824.99,
+        "price": 816.99,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/NVIDIA+GeForce+RTX+5070+Ti+16+Go",
         "source": "simulation"
       },
       {
         "merchant": "fnac",
-        "price": 838.99,
+        "price": 830.99,
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=NVIDIA+GeForce+RTX+5070+Ti+16+Go",
         "source": "simulation"
@@ -374,35 +374,35 @@
     "rtx-5070-12go": [
       {
         "merchant": "amazon",
-        "price": 541.9,
+        "price": 542.99,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=NVIDIA+GeForce+RTX+5070+12+Go&tag=ton-tag-21",
         "source": "simulation"
       },
       {
         "merchant": "cdiscount",
-        "price": 544.99,
+        "price": 548.99,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/NVIDIA+GeForce+RTX+5070+12+Go.html",
         "source": "simulation"
       },
       {
         "merchant": "rueducommerce",
-        "price": 555.9,
+        "price": 552.99,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/NVIDIA+GeForce+RTX+5070+12+Go",
         "source": "simulation"
       },
       {
         "merchant": "fnac",
-        "price": 570.99,
+        "price": 572.99,
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=NVIDIA+GeForce+RTX+5070+12+Go",
         "source": "simulation"
       },
       {
         "merchant": "topachat",
-        "price": 550.99,
+        "price": 548.99,
         "in_stock": false,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=NVIDIA+GeForce+RTX+5070+12+Go",
         "source": "simulation"
@@ -410,24 +410,24 @@
     ],
     "rtx-5060-ti-16go": [
       {
-        "merchant": "topachat",
-        "price": 432.99,
-        "in_stock": true,
-        "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=NVIDIA+GeForce+RTX+5060+Ti+16+Go",
-        "source": "simulation"
-      },
-      {
         "merchant": "amazon",
-        "price": 434.99,
+        "price": 431.9,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=NVIDIA+GeForce+RTX+5060+Ti+16+Go&tag=ton-tag-21",
         "source": "simulation"
       },
       {
         "merchant": "cdiscount",
-        "price": 435.9,
+        "price": 434.99,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/NVIDIA+GeForce+RTX+5060+Ti+16+Go.html",
+        "source": "simulation"
+      },
+      {
+        "merchant": "topachat",
+        "price": 435.9,
+        "in_stock": true,
+        "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=NVIDIA+GeForce+RTX+5060+Ti+16+Go",
         "source": "simulation"
       },
       {
@@ -439,7 +439,7 @@
       },
       {
         "merchant": "fnac",
-        "price": 454.99,
+        "price": 452.99,
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=NVIDIA+GeForce+RTX+5060+Ti+16+Go",
         "source": "simulation"
@@ -448,9 +448,16 @@
     "rtx-5060-ti-8go": [
       {
         "merchant": "amazon",
-        "price": 361.9,
+        "price": 363.9,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=NVIDIA+GeForce+RTX+5060+Ti+8+Go&tag=ton-tag-21",
+        "source": "simulation"
+      },
+      {
+        "merchant": "cdiscount",
+        "price": 365.9,
+        "in_stock": true,
+        "url": "https://www.cdiscount.com/search/10/NVIDIA+GeForce+RTX+5060+Ti+8+Go.html",
         "source": "simulation"
       },
       {
@@ -462,64 +469,64 @@
       },
       {
         "merchant": "rueducommerce",
-        "price": 386.99,
+        "price": 388.99,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/NVIDIA+GeForce+RTX+5060+Ti+8+Go",
         "source": "simulation"
       },
       {
         "merchant": "fnac",
-        "price": 397.9,
+        "price": 395.9,
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=NVIDIA+GeForce+RTX+5060+Ti+8+Go",
-        "source": "simulation"
-      },
-      {
-        "merchant": "cdiscount",
-        "price": 362.99,
-        "in_stock": false,
-        "url": "https://www.cdiscount.com/search/10/NVIDIA+GeForce+RTX+5060+Ti+8+Go.html",
         "source": "simulation"
       }
     ],
     "rtx-5060-8go": [
       {
         "merchant": "amazon",
-        "price": 293.9,
+        "price": 295.9,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=NVIDIA+GeForce+RTX+5060+8+Go&tag=ton-tag-21",
         "source": "simulation"
       },
       {
         "merchant": "cdiscount",
-        "price": 297.9,
+        "price": 300.99,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/NVIDIA+GeForce+RTX+5060+8+Go.html",
         "source": "simulation"
       },
       {
         "merchant": "rueducommerce",
-        "price": 304.99,
+        "price": 306.99,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/NVIDIA+GeForce+RTX+5060+8+Go",
         "source": "simulation"
       },
       {
         "merchant": "fnac",
-        "price": 308.99,
+        "price": 310.99,
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=NVIDIA+GeForce+RTX+5060+8+Go",
         "source": "simulation"
       },
       {
         "merchant": "topachat",
-        "price": 297.9,
+        "price": 298.99,
         "in_stock": false,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=NVIDIA+GeForce+RTX+5060+8+Go",
         "source": "simulation"
       }
     ],
     "rx-9070-xt-16go": [
+      {
+        "merchant": "topachat",
+        "price": 595.9,
+        "in_stock": true,
+        "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=AMD+Radeon+RX+9070+XT+16+Go",
+        "source": "simulation"
+      },
       {
         "merchant": "amazon",
         "price": 633.9,
@@ -529,28 +536,21 @@
       },
       {
         "merchant": "cdiscount",
-        "price": 657.9,
+        "price": 662.99,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/AMD+Radeon+RX+9070+XT+16+Go.html",
         "source": "simulation"
       },
       {
-        "merchant": "topachat",
-        "price": 664.99,
-        "in_stock": true,
-        "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=AMD+Radeon+RX+9070+XT+16+Go",
-        "source": "simulation"
-      },
-      {
         "merchant": "rueducommerce",
-        "price": 673.9,
+        "price": 678.99,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/AMD+Radeon+RX+9070+XT+16+Go",
         "source": "simulation"
       },
       {
         "merchant": "fnac",
-        "price": 681.9,
+        "price": 680.99,
         "in_stock": false,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=AMD+Radeon+RX+9070+XT+16+Go",
         "source": "simulation"
@@ -559,35 +559,35 @@
     "rx-9070-16go": [
       {
         "merchant": "cdiscount",
-        "price": 526.99,
+        "price": 527.9,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/AMD+Radeon+RX+9070+16+Go.html",
         "source": "simulation"
       },
       {
         "merchant": "amazon",
-        "price": 584.99,
+        "price": 586.99,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=AMD+Radeon+RX+9070+16+Go&tag=ton-tag-21",
         "source": "simulation"
       },
       {
         "merchant": "topachat",
-        "price": 589.9,
+        "price": 590.99,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=AMD+Radeon+RX+9070+16+Go",
         "source": "simulation"
       },
       {
         "merchant": "rueducommerce",
-        "price": 598.99,
+        "price": 599.9,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/AMD+Radeon+RX+9070+16+Go",
         "source": "simulation"
       },
       {
         "merchant": "fnac",
-        "price": 611.9,
+        "price": 614.99,
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=AMD+Radeon+RX+9070+16+Go",
         "source": "simulation"
@@ -596,21 +596,21 @@
     "rx-9060-xt-16go": [
       {
         "merchant": "amazon",
-        "price": 368.99,
+        "price": 369.9,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=AMD+Radeon+RX+9060+XT+16+Go&tag=ton-tag-21",
         "source": "simulation"
       },
       {
         "merchant": "cdiscount",
-        "price": 376.99,
+        "price": 375.9,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/AMD+Radeon+RX+9060+XT+16+Go.html",
         "source": "simulation"
       },
       {
         "merchant": "topachat",
-        "price": 382.99,
+        "price": 380.99,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=AMD+Radeon+RX+9060+XT+16+Go",
         "source": "simulation"
@@ -624,7 +624,7 @@
       },
       {
         "merchant": "fnac",
-        "price": 396.99,
+        "price": 395.9,
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=AMD+Radeon+RX+9060+XT+16+Go",
         "source": "simulation"
@@ -640,79 +640,79 @@
       },
       {
         "merchant": "amazon",
-        "price": 513.9,
+        "price": 520.99,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=Corsair+Vengeance+32+Go+%282x16+Go%29+DDR5+6000+MHz+CL30&tag=ton-tag-21",
         "source": "simulation"
       },
       {
+        "merchant": "topachat",
+        "price": 530.99,
+        "in_stock": true,
+        "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=Corsair+Vengeance+32+Go+%282x16+Go%29+DDR5+6000+MHz+CL30",
+        "source": "simulation"
+      },
+      {
         "merchant": "cdiscount",
-        "price": 527.9,
+        "price": 535.9,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/Corsair+Vengeance+32+Go+%282x16+Go%29+DDR5+6000+MHz+CL30.html",
         "source": "simulation"
       },
       {
         "merchant": "rueducommerce",
-        "price": 536.99,
+        "price": 540.99,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/Corsair+Vengeance+32+Go+%282x16+Go%29+DDR5+6000+MHz+CL30",
         "source": "simulation"
       },
       {
         "merchant": "fnac",
-        "price": 550.99,
+        "price": 559.9,
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=Corsair+Vengeance+32+Go+%282x16+Go%29+DDR5+6000+MHz+CL30",
-        "source": "simulation"
-      },
-      {
-        "merchant": "topachat",
-        "price": 525.9,
-        "in_stock": false,
-        "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=Corsair+Vengeance+32+Go+%282x16+Go%29+DDR5+6000+MHz+CL30",
         "source": "simulation"
       }
     ],
     "gskill-trident-z5-neo-rgb-32go-ddr5-6000-cl30": [
       {
         "merchant": "aliexpress",
-        "price": 539.9,
+        "price": 537.9,
         "in_stock": true,
         "url": "https://fr.aliexpress.com/w/wholesale-G.Skill-Trident-Z5-Neo-RGB-32-Go-DDR5-6000-MHz-CL30.html",
         "source": "simulation"
       },
       {
         "merchant": "amazon",
-        "price": 563.9,
+        "price": 557.9,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=G.Skill+Trident+Z5+Neo+RGB+32+Go+DDR5+6000+MHz+CL30&tag=ton-tag-21",
         "source": "simulation"
       },
       {
         "merchant": "cdiscount",
-        "price": 569.9,
+        "price": 571.9,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/G.Skill+Trident+Z5+Neo+RGB+32+Go+DDR5+6000+MHz+CL30.html",
         "source": "simulation"
       },
       {
         "merchant": "topachat",
-        "price": 579.9,
+        "price": 574.99,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=G.Skill+Trident+Z5+Neo+RGB+32+Go+DDR5+6000+MHz+CL30",
         "source": "simulation"
       },
       {
         "merchant": "rueducommerce",
-        "price": 585.9,
+        "price": 584.99,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/G.Skill+Trident+Z5+Neo+RGB+32+Go+DDR5+6000+MHz+CL30",
         "source": "simulation"
       },
       {
         "merchant": "fnac",
-        "price": 597.9,
+        "price": 595.9,
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=G.Skill+Trident+Z5+Neo+RGB+32+Go+DDR5+6000+MHz+CL30",
         "source": "simulation"
@@ -721,42 +721,42 @@
     "kingston-fury-beast-32go-ddr5-6000-cl30": [
       {
         "merchant": "aliexpress",
-        "price": 510.99,
+        "price": 511.9,
         "in_stock": true,
         "url": "https://fr.aliexpress.com/w/wholesale-Kingston-Fury-Beast-32-Go-DDR5-6000-MHz-CL30.html",
         "source": "simulation"
       },
       {
         "merchant": "amazon",
-        "price": 521.9,
+        "price": 520.99,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=Kingston+Fury+Beast+32+Go+DDR5+6000+MHz+CL30&tag=ton-tag-21",
         "source": "simulation"
       },
       {
         "merchant": "topachat",
-        "price": 533.9,
+        "price": 535.9,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=Kingston+Fury+Beast+32+Go+DDR5+6000+MHz+CL30",
         "source": "simulation"
       },
       {
         "merchant": "cdiscount",
-        "price": 536.99,
+        "price": 537.9,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/Kingston+Fury+Beast+32+Go+DDR5+6000+MHz+CL30.html",
         "source": "simulation"
       },
       {
         "merchant": "rueducommerce",
-        "price": 545.9,
+        "price": 548.99,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/Kingston+Fury+Beast+32+Go+DDR5+6000+MHz+CL30",
         "source": "simulation"
       },
       {
         "merchant": "fnac",
-        "price": 552.99,
+        "price": 550.99,
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=Kingston+Fury+Beast+32+Go+DDR5+6000+MHz+CL30",
         "source": "simulation"
@@ -765,21 +765,21 @@
     "samsung-990-pro-2to": [
       {
         "merchant": "aliexpress",
-        "price": 358.99,
+        "price": 359.9,
         "in_stock": true,
         "url": "https://fr.aliexpress.com/w/wholesale-Samsung-990-PRO-2-To-PCIe-4.0.html",
         "source": "simulation"
       },
       {
         "merchant": "amazon",
-        "price": 382.99,
+        "price": 381.9,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=Samsung+990+PRO+2+To+PCIe+4.0&tag=ton-tag-21",
         "source": "simulation"
       },
       {
         "merchant": "cdiscount",
-        "price": 383.9,
+        "price": 381.9,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/Samsung+990+PRO+2+To+PCIe+4.0.html",
         "source": "simulation"
@@ -793,14 +793,14 @@
       },
       {
         "merchant": "fnac",
-        "price": 398.99,
+        "price": 396.99,
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=Samsung+990+PRO+2+To+PCIe+4.0",
         "source": "simulation"
       },
       {
         "merchant": "rueducommerce",
-        "price": 400.99,
+        "price": 402.99,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/Samsung+990+PRO+2+To+PCIe+4.0",
         "source": "simulation"
@@ -808,8 +808,15 @@
     ],
     "wd-black-sn850x-2to": [
       {
+        "merchant": "aliexpress",
+        "price": 324.99,
+        "in_stock": true,
+        "url": "https://fr.aliexpress.com/w/wholesale-WD_BLACK-SN850X-2-To-PCIe-4.0.html",
+        "source": "simulation"
+      },
+      {
         "merchant": "amazon",
-        "price": 335.9,
+        "price": 336.99,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=WD_BLACK+SN850X+2+To+PCIe+4.0&tag=ton-tag-21",
         "source": "simulation"
@@ -823,14 +830,14 @@
       },
       {
         "merchant": "topachat",
-        "price": 342.99,
+        "price": 343.9,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=WD_BLACK+SN850X+2+To+PCIe+4.0",
         "source": "simulation"
       },
       {
         "merchant": "rueducommerce",
-        "price": 348.99,
+        "price": 349.9,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/WD_BLACK+SN850X+2+To+PCIe+4.0",
         "source": "simulation"
@@ -841,47 +848,40 @@
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=WD_BLACK+SN850X+2+To+PCIe+4.0",
         "source": "simulation"
-      },
-      {
-        "merchant": "aliexpress",
-        "price": 326.99,
-        "in_stock": false,
-        "url": "https://fr.aliexpress.com/w/wholesale-WD_BLACK-SN850X-2-To-PCIe-4.0.html",
-        "source": "simulation"
       }
     ],
     "crucial-t500-2to": [
       {
         "merchant": "aliexpress",
-        "price": 316.99,
+        "price": 314.99,
         "in_stock": true,
         "url": "https://fr.aliexpress.com/w/wholesale-Crucial-T500-2-To-PCIe-4.0.html",
         "source": "simulation"
       },
       {
         "merchant": "amazon",
-        "price": 327.9,
+        "price": 323.9,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=Crucial+T500+2+To+PCIe+4.0&tag=ton-tag-21",
         "source": "simulation"
       },
       {
         "merchant": "cdiscount",
-        "price": 331.9,
+        "price": 328.99,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/Crucial+T500+2+To+PCIe+4.0.html",
         "source": "simulation"
       },
       {
         "merchant": "topachat",
-        "price": 333.9,
+        "price": 331.9,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=Crucial+T500+2+To+PCIe+4.0",
         "source": "simulation"
       },
       {
         "merchant": "rueducommerce",
-        "price": 342.99,
+        "price": 339.9,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/Crucial+T500+2+To+PCIe+4.0",
         "source": "simulation"
@@ -918,14 +918,14 @@
       },
       {
         "merchant": "rueducommerce",
-        "price": 222.99,
+        "price": 223.9,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/MSI+B850+Gaming+Plus+WiFi",
         "source": "simulation"
       },
       {
         "merchant": "fnac",
-        "price": 225.9,
+        "price": 223.9,
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=MSI+B850+Gaming+Plus+WiFi",
         "source": "simulation"
@@ -934,21 +934,28 @@
     "asus-tuf-gaming-b650-plus-wifi": [
       {
         "merchant": "cdiscount",
-        "price": 165.9,
+        "price": 164.99,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/ASUS+TUF+Gaming+B650-Plus+WiFi.html",
         "source": "simulation"
       },
       {
         "merchant": "amazon",
-        "price": 186.99,
+        "price": 185.9,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=ASUS+TUF+Gaming+B650-Plus+WiFi&tag=ton-tag-21",
         "source": "simulation"
       },
       {
+        "merchant": "topachat",
+        "price": 188.99,
+        "in_stock": true,
+        "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=ASUS+TUF+Gaming+B650-Plus+WiFi",
+        "source": "simulation"
+      },
+      {
         "merchant": "rueducommerce",
-        "price": 192.99,
+        "price": 189.9,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/ASUS+TUF+Gaming+B650-Plus+WiFi",
         "source": "simulation"
@@ -958,13 +965,6 @@
         "price": 198.99,
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=ASUS+TUF+Gaming+B650-Plus+WiFi",
-        "source": "simulation"
-      },
-      {
-        "merchant": "topachat",
-        "price": 189.9,
-        "in_stock": false,
-        "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=ASUS+TUF+Gaming+B650-Plus+WiFi",
         "source": "simulation"
       }
     ]
