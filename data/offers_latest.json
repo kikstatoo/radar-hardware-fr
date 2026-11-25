@@ -1,6 +1,6 @@
 {
-  "generated_at": 1795569959,
-  "generated_at_iso": "2026-11-25T01:25:59+00:00",
+  "generated_at": 1795570030,
+  "generated_at_iso": "2026-11-25T01:27:10+00:00",
   "mode": "simulation",
   "products": {
     "ryzen-7-9800x3d": [
@@ -15,21 +15,30 @@
       },
       {
         "merchant": "computeruniverse",
-        "price": 436.98,
+        "price": 435.89,
         "in_stock": true,
         "url": "https://www.computeruniverse.net/de/search?query=AMD+Ryzen+7+9800X3D",
         "source": "simulation",
-        "item_price": 426.99,
+        "item_price": 425.9,
         "shipping": 9.99
       },
       {
         "merchant": "amazon_de",
-        "price": 442.98,
+        "price": 441.89,
         "in_stock": true,
         "url": "https://www.amazon.de/s?k=AMD+Ryzen+7+9800X3D",
         "source": "simulation",
-        "item_price": 434.99,
+        "item_price": 433.9,
         "shipping": 7.99
+      },
+      {
+        "merchant": "megekko",
+        "price": 446.85,
+        "in_stock": true,
+        "url": "https://www.megekko.nl/zoeken?q=AMD+Ryzen+7+9800X3D",
+        "source": "simulation",
+        "item_price": 433.9,
+        "shipping": 12.95
       },
       {
         "merchant": "amazon_fr",
@@ -39,15 +48,6 @@
         "source": "simulation",
         "item_price": 447.9,
         "shipping": 0.0
-      },
-      {
-        "merchant": "megekko",
-        "price": 447.94,
-        "in_stock": true,
-        "url": "https://www.megekko.nl/zoeken?q=AMD+Ryzen+7+9800X3D",
-        "source": "simulation",
-        "item_price": 434.99,
-        "shipping": 12.95
       },
       {
         "merchant": "amazon_es",
@@ -60,11 +60,11 @@
       },
       {
         "merchant": "caseking",
-        "price": 452.89,
+        "price": 456.89,
         "in_stock": true,
         "url": "https://www.caseking.de/search?search=AMD+Ryzen+7+9800X3D",
         "source": "simulation",
-        "item_price": 437.9,
+        "item_price": 441.9,
         "shipping": 14.99
       },
       {
@@ -86,48 +86,48 @@
         "shipping": 5.99
       },
       {
-        "merchant": "rueducommerce",
-        "price": 465.89,
-        "in_stock": true,
-        "url": "https://www.rueducommerce.fr/r/AMD+Ryzen+7+9800X3D",
-        "source": "simulation",
-        "item_price": 459.9,
-        "shipping": 5.99
-      },
-      {
         "merchant": "materielnet",
-        "price": 465.98,
+        "price": 464.89,
         "in_stock": true,
         "url": "https://www.materiel.net/recherche/AMD+Ryzen+7+9800X3D/",
         "source": "simulation",
-        "item_price": 458.99,
+        "item_price": 457.9,
         "shipping": 6.99
       },
       {
+        "merchant": "rueducommerce",
+        "price": 464.98,
+        "in_stock": true,
+        "url": "https://www.rueducommerce.fr/r/AMD+Ryzen+7+9800X3D",
+        "source": "simulation",
+        "item_price": 458.99,
+        "shipping": 5.99
+      },
+      {
         "merchant": "ldlc",
-        "price": 475.98,
+        "price": 471.98,
         "in_stock": true,
         "url": "https://www.ldlc.com/recherche/AMD+Ryzen+7+9800X3D/",
         "source": "simulation",
-        "item_price": 468.99,
+        "item_price": 464.99,
         "shipping": 6.99
       },
       {
         "merchant": "fnac",
-        "price": 476.89,
+        "price": 475.98,
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=AMD+Ryzen+7+9800X3D",
         "source": "simulation",
-        "item_price": 471.9,
+        "item_price": 470.99,
         "shipping": 4.99
       },
       {
         "merchant": "alternate",
-        "price": 444.89,
+        "price": 446.89,
         "in_stock": false,
         "url": "https://www.alternate.fr/listing.xhtml?q=AMD+Ryzen+7+9800X3D",
         "source": "simulation",
-        "item_price": 437.9,
+        "item_price": 439.9,
         "shipping": 6.99
       }
     ],
@@ -143,20 +143,20 @@
       },
       {
         "merchant": "pccomponentes",
-        "price": 272.99,
+        "price": 273.9,
         "in_stock": true,
         "url": "https://www.pccomponentes.fr/search/?query=AMD+Ryzen+7+9700X",
         "source": "simulation",
-        "item_price": 272.99,
+        "item_price": 273.9,
         "shipping": 0.0
       },
       {
         "merchant": "amazon_fr",
-        "price": 278.99,
+        "price": 279.9,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=AMD+Ryzen+7+9700X&tag=ton-tag-21",
         "source": "simulation",
-        "item_price": 278.99,
+        "item_price": 279.9,
         "shipping": 0.0
       },
       {
@@ -170,11 +170,11 @@
       },
       {
         "merchant": "amazon_es",
-        "price": 285.89,
+        "price": 283.89,
         "in_stock": true,
         "url": "https://www.amazon.es/s?k=AMD+Ryzen+7+9700X",
         "source": "simulation",
-        "item_price": 277.9,
+        "item_price": 275.9,
         "shipping": 7.99
       },
       {
@@ -187,37 +187,37 @@
         "shipping": 12.95
       },
       {
-        "merchant": "cdiscount",
-        "price": 291.98,
-        "in_stock": true,
-        "url": "https://www.cdiscount.com/search/10/AMD+Ryzen+7+9700X.html",
-        "source": "simulation",
-        "item_price": 286.99,
-        "shipping": 4.99
-      },
-      {
         "merchant": "caseking",
-        "price": 291.98,
+        "price": 289.98,
         "in_stock": true,
         "url": "https://www.caseking.de/search?search=AMD+Ryzen+7+9700X",
         "source": "simulation",
-        "item_price": 276.99,
+        "item_price": 274.99,
         "shipping": 14.99
       },
       {
-        "merchant": "rueducommerce",
-        "price": 297.89,
+        "merchant": "cdiscount",
+        "price": 292.89,
         "in_stock": true,
-        "url": "https://www.rueducommerce.fr/r/AMD+Ryzen+7+9700X",
+        "url": "https://www.cdiscount.com/search/10/AMD+Ryzen+7+9700X.html",
         "source": "simulation",
-        "item_price": 291.9,
-        "shipping": 5.99
+        "item_price": 287.9,
+        "shipping": 4.99
       },
       {
         "merchant": "topachat",
-        "price": 298.98,
+        "price": 296.98,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=AMD+Ryzen+7+9700X",
+        "source": "simulation",
+        "item_price": 290.99,
+        "shipping": 5.99
+      },
+      {
+        "merchant": "rueducommerce",
+        "price": 298.98,
+        "in_stock": true,
+        "url": "https://www.rueducommerce.fr/r/AMD+Ryzen+7+9700X",
         "source": "simulation",
         "item_price": 292.99,
         "shipping": 5.99
@@ -233,20 +233,20 @@
       },
       {
         "merchant": "alternate",
-        "price": 286.89,
+        "price": 284.89,
         "in_stock": false,
         "url": "https://www.alternate.fr/listing.xhtml?q=AMD+Ryzen+7+9700X",
         "source": "simulation",
-        "item_price": 279.9,
+        "item_price": 277.9,
         "shipping": 6.99
       },
       {
         "merchant": "fnac",
-        "price": 302.89,
+        "price": 303.98,
         "in_stock": false,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=AMD+Ryzen+7+9700X",
         "source": "simulation",
-        "item_price": 297.9,
+        "item_price": 298.99,
         "shipping": 4.99
       }
     ],
@@ -262,11 +262,11 @@
       },
       {
         "merchant": "amazon_es",
-        "price": 333.89,
+        "price": 335.89,
         "in_stock": true,
         "url": "https://www.amazon.es/s?k=AMD+Ryzen+7+7800X3D",
         "source": "simulation",
-        "item_price": 325.9,
+        "item_price": 327.9,
         "shipping": 7.99
       },
       {
@@ -280,21 +280,21 @@
       },
       {
         "merchant": "amazon_de",
-        "price": 338.98,
+        "price": 336.98,
         "in_stock": true,
         "url": "https://www.amazon.de/s?k=AMD+Ryzen+7+7800X3D",
         "source": "simulation",
-        "item_price": 330.99,
+        "item_price": 328.99,
         "shipping": 7.99
       },
       {
-        "merchant": "megekko",
-        "price": 340.85,
+        "merchant": "alternate",
+        "price": 340.89,
         "in_stock": true,
-        "url": "https://www.megekko.nl/zoeken?q=AMD+Ryzen+7+7800X3D",
+        "url": "https://www.alternate.fr/listing.xhtml?q=AMD+Ryzen+7+7800X3D",
         "source": "simulation",
-        "item_price": 327.9,
-        "shipping": 12.95
+        "item_price": 333.9,
+        "shipping": 6.99
       },
       {
         "merchant": "amazon_fr",
@@ -306,6 +306,15 @@
         "shipping": 0.0
       },
       {
+        "merchant": "megekko",
+        "price": 341.94,
+        "in_stock": true,
+        "url": "https://www.megekko.nl/zoeken?q=AMD+Ryzen+7+7800X3D",
+        "source": "simulation",
+        "item_price": 328.99,
+        "shipping": 12.95
+      },
+      {
         "merchant": "caseking",
         "price": 343.98,
         "in_stock": true,
@@ -315,77 +324,59 @@
         "shipping": 14.99
       },
       {
-        "merchant": "alternate",
-        "price": 344.89,
-        "in_stock": true,
-        "url": "https://www.alternate.fr/listing.xhtml?q=AMD+Ryzen+7+7800X3D",
-        "source": "simulation",
-        "item_price": 337.9,
-        "shipping": 6.99
-      },
-      {
         "merchant": "topachat",
-        "price": 349.89,
+        "price": 350.98,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=AMD+Ryzen+7+7800X3D",
         "source": "simulation",
-        "item_price": 343.9,
+        "item_price": 344.99,
         "shipping": 5.99
       },
       {
         "merchant": "cdiscount",
-        "price": 351.98,
+        "price": 353.98,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/AMD+Ryzen+7+7800X3D.html",
         "source": "simulation",
-        "item_price": 346.99,
+        "item_price": 348.99,
         "shipping": 4.99
       },
       {
         "merchant": "rueducommerce",
-        "price": 360.98,
+        "price": 358.98,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/AMD+Ryzen+7+7800X3D",
         "source": "simulation",
-        "item_price": 354.99,
+        "item_price": 352.99,
         "shipping": 5.99
       },
       {
         "merchant": "materielnet",
-        "price": 364.89,
+        "price": 363.98,
         "in_stock": true,
         "url": "https://www.materiel.net/recherche/AMD+Ryzen+7+7800X3D/",
         "source": "simulation",
-        "item_price": 357.9,
+        "item_price": 356.99,
         "shipping": 6.99
       },
       {
         "merchant": "ldlc",
-        "price": 369.98,
+        "price": 368.89,
         "in_stock": true,
         "url": "https://www.ldlc.com/recherche/AMD+Ryzen+7+7800X3D/",
         "source": "simulation",
-        "item_price": 362.99,
+        "item_price": 361.9,
         "shipping": 6.99
       }
     ],
     "ryzen-5-9600x": [
       {
         "merchant": "pccomponentes",
-        "price": 183.9,
+        "price": 186.99,
         "in_stock": true,
         "url": "https://www.pccomponentes.fr/search/?query=AMD+Ryzen+5+9600X",
         "source": "simulation",
-        "item_price": 183.9,
-        "shipping": 0.0
-      },
-      {
-        "merchant": "amazon_fr",
-        "price": 190.99,
-        "in_stock": true,
-        "url": "https://www.amazon.fr/s?k=AMD+Ryzen+5+9600X&tag=ton-tag-21",
-        "source": "simulation",
-        "item_price": 190.99,
+        "item_price": 186.99,
         "shipping": 0.0
       },
       {
@@ -398,12 +389,21 @@
         "shipping": 9.99
       },
       {
+        "merchant": "amazon_fr",
+        "price": 191.9,
+        "in_stock": true,
+        "url": "https://www.amazon.fr/s?k=AMD+Ryzen+5+9600X&tag=ton-tag-21",
+        "source": "simulation",
+        "item_price": 191.9,
+        "shipping": 0.0
+      },
+      {
         "merchant": "amazon_de",
-        "price": 194.98,
+        "price": 195.89,
         "in_stock": true,
         "url": "https://www.amazon.de/s?k=AMD+Ryzen+5+9600X",
         "source": "simulation",
-        "item_price": 186.99,
+        "item_price": 187.9,
         "shipping": 7.99
       },
       {
@@ -444,47 +444,47 @@
       },
       {
         "merchant": "caseking",
-        "price": 203.98,
+        "price": 202.89,
         "in_stock": true,
         "url": "https://www.caseking.de/search?search=AMD+Ryzen+5+9600X",
         "source": "simulation",
-        "item_price": 188.99,
+        "item_price": 187.9,
         "shipping": 14.99
       },
       {
         "merchant": "rueducommerce",
-        "price": 204.98,
+        "price": 205.89,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/AMD+Ryzen+5+9600X",
         "source": "simulation",
-        "item_price": 198.99,
+        "item_price": 199.9,
         "shipping": 5.99
       },
       {
-        "merchant": "ldlc",
+        "merchant": "materielnet",
         "price": 206.89,
         "in_stock": true,
-        "url": "https://www.ldlc.com/recherche/AMD+Ryzen+5+9600X/",
+        "url": "https://www.materiel.net/recherche/AMD+Ryzen+5+9600X/",
         "source": "simulation",
         "item_price": 199.9,
         "shipping": 6.99
       },
       {
-        "merchant": "materielnet",
+        "merchant": "ldlc",
         "price": 207.98,
         "in_stock": true,
-        "url": "https://www.materiel.net/recherche/AMD+Ryzen+5+9600X/",
+        "url": "https://www.ldlc.com/recherche/AMD+Ryzen+5+9600X/",
         "source": "simulation",
         "item_price": 200.99,
         "shipping": 6.99
       },
       {
         "merchant": "fnac",
-        "price": 211.98,
+        "price": 210.89,
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=AMD+Ryzen+5+9600X",
         "source": "simulation",
-        "item_price": 206.99,
+        "item_price": 205.9,
         "shipping": 4.99
       }
     ],
@@ -499,21 +499,12 @@
         "shipping": 0.0
       },
       {
-        "merchant": "amazon_fr",
-        "price": 155.9,
-        "in_stock": true,
-        "url": "https://www.amazon.fr/s?k=AMD+Ryzen+5+9500F&tag=ton-tag-21",
-        "source": "simulation",
-        "item_price": 155.9,
-        "shipping": 0.0
-      },
-      {
         "merchant": "computeruniverse",
-        "price": 157.89,
+        "price": 156.98,
         "in_stock": true,
         "url": "https://www.computeruniverse.net/de/search?query=AMD+Ryzen+5+9500F",
         "source": "simulation",
-        "item_price": 147.9,
+        "item_price": 146.99,
         "shipping": 9.99
       },
       {
@@ -544,13 +535,13 @@
         "shipping": 6.99
       },
       {
-        "merchant": "topachat",
-        "price": 161.89,
+        "merchant": "megekko",
+        "price": 161.94,
         "in_stock": true,
-        "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=AMD+Ryzen+5+9500F",
+        "url": "https://www.megekko.nl/zoeken?q=AMD+Ryzen+5+9500F",
         "source": "simulation",
-        "item_price": 155.9,
-        "shipping": 5.99
+        "item_price": 148.99,
+        "shipping": 12.95
       },
       {
         "merchant": "cdiscount",
@@ -562,21 +553,21 @@
         "shipping": 4.99
       },
       {
-        "merchant": "megekko",
-        "price": 162.85,
+        "merchant": "topachat",
+        "price": 162.98,
         "in_stock": true,
-        "url": "https://www.megekko.nl/zoeken?q=AMD+Ryzen+5+9500F",
+        "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=AMD+Ryzen+5+9500F",
         "source": "simulation",
-        "item_price": 149.9,
-        "shipping": 12.95
+        "item_price": 156.99,
+        "shipping": 5.99
       },
       {
         "merchant": "rueducommerce",
-        "price": 166.98,
+        "price": 165.89,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/AMD+Ryzen+5+9500F",
         "source": "simulation",
-        "item_price": 160.99,
+        "item_price": 159.9,
         "shipping": 5.99
       },
       {
@@ -590,31 +581,40 @@
       },
       {
         "merchant": "fnac",
-        "price": 168.89,
+        "price": 167.98,
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=AMD+Ryzen+5+9500F",
         "source": "simulation",
-        "item_price": 163.9,
+        "item_price": 162.99,
         "shipping": 4.99
       },
       {
         "merchant": "ldlc",
-        "price": 171.98,
+        "price": 169.98,
         "in_stock": true,
         "url": "https://www.ldlc.com/recherche/AMD+Ryzen+5+9500F/",
         "source": "simulation",
-        "item_price": 164.99,
+        "item_price": 162.99,
         "shipping": 6.99
+      },
+      {
+        "merchant": "amazon_fr",
+        "price": 154.99,
+        "in_stock": false,
+        "url": "https://www.amazon.fr/s?k=AMD+Ryzen+5+9500F&tag=ton-tag-21",
+        "source": "simulation",
+        "item_price": 154.99,
+        "shipping": 0.0
       }
     ],
     "core-ultra-7-265k": [
       {
         "merchant": "amazon_de",
-        "price": 274.98,
+        "price": 273.89,
         "in_stock": true,
         "url": "https://www.amazon.de/s?k=Intel+Core+Ultra+7+265K",
         "source": "simulation",
-        "item_price": 266.99,
+        "item_price": 265.9,
         "shipping": 7.99
       },
       {
@@ -628,21 +628,12 @@
       },
       {
         "merchant": "amazon_fr",
-        "price": 275.9,
+        "price": 276.99,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=Intel+Core+Ultra+7+265K&tag=ton-tag-21",
         "source": "simulation",
-        "item_price": 275.9,
+        "item_price": 276.99,
         "shipping": 0.0
-      },
-      {
-        "merchant": "megekko",
-        "price": 282.85,
-        "in_stock": true,
-        "url": "https://www.megekko.nl/zoeken?q=Intel+Core+Ultra+7+265K",
-        "source": "simulation",
-        "item_price": 269.9,
-        "shipping": 12.95
       },
       {
         "merchant": "alternate",
@@ -652,6 +643,15 @@
         "source": "simulation",
         "item_price": 275.9,
         "shipping": 6.99
+      },
+      {
+        "merchant": "megekko",
+        "price": 283.94,
+        "in_stock": true,
+        "url": "https://www.megekko.nl/zoeken?q=Intel+Core+Ultra+7+265K",
+        "source": "simulation",
+        "item_price": 270.99,
+        "shipping": 12.95
       },
       {
         "merchant": "cdiscount",
@@ -664,21 +664,30 @@
       },
       {
         "merchant": "topachat",
-        "price": 288.98,
+        "price": 289.89,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=Intel+Core+Ultra+7+265K",
         "source": "simulation",
-        "item_price": 282.99,
+        "item_price": 283.9,
         "shipping": 5.99
       },
       {
         "merchant": "materielnet",
-        "price": 297.98,
+        "price": 298.89,
         "in_stock": true,
         "url": "https://www.materiel.net/recherche/Intel+Core+Ultra+7+265K/",
         "source": "simulation",
-        "item_price": 290.99,
+        "item_price": 291.9,
         "shipping": 6.99
+      },
+      {
+        "merchant": "fnac",
+        "price": 298.89,
+        "in_stock": true,
+        "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=Intel+Core+Ultra+7+265K",
+        "source": "simulation",
+        "item_price": 293.9,
+        "shipping": 4.99
       },
       {
         "merchant": "rueducommerce",
@@ -690,30 +699,21 @@
         "shipping": 5.99
       },
       {
-        "merchant": "fnac",
-        "price": 300.89,
-        "in_stock": true,
-        "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=Intel+Core+Ultra+7+265K",
-        "source": "simulation",
-        "item_price": 295.9,
-        "shipping": 4.99
-      },
-      {
         "merchant": "ldlc",
-        "price": 301.98,
+        "price": 300.89,
         "in_stock": true,
         "url": "https://www.ldlc.com/recherche/Intel+Core+Ultra+7+265K/",
         "source": "simulation",
-        "item_price": 294.99,
+        "item_price": 293.9,
         "shipping": 6.99
       },
       {
         "merchant": "amazon_es",
-        "price": 285.89,
+        "price": 282.98,
         "in_stock": false,
         "url": "https://www.amazon.es/s?k=Intel+Core+Ultra+7+265K",
         "source": "simulation",
-        "item_price": 277.9,
+        "item_price": 274.99,
         "shipping": 7.99
       }
     ],
@@ -729,11 +729,11 @@
       },
       {
         "merchant": "amazon_de",
-        "price": 186.98,
+        "price": 185.89,
         "in_stock": true,
         "url": "https://www.amazon.de/s?k=Intel+Core+Ultra+5+245KF",
         "source": "simulation",
-        "item_price": 178.99,
+        "item_price": 177.9,
         "shipping": 7.99
       },
       {
@@ -747,48 +747,39 @@
       },
       {
         "merchant": "computeruniverse",
-        "price": 186.98,
+        "price": 188.98,
         "in_stock": true,
         "url": "https://www.computeruniverse.net/de/search?query=Intel+Core+Ultra+5+245KF",
         "source": "simulation",
-        "item_price": 176.99,
+        "item_price": 178.99,
         "shipping": 9.99
       },
       {
         "merchant": "alternate",
-        "price": 187.98,
+        "price": 189.98,
         "in_stock": true,
         "url": "https://www.alternate.fr/listing.xhtml?q=Intel+Core+Ultra+5+245KF",
         "source": "simulation",
-        "item_price": 180.99,
+        "item_price": 182.99,
         "shipping": 6.99
       },
       {
         "merchant": "megekko",
-        "price": 191.94,
+        "price": 192.85,
         "in_stock": true,
         "url": "https://www.megekko.nl/zoeken?q=Intel+Core+Ultra+5+245KF",
         "source": "simulation",
-        "item_price": 178.99,
+        "item_price": 179.9,
         "shipping": 12.95
       },
       {
         "merchant": "topachat",
-        "price": 193.89,
+        "price": 194.98,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=Intel+Core+Ultra+5+245KF",
         "source": "simulation",
-        "item_price": 187.9,
+        "item_price": 188.99,
         "shipping": 5.99
-      },
-      {
-        "merchant": "caseking",
-        "price": 195.98,
-        "in_stock": true,
-        "url": "https://www.caseking.de/search?search=Intel+Core+Ultra+5+245KF",
-        "source": "simulation",
-        "item_price": 180.99,
-        "shipping": 14.99
       },
       {
         "merchant": "materielnet",
@@ -800,30 +791,39 @@
         "shipping": 6.99
       },
       {
+        "merchant": "caseking",
+        "price": 196.89,
+        "in_stock": true,
+        "url": "https://www.caseking.de/search?search=Intel+Core+Ultra+5+245KF",
+        "source": "simulation",
+        "item_price": 181.9,
+        "shipping": 14.99
+      },
+      {
         "merchant": "rueducommerce",
-        "price": 198.98,
+        "price": 196.98,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/Intel+Core+Ultra+5+245KF",
         "source": "simulation",
-        "item_price": 192.99,
+        "item_price": 190.99,
         "shipping": 5.99
       },
       {
         "merchant": "fnac",
-        "price": 201.98,
+        "price": 202.89,
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=Intel+Core+Ultra+5+245KF",
         "source": "simulation",
-        "item_price": 196.99,
+        "item_price": 197.9,
         "shipping": 4.99
       },
       {
         "merchant": "pccomponentes",
-        "price": 178.99,
+        "price": 177.9,
         "in_stock": false,
         "url": "https://www.pccomponentes.fr/search/?query=Intel+Core+Ultra+5+245KF",
         "source": "simulation",
-        "item_price": 178.99,
+        "item_price": 177.9,
         "shipping": 0.0
       },
       {
@@ -839,21 +839,12 @@
     "rtx-5080-16go": [
       {
         "merchant": "pccomponentes",
-        "price": 1019.99,
+        "price": 1029.99,
         "in_stock": true,
         "url": "https://www.pccomponentes.fr/search/?query=NVIDIA+GeForce+RTX+5080+16+Go",
         "source": "simulation",
-        "item_price": 1019.99,
-        "shipping": 0.0
-      },
-      {
-        "merchant": "computeruniverse",
-        "price": 1039.98,
-        "in_stock": true,
-        "url": "https://www.computeruniverse.net/de/search?query=NVIDIA+GeForce+RTX+5080+16+Go",
-        "source": "simulation",
         "item_price": 1029.99,
-        "shipping": 9.99
+        "shipping": 0.0
       },
       {
         "merchant": "amazon_es",
@@ -865,12 +856,21 @@
         "shipping": 7.99
       },
       {
+        "merchant": "computeruniverse",
+        "price": 1049.98,
+        "in_stock": true,
+        "url": "https://www.computeruniverse.net/de/search?query=NVIDIA+GeForce+RTX+5080+16+Go",
+        "source": "simulation",
+        "item_price": 1039.99,
+        "shipping": 9.99
+      },
+      {
         "merchant": "megekko",
-        "price": 1052.94,
+        "price": 1062.94,
         "in_stock": true,
         "url": "https://www.megekko.nl/zoeken?q=NVIDIA+GeForce+RTX+5080+16+Go",
         "source": "simulation",
-        "item_price": 1039.99,
+        "item_price": 1049.99,
         "shipping": 12.95
       },
       {
@@ -931,11 +931,11 @@
     "rtx-5070-ti-16go": [
       {
         "merchant": "pccomponentes",
-        "price": 762.99,
+        "price": 761.9,
         "in_stock": true,
         "url": "https://www.pccomponentes.fr/search/?query=NVIDIA+GeForce+RTX+5070+Ti+16+Go",
         "source": "simulation",
-        "item_price": 762.99,
+        "item_price": 761.9,
         "shipping": 0.0
       },
       {
@@ -949,21 +949,12 @@
       },
       {
         "merchant": "megekko",
-        "price": 776.85,
+        "price": 774.85,
         "in_stock": true,
         "url": "https://www.megekko.nl/zoeken?q=NVIDIA+GeForce+RTX+5070+Ti+16+Go",
         "source": "simulation",
-        "item_price": 763.9,
-        "shipping": 12.95
-      },
-      {
-        "merchant": "caseking",
-        "price": 776.89,
-        "in_stock": true,
-        "url": "https://www.caseking.de/search?search=NVIDIA+GeForce+RTX+5070+Ti+16+Go",
-        "source": "simulation",
         "item_price": 761.9,
-        "shipping": 14.99
+        "shipping": 12.95
       },
       {
         "merchant": "amazon_fr",
@@ -975,167 +966,176 @@
         "shipping": 0.0
       },
       {
+        "merchant": "caseking",
+        "price": 778.89,
+        "in_stock": true,
+        "url": "https://www.caseking.de/search?search=NVIDIA+GeForce+RTX+5070+Ti+16+Go",
+        "source": "simulation",
+        "item_price": 763.9,
+        "shipping": 14.99
+      },
+      {
         "merchant": "amazon_es",
-        "price": 780.98,
+        "price": 782.98,
         "in_stock": true,
         "url": "https://www.amazon.es/s?k=NVIDIA+GeForce+RTX+5070+Ti+16+Go",
         "source": "simulation",
-        "item_price": 772.99,
+        "item_price": 774.99,
         "shipping": 7.99
       },
       {
-        "merchant": "topachat",
-        "price": 800.98,
-        "in_stock": true,
-        "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=NVIDIA+GeForce+RTX+5070+Ti+16+Go",
-        "source": "simulation",
-        "item_price": 794.99,
-        "shipping": 5.99
-      },
-      {
         "merchant": "cdiscount",
-        "price": 806.89,
+        "price": 808.89,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/NVIDIA+GeForce+RTX+5070+Ti+16+Go.html",
         "source": "simulation",
-        "item_price": 801.9,
+        "item_price": 803.9,
         "shipping": 4.99
       },
       {
+        "merchant": "topachat",
+        "price": 808.98,
+        "in_stock": true,
+        "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=NVIDIA+GeForce+RTX+5070+Ti+16+Go",
+        "source": "simulation",
+        "item_price": 802.99,
+        "shipping": 5.99
+      },
+      {
         "merchant": "materielnet",
-        "price": 824.89,
+        "price": 822.89,
         "in_stock": true,
         "url": "https://www.materiel.net/recherche/NVIDIA+GeForce+RTX+5070+Ti+16+Go/",
         "source": "simulation",
-        "item_price": 817.9,
-        "shipping": 6.99
-      },
-      {
-        "merchant": "ldlc",
-        "price": 826.89,
-        "in_stock": true,
-        "url": "https://www.ldlc.com/recherche/NVIDIA+GeForce+RTX+5070+Ti+16+Go/",
-        "source": "simulation",
-        "item_price": 819.9,
+        "item_price": 815.9,
         "shipping": 6.99
       },
       {
         "merchant": "rueducommerce",
-        "price": 826.98,
+        "price": 827.89,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/NVIDIA+GeForce+RTX+5070+Ti+16+Go",
         "source": "simulation",
-        "item_price": 820.99,
+        "item_price": 821.9,
         "shipping": 5.99
+      },
+      {
+        "merchant": "ldlc",
+        "price": 832.89,
+        "in_stock": true,
+        "url": "https://www.ldlc.com/recherche/NVIDIA+GeForce+RTX+5070+Ti+16+Go/",
+        "source": "simulation",
+        "item_price": 825.9,
+        "shipping": 6.99
       }
     ],
     "rtx-5070-12go": [
       {
         "merchant": "pccomponentes",
-        "price": 522.99,
+        "price": 516.99,
         "in_stock": true,
         "url": "https://www.pccomponentes.fr/search/?query=NVIDIA+GeForce+RTX+5070+12+Go",
         "source": "simulation",
-        "item_price": 522.99,
+        "item_price": 516.99,
         "shipping": 0.0
       },
       {
         "merchant": "amazon_de",
-        "price": 528.98,
+        "price": 526.98,
         "in_stock": true,
         "url": "https://www.amazon.de/s?k=NVIDIA+GeForce+RTX+5070+12+Go",
         "source": "simulation",
-        "item_price": 520.99,
+        "item_price": 518.99,
         "shipping": 7.99
-      },
-      {
-        "merchant": "amazon_es",
-        "price": 533.89,
-        "in_stock": true,
-        "url": "https://www.amazon.es/s?k=NVIDIA+GeForce+RTX+5070+12+Go",
-        "source": "simulation",
-        "item_price": 525.9,
-        "shipping": 7.99
-      },
-      {
-        "merchant": "caseking",
-        "price": 534.89,
-        "in_stock": true,
-        "url": "https://www.caseking.de/search?search=NVIDIA+GeForce+RTX+5070+12+Go",
-        "source": "simulation",
-        "item_price": 519.9,
-        "shipping": 14.99
-      },
-      {
-        "merchant": "computeruniverse",
-        "price": 535.89,
-        "in_stock": true,
-        "url": "https://www.computeruniverse.net/de/search?query=NVIDIA+GeForce+RTX+5070+12+Go",
-        "source": "simulation",
-        "item_price": 525.9,
-        "shipping": 9.99
-      },
-      {
-        "merchant": "megekko",
-        "price": 536.85,
-        "in_stock": true,
-        "url": "https://www.megekko.nl/zoeken?q=NVIDIA+GeForce+RTX+5070+12+Go",
-        "source": "simulation",
-        "item_price": 523.9,
-        "shipping": 12.95
       },
       {
         "merchant": "alternate",
-        "price": 537.98,
+        "price": 531.98,
         "in_stock": true,
         "url": "https://www.alternate.fr/listing.xhtml?q=NVIDIA+GeForce+RTX+5070+12+Go",
         "source": "simulation",
-        "item_price": 530.99,
+        "item_price": 524.99,
         "shipping": 6.99
       },
       {
+        "merchant": "computeruniverse",
+        "price": 533.89,
+        "in_stock": true,
+        "url": "https://www.computeruniverse.net/de/search?query=NVIDIA+GeForce+RTX+5070+12+Go",
+        "source": "simulation",
+        "item_price": 523.9,
+        "shipping": 9.99
+      },
+      {
+        "merchant": "caseking",
+        "price": 533.98,
+        "in_stock": true,
+        "url": "https://www.caseking.de/search?search=NVIDIA+GeForce+RTX+5070+12+Go",
+        "source": "simulation",
+        "item_price": 518.99,
+        "shipping": 14.99
+      },
+      {
+        "merchant": "amazon_es",
+        "price": 534.98,
+        "in_stock": true,
+        "url": "https://www.amazon.es/s?k=NVIDIA+GeForce+RTX+5070+12+Go",
+        "source": "simulation",
+        "item_price": 526.99,
+        "shipping": 7.99
+      },
+      {
+        "merchant": "megekko",
+        "price": 535.94,
+        "in_stock": true,
+        "url": "https://www.megekko.nl/zoeken?q=NVIDIA+GeForce+RTX+5070+12+Go",
+        "source": "simulation",
+        "item_price": 522.99,
+        "shipping": 12.95
+      },
+      {
         "merchant": "amazon_fr",
-        "price": 539.9,
+        "price": 536.99,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=NVIDIA+GeForce+RTX+5070+12+Go&tag=ton-tag-21",
         "source": "simulation",
-        "item_price": 539.9,
+        "item_price": 536.99,
         "shipping": 0.0
       },
       {
         "merchant": "cdiscount",
-        "price": 540.89,
+        "price": 541.98,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/NVIDIA+GeForce+RTX+5070+12+Go.html",
         "source": "simulation",
-        "item_price": 535.9,
+        "item_price": 536.99,
         "shipping": 4.99
       },
       {
         "merchant": "topachat",
-        "price": 551.89,
+        "price": 549.89,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=NVIDIA+GeForce+RTX+5070+12+Go",
         "source": "simulation",
-        "item_price": 545.9,
+        "item_price": 543.9,
         "shipping": 5.99
       },
       {
         "merchant": "rueducommerce",
-        "price": 558.98,
+        "price": 556.98,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/NVIDIA+GeForce+RTX+5070+12+Go",
         "source": "simulation",
-        "item_price": 552.99,
+        "item_price": 550.99,
         "shipping": 5.99
       },
       {
         "merchant": "ldlc",
-        "price": 573.98,
+        "price": 574.89,
         "in_stock": true,
         "url": "https://www.ldlc.com/recherche/NVIDIA+GeForce+RTX+5070+12+Go/",
         "source": "simulation",
-        "item_price": 566.99,
+        "item_price": 567.9,
         "shipping": 6.99
       }
     ],
@@ -1160,66 +1160,57 @@
       },
       {
         "merchant": "alternate",
-        "price": 417.98,
+        "price": 419.98,
         "in_stock": true,
         "url": "https://www.alternate.fr/listing.xhtml?q=NVIDIA+GeForce+RTX+5060+Ti+16+Go",
         "source": "simulation",
-        "item_price": 410.99,
+        "item_price": 412.99,
         "shipping": 6.99
       },
       {
-        "merchant": "amazon_fr",
-        "price": 419.9,
-        "in_stock": true,
-        "url": "https://www.amazon.fr/s?k=NVIDIA+GeForce+RTX+5060+Ti+16+Go&tag=ton-tag-21",
-        "source": "simulation",
-        "item_price": 419.9,
-        "shipping": 0.0
-      },
-      {
         "merchant": "caseking",
-        "price": 420.89,
+        "price": 419.98,
         "in_stock": true,
         "url": "https://www.caseking.de/search?search=NVIDIA+GeForce+RTX+5060+Ti+16+Go",
         "source": "simulation",
-        "item_price": 405.9,
+        "item_price": 404.99,
         "shipping": 14.99
       },
       {
-        "merchant": "amazon_es",
-        "price": 421.89,
-        "in_stock": true,
-        "url": "https://www.amazon.es/s?k=NVIDIA+GeForce+RTX+5060+Ti+16+Go",
-        "source": "simulation",
-        "item_price": 413.9,
-        "shipping": 7.99
-      },
-      {
         "merchant": "megekko",
-        "price": 421.94,
+        "price": 420.85,
         "in_stock": true,
         "url": "https://www.megekko.nl/zoeken?q=NVIDIA+GeForce+RTX+5060+Ti+16+Go",
         "source": "simulation",
-        "item_price": 408.99,
+        "item_price": 407.9,
         "shipping": 12.95
       },
       {
-        "merchant": "cdiscount",
-        "price": 428.89,
+        "merchant": "amazon_fr",
+        "price": 423.9,
         "in_stock": true,
-        "url": "https://www.cdiscount.com/search/10/NVIDIA+GeForce+RTX+5060+Ti+16+Go.html",
+        "url": "https://www.amazon.fr/s?k=NVIDIA+GeForce+RTX+5060+Ti+16+Go&tag=ton-tag-21",
         "source": "simulation",
         "item_price": 423.9,
-        "shipping": 4.99
+        "shipping": 0.0
       },
       {
         "merchant": "topachat",
-        "price": 430.98,
+        "price": 429.89,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=NVIDIA+GeForce+RTX+5060+Ti+16+Go",
         "source": "simulation",
-        "item_price": 424.99,
+        "item_price": 423.9,
         "shipping": 5.99
+      },
+      {
+        "merchant": "cdiscount",
+        "price": 430.89,
+        "in_stock": true,
+        "url": "https://www.cdiscount.com/search/10/NVIDIA+GeForce+RTX+5060+Ti+16+Go.html",
+        "source": "simulation",
+        "item_price": 425.9,
+        "shipping": 4.99
       },
       {
         "merchant": "materielnet",
@@ -1232,103 +1223,112 @@
       },
       {
         "merchant": "ldlc",
-        "price": 445.98,
+        "price": 446.89,
         "in_stock": true,
         "url": "https://www.ldlc.com/recherche/NVIDIA+GeForce+RTX+5060+Ti+16+Go/",
         "source": "simulation",
-        "item_price": 438.99,
+        "item_price": 439.9,
         "shipping": 6.99
       },
       {
         "merchant": "fnac",
-        "price": 449.98,
+        "price": 452.89,
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=NVIDIA+GeForce+RTX+5060+Ti+16+Go",
         "source": "simulation",
-        "item_price": 444.99,
+        "item_price": 447.9,
         "shipping": 4.99
+      },
+      {
+        "merchant": "amazon_es",
+        "price": 422.98,
+        "in_stock": false,
+        "url": "https://www.amazon.es/s?k=NVIDIA+GeForce+RTX+5060+Ti+16+Go",
+        "source": "simulation",
+        "item_price": 414.99,
+        "shipping": 7.99
       }
     ],
     "rtx-5060-ti-8go": [
       {
         "merchant": "pccomponentes",
-        "price": 356.99,
+        "price": 355.9,
         "in_stock": true,
         "url": "https://www.pccomponentes.fr/search/?query=NVIDIA+GeForce+RTX+5060+Ti+8+Go",
         "source": "simulation",
-        "item_price": 356.99,
+        "item_price": 355.9,
         "shipping": 0.0
       },
       {
         "merchant": "computeruniverse",
-        "price": 363.89,
+        "price": 361.89,
         "in_stock": true,
         "url": "https://www.computeruniverse.net/de/search?query=NVIDIA+GeForce+RTX+5060+Ti+8+Go",
         "source": "simulation",
-        "item_price": 353.9,
+        "item_price": 351.9,
         "shipping": 9.99
       },
       {
-        "merchant": "megekko",
-        "price": 365.94,
-        "in_stock": true,
-        "url": "https://www.megekko.nl/zoeken?q=NVIDIA+GeForce+RTX+5060+Ti+8+Go",
-        "source": "simulation",
-        "item_price": 352.99,
-        "shipping": 12.95
-      },
-      {
         "merchant": "amazon_de",
-        "price": 369.89,
+        "price": 367.89,
         "in_stock": true,
         "url": "https://www.amazon.de/s?k=NVIDIA+GeForce+RTX+5060+Ti+8+Go",
         "source": "simulation",
-        "item_price": 361.9,
+        "item_price": 359.9,
         "shipping": 7.99
       },
       {
+        "merchant": "megekko",
+        "price": 368.85,
+        "in_stock": true,
+        "url": "https://www.megekko.nl/zoeken?q=NVIDIA+GeForce+RTX+5060+Ti+8+Go",
+        "source": "simulation",
+        "item_price": 355.9,
+        "shipping": 12.95
+      },
+      {
         "merchant": "amazon_es",
-        "price": 370.98,
+        "price": 371.89,
         "in_stock": true,
         "url": "https://www.amazon.es/s?k=NVIDIA+GeForce+RTX+5060+Ti+8+Go",
         "source": "simulation",
-        "item_price": 362.99,
+        "item_price": 363.9,
         "shipping": 7.99
       },
       {
         "merchant": "amazon_fr",
-        "price": 371.9,
+        "price": 372.99,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=NVIDIA+GeForce+RTX+5060+Ti+8+Go&tag=ton-tag-21",
         "source": "simulation",
-        "item_price": 371.9,
+        "item_price": 372.99,
         "shipping": 0.0
       },
       {
-        "merchant": "alternate",
-        "price": 376.89,
-        "in_stock": true,
-        "url": "https://www.alternate.fr/listing.xhtml?q=NVIDIA+GeForce+RTX+5060+Ti+8+Go",
-        "source": "simulation",
-        "item_price": 369.9,
-        "shipping": 6.99
-      },
-      {
         "merchant": "cdiscount",
-        "price": 379.98,
+        "price": 377.98,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/NVIDIA+GeForce+RTX+5060+Ti+8+Go.html",
         "source": "simulation",
-        "item_price": 374.99,
+        "item_price": 372.99,
         "shipping": 4.99
       },
       {
+        "merchant": "alternate",
+        "price": 377.98,
+        "in_stock": true,
+        "url": "https://www.alternate.fr/listing.xhtml?q=NVIDIA+GeForce+RTX+5060+Ti+8+Go",
+        "source": "simulation",
+        "item_price": 370.99,
+        "shipping": 6.99
+      },
+      {
         "merchant": "topachat",
-        "price": 389.89,
+        "price": 387.89,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=NVIDIA+GeForce+RTX+5060+Ti+8+Go",
         "source": "simulation",
-        "item_price": 383.9,
+        "item_price": 381.9,
         "shipping": 5.99
       },
       {
@@ -1342,58 +1342,58 @@
       },
       {
         "merchant": "materielnet",
-        "price": 395.98,
+        "price": 394.89,
         "in_stock": true,
         "url": "https://www.materiel.net/recherche/NVIDIA+GeForce+RTX+5060+Ti+8+Go/",
         "source": "simulation",
-        "item_price": 388.99,
+        "item_price": 387.9,
+        "shipping": 6.99
+      },
+      {
+        "merchant": "ldlc",
+        "price": 396.89,
+        "in_stock": true,
+        "url": "https://www.ldlc.com/recherche/NVIDIA+GeForce+RTX+5060+Ti+8+Go/",
+        "source": "simulation",
+        "item_price": 389.9,
         "shipping": 6.99
       },
       {
         "merchant": "fnac",
-        "price": 399.98,
+        "price": 400.89,
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=NVIDIA+GeForce+RTX+5060+Ti+8+Go",
         "source": "simulation",
-        "item_price": 394.99,
+        "item_price": 395.9,
         "shipping": 4.99
-      },
-      {
-        "merchant": "ldlc",
-        "price": 400.89,
-        "in_stock": true,
-        "url": "https://www.ldlc.com/recherche/NVIDIA+GeForce+RTX+5060+Ti+8+Go/",
-        "source": "simulation",
-        "item_price": 393.9,
-        "shipping": 6.99
       }
     ],
     "rtx-5060-8go": [
       {
         "merchant": "pccomponentes",
-        "price": 289.9,
+        "price": 288.99,
         "in_stock": true,
         "url": "https://www.pccomponentes.fr/search/?query=NVIDIA+GeForce+RTX+5060+8+Go",
         "source": "simulation",
-        "item_price": 289.9,
+        "item_price": 288.99,
         "shipping": 0.0
       },
       {
         "merchant": "computeruniverse",
-        "price": 293.89,
+        "price": 294.98,
         "in_stock": true,
         "url": "https://www.computeruniverse.net/de/search?query=NVIDIA+GeForce+RTX+5060+8+Go",
         "source": "simulation",
-        "item_price": 283.9,
+        "item_price": 284.99,
         "shipping": 9.99
       },
       {
         "merchant": "amazon_fr",
-        "price": 293.9,
+        "price": 294.99,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=NVIDIA+GeForce+RTX+5060+8+Go&tag=ton-tag-21",
         "source": "simulation",
-        "item_price": 293.9,
+        "item_price": 294.99,
         "shipping": 0.0
       },
       {
@@ -1407,11 +1407,11 @@
       },
       {
         "merchant": "amazon_es",
-        "price": 297.89,
+        "price": 298.98,
         "in_stock": true,
         "url": "https://www.amazon.es/s?k=NVIDIA+GeForce+RTX+5060+8+Go",
         "source": "simulation",
-        "item_price": 289.9,
+        "item_price": 290.99,
         "shipping": 7.99
       },
       {
@@ -1424,40 +1424,31 @@
         "shipping": 6.99
       },
       {
-        "merchant": "caseking",
-        "price": 306.89,
-        "in_stock": true,
-        "url": "https://www.caseking.de/search?search=NVIDIA+GeForce+RTX+5060+8+Go",
-        "source": "simulation",
-        "item_price": 291.9,
-        "shipping": 14.99
-      },
-      {
         "merchant": "cdiscount",
-        "price": 307.98,
+        "price": 305.98,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/NVIDIA+GeForce+RTX+5060+8+Go.html",
         "source": "simulation",
-        "item_price": 302.99,
+        "item_price": 300.99,
         "shipping": 4.99
       },
       {
+        "merchant": "caseking",
+        "price": 307.98,
+        "in_stock": true,
+        "url": "https://www.caseking.de/search?search=NVIDIA+GeForce+RTX+5060+8+Go",
+        "source": "simulation",
+        "item_price": 292.99,
+        "shipping": 14.99
+      },
+      {
         "merchant": "topachat",
-        "price": 314.98,
+        "price": 313.89,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=NVIDIA+GeForce+RTX+5060+8+Go",
         "source": "simulation",
-        "item_price": 308.99,
+        "item_price": 307.9,
         "shipping": 5.99
-      },
-      {
-        "merchant": "materielnet",
-        "price": 319.98,
-        "in_stock": true,
-        "url": "https://www.materiel.net/recherche/NVIDIA+GeForce+RTX+5060+8+Go/",
-        "source": "simulation",
-        "item_price": 312.99,
-        "shipping": 6.99
       },
       {
         "merchant": "fnac",
@@ -1478,23 +1469,41 @@
         "shipping": 6.99
       },
       {
+        "merchant": "materielnet",
+        "price": 320.89,
+        "in_stock": true,
+        "url": "https://www.materiel.net/recherche/NVIDIA+GeForce+RTX+5060+8+Go/",
+        "source": "simulation",
+        "item_price": 313.9,
+        "shipping": 6.99
+      },
+      {
         "merchant": "megekko",
-        "price": 297.94,
+        "price": 296.85,
         "in_stock": false,
         "url": "https://www.megekko.nl/zoeken?q=NVIDIA+GeForce+RTX+5060+8+Go",
         "source": "simulation",
-        "item_price": 284.99,
+        "item_price": 283.9,
         "shipping": 12.95
       }
     ],
     "rx-9070-xt-16go": [
       {
         "merchant": "amazon_de",
-        "price": 640.98,
+        "price": 638.98,
         "in_stock": true,
         "url": "https://www.amazon.de/s?k=AMD+Radeon+RX+9070+XT+16+Go",
         "source": "simulation",
-        "item_price": 632.99,
+        "item_price": 630.99,
+        "shipping": 7.99
+      },
+      {
+        "merchant": "amazon_es",
+        "price": 648.98,
+        "in_stock": true,
+        "url": "https://www.amazon.es/s?k=AMD+Radeon+RX+9070+XT+16+Go",
+        "source": "simulation",
+        "item_price": 640.99,
         "shipping": 7.99
       },
       {
@@ -1508,258 +1517,249 @@
       },
       {
         "merchant": "pccomponentes",
-        "price": 648.99,
+        "price": 651.9,
         "in_stock": true,
         "url": "https://www.pccomponentes.fr/search/?query=AMD+Radeon+RX+9070+XT+16+Go",
         "source": "simulation",
-        "item_price": 648.99,
+        "item_price": 651.9,
         "shipping": 0.0
-      },
-      {
-        "merchant": "amazon_es",
-        "price": 650.98,
-        "in_stock": true,
-        "url": "https://www.amazon.es/s?k=AMD+Radeon+RX+9070+XT+16+Go",
-        "source": "simulation",
-        "item_price": 642.99,
-        "shipping": 7.99
       },
       {
         "merchant": "amazon_fr",
-        "price": 664.99,
+        "price": 665.9,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=AMD+Radeon+RX+9070+XT+16+Go&tag=ton-tag-21",
         "source": "simulation",
-        "item_price": 664.99,
+        "item_price": 665.9,
         "shipping": 0.0
       },
       {
-        "merchant": "cdiscount",
-        "price": 670.89,
-        "in_stock": true,
-        "url": "https://www.cdiscount.com/search/10/AMD+Radeon+RX+9070+XT+16+Go.html",
-        "source": "simulation",
-        "item_price": 665.9,
-        "shipping": 4.99
-      },
-      {
         "merchant": "alternate",
-        "price": 671.98,
+        "price": 673.98,
         "in_stock": true,
         "url": "https://www.alternate.fr/listing.xhtml?q=AMD+Radeon+RX+9070+XT+16+Go",
         "source": "simulation",
-        "item_price": 664.99,
+        "item_price": 666.99,
         "shipping": 6.99
       },
       {
         "merchant": "topachat",
-        "price": 684.98,
+        "price": 687.89,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=AMD+Radeon+RX+9070+XT+16+Go",
         "source": "simulation",
-        "item_price": 678.99,
+        "item_price": 681.9,
         "shipping": 5.99
       },
       {
         "merchant": "rueducommerce",
-        "price": 689.89,
+        "price": 692.98,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/AMD+Radeon+RX+9070+XT+16+Go",
         "source": "simulation",
-        "item_price": 683.9,
+        "item_price": 686.99,
         "shipping": 5.99
       },
       {
         "merchant": "ldlc",
-        "price": 698.89,
+        "price": 695.98,
         "in_stock": true,
         "url": "https://www.ldlc.com/recherche/AMD+Radeon+RX+9070+XT+16+Go/",
         "source": "simulation",
-        "item_price": 691.9,
+        "item_price": 688.99,
         "shipping": 6.99
       },
       {
         "merchant": "fnac",
-        "price": 707.98,
+        "price": 706.89,
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=AMD+Radeon+RX+9070+XT+16+Go",
         "source": "simulation",
-        "item_price": 702.99,
+        "item_price": 701.9,
+        "shipping": 4.99
+      },
+      {
+        "merchant": "cdiscount",
+        "price": 665.98,
+        "in_stock": false,
+        "url": "https://www.cdiscount.com/search/10/AMD+Radeon+RX+9070+XT+16+Go.html",
+        "source": "simulation",
+        "item_price": 660.99,
         "shipping": 4.99
       }
     ],
     "rx-9070-16go": [
       {
         "merchant": "pccomponentes",
-        "price": 552.99,
+        "price": 549.9,
         "in_stock": true,
         "url": "https://www.pccomponentes.fr/search/?query=AMD+Radeon+RX+9070+16+Go",
         "source": "simulation",
-        "item_price": 552.99,
+        "item_price": 549.9,
         "shipping": 0.0
       },
       {
         "merchant": "computeruniverse",
-        "price": 553.89,
+        "price": 551.89,
         "in_stock": true,
         "url": "https://www.computeruniverse.net/de/search?query=AMD+Radeon+RX+9070+16+Go",
         "source": "simulation",
-        "item_price": 543.9,
+        "item_price": 541.9,
         "shipping": 9.99
       },
       {
         "merchant": "amazon_de",
-        "price": 558.98,
+        "price": 555.89,
         "in_stock": true,
         "url": "https://www.amazon.de/s?k=AMD+Radeon+RX+9070+16+Go",
         "source": "simulation",
-        "item_price": 550.99,
+        "item_price": 547.9,
         "shipping": 7.99
       },
       {
         "merchant": "amazon_es",
-        "price": 570.98,
+        "price": 564.98,
         "in_stock": true,
         "url": "https://www.amazon.es/s?k=AMD+Radeon+RX+9070+16+Go",
         "source": "simulation",
-        "item_price": 562.99,
+        "item_price": 556.99,
         "shipping": 7.99
       },
       {
         "merchant": "amazon_fr",
-        "price": 570.99,
+        "price": 568.99,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=AMD+Radeon+RX+9070+16+Go&tag=ton-tag-21",
         "source": "simulation",
-        "item_price": 570.99,
+        "item_price": 568.99,
         "shipping": 0.0
       },
       {
-        "merchant": "alternate",
-        "price": 572.89,
-        "in_stock": true,
-        "url": "https://www.alternate.fr/listing.xhtml?q=AMD+Radeon+RX+9070+16+Go",
-        "source": "simulation",
-        "item_price": 565.9,
-        "shipping": 6.99
-      },
-      {
         "merchant": "caseking",
-        "price": 573.98,
+        "price": 569.98,
         "in_stock": true,
         "url": "https://www.caseking.de/search?search=AMD+Radeon+RX+9070+16+Go",
         "source": "simulation",
-        "item_price": 558.99,
+        "item_price": 554.99,
         "shipping": 14.99
       },
       {
+        "merchant": "alternate",
+        "price": 570.89,
+        "in_stock": true,
+        "url": "https://www.alternate.fr/listing.xhtml?q=AMD+Radeon+RX+9070+16+Go",
+        "source": "simulation",
+        "item_price": 563.9,
+        "shipping": 6.99
+      },
+      {
         "merchant": "topachat",
-        "price": 589.89,
+        "price": 584.98,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=AMD+Radeon+RX+9070+16+Go",
         "source": "simulation",
-        "item_price": 583.9,
+        "item_price": 578.99,
         "shipping": 5.99
       },
       {
-        "merchant": "rueducommerce",
-        "price": 602.98,
+        "merchant": "ldlc",
+        "price": 610.89,
         "in_stock": true,
+        "url": "https://www.ldlc.com/recherche/AMD+Radeon+RX+9070+16+Go/",
+        "source": "simulation",
+        "item_price": 603.9,
+        "shipping": 6.99
+      },
+      {
+        "merchant": "rueducommerce",
+        "price": 603.89,
+        "in_stock": false,
         "url": "https://www.rueducommerce.fr/r/AMD+Radeon+RX+9070+16+Go",
         "source": "simulation",
-        "item_price": 596.99,
+        "item_price": 597.9,
         "shipping": 5.99
       },
       {
         "merchant": "materielnet",
-        "price": 607.98,
+        "price": 603.98,
         "in_stock": false,
         "url": "https://www.materiel.net/recherche/AMD+Radeon+RX+9070+16+Go/",
         "source": "simulation",
-        "item_price": 600.99,
-        "shipping": 6.99
-      },
-      {
-        "merchant": "ldlc",
-        "price": 612.89,
-        "in_stock": false,
-        "url": "https://www.ldlc.com/recherche/AMD+Radeon+RX+9070+16+Go/",
-        "source": "simulation",
-        "item_price": 605.9,
+        "item_price": 596.99,
         "shipping": 6.99
       }
     ],
     "rx-9060-xt-16go": [
       {
         "merchant": "pccomponentes",
-        "price": 357.9,
+        "price": 354.99,
         "in_stock": true,
         "url": "https://www.pccomponentes.fr/search/?query=AMD+Radeon+RX+9060+XT+16+Go",
         "source": "simulation",
-        "item_price": 357.9,
+        "item_price": 354.99,
         "shipping": 0.0
       },
       {
         "merchant": "computeruniverse",
-        "price": 361.89,
+        "price": 359.89,
         "in_stock": true,
         "url": "https://www.computeruniverse.net/de/search?query=AMD+Radeon+RX+9060+XT+16+Go",
         "source": "simulation",
-        "item_price": 351.9,
+        "item_price": 349.9,
         "shipping": 9.99
       },
       {
+        "merchant": "amazon_fr",
+        "price": 368.99,
+        "in_stock": true,
+        "url": "https://www.amazon.fr/s?k=AMD+Radeon+RX+9060+XT+16+Go&tag=ton-tag-21",
+        "source": "simulation",
+        "item_price": 368.99,
+        "shipping": 0.0
+      },
+      {
         "merchant": "megekko",
-        "price": 369.94,
+        "price": 370.85,
         "in_stock": true,
         "url": "https://www.megekko.nl/zoeken?q=AMD+Radeon+RX+9060+XT+16+Go",
         "source": "simulation",
-        "item_price": 356.99,
+        "item_price": 357.9,
         "shipping": 12.95
       },
       {
         "merchant": "caseking",
-        "price": 372.89,
+        "price": 370.89,
         "in_stock": true,
         "url": "https://www.caseking.de/search?search=AMD+Radeon+RX+9060+XT+16+Go",
         "source": "simulation",
-        "item_price": 357.9,
+        "item_price": 355.9,
         "shipping": 14.99
       },
       {
-        "merchant": "amazon_fr",
-        "price": 373.9,
-        "in_stock": true,
-        "url": "https://www.amazon.fr/s?k=AMD+Radeon+RX+9060+XT+16+Go&tag=ton-tag-21",
-        "source": "simulation",
-        "item_price": 373.9,
-        "shipping": 0.0
-      },
-      {
         "merchant": "amazon_es",
-        "price": 375.89,
+        "price": 372.98,
         "in_stock": true,
         "url": "https://www.amazon.es/s?k=AMD+Radeon+RX+9060+XT+16+Go",
         "source": "simulation",
-        "item_price": 367.9,
+        "item_price": 364.99,
         "shipping": 7.99
       },
       {
         "merchant": "alternate",
-        "price": 377.98,
+        "price": 373.98,
         "in_stock": true,
         "url": "https://www.alternate.fr/listing.xhtml?q=AMD+Radeon+RX+9060+XT+16+Go",
         "source": "simulation",
-        "item_price": 370.99,
+        "item_price": 366.99,
         "shipping": 6.99
       },
       {
         "merchant": "cdiscount",
-        "price": 381.98,
+        "price": 379.98,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/AMD+Radeon+RX+9060+XT+16+Go.html",
         "source": "simulation",
-        "item_price": 376.99,
+        "item_price": 374.99,
         "shipping": 4.99
       },
       {
@@ -1773,20 +1773,20 @@
       },
       {
         "merchant": "rueducommerce",
-        "price": 391.89,
+        "price": 389.89,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/AMD+Radeon+RX+9060+XT+16+Go",
         "source": "simulation",
-        "item_price": 385.9,
+        "item_price": 383.9,
         "shipping": 5.99
       },
       {
         "merchant": "materielnet",
-        "price": 392.89,
+        "price": 390.89,
         "in_stock": true,
         "url": "https://www.materiel.net/recherche/AMD+Radeon+RX+9060+XT+16+Go/",
         "source": "simulation",
-        "item_price": 385.9,
+        "item_price": 383.9,
         "shipping": 6.99
       },
       {
@@ -1811,11 +1811,11 @@
       },
       {
         "merchant": "computeruniverse",
-        "price": 507.89,
+        "price": 511.89,
         "in_stock": true,
         "url": "https://www.computeruniverse.net/de/search?query=Corsair+Vengeance+32+Go+%282x16+Go%29+DDR5+6000+MHz+CL30",
         "source": "simulation",
-        "item_price": 497.9,
+        "item_price": 501.9,
         "shipping": 9.99
       },
       {
@@ -1829,74 +1829,74 @@
       },
       {
         "merchant": "megekko",
-        "price": 519.94,
+        "price": 518.85,
         "in_stock": true,
         "url": "https://www.megekko.nl/zoeken?q=Corsair+Vengeance+32+Go+%282x16+Go%29+DDR5+6000+MHz+CL30",
         "source": "simulation",
-        "item_price": 506.99,
+        "item_price": 505.9,
         "shipping": 12.95
       },
       {
         "merchant": "caseking",
-        "price": 521.98,
+        "price": 525.98,
         "in_stock": true,
         "url": "https://www.caseking.de/search?search=Corsair+Vengeance+32+Go+%282x16+Go%29+DDR5+6000+MHz+CL30",
         "source": "simulation",
-        "item_price": 506.99,
+        "item_price": 510.99,
         "shipping": 14.99
       },
       {
         "merchant": "alternate",
-        "price": 524.89,
+        "price": 528.89,
         "in_stock": true,
         "url": "https://www.alternate.fr/listing.xhtml?q=Corsair+Vengeance+32+Go+%282x16+Go%29+DDR5+6000+MHz+CL30",
         "source": "simulation",
-        "item_price": 517.9,
+        "item_price": 521.9,
         "shipping": 6.99
       },
       {
-        "merchant": "cdiscount",
-        "price": 530.89,
-        "in_stock": true,
-        "url": "https://www.cdiscount.com/search/10/Corsair+Vengeance+32+Go+%282x16+Go%29+DDR5+6000+MHz+CL30.html",
-        "source": "simulation",
-        "item_price": 525.9,
-        "shipping": 4.99
-      },
-      {
         "merchant": "amazon_fr",
-        "price": 531.9,
+        "price": 532.99,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=Corsair+Vengeance+32+Go+%282x16+Go%29+DDR5+6000+MHz+CL30&tag=ton-tag-21",
         "source": "simulation",
-        "item_price": 531.9,
+        "item_price": 532.99,
         "shipping": 0.0
       },
       {
         "merchant": "topachat",
-        "price": 535.89,
+        "price": 533.89,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=Corsair+Vengeance+32+Go+%282x16+Go%29+DDR5+6000+MHz+CL30",
         "source": "simulation",
-        "item_price": 529.9,
+        "item_price": 527.9,
         "shipping": 5.99
       },
       {
+        "merchant": "cdiscount",
+        "price": 533.98,
+        "in_stock": true,
+        "url": "https://www.cdiscount.com/search/10/Corsair+Vengeance+32+Go+%282x16+Go%29+DDR5+6000+MHz+CL30.html",
+        "source": "simulation",
+        "item_price": 528.99,
+        "shipping": 4.99
+      },
+      {
         "merchant": "rueducommerce",
-        "price": 548.98,
+        "price": 553.89,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/Corsair+Vengeance+32+Go+%282x16+Go%29+DDR5+6000+MHz+CL30",
         "source": "simulation",
-        "item_price": 542.99,
+        "item_price": 547.9,
         "shipping": 5.99
       },
       {
         "merchant": "materielnet",
-        "price": 549.98,
+        "price": 554.89,
         "in_stock": true,
         "url": "https://www.materiel.net/recherche/Corsair+Vengeance+32+Go+%282x16+Go%29+DDR5+6000+MHz+CL30/",
         "source": "simulation",
-        "item_price": 542.99,
+        "item_price": 547.9,
         "shipping": 6.99
       },
       {
@@ -1910,11 +1910,11 @@
       },
       {
         "merchant": "fnac",
-        "price": 558.89,
+        "price": 560.89,
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=Corsair+Vengeance+32+Go+%282x16+Go%29+DDR5+6000+MHz+CL30",
         "source": "simulation",
-        "item_price": 553.9,
+        "item_price": 555.9,
         "shipping": 4.99
       }
     ],
@@ -1939,38 +1939,38 @@
       },
       {
         "merchant": "pccomponentes",
-        "price": 536.99,
+        "price": 537.9,
         "in_stock": true,
         "url": "https://www.pccomponentes.fr/search/?query=G.Skill+Trident+Z5+Neo+RGB+32+Go+DDR5+6000+MHz+CL30",
         "source": "simulation",
-        "item_price": 536.99,
+        "item_price": 537.9,
         "shipping": 0.0
       },
       {
         "merchant": "amazon_de",
-        "price": 549.89,
+        "price": 550.98,
         "in_stock": true,
         "url": "https://www.amazon.de/s?k=G.Skill+Trident+Z5+Neo+RGB+32+Go+DDR5+6000+MHz+CL30",
         "source": "simulation",
-        "item_price": 541.9,
+        "item_price": 542.99,
         "shipping": 7.99
       },
       {
         "merchant": "alternate",
-        "price": 553.98,
+        "price": 554.89,
         "in_stock": true,
         "url": "https://www.alternate.fr/listing.xhtml?q=G.Skill+Trident+Z5+Neo+RGB+32+Go+DDR5+6000+MHz+CL30",
         "source": "simulation",
-        "item_price": 546.99,
+        "item_price": 547.9,
         "shipping": 6.99
       },
       {
         "merchant": "amazon_es",
-        "price": 556.98,
+        "price": 555.89,
         "in_stock": true,
         "url": "https://www.amazon.es/s?k=G.Skill+Trident+Z5+Neo+RGB+32+Go+DDR5+6000+MHz+CL30",
         "source": "simulation",
-        "item_price": 548.99,
+        "item_price": 547.9,
         "shipping": 7.99
       },
       {
@@ -1983,68 +1983,68 @@
         "shipping": 0.0
       },
       {
-        "merchant": "cdiscount",
-        "price": 563.98,
-        "in_stock": true,
-        "url": "https://www.cdiscount.com/search/10/G.Skill+Trident+Z5+Neo+RGB+32+Go+DDR5+6000+MHz+CL30.html",
-        "source": "simulation",
-        "item_price": 558.99,
-        "shipping": 4.99
-      },
-      {
         "merchant": "topachat",
-        "price": 569.89,
+        "price": 567.89,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=G.Skill+Trident+Z5+Neo+RGB+32+Go+DDR5+6000+MHz+CL30",
         "source": "simulation",
-        "item_price": 563.9,
+        "item_price": 561.9,
         "shipping": 5.99
       },
       {
-        "merchant": "rueducommerce",
-        "price": 582.98,
+        "merchant": "cdiscount",
+        "price": 567.98,
         "in_stock": true,
-        "url": "https://www.rueducommerce.fr/r/G.Skill+Trident+Z5+Neo+RGB+32+Go+DDR5+6000+MHz+CL30",
+        "url": "https://www.cdiscount.com/search/10/G.Skill+Trident+Z5+Neo+RGB+32+Go+DDR5+6000+MHz+CL30.html",
         "source": "simulation",
-        "item_price": 576.99,
-        "shipping": 5.99
-      },
-      {
-        "merchant": "fnac",
-        "price": 585.98,
-        "in_stock": true,
-        "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=G.Skill+Trident+Z5+Neo+RGB+32+Go+DDR5+6000+MHz+CL30",
-        "source": "simulation",
-        "item_price": 580.99,
+        "item_price": 562.99,
         "shipping": 4.99
       },
       {
+        "merchant": "fnac",
+        "price": 583.98,
+        "in_stock": true,
+        "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=G.Skill+Trident+Z5+Neo+RGB+32+Go+DDR5+6000+MHz+CL30",
+        "source": "simulation",
+        "item_price": 578.99,
+        "shipping": 4.99
+      },
+      {
+        "merchant": "rueducommerce",
+        "price": 584.98,
+        "in_stock": true,
+        "url": "https://www.rueducommerce.fr/r/G.Skill+Trident+Z5+Neo+RGB+32+Go+DDR5+6000+MHz+CL30",
+        "source": "simulation",
+        "item_price": 578.99,
+        "shipping": 5.99
+      },
+      {
         "merchant": "ldlc",
-        "price": 596.89,
+        "price": 595.98,
         "in_stock": true,
         "url": "https://www.ldlc.com/recherche/G.Skill+Trident+Z5+Neo+RGB+32+Go+DDR5+6000+MHz+CL30/",
         "source": "simulation",
-        "item_price": 589.9,
+        "item_price": 588.99,
         "shipping": 6.99
       }
     ],
     "kingston-fury-beast-32go-ddr5-6000-cl30": [
       {
         "merchant": "computeruniverse",
-        "price": 502.98,
+        "price": 505.89,
         "in_stock": true,
         "url": "https://www.computeruniverse.net/de/search?query=Kingston+Fury+Beast+32+Go+DDR5+6000+MHz+CL30",
         "source": "simulation",
-        "item_price": 492.99,
+        "item_price": 495.9,
         "shipping": 9.99
       },
       {
         "merchant": "pccomponentes",
-        "price": 504.99,
+        "price": 505.9,
         "in_stock": true,
         "url": "https://www.pccomponentes.fr/search/?query=Kingston+Fury+Beast+32+Go+DDR5+6000+MHz+CL30",
         "source": "simulation",
-        "item_price": 504.99,
+        "item_price": 505.9,
         "shipping": 0.0
       },
       {
@@ -2057,58 +2057,49 @@
         "shipping": 7.99
       },
       {
-        "merchant": "amazon_fr",
-        "price": 522.99,
-        "in_stock": true,
-        "url": "https://www.amazon.fr/s?k=Kingston+Fury+Beast+32+Go+DDR5+6000+MHz+CL30&tag=ton-tag-21",
-        "source": "simulation",
-        "item_price": 522.99,
-        "shipping": 0.0
-      },
-      {
         "merchant": "caseking",
-        "price": 525.98,
+        "price": 523.98,
         "in_stock": true,
         "url": "https://www.caseking.de/search?search=Kingston+Fury+Beast+32+Go+DDR5+6000+MHz+CL30",
         "source": "simulation",
-        "item_price": 510.99,
+        "item_price": 508.99,
         "shipping": 14.99
       },
       {
-        "merchant": "cdiscount",
-        "price": 526.89,
-        "in_stock": true,
-        "url": "https://www.cdiscount.com/search/10/Kingston+Fury+Beast+32+Go+DDR5+6000+MHz+CL30.html",
-        "source": "simulation",
-        "item_price": 521.9,
-        "shipping": 4.99
-      },
-      {
         "merchant": "alternate",
-        "price": 527.98,
+        "price": 525.98,
         "in_stock": true,
         "url": "https://www.alternate.fr/listing.xhtml?q=Kingston+Fury+Beast+32+Go+DDR5+6000+MHz+CL30",
         "source": "simulation",
-        "item_price": 520.99,
+        "item_price": 518.99,
         "shipping": 6.99
+      },
+      {
+        "merchant": "amazon_fr",
+        "price": 527.9,
+        "in_stock": true,
+        "url": "https://www.amazon.fr/s?k=Kingston+Fury+Beast+32+Go+DDR5+6000+MHz+CL30&tag=ton-tag-21",
+        "source": "simulation",
+        "item_price": 527.9,
+        "shipping": 0.0
+      },
+      {
+        "merchant": "cdiscount",
+        "price": 527.98,
+        "in_stock": true,
+        "url": "https://www.cdiscount.com/search/10/Kingston+Fury+Beast+32+Go+DDR5+6000+MHz+CL30.html",
+        "source": "simulation",
+        "item_price": 522.99,
+        "shipping": 4.99
       },
       {
         "merchant": "topachat",
-        "price": 532.98,
+        "price": 533.89,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=Kingston+Fury+Beast+32+Go+DDR5+6000+MHz+CL30",
         "source": "simulation",
-        "item_price": 526.99,
+        "item_price": 527.9,
         "shipping": 5.99
-      },
-      {
-        "merchant": "ldlc",
-        "price": 550.89,
-        "in_stock": true,
-        "url": "https://www.ldlc.com/recherche/Kingston+Fury+Beast+32+Go+DDR5+6000+MHz+CL30/",
-        "source": "simulation",
-        "item_price": 543.9,
-        "shipping": 6.99
       },
       {
         "merchant": "materielnet",
@@ -2121,94 +2112,103 @@
       },
       {
         "merchant": "rueducommerce",
-        "price": 551.89,
+        "price": 550.98,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/Kingston+Fury+Beast+32+Go+DDR5+6000+MHz+CL30",
         "source": "simulation",
-        "item_price": 545.9,
+        "item_price": 544.99,
         "shipping": 5.99
       },
       {
+        "merchant": "ldlc",
+        "price": 555.98,
+        "in_stock": true,
+        "url": "https://www.ldlc.com/recherche/Kingston+Fury+Beast+32+Go+DDR5+6000+MHz+CL30/",
+        "source": "simulation",
+        "item_price": 548.99,
+        "shipping": 6.99
+      },
+      {
         "merchant": "fnac",
-        "price": 556.89,
+        "price": 559.98,
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=Kingston+Fury+Beast+32+Go+DDR5+6000+MHz+CL30",
         "source": "simulation",
-        "item_price": 551.9,
+        "item_price": 554.99,
         "shipping": 4.99
       },
       {
         "merchant": "megekko",
-        "price": 521.94,
+        "price": 523.94,
         "in_stock": false,
         "url": "https://www.megekko.nl/zoeken?q=Kingston+Fury+Beast+32+Go+DDR5+6000+MHz+CL30",
         "source": "simulation",
-        "item_price": 508.99,
+        "item_price": 510.99,
         "shipping": 12.95
       }
     ],
     "samsung-990-pro-2to": [
       {
         "merchant": "pccomponentes",
-        "price": 376.99,
+        "price": 380.99,
         "in_stock": true,
         "url": "https://www.pccomponentes.fr/search/?query=Samsung+990+PRO+2+To+PCIe+4.0",
         "source": "simulation",
-        "item_price": 376.99,
+        "item_price": 380.99,
         "shipping": 0.0
       },
       {
         "merchant": "alternate",
-        "price": 391.98,
+        "price": 394.89,
         "in_stock": true,
         "url": "https://www.alternate.fr/listing.xhtml?q=Samsung+990+PRO+2+To+PCIe+4.0",
         "source": "simulation",
-        "item_price": 384.99,
+        "item_price": 387.9,
         "shipping": 6.99
       },
       {
         "merchant": "caseking",
-        "price": 393.98,
+        "price": 395.98,
         "in_stock": true,
         "url": "https://www.caseking.de/search?search=Samsung+990+PRO+2+To+PCIe+4.0",
         "source": "simulation",
-        "item_price": 378.99,
+        "item_price": 380.99,
         "shipping": 14.99
       },
       {
-        "merchant": "amazon_es",
-        "price": 395.89,
-        "in_stock": true,
-        "url": "https://www.amazon.es/s?k=Samsung+990+PRO+2+To+PCIe+4.0",
-        "source": "simulation",
-        "item_price": 387.9,
-        "shipping": 7.99
-      },
-      {
         "merchant": "megekko",
-        "price": 395.94,
+        "price": 396.85,
         "in_stock": true,
         "url": "https://www.megekko.nl/zoeken?q=Samsung+990+PRO+2+To+PCIe+4.0",
         "source": "simulation",
-        "item_price": 382.99,
+        "item_price": 383.9,
         "shipping": 12.95
       },
       {
+        "merchant": "amazon_es",
+        "price": 398.98,
+        "in_stock": true,
+        "url": "https://www.amazon.es/s?k=Samsung+990+PRO+2+To+PCIe+4.0",
+        "source": "simulation",
+        "item_price": 390.99,
+        "shipping": 7.99
+      },
+      {
         "merchant": "amazon_fr",
-        "price": 396.99,
+        "price": 399.9,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=Samsung+990+PRO+2+To+PCIe+4.0&tag=ton-tag-21",
         "source": "simulation",
-        "item_price": 396.99,
+        "item_price": 399.9,
         "shipping": 0.0
       },
       {
         "merchant": "cdiscount",
-        "price": 401.98,
+        "price": 403.98,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/Samsung+990+PRO+2+To+PCIe+4.0.html",
         "source": "simulation",
-        "item_price": 396.99,
+        "item_price": 398.99,
         "shipping": 4.99
       },
       {
@@ -2231,20 +2231,20 @@
       },
       {
         "merchant": "rueducommerce",
-        "price": 414.98,
+        "price": 415.89,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/Samsung+990+PRO+2+To+PCIe+4.0",
         "source": "simulation",
-        "item_price": 408.99,
+        "item_price": 409.9,
         "shipping": 5.99
       },
       {
         "merchant": "ldlc",
-        "price": 420.89,
+        "price": 422.89,
         "in_stock": true,
         "url": "https://www.ldlc.com/recherche/Samsung+990+PRO+2+To+PCIe+4.0/",
         "source": "simulation",
-        "item_price": 413.9,
+        "item_price": 415.9,
         "shipping": 6.99
       },
       {
@@ -2269,47 +2269,47 @@
       },
       {
         "merchant": "amazon_de",
-        "price": 332.98,
+        "price": 331.89,
         "in_stock": true,
         "url": "https://www.amazon.de/s?k=WD_BLACK+SN850X+2+To+PCIe+4.0",
         "source": "simulation",
-        "item_price": 324.99,
+        "item_price": 323.9,
         "shipping": 7.99
       },
       {
+        "merchant": "computeruniverse",
+        "price": 332.98,
+        "in_stock": true,
+        "url": "https://www.computeruniverse.net/de/search?query=WD_BLACK+SN850X+2+To+PCIe+4.0",
+        "source": "simulation",
+        "item_price": 322.99,
+        "shipping": 9.99
+      },
+      {
         "merchant": "amazon_fr",
-        "price": 333.9,
+        "price": 332.99,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=WD_BLACK+SN850X+2+To+PCIe+4.0&tag=ton-tag-21",
         "source": "simulation",
-        "item_price": 333.9,
+        "item_price": 332.99,
         "shipping": 0.0
       },
       {
         "merchant": "megekko",
-        "price": 334.85,
+        "price": 333.94,
         "in_stock": true,
         "url": "https://www.megekko.nl/zoeken?q=WD_BLACK+SN850X+2+To+PCIe+4.0",
         "source": "simulation",
-        "item_price": 321.9,
+        "item_price": 320.99,
         "shipping": 12.95
       },
       {
-        "merchant": "computeruniverse",
-        "price": 334.98,
-        "in_stock": true,
-        "url": "https://www.computeruniverse.net/de/search?query=WD_BLACK+SN850X+2+To+PCIe+4.0",
-        "source": "simulation",
-        "item_price": 324.99,
-        "shipping": 9.99
-      },
-      {
         "merchant": "alternate",
-        "price": 335.98,
+        "price": 336.89,
         "in_stock": true,
         "url": "https://www.alternate.fr/listing.xhtml?q=WD_BLACK+SN850X+2+To+PCIe+4.0",
         "source": "simulation",
-        "item_price": 328.99,
+        "item_price": 329.9,
         "shipping": 6.99
       },
       {
@@ -2323,57 +2323,57 @@
       },
       {
         "merchant": "caseking",
-        "price": 340.89,
+        "price": 343.98,
         "in_stock": true,
         "url": "https://www.caseking.de/search?search=WD_BLACK+SN850X+2+To+PCIe+4.0",
         "source": "simulation",
-        "item_price": 325.9,
+        "item_price": 328.99,
         "shipping": 14.99
       },
       {
         "merchant": "cdiscount",
-        "price": 346.89,
+        "price": 344.89,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/WD_BLACK+SN850X+2+To+PCIe+4.0.html",
         "source": "simulation",
-        "item_price": 341.9,
+        "item_price": 339.9,
         "shipping": 4.99
       },
       {
         "merchant": "topachat",
-        "price": 346.98,
+        "price": 345.89,
         "in_stock": true,
         "url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=WD_BLACK+SN850X+2+To+PCIe+4.0",
         "source": "simulation",
-        "item_price": 340.99,
+        "item_price": 339.9,
+        "shipping": 5.99
+      },
+      {
+        "merchant": "rueducommerce",
+        "price": 354.98,
+        "in_stock": true,
+        "url": "https://www.rueducommerce.fr/r/WD_BLACK+SN850X+2+To+PCIe+4.0",
+        "source": "simulation",
+        "item_price": 348.99,
         "shipping": 5.99
       },
       {
         "merchant": "ldlc",
-        "price": 354.89,
-        "in_stock": true,
-        "url": "https://www.ldlc.com/recherche/WD_BLACK+SN850X+2+To+PCIe+4.0/",
-        "source": "simulation",
-        "item_price": 347.9,
-        "shipping": 6.99
-      },
-      {
-        "merchant": "materielnet",
         "price": 355.98,
         "in_stock": true,
-        "url": "https://www.materiel.net/recherche/WD_BLACK+SN850X+2+To+PCIe+4.0/",
+        "url": "https://www.ldlc.com/recherche/WD_BLACK+SN850X+2+To+PCIe+4.0/",
         "source": "simulation",
         "item_price": 348.99,
         "shipping": 6.99
       },
       {
-        "merchant": "rueducommerce",
-        "price": 356.98,
+        "merchant": "materielnet",
+        "price": 356.89,
         "in_stock": true,
-        "url": "https://www.rueducommerce.fr/r/WD_BLACK+SN850X+2+To+PCIe+4.0",
+        "url": "https://www.materiel.net/recherche/WD_BLACK+SN850X+2+To+PCIe+4.0/",
         "source": "simulation",
-        "item_price": 350.99,
-        "shipping": 5.99
+        "item_price": 349.9,
+        "shipping": 6.99
       },
       {
         "merchant": "fnac",
@@ -2388,48 +2388,48 @@
     "crucial-t500-2to": [
       {
         "merchant": "pccomponentes",
-        "price": 303.9,
+        "price": 308.99,
         "in_stock": true,
         "url": "https://www.pccomponentes.fr/search/?query=Crucial+T500+2+To+PCIe+4.0",
         "source": "simulation",
-        "item_price": 303.9,
+        "item_price": 308.99,
         "shipping": 0.0
       },
       {
+        "merchant": "amazon_de",
+        "price": 315.89,
+        "in_stock": true,
+        "url": "https://www.amazon.de/s?k=Crucial+T500+2+To+PCIe+4.0",
+        "source": "simulation",
+        "item_price": 307.9,
+        "shipping": 7.99
+      },
+      {
         "merchant": "amazon_fr",
-        "price": 311.9,
+        "price": 315.9,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=Crucial+T500+2+To+PCIe+4.0&tag=ton-tag-21",
         "source": "simulation",
-        "item_price": 311.9,
+        "item_price": 315.9,
         "shipping": 0.0
       },
       {
         "merchant": "megekko",
-        "price": 319.94,
+        "price": 320.85,
         "in_stock": true,
         "url": "https://www.megekko.nl/zoeken?q=Crucial+T500+2+To+PCIe+4.0",
         "source": "simulation",
-        "item_price": 306.99,
+        "item_price": 307.9,
         "shipping": 12.95
       },
       {
         "merchant": "cdiscount",
-        "price": 323.98,
+        "price": 325.98,
         "in_stock": true,
         "url": "https://www.cdiscount.com/search/10/Crucial+T500+2+To+PCIe+4.0.html",
         "source": "simulation",
-        "item_price": 318.99,
+        "item_price": 320.99,
         "shipping": 4.99
-      },
-      {
-        "merchant": "caseking",
-        "price": 329.98,
-        "in_stock": true,
-        "url": "https://www.caseking.de/search?search=Crucial+T500+2+To+PCIe+4.0",
-        "source": "simulation",
-        "item_price": 314.99,
-        "shipping": 14.99
       },
       {
         "merchant": "topachat",
@@ -2441,105 +2441,96 @@
         "shipping": 5.99
       },
       {
+        "merchant": "caseking",
+        "price": 333.98,
+        "in_stock": true,
+        "url": "https://www.caseking.de/search?search=Crucial+T500+2+To+PCIe+4.0",
+        "source": "simulation",
+        "item_price": 318.99,
+        "shipping": 14.99
+      },
+      {
         "merchant": "rueducommerce",
-        "price": 332.98,
+        "price": 335.89,
         "in_stock": true,
         "url": "https://www.rueducommerce.fr/r/Crucial+T500+2+To+PCIe+4.0",
         "source": "simulation",
-        "item_price": 326.99,
+        "item_price": 329.9,
         "shipping": 5.99
       },
       {
-        "merchant": "ldlc",
-        "price": 337.98,
-        "in_stock": true,
-        "url": "https://www.ldlc.com/recherche/Crucial+T500+2+To+PCIe+4.0/",
-        "source": "simulation",
-        "item_price": 330.99,
-        "shipping": 6.99
-      },
-      {
         "merchant": "materielnet",
-        "price": 337.98,
+        "price": 338.89,
         "in_stock": true,
         "url": "https://www.materiel.net/recherche/Crucial+T500+2+To+PCIe+4.0/",
         "source": "simulation",
-        "item_price": 330.99,
+        "item_price": 331.9,
+        "shipping": 6.99
+      },
+      {
+        "merchant": "ldlc",
+        "price": 340.89,
+        "in_stock": true,
+        "url": "https://www.ldlc.com/recherche/Crucial+T500+2+To+PCIe+4.0/",
+        "source": "simulation",
+        "item_price": 333.9,
         "shipping": 6.99
       },
       {
         "merchant": "fnac",
-        "price": 342.89,
+        "price": 346.89,
         "in_stock": true,
         "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=Crucial+T500+2+To+PCIe+4.0",
         "source": "simulation",
-        "item_price": 337.9,
+        "item_price": 341.9,
         "shipping": 4.99
-      },
-      {
-        "merchant": "amazon_de",
-        "price": 311.89,
-        "in_stock": false,
-        "url": "https://www.amazon.de/s?k=Crucial+T500+2+To+PCIe+4.0",
-        "source": "simulation",
-        "item_price": 303.9,
-        "shipping": 7.99
       }
     ],
     "msi-b850-gaming-plus-wifi": [
       {
         "merchant": "amazon_de",
-        "price": 211.89,
+        "price": 212.98,
         "in_stock": true,
         "url": "https://www.amazon.de/s?k=MSI+B850+Gaming+Plus+WiFi",
         "source": "simulation",
-        "item_price": 203.9,
+        "item_price": 204.99,
         "shipping": 7.99
       },
       {
         "merchant": "computeruniverse",
-        "price": 211.89,
+        "price": 212.98,
         "in_stock": true,
         "url": "https://www.computeruniverse.net/de/search?query=MSI+B850+Gaming+Plus+WiFi",
         "source": "simulation",
-        "item_price": 201.9,
+        "item_price": 202.99,
         "shipping": 9.99
       },
       {
-        "merchant": "alternate",
-        "price": 214.89,
-        "in_stock": true,
-        "url": "https://www.alternate.fr/listing.xhtml?q=MSI+B850+Gaming+Plus+WiFi",
-        "source": "simulation",
-        "item_price": 207.9,
-        "shipping": 6.99
-      },
-      {
         "merchant": "amazon_fr",
-        "price": 214.99,
+        "price": 215.9,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=MSI+B850+Gaming+Plus+WiFi&tag=ton-tag-21",
         "source": "simulation",
-        "item_price": 214.99,
+        "item_price": 215.9,
         "shipping": 0.0
       },
       {
+        "merchant": "alternate",
+        "price": 216.89,
+        "in_stock": true,
+        "url": "https://www.alternate.fr/listing.xhtml?q=MSI+B850+Gaming+Plus+WiFi",
+        "source": "simulation",
+        "item_price": 209.9,
+        "shipping": 6.99
+      },
+      {
         "merchant": "amazon_es",
-        "price": 216.98,
+        "price": 217.89,
         "in_stock": true,
         "url": "https://www.amazon.es/s?k=MSI+B850+Gaming+Plus+WiFi",
         "source": "simulation",
-        "item_price": 208.99,
+        "item_price": 209.9,
         "shipping": 7.99
-      },
-      {
-        "merchant": "megekko",
-        "price": 218.85,
-        "in_stock": true,
-        "url": "https://www.megekko.nl/zoeken?q=MSI+B850+Gaming+Plus+WiFi",
-        "source": "simulation",
-        "item_price": 205.9,
-        "shipping": 12.95
       },
       {
         "merchant": "cdiscount",
@@ -2551,12 +2542,21 @@
         "shipping": 4.99
       },
       {
+        "merchant": "megekko",
+        "price": 220.85,
+        "in_stock": true,
+        "url": "https://www.megekko.nl/zoeken?q=MSI+B850+Gaming+Plus+WiFi",
+        "source": "simulation",
+        "item_price": 207.9,
+        "shipping": 12.95
+      },
+      {
         "merchant": "caseking",
-        "price": 222.89,
+        "price": 224.89,
         "in_stock": true,
         "url": "https://www.caseking.de/search?search=MSI+B850+Gaming+Plus+WiFi",
         "source": "simulation",
-        "item_price": 207.9,
+        "item_price": 209.9,
         "shipping": 14.99
       },
       {
@@ -2579,18 +2579,9 @@
       },
       {
         "merchant": "materielnet",
-        "price": 229.98,
-        "in_stock": true,
-        "url": "https://www.materiel.net/recherche/MSI+B850+Gaming+Plus+WiFi/",
-        "source": "simulation",
-        "item_price": 222.99,
-        "shipping": 6.99
-      },
-      {
-        "merchant": "ldlc",
         "price": 230.89,
         "in_stock": true,
-        "url": "https://www.ldlc.com/recherche/MSI+B850+Gaming+Plus+WiFi/",
+        "url": "https://www.materiel.net/recherche/MSI+B850+Gaming+Plus+WiFi/",
         "source": "simulation",
         "item_price": 223.9,
         "shipping": 6.99
@@ -2603,6 +2594,15 @@
         "source": "simulation",
         "item_price": 227.9,
         "shipping": 4.99
+      },
+      {
+        "merchant": "ldlc",
+        "price": 231.98,
+        "in_stock": false,
+        "url": "https://www.ldlc.com/recherche/MSI+B850+Gaming+Plus+WiFi/",
+        "source": "simulation",
+        "item_price": 224.99,
+        "shipping": 6.99
       }
     ],
     "asus-tuf-gaming-b650-plus-wifi": [
@@ -2617,29 +2617,29 @@
       },
       {
         "merchant": "computeruniverse",
-        "price": 182.98,
+        "price": 184.98,
         "in_stock": true,
         "url": "https://www.computeruniverse.net/de/search?query=ASUS+TUF+Gaming+B650-Plus+WiFi",
         "source": "simulation",
-        "item_price": 172.99,
+        "item_price": 174.99,
         "shipping": 9.99
       },
       {
         "merchant": "amazon_fr",
-        "price": 186.99,
+        "price": 187.9,
         "in_stock": true,
         "url": "https://www.amazon.fr/s?k=ASUS+TUF+Gaming+B650-Plus+WiFi&tag=ton-tag-21",
         "source": "simulation",
-        "item_price": 186.99,
+        "item_price": 187.9,
         "shipping": 0.0
       },
       {
         "merchant": "alternate",
-        "price": 187.98,
+        "price": 188.89,
         "in_stock": true,
         "url": "https://www.alternate.fr/listing.xhtml?q=ASUS+TUF+Gaming+B650-Plus+WiFi",
         "source": "simulation",
-        "item_price": 180.99,
+        "item_price": 181.9,
         "shipping": 6.99
       },
       {
@@ -2653,11 +2653,11 @@
       },
       {
         "merchant": "megekko",
-        "price": 190.85,
+        "price": 193.94,
         "in_stock": true,
         "url": "https://www.megekko.nl/zoeken?q=ASUS+TUF+Gaming+B650-Plus+WiFi",
         "source": "simulation",
-        "item_price": 177.9,
+        "item_price": 180.99,
         "shipping": 12.95
       },
       {
@@ -2688,15 +2688,6 @@
         "shipping": 5.99
       },
       {
-        "merchant": "materielnet",
-        "price": 198.89,
-        "in_stock": true,
-        "url": "https://www.materiel.net/recherche/ASUS+TUF+Gaming+B650-Plus+WiFi/",
-        "source": "simulation",
-        "item_price": 191.9,
-        "shipping": 6.99
-      },
-      {
         "merchant": "fnac",
         "price": 198.89,
         "in_stock": true,
@@ -2706,12 +2697,21 @@
         "shipping": 4.99
       },
       {
+        "merchant": "materielnet",
+        "price": 199.98,
+        "in_stock": true,
+        "url": "https://www.materiel.net/recherche/ASUS+TUF+Gaming+B650-Plus+WiFi/",
+        "source": "simulation",
+        "item_price": 192.99,
+        "shipping": 6.99
+      },
+      {
         "merchant": "ldlc",
-        "price": 201.98,
+        "price": 202.89,
         "in_stock": true,
         "url": "https://www.ldlc.com/recherche/ASUS+TUF+Gaming+B650-Plus+WiFi/",
         "source": "simulation",
-        "item_price": 194.99,
+        "item_price": 195.9,
         "shipping": 6.99
       }
     ]
