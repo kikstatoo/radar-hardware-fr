@@ -21,6 +21,11 @@ jobs:
   update:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    env:
+      # Hébergement principal sur Cloudflare Pages (gratuit) dès que les secrets Cloudflare existent.
+      # Nom du projet modifiable via la variable de dépôt CLOUDFLARE_PROJECT (défaut : radarhardware).
+      CF_PROJECT: ${{ vars.CLOUDFLARE_PROJECT || 'radarhardware' }}
+      HAS_CF: ${{ secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CLOUDFLARE_ACCOUNT_ID != '' }}
     steps:
       - name: Récupération du dépôt
         uses: actions/checkout@v4
@@ -47,6 +52,9 @@ jobs:
 
       - name: 3. Analyse, graphiques et génération du site
         run: python scripts/build_site.py
+        env:
+          # Domaine perso (variable SITE_BASE_URL) > Cloudflare Pages > GitHub Pages
+          SITE_BASE_URL: ${{ vars.SITE_BASE_URL || (env.HAS_CF == 'true' && format('https://{0}.pages.dev', env.CF_PROJECT)) || '' }}
 
       - name: 4. Alertes Discord / Telegram / X
         continue-on-error: true   # une API sociale en panne ne doit jamais bloquer le site
@@ -75,6 +83,24 @@ jobs:
               echo "Push refusé, nouvelle tentative ($i)…"; sleep 5
             done
           fi
+
+      - name: 5a. Création du projet Cloudflare Pages (sans effet s'il existe déjà)
+        if: env.HAS_CF == 'true'
+        continue-on-error: true
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages project create ${{ env.CF_PROJECT }} --production-branch=main
+
+      - name: 5b. Déploiement sur Cloudflare Pages
+        if: env.HAS_CF == 'true'
+        continue-on-error: true   # en cas de panne Cloudflare, la copie GitHub Pages reste à jour
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=${{ env.CF_PROJECT }} --branch=main --commit-dirty=true
 
       - name: Préparation de l'artefact GitHub Pages
         uses: actions/upload-pages-artifact@v3

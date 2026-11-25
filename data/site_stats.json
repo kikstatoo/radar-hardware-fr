@@ -1,7 +1,7 @@
 {
   "mode": "simulation",
-  "generated_at": 1795574543,
-  "base_url": "https://kikstatoo.github.io/radar-hardware-fr",
+  "generated_at": 1795575357,
+  "base_url": "https://radarhardware.pages.dev",
   "site_name": "Radar Hardware Europe",
   "products": [
     {
@@ -19,7 +19,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=AMD+Ryzen+5+5600",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/ryzen-5-5600.html",
+      "page_url": "https://radarhardware.pages.dev/produit/ryzen-5-5600.html",
       "chart_path": "dist/assets/social/ryzen-5-5600-alert.png",
       "social_path": "dist/assets/social/ryzen-5-5600-alert.png"
     },
@@ -38,7 +38,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=AMD+Ryzen+5+5600X",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/ryzen-5-5600x.html",
+      "page_url": "https://radarhardware.pages.dev/produit/ryzen-5-5600x.html",
       "chart_path": "dist/assets/social/ryzen-5-5600x-alert.png",
       "social_path": "dist/assets/social/ryzen-5-5600x-alert.png"
     },
@@ -57,7 +57,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=AMD+Ryzen+7+5700X3D",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/ryzen-7-5700x3d.html",
+      "page_url": "https://radarhardware.pages.dev/produit/ryzen-7-5700x3d.html",
       "chart_path": "dist/assets/social/ryzen-7-5700x3d-alert.png",
       "social_path": "dist/assets/social/ryzen-7-5700x3d-alert.png"
     },
@@ -76,7 +76,7 @@
       "best_merchant": "alternate",
       "best_merchant_name": "Alternate",
       "best_url": "https://www.alternate.fr/listing.xhtml?q=AMD+Ryzen+7+5800X3D",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/ryzen-7-5800x3d.html",
+      "page_url": "https://radarhardware.pages.dev/produit/ryzen-7-5800x3d.html",
       "chart_path": "dist/assets/social/ryzen-7-5800x3d-alert.png",
       "social_path": "dist/assets/social/ryzen-7-5800x3d-alert.png"
     },
@@ -95,7 +95,7 @@
       "best_merchant": "computeruniverse",
       "best_merchant_name": "ComputerUniverse",
       "best_url": "https://www.computeruniverse.net/de/search?query=AMD+Ryzen+5+7500F",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/ryzen-5-7500f.html",
+      "page_url": "https://radarhardware.pages.dev/produit/ryzen-5-7500f.html",
       "chart_path": "dist/assets/social/ryzen-5-7500f-alert.png",
       "social_path": "dist/assets/social/ryzen-5-7500f-alert.png"
     },
@@ -114,7 +114,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=AMD+Ryzen+5+7600",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/ryzen-5-7600.html",
+      "page_url": "https://radarhardware.pages.dev/produit/ryzen-5-7600.html",
       "chart_path": "dist/assets/social/ryzen-5-7600-alert.png",
       "social_path": "dist/assets/social/ryzen-5-7600-alert.png"
     },
@@ -133,7 +133,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=AMD+Ryzen+5+7600X",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/ryzen-5-7600x.html",
+      "page_url": "https://radarhardware.pages.dev/produit/ryzen-5-7600x.html",
       "chart_path": "dist/assets/social/ryzen-5-7600x-alert.png",
       "social_path": "dist/assets/social/ryzen-5-7600x-alert.png"
     },
@@ -152,7 +152,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=AMD+Ryzen+7+7700X",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/ryzen-7-7700x.html",
+      "page_url": "https://radarhardware.pages.dev/produit/ryzen-7-7700x.html",
       "chart_path": "dist/assets/social/ryzen-7-7700x-alert.png",
       "social_path": "dist/assets/social/ryzen-7-7700x-alert.png"
     },
@@ -171,7 +171,7 @@
       "best_merchant": "amazon_de",
       "best_merchant_name": "Amazon.de",
       "best_url": "https://www.amazon.de/s?k=0730143314930",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/ryzen-7-7800x3d.html",
+      "page_url": "https://radarhardware.pages.dev/produit/ryzen-7-7800x3d.html",
       "chart_path": "dist/assets/social/ryzen-7-7800x3d-alert.png",
       "social_path": "dist/assets/social/ryzen-7-7800x3d-alert.png"
     },
@@ -190,7 +190,7 @@
       "best_merchant": "topachat",
       "best_merchant_name": "TopAchat",
       "best_url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=AMD+Ryzen+9+7950X3D",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/ryzen-9-7950x3d.html",
+      "page_url": "https://radarhardware.pages.dev/produit/ryzen-9-7950x3d.html",
       "chart_path": "dist/assets/social/ryzen-9-7950x3d-alert.png",
       "social_path": "dist/assets/social/ryzen-9-7950x3d-alert.png"
     },
@@ -209,7 +209,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=AMD+Ryzen+5+9500F",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/ryzen-5-9500f.html",
+      "page_url": "https://radarhardware.pages.dev/produit/ryzen-5-9500f.html",
       "chart_path": "dist/assets/social/ryzen-5-9500f-alert.png",
       "social_path": "dist/assets/social/ryzen-5-9500f-alert.png"
     },
@@ -228,7 +228,7 @@
       "best_merchant": "amazon_fr",
       "best_merchant_name": "Amazon.fr",
       "best_url": "https://www.amazon.fr/s?k=0730143315609",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/ryzen-5-9600x.html",
+      "page_url": "https://radarhardware.pages.dev/produit/ryzen-5-9600x.html",
       "chart_path": "dist/assets/social/ryzen-5-9600x-alert.png",
       "social_path": "dist/assets/social/ryzen-5-9600x-alert.png"
     },
@@ -247,7 +247,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=AMD+Ryzen+7+9700X",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/ryzen-7-9700x.html",
+      "page_url": "https://radarhardware.pages.dev/produit/ryzen-7-9700x.html",
       "chart_path": "dist/assets/social/ryzen-7-9700x-alert.png",
       "social_path": "dist/assets/social/ryzen-7-9700x-alert.png"
     },
@@ -266,7 +266,7 @@
       "best_merchant": "computeruniverse",
       "best_merchant_name": "ComputerUniverse",
       "best_url": "https://www.computeruniverse.net/de/search?query=AMD+Ryzen+7+9800X3D",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/ryzen-7-9800x3d.html",
+      "page_url": "https://radarhardware.pages.dev/produit/ryzen-7-9800x3d.html",
       "chart_path": "dist/assets/social/ryzen-7-9800x3d-alert.png",
       "social_path": "dist/assets/social/ryzen-7-9800x3d-alert.png"
     },
@@ -285,7 +285,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=AMD+Ryzen+9+9900X",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/ryzen-9-9900x.html",
+      "page_url": "https://radarhardware.pages.dev/produit/ryzen-9-9900x.html",
       "chart_path": "dist/assets/social/ryzen-9-9900x-alert.png",
       "social_path": "dist/assets/social/ryzen-9-9900x-alert.png"
     },
@@ -304,7 +304,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=AMD+Ryzen+9+9950X",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/ryzen-9-9950x.html",
+      "page_url": "https://radarhardware.pages.dev/produit/ryzen-9-9950x.html",
       "chart_path": "dist/assets/social/ryzen-9-9950x-alert.png",
       "social_path": "dist/assets/social/ryzen-9-9950x-alert.png"
     },
@@ -323,7 +323,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Intel+Core+i5-12400F",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/core-i5-12400f.html",
+      "page_url": "https://radarhardware.pages.dev/produit/core-i5-12400f.html",
       "chart_path": "dist/assets/social/core-i5-12400f-alert.png",
       "social_path": "dist/assets/social/core-i5-12400f-alert.png"
     },
@@ -342,7 +342,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Intel+Core+i5-13400F",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/core-i5-13400f.html",
+      "page_url": "https://radarhardware.pages.dev/produit/core-i5-13400f.html",
       "chart_path": "dist/assets/social/core-i5-13400f-alert.png",
       "social_path": "dist/assets/social/core-i5-13400f-alert.png"
     },
@@ -361,7 +361,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Intel+Core+i5-14400F",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/core-i5-14400f.html",
+      "page_url": "https://radarhardware.pages.dev/produit/core-i5-14400f.html",
       "chart_path": "dist/assets/social/core-i5-14400f-alert.png",
       "social_path": "dist/assets/social/core-i5-14400f-alert.png"
     },
@@ -380,7 +380,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Intel+Core+i5-13600KF",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/core-i5-13600kf.html",
+      "page_url": "https://radarhardware.pages.dev/produit/core-i5-13600kf.html",
       "chart_path": "dist/assets/social/core-i5-13600kf-alert.png",
       "social_path": "dist/assets/social/core-i5-13600kf-alert.png"
     },
@@ -399,7 +399,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Intel+Core+i5-14600K",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/core-i5-14600k.html",
+      "page_url": "https://radarhardware.pages.dev/produit/core-i5-14600k.html",
       "chart_path": "dist/assets/social/core-i5-14600k-alert.png",
       "social_path": "dist/assets/social/core-i5-14600k-alert.png"
     },
@@ -418,7 +418,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Intel+Core+i7-14700K",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/core-i7-14700k.html",
+      "page_url": "https://radarhardware.pages.dev/produit/core-i7-14700k.html",
       "chart_path": "dist/assets/social/core-i7-14700k-alert.png",
       "social_path": "dist/assets/social/core-i7-14700k-alert.png"
     },
@@ -437,7 +437,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Intel+Core+Ultra+5+245KF",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/core-ultra-5-245kf.html",
+      "page_url": "https://radarhardware.pages.dev/produit/core-ultra-5-245kf.html",
       "chart_path": "dist/assets/social/core-ultra-5-245kf-alert.png",
       "social_path": "dist/assets/social/core-ultra-5-245kf-alert.png"
     },
@@ -456,7 +456,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Intel+Core+Ultra+7+265K",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/core-ultra-7-265k.html",
+      "page_url": "https://radarhardware.pages.dev/produit/core-ultra-7-265k.html",
       "chart_path": "dist/assets/social/core-ultra-7-265k-alert.png",
       "social_path": "dist/assets/social/core-ultra-7-265k-alert.png"
     },
@@ -475,7 +475,7 @@
       "best_merchant": "materielnet",
       "best_merchant_name": "Materiel.net",
       "best_url": "https://www.materiel.net/recherche/Intel+Core+Ultra+9+285K/",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/core-ultra-9-285k.html",
+      "page_url": "https://radarhardware.pages.dev/produit/core-ultra-9-285k.html",
       "chart_path": "dist/assets/social/core-ultra-9-285k-alert.png",
       "social_path": "dist/assets/social/core-ultra-9-285k-alert.png"
     },
@@ -494,7 +494,7 @@
       "best_merchant": "amazon_de",
       "best_merchant_name": "Amazon.de",
       "best_url": "https://www.amazon.de/s?k=NVIDIA+GeForce+RTX+3050+6+Go",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rtx-3050-6-go.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rtx-3050-6-go.html",
       "chart_path": "dist/assets/social/rtx-3050-6-go-alert.png",
       "social_path": "dist/assets/social/rtx-3050-6-go-alert.png"
     },
@@ -513,7 +513,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=NVIDIA+GeForce+RTX+3060+12+Go",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rtx-3060-12-go.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rtx-3060-12-go.html",
       "chart_path": "dist/assets/social/rtx-3060-12-go-alert.png",
       "social_path": "dist/assets/social/rtx-3060-12-go-alert.png"
     },
@@ -532,7 +532,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=NVIDIA+GeForce+RTX+3060+Ti",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rtx-3060-ti.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rtx-3060-ti.html",
       "chart_path": "dist/assets/social/rtx-3060-ti-alert.png",
       "social_path": "dist/assets/social/rtx-3060-ti-alert.png"
     },
@@ -551,7 +551,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=NVIDIA+GeForce+RTX+3070",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rtx-3070.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rtx-3070.html",
       "chart_path": "dist/assets/social/rtx-3070-alert.png",
       "social_path": "dist/assets/social/rtx-3070-alert.png"
     },
@@ -570,7 +570,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=NVIDIA+GeForce+RTX+4060",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rtx-4060.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rtx-4060.html",
       "chart_path": "dist/assets/social/rtx-4060-alert.png",
       "social_path": "dist/assets/social/rtx-4060-alert.png"
     },
@@ -589,7 +589,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=NVIDIA+GeForce+RTX+4060+Ti+8+Go",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rtx-4060-ti-8-go.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rtx-4060-ti-8-go.html",
       "chart_path": "dist/assets/social/rtx-4060-ti-8-go-alert.png",
       "social_path": "dist/assets/social/rtx-4060-ti-8-go-alert.png"
     },
@@ -608,7 +608,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=NVIDIA+GeForce+RTX+4060+Ti+16+Go",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rtx-4060-ti-16-go.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rtx-4060-ti-16-go.html",
       "chart_path": "dist/assets/social/rtx-4060-ti-16-go-alert.png",
       "social_path": "dist/assets/social/rtx-4060-ti-16-go-alert.png"
     },
@@ -627,7 +627,7 @@
       "best_merchant": "amazon_de",
       "best_merchant_name": "Amazon.de",
       "best_url": "https://www.amazon.de/s?k=NVIDIA+GeForce+RTX+4070",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rtx-4070.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rtx-4070.html",
       "chart_path": "dist/assets/social/rtx-4070-alert.png",
       "social_path": "dist/assets/social/rtx-4070-alert.png"
     },
@@ -646,7 +646,7 @@
       "best_merchant": "rueducommerce",
       "best_merchant_name": "Rue du Commerce",
       "best_url": "https://www.rueducommerce.fr/r/NVIDIA+GeForce+RTX+4070+Super",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rtx-4070-super.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rtx-4070-super.html",
       "chart_path": "dist/assets/social/rtx-4070-super-alert.png",
       "social_path": "dist/assets/social/rtx-4070-super-alert.png"
     },
@@ -665,7 +665,7 @@
       "best_merchant": "caseking",
       "best_merchant_name": "Caseking",
       "best_url": "https://www.caseking.de/search?search=NVIDIA+GeForce+RTX+4070+Ti",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rtx-4070-ti.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rtx-4070-ti.html",
       "chart_path": "dist/assets/social/rtx-4070-ti-alert.png",
       "social_path": "dist/assets/social/rtx-4070-ti-alert.png"
     },
@@ -684,7 +684,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=NVIDIA+GeForce+RTX+4070+Ti+Super",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rtx-4070-ti-super.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rtx-4070-ti-super.html",
       "chart_path": "dist/assets/social/rtx-4070-ti-super-alert.png",
       "social_path": "dist/assets/social/rtx-4070-ti-super-alert.png"
     },
@@ -703,7 +703,7 @@
       "best_merchant": "amazon_de",
       "best_merchant_name": "Amazon.de",
       "best_url": "https://www.amazon.de/s?k=NVIDIA+GeForce+RTX+4080+Super",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rtx-4080-super.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rtx-4080-super.html",
       "chart_path": "dist/assets/social/rtx-4080-super-alert.png",
       "social_path": "dist/assets/social/rtx-4080-super-alert.png"
     },
@@ -722,7 +722,7 @@
       "best_merchant": "computeruniverse",
       "best_merchant_name": "ComputerUniverse",
       "best_url": "https://www.computeruniverse.net/de/search?query=NVIDIA+GeForce+RTX+4090",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rtx-4090.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rtx-4090.html",
       "chart_path": "dist/assets/social/rtx-4090-alert.png",
       "social_path": "dist/assets/social/rtx-4090-alert.png"
     },
@@ -741,7 +741,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=NVIDIA+GeForce+RTX+5060+8+Go",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rtx-5060-8go.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rtx-5060-8go.html",
       "chart_path": "dist/assets/social/rtx-5060-8go-alert.png",
       "social_path": "dist/assets/social/rtx-5060-8go-alert.png"
     },
@@ -760,7 +760,7 @@
       "best_merchant": "computeruniverse",
       "best_merchant_name": "ComputerUniverse",
       "best_url": "https://www.computeruniverse.net/de/search?query=NVIDIA+GeForce+RTX+5060+Ti+8+Go",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rtx-5060-ti-8go.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rtx-5060-ti-8go.html",
       "chart_path": "dist/assets/social/rtx-5060-ti-8go-alert.png",
       "social_path": "dist/assets/social/rtx-5060-ti-8go-alert.png"
     },
@@ -779,7 +779,7 @@
       "best_merchant": "amazon_de",
       "best_merchant_name": "Amazon.de",
       "best_url": "https://www.amazon.de/s?k=NVIDIA+GeForce+RTX+5060+Ti+16+Go",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rtx-5060-ti-16go.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rtx-5060-ti-16go.html",
       "chart_path": "dist/assets/social/rtx-5060-ti-16go-alert.png",
       "social_path": "dist/assets/social/rtx-5060-ti-16go-alert.png"
     },
@@ -798,7 +798,7 @@
       "best_merchant": "amazon_de",
       "best_merchant_name": "Amazon.de",
       "best_url": "https://www.amazon.de/s?k=NVIDIA+GeForce+RTX+5070+12+Go",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rtx-5070-12go.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rtx-5070-12go.html",
       "chart_path": "dist/assets/social/rtx-5070-12go-alert.png",
       "social_path": "dist/assets/social/rtx-5070-12go-alert.png"
     },
@@ -817,7 +817,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=NVIDIA+GeForce+RTX+5070+Ti+16+Go",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rtx-5070-ti-16go.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rtx-5070-ti-16go.html",
       "chart_path": "dist/assets/social/rtx-5070-ti-16go-alert.png",
       "social_path": "dist/assets/social/rtx-5070-ti-16go-alert.png"
     },
@@ -836,7 +836,7 @@
       "best_merchant": "computeruniverse",
       "best_merchant_name": "ComputerUniverse",
       "best_url": "https://www.computeruniverse.net/de/search?query=NVIDIA+GeForce+RTX+5080+16+Go",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rtx-5080-16go.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rtx-5080-16go.html",
       "chart_path": "dist/assets/social/rtx-5080-16go-alert.png",
       "social_path": "dist/assets/social/rtx-5080-16go-alert.png"
     },
@@ -855,7 +855,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=AMD+Radeon+RX+6600",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rx-6600.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rx-6600.html",
       "chart_path": "dist/assets/social/rx-6600-alert.png",
       "social_path": "dist/assets/social/rx-6600-alert.png"
     },
@@ -874,7 +874,7 @@
       "best_merchant": "computeruniverse",
       "best_merchant_name": "ComputerUniverse",
       "best_url": "https://www.computeruniverse.net/de/search?query=AMD+Radeon+RX+6650+XT",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rx-6650-xt.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rx-6650-xt.html",
       "chart_path": "dist/assets/social/rx-6650-xt-alert.png",
       "social_path": "dist/assets/social/rx-6650-xt-alert.png"
     },
@@ -893,7 +893,7 @@
       "best_merchant": "computeruniverse",
       "best_merchant_name": "ComputerUniverse",
       "best_url": "https://www.computeruniverse.net/de/search?query=AMD+Radeon+RX+6700+XT",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rx-6700-xt.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rx-6700-xt.html",
       "chart_path": "dist/assets/social/rx-6700-xt-alert.png",
       "social_path": "dist/assets/social/rx-6700-xt-alert.png"
     },
@@ -912,7 +912,7 @@
       "best_merchant": "amazon_de",
       "best_merchant_name": "Amazon.de",
       "best_url": "https://www.amazon.de/s?k=AMD+Radeon+RX+6750+XT",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rx-6750-xt.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rx-6750-xt.html",
       "chart_path": "dist/assets/social/rx-6750-xt-alert.png",
       "social_path": "dist/assets/social/rx-6750-xt-alert.png"
     },
@@ -931,7 +931,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=AMD+Radeon+RX+7600",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rx-7600.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rx-7600.html",
       "chart_path": "dist/assets/social/rx-7600-alert.png",
       "social_path": "dist/assets/social/rx-7600-alert.png"
     },
@@ -950,7 +950,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=AMD+Radeon+RX+7600+XT",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rx-7600-xt.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rx-7600-xt.html",
       "chart_path": "dist/assets/social/rx-7600-xt-alert.png",
       "social_path": "dist/assets/social/rx-7600-xt-alert.png"
     },
@@ -969,7 +969,7 @@
       "best_merchant": "rueducommerce",
       "best_merchant_name": "Rue du Commerce",
       "best_url": "https://www.rueducommerce.fr/r/AMD+Radeon+RX+7700+XT",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rx-7700-xt.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rx-7700-xt.html",
       "chart_path": "dist/assets/social/rx-7700-xt-alert.png",
       "social_path": "dist/assets/social/rx-7700-xt-alert.png"
     },
@@ -988,7 +988,7 @@
       "best_merchant": "computeruniverse",
       "best_merchant_name": "ComputerUniverse",
       "best_url": "https://www.computeruniverse.net/de/search?query=AMD+Radeon+RX+7800+XT",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rx-7800-xt.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rx-7800-xt.html",
       "chart_path": "dist/assets/social/rx-7800-xt-alert.png",
       "social_path": "dist/assets/social/rx-7800-xt-alert.png"
     },
@@ -1007,7 +1007,7 @@
       "best_merchant": "computeruniverse",
       "best_merchant_name": "ComputerUniverse",
       "best_url": "https://www.computeruniverse.net/de/search?query=AMD+Radeon+RX+7900+GRE",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rx-7900-gre.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rx-7900-gre.html",
       "chart_path": "dist/assets/social/rx-7900-gre-alert.png",
       "social_path": "dist/assets/social/rx-7900-gre-alert.png"
     },
@@ -1026,7 +1026,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=AMD+Radeon+RX+7900+XT",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rx-7900-xt.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rx-7900-xt.html",
       "chart_path": "dist/assets/social/rx-7900-xt-alert.png",
       "social_path": "dist/assets/social/rx-7900-xt-alert.png"
     },
@@ -1045,7 +1045,7 @@
       "best_merchant": "computeruniverse",
       "best_merchant_name": "ComputerUniverse",
       "best_url": "https://www.computeruniverse.net/de/search?query=AMD+Radeon+RX+7900+XTX",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rx-7900-xtx.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rx-7900-xtx.html",
       "chart_path": "dist/assets/social/rx-7900-xtx-alert.png",
       "social_path": "dist/assets/social/rx-7900-xtx-alert.png"
     },
@@ -1064,7 +1064,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=AMD+Radeon+RX+9060+XT+8+Go",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rx-9060-xt-8-go.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rx-9060-xt-8-go.html",
       "chart_path": "dist/assets/social/rx-9060-xt-8-go-alert.png",
       "social_path": "dist/assets/social/rx-9060-xt-8-go-alert.png"
     },
@@ -1083,7 +1083,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=AMD+Radeon+RX+9060+XT+16+Go",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rx-9060-xt-16go.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rx-9060-xt-16go.html",
       "chart_path": "dist/assets/social/rx-9060-xt-16go-alert.png",
       "social_path": "dist/assets/social/rx-9060-xt-16go-alert.png"
     },
@@ -1102,7 +1102,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=AMD+Radeon+RX+9070+16+Go",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rx-9070-16go.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rx-9070-16go.html",
       "chart_path": "dist/assets/social/rx-9070-16go-alert.png",
       "social_path": "dist/assets/social/rx-9070-16go-alert.png"
     },
@@ -1121,7 +1121,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=AMD+Radeon+RX+9070+XT+16+Go",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rx-9070-xt-16go.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rx-9070-xt-16go.html",
       "chart_path": "dist/assets/social/rx-9070-xt-16go-alert.png",
       "social_path": "dist/assets/social/rx-9070-xt-16go-alert.png"
     },
@@ -1140,7 +1140,7 @@
       "best_merchant": "computeruniverse",
       "best_merchant_name": "ComputerUniverse",
       "best_url": "https://www.computeruniverse.net/de/search?query=AMD+Radeon+RX+9070+GRE+12+Go",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/rx-9070-gre-12-go.html",
+      "page_url": "https://radarhardware.pages.dev/produit/rx-9070-gre-12-go.html",
       "chart_path": "dist/assets/social/rx-9070-gre-12-go-alert.png",
       "social_path": "dist/assets/social/rx-9070-gre-12-go-alert.png"
     },
@@ -1159,7 +1159,7 @@
       "best_merchant": "rueducommerce",
       "best_merchant_name": "Rue du Commerce",
       "best_url": "https://www.rueducommerce.fr/r/MSI+MAG+B550+Tomahawk",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/msi-mag-b550-tomahawk.html",
+      "page_url": "https://radarhardware.pages.dev/produit/msi-mag-b550-tomahawk.html",
       "chart_path": "dist/assets/social/msi-mag-b550-tomahawk-alert.png",
       "social_path": "dist/assets/social/msi-mag-b550-tomahawk-alert.png"
     },
@@ -1178,7 +1178,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=ASUS+TUF+Gaming+B550-Plus+WiFi+II",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/asus-tuf-gaming-b550-plus-wifi-ii.html",
+      "page_url": "https://radarhardware.pages.dev/produit/asus-tuf-gaming-b550-plus-wifi-ii.html",
       "chart_path": "dist/assets/social/asus-tuf-gaming-b550-plus-wifi-ii-alert.png",
       "social_path": "dist/assets/social/asus-tuf-gaming-b550-plus-wifi-ii-alert.png"
     },
@@ -1197,7 +1197,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Gigabyte+B550M+DS3H",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/gigabyte-b550m-ds3h.html",
+      "page_url": "https://radarhardware.pages.dev/produit/gigabyte-b550m-ds3h.html",
       "chart_path": "dist/assets/social/gigabyte-b550m-ds3h-alert.png",
       "social_path": "dist/assets/social/gigabyte-b550m-ds3h-alert.png"
     },
@@ -1216,7 +1216,7 @@
       "best_merchant": "amazon_fr",
       "best_merchant_name": "Amazon.fr",
       "best_url": "https://www.amazon.fr/s?k=ASRock+B550M+Pro4",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/asrock-b550m-pro4.html",
+      "page_url": "https://radarhardware.pages.dev/produit/asrock-b550m-pro4.html",
       "chart_path": "dist/assets/social/asrock-b550m-pro4-alert.png",
       "social_path": "dist/assets/social/asrock-b550m-pro4-alert.png"
     },
@@ -1235,7 +1235,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=ASUS+ROG+Strix+B550-I+Gaming",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/asus-rog-strix-b550-i-gaming.html",
+      "page_url": "https://radarhardware.pages.dev/produit/asus-rog-strix-b550-i-gaming.html",
       "chart_path": "dist/assets/social/asus-rog-strix-b550-i-gaming-alert.png",
       "social_path": "dist/assets/social/asus-rog-strix-b550-i-gaming-alert.png"
     },
@@ -1254,7 +1254,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=MSI+MAG+X570S+Tomahawk+Max+WiFi",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/msi-mag-x570s-tomahawk-max-wifi.html",
+      "page_url": "https://radarhardware.pages.dev/produit/msi-mag-x570s-tomahawk-max-wifi.html",
       "chart_path": "dist/assets/social/msi-mag-x570s-tomahawk-max-wifi-alert.png",
       "social_path": "dist/assets/social/msi-mag-x570s-tomahawk-max-wifi-alert.png"
     },
@@ -1273,7 +1273,7 @@
       "best_merchant": "amazon_fr",
       "best_merchant_name": "Amazon.fr",
       "best_url": "https://www.amazon.fr/s?k=MSI+B650+Gaming+Plus+WiFi",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/msi-b650-gaming-plus-wifi.html",
+      "page_url": "https://radarhardware.pages.dev/produit/msi-b650-gaming-plus-wifi.html",
       "chart_path": "dist/assets/social/msi-b650-gaming-plus-wifi-alert.png",
       "social_path": "dist/assets/social/msi-b650-gaming-plus-wifi-alert.png"
     },
@@ -1292,7 +1292,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=ASUS+TUF+Gaming+B650-Plus+WiFi",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/asus-tuf-gaming-b650-plus-wifi.html",
+      "page_url": "https://radarhardware.pages.dev/produit/asus-tuf-gaming-b650-plus-wifi.html",
       "chart_path": "dist/assets/social/asus-tuf-gaming-b650-plus-wifi-alert.png",
       "social_path": "dist/assets/social/asus-tuf-gaming-b650-plus-wifi-alert.png"
     },
@@ -1311,7 +1311,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Gigabyte+B650M+Aorus+Elite+AX",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/gigabyte-b650m-aorus-elite-ax.html",
+      "page_url": "https://radarhardware.pages.dev/produit/gigabyte-b650m-aorus-elite-ax.html",
       "chart_path": "dist/assets/social/gigabyte-b650m-aorus-elite-ax-alert.png",
       "social_path": "dist/assets/social/gigabyte-b650m-aorus-elite-ax-alert.png"
     },
@@ -1330,7 +1330,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=ASRock+B650I+Lightning+WiFi",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/asrock-b650i-lightning-wifi.html",
+      "page_url": "https://radarhardware.pages.dev/produit/asrock-b650i-lightning-wifi.html",
       "chart_path": "dist/assets/social/asrock-b650i-lightning-wifi-alert.png",
       "social_path": "dist/assets/social/asrock-b650i-lightning-wifi-alert.png"
     },
@@ -1349,7 +1349,7 @@
       "best_merchant": "amazon_de",
       "best_merchant_name": "Amazon.de",
       "best_url": "https://www.amazon.de/s?k=4711377285438",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/msi-b850-gaming-plus-wifi.html",
+      "page_url": "https://radarhardware.pages.dev/produit/msi-b850-gaming-plus-wifi.html",
       "chart_path": "dist/assets/social/msi-b850-gaming-plus-wifi-alert.png",
       "social_path": "dist/assets/social/msi-b850-gaming-plus-wifi-alert.png"
     },
@@ -1368,7 +1368,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Gigabyte+B850+Aorus+Elite+WiFi7",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/gigabyte-b850-aorus-elite-wifi7.html",
+      "page_url": "https://radarhardware.pages.dev/produit/gigabyte-b850-aorus-elite-wifi7.html",
       "chart_path": "dist/assets/social/gigabyte-b850-aorus-elite-wifi7-alert.png",
       "social_path": "dist/assets/social/gigabyte-b850-aorus-elite-wifi7-alert.png"
     },
@@ -1387,7 +1387,7 @@
       "best_merchant": "computeruniverse",
       "best_merchant_name": "ComputerUniverse",
       "best_url": "https://www.computeruniverse.net/de/search?query=MSI+MAG+B850M+Mortar+WiFi",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/msi-mag-b850m-mortar-wifi.html",
+      "page_url": "https://radarhardware.pages.dev/produit/msi-mag-b850m-mortar-wifi.html",
       "chart_path": "dist/assets/social/msi-mag-b850m-mortar-wifi-alert.png",
       "social_path": "dist/assets/social/msi-mag-b850m-mortar-wifi-alert.png"
     },
@@ -1406,7 +1406,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=ASUS+ROG+Strix+X670E-E+Gaming+WiFi",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/asus-rog-strix-x670e-e-gaming-wifi.html",
+      "page_url": "https://radarhardware.pages.dev/produit/asus-rog-strix-x670e-e-gaming-wifi.html",
       "chart_path": "dist/assets/social/asus-rog-strix-x670e-e-gaming-wifi-alert.png",
       "social_path": "dist/assets/social/asus-rog-strix-x670e-e-gaming-wifi-alert.png"
     },
@@ -1425,7 +1425,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=ASUS+TUF+Gaming+X870-Plus+WiFi",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/asus-tuf-gaming-x870-plus-wifi.html",
+      "page_url": "https://radarhardware.pages.dev/produit/asus-tuf-gaming-x870-plus-wifi.html",
       "chart_path": "dist/assets/social/asus-tuf-gaming-x870-plus-wifi-alert.png",
       "social_path": "dist/assets/social/asus-tuf-gaming-x870-plus-wifi-alert.png"
     },
@@ -1444,7 +1444,7 @@
       "best_merchant": "computeruniverse",
       "best_merchant_name": "ComputerUniverse",
       "best_url": "https://www.computeruniverse.net/de/search?query=MSI+MAG+X870+Tomahawk+WiFi",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/msi-mag-x870-tomahawk-wifi.html",
+      "page_url": "https://radarhardware.pages.dev/produit/msi-mag-x870-tomahawk-wifi.html",
       "chart_path": "dist/assets/social/msi-mag-x870-tomahawk-wifi-alert.png",
       "social_path": "dist/assets/social/msi-mag-x870-tomahawk-wifi-alert.png"
     },
@@ -1463,7 +1463,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=MSI+PRO+B760M-A+WiFi+DDR4",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/msi-pro-b760m-a-wifi-ddr4.html",
+      "page_url": "https://radarhardware.pages.dev/produit/msi-pro-b760m-a-wifi-ddr4.html",
       "chart_path": "dist/assets/social/msi-pro-b760m-a-wifi-ddr4-alert.png",
       "social_path": "dist/assets/social/msi-pro-b760m-a-wifi-ddr4-alert.png"
     },
@@ -1482,7 +1482,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=ASUS+TUF+Gaming+B760-Plus+WiFi",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/asus-tuf-gaming-b760-plus-wifi.html",
+      "page_url": "https://radarhardware.pages.dev/produit/asus-tuf-gaming-b760-plus-wifi.html",
       "chart_path": "dist/assets/social/asus-tuf-gaming-b760-plus-wifi-alert.png",
       "social_path": "dist/assets/social/asus-tuf-gaming-b760-plus-wifi-alert.png"
     },
@@ -1501,7 +1501,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Gigabyte+B760I+Aorus+Pro+DDR4",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/gigabyte-b760i-aorus-pro-ddr4.html",
+      "page_url": "https://radarhardware.pages.dev/produit/gigabyte-b760i-aorus-pro-ddr4.html",
       "chart_path": "dist/assets/social/gigabyte-b760i-aorus-pro-ddr4-alert.png",
       "social_path": "dist/assets/social/gigabyte-b760i-aorus-pro-ddr4-alert.png"
     },
@@ -1520,7 +1520,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=MSI+MAG+Z790+Tomahawk+WiFi",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/msi-mag-z790-tomahawk-wifi.html",
+      "page_url": "https://radarhardware.pages.dev/produit/msi-mag-z790-tomahawk-wifi.html",
       "chart_path": "dist/assets/social/msi-mag-z790-tomahawk-wifi-alert.png",
       "social_path": "dist/assets/social/msi-mag-z790-tomahawk-wifi-alert.png"
     },
@@ -1539,7 +1539,7 @@
       "best_merchant": "materielnet",
       "best_merchant_name": "Materiel.net",
       "best_url": "https://www.materiel.net/recherche/ASUS+ROG+Strix+Z790-A+Gaming+WiFi+II/",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/asus-rog-strix-z790-a-gaming-wifi-ii.html",
+      "page_url": "https://radarhardware.pages.dev/produit/asus-rog-strix-z790-a-gaming-wifi-ii.html",
       "chart_path": "dist/assets/social/asus-rog-strix-z790-a-gaming-wifi-ii-alert.png",
       "social_path": "dist/assets/social/asus-rog-strix-z790-a-gaming-wifi-ii-alert.png"
     },
@@ -1558,7 +1558,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=MSI+PRO+B860-P+WiFi",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/msi-pro-b860-p-wifi.html",
+      "page_url": "https://radarhardware.pages.dev/produit/msi-pro-b860-p-wifi.html",
       "chart_path": "dist/assets/social/msi-pro-b860-p-wifi-alert.png",
       "social_path": "dist/assets/social/msi-pro-b860-p-wifi-alert.png"
     },
@@ -1577,7 +1577,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=ASUS+TUF+Gaming+B860M-Plus+WiFi",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/asus-tuf-gaming-b860m-plus-wifi.html",
+      "page_url": "https://radarhardware.pages.dev/produit/asus-tuf-gaming-b860m-plus-wifi.html",
       "chart_path": "dist/assets/social/asus-tuf-gaming-b860m-plus-wifi-alert.png",
       "social_path": "dist/assets/social/asus-tuf-gaming-b860m-plus-wifi-alert.png"
     },
@@ -1596,7 +1596,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Gigabyte+Z890+Aorus+Elite+WiFi7",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/gigabyte-z890-aorus-elite-wifi7.html",
+      "page_url": "https://radarhardware.pages.dev/produit/gigabyte-z890-aorus-elite-wifi7.html",
       "chart_path": "dist/assets/social/gigabyte-z890-aorus-elite-wifi7-alert.png",
       "social_path": "dist/assets/social/gigabyte-z890-aorus-elite-wifi7-alert.png"
     },
@@ -1615,7 +1615,7 @@
       "best_merchant": "megekko",
       "best_merchant_name": "Megekko",
       "best_url": "https://www.megekko.nl/zoeken?q=ASUS+ROG+Strix+Z890-I+Gaming+WiFi",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/asus-rog-strix-z890-i-gaming-wifi.html",
+      "page_url": "https://radarhardware.pages.dev/produit/asus-rog-strix-z890-i-gaming-wifi.html",
       "chart_path": "dist/assets/social/asus-rog-strix-z890-i-gaming-wifi-alert.png",
       "social_path": "dist/assets/social/asus-rog-strix-z890-i-gaming-wifi-alert.png"
     },
@@ -1634,7 +1634,7 @@
       "best_merchant": "amazon_fr",
       "best_merchant_name": "Amazon.fr",
       "best_url": "https://www.amazon.fr/s?k=Corsair+Vengeance+LPX+16+Go+%282x8+Go%29+DDR4+3200+MHz+CL16",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/corsair-vengeance-lpx-16-go-2x8-go-ddr4-3200-mhz-cl16.html",
+      "page_url": "https://radarhardware.pages.dev/produit/corsair-vengeance-lpx-16-go-2x8-go-ddr4-3200-mhz-cl16.html",
       "chart_path": "dist/assets/social/corsair-vengeance-lpx-16-go-2x8-go-ddr4-3200-mhz-cl16-alert.png",
       "social_path": "dist/assets/social/corsair-vengeance-lpx-16-go-2x8-go-ddr4-3200-mhz-cl16-alert.png"
     },
@@ -1653,7 +1653,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Corsair+Vengeance+LPX+32+Go+%282x16+Go%29+DDR4+3200+MHz+CL16",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/corsair-vengeance-lpx-32-go-2x16-go-ddr4-3200-mhz-cl16.html",
+      "page_url": "https://radarhardware.pages.dev/produit/corsair-vengeance-lpx-32-go-2x16-go-ddr4-3200-mhz-cl16.html",
       "chart_path": "dist/assets/social/corsair-vengeance-lpx-32-go-2x16-go-ddr4-3200-mhz-cl16-alert.png",
       "social_path": "dist/assets/social/corsair-vengeance-lpx-32-go-2x16-go-ddr4-3200-mhz-cl16-alert.png"
     },
@@ -1672,7 +1672,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=G.Skill+Ripjaws+V+16+Go+%282x8+Go%29+DDR4+3600+MHz+CL16",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/g-skill-ripjaws-v-16-go-2x8-go-ddr4-3600-mhz-cl16.html",
+      "page_url": "https://radarhardware.pages.dev/produit/g-skill-ripjaws-v-16-go-2x8-go-ddr4-3600-mhz-cl16.html",
       "chart_path": "dist/assets/social/g-skill-ripjaws-v-16-go-2x8-go-ddr4-3600-mhz-cl16-alert.png",
       "social_path": "dist/assets/social/g-skill-ripjaws-v-16-go-2x8-go-ddr4-3600-mhz-cl16-alert.png"
     },
@@ -1691,7 +1691,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=G.Skill+Ripjaws+V+32+Go+%282x16+Go%29+DDR4+3600+MHz+CL18",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/g-skill-ripjaws-v-32-go-2x16-go-ddr4-3600-mhz-cl18.html",
+      "page_url": "https://radarhardware.pages.dev/produit/g-skill-ripjaws-v-32-go-2x16-go-ddr4-3600-mhz-cl18.html",
       "chart_path": "dist/assets/social/g-skill-ripjaws-v-32-go-2x16-go-ddr4-3600-mhz-cl18-alert.png",
       "social_path": "dist/assets/social/g-skill-ripjaws-v-32-go-2x16-go-ddr4-3600-mhz-cl18-alert.png"
     },
@@ -1710,7 +1710,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Kingston+Fury+Beast+16+Go+%282x8+Go%29+DDR4+3200+MHz+CL16",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/kingston-fury-beast-16-go-2x8-go-ddr4-3200-mhz-cl16.html",
+      "page_url": "https://radarhardware.pages.dev/produit/kingston-fury-beast-16-go-2x8-go-ddr4-3200-mhz-cl16.html",
       "chart_path": "dist/assets/social/kingston-fury-beast-16-go-2x8-go-ddr4-3200-mhz-cl16-alert.png",
       "social_path": "dist/assets/social/kingston-fury-beast-16-go-2x8-go-ddr4-3200-mhz-cl16-alert.png"
     },
@@ -1729,7 +1729,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Kingston+Fury+Beast+32+Go+%282x16+Go%29+DDR4+3600+MHz+CL18",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/kingston-fury-beast-32-go-2x16-go-ddr4-3600-mhz-cl18.html",
+      "page_url": "https://radarhardware.pages.dev/produit/kingston-fury-beast-32-go-2x16-go-ddr4-3600-mhz-cl18.html",
       "chart_path": "dist/assets/social/kingston-fury-beast-32-go-2x16-go-ddr4-3600-mhz-cl18-alert.png",
       "social_path": "dist/assets/social/kingston-fury-beast-32-go-2x16-go-ddr4-3600-mhz-cl18-alert.png"
     },
@@ -1748,7 +1748,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Crucial+Pro+32+Go+%282x16+Go%29+DDR4+3200+MHz+CL22",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/crucial-pro-32-go-2x16-go-ddr4-3200-mhz-cl22.html",
+      "page_url": "https://radarhardware.pages.dev/produit/crucial-pro-32-go-2x16-go-ddr4-3200-mhz-cl22.html",
       "chart_path": "dist/assets/social/crucial-pro-32-go-2x16-go-ddr4-3200-mhz-cl22-alert.png",
       "social_path": "dist/assets/social/crucial-pro-32-go-2x16-go-ddr4-3200-mhz-cl22-alert.png"
     },
@@ -1767,7 +1767,7 @@
       "best_merchant": "computeruniverse",
       "best_merchant_name": "ComputerUniverse",
       "best_url": "https://www.computeruniverse.net/de/search?query=Corsair+Vengeance+32+Go+%282x16+Go%29+DDR5+6000+MHz+CL30",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/corsair-vengeance-32go-ddr5-6000-cl30.html",
+      "page_url": "https://radarhardware.pages.dev/produit/corsair-vengeance-32go-ddr5-6000-cl30.html",
       "chart_path": "dist/assets/social/corsair-vengeance-32go-ddr5-6000-cl30-alert.png",
       "social_path": "dist/assets/social/corsair-vengeance-32go-ddr5-6000-cl30-alert.png"
     },
@@ -1786,7 +1786,7 @@
       "best_merchant": "computeruniverse",
       "best_merchant_name": "ComputerUniverse",
       "best_url": "https://www.computeruniverse.net/de/search?query=G.Skill+Trident+Z5+Neo+RGB+32+Go+DDR5+6000+MHz+CL30",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/gskill-trident-z5-neo-rgb-32go-ddr5-6000-cl30.html",
+      "page_url": "https://radarhardware.pages.dev/produit/gskill-trident-z5-neo-rgb-32go-ddr5-6000-cl30.html",
       "chart_path": "dist/assets/social/gskill-trident-z5-neo-rgb-32go-ddr5-6000-cl30-alert.png",
       "social_path": "dist/assets/social/gskill-trident-z5-neo-rgb-32go-ddr5-6000-cl30-alert.png"
     },
@@ -1805,7 +1805,7 @@
       "best_merchant": "amazon_de",
       "best_merchant_name": "Amazon.de",
       "best_url": "https://www.amazon.de/s?k=0740617342994",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/kingston-fury-beast-32go-ddr5-6000-cl30.html",
+      "page_url": "https://radarhardware.pages.dev/produit/kingston-fury-beast-32go-ddr5-6000-cl30.html",
       "chart_path": "dist/assets/social/kingston-fury-beast-32go-ddr5-6000-cl30-alert.png",
       "social_path": "dist/assets/social/kingston-fury-beast-32go-ddr5-6000-cl30-alert.png"
     },
@@ -1824,7 +1824,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=G.Skill+Flare+X5+32+Go+%282x16+Go%29+DDR5+6000+MHz+CL30",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/g-skill-flare-x5-32-go-2x16-go-ddr5-6000-mhz-cl30.html",
+      "page_url": "https://radarhardware.pages.dev/produit/g-skill-flare-x5-32-go-2x16-go-ddr5-6000-mhz-cl30.html",
       "chart_path": "dist/assets/social/g-skill-flare-x5-32-go-2x16-go-ddr5-6000-mhz-cl30-alert.png",
       "social_path": "dist/assets/social/g-skill-flare-x5-32-go-2x16-go-ddr5-6000-mhz-cl30-alert.png"
     },
@@ -1843,7 +1843,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Corsair+Vengeance+RGB+32+Go+%282x16+Go%29+DDR5+6000+MHz+CL36",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/corsair-vengeance-rgb-32-go-2x16-go-ddr5-6000-mhz-cl36.html",
+      "page_url": "https://radarhardware.pages.dev/produit/corsair-vengeance-rgb-32-go-2x16-go-ddr5-6000-mhz-cl36.html",
       "chart_path": "dist/assets/social/corsair-vengeance-rgb-32-go-2x16-go-ddr5-6000-mhz-cl36-alert.png",
       "social_path": "dist/assets/social/corsair-vengeance-rgb-32-go-2x16-go-ddr5-6000-mhz-cl36-alert.png"
     },
@@ -1862,7 +1862,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Kingston+Fury+Beast+32+Go+%282x16+Go%29+DDR5+5600+MHz+CL36",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/kingston-fury-beast-32-go-2x16-go-ddr5-5600-mhz-cl36.html",
+      "page_url": "https://radarhardware.pages.dev/produit/kingston-fury-beast-32-go-2x16-go-ddr5-5600-mhz-cl36.html",
       "chart_path": "dist/assets/social/kingston-fury-beast-32-go-2x16-go-ddr5-5600-mhz-cl36-alert.png",
       "social_path": "dist/assets/social/kingston-fury-beast-32-go-2x16-go-ddr5-5600-mhz-cl36-alert.png"
     },
@@ -1881,7 +1881,7 @@
       "best_merchant": "amazon_es",
       "best_merchant_name": "Amazon.es",
       "best_url": "https://www.amazon.es/s?k=Crucial+Pro+32+Go+%282x16+Go%29+DDR5+5600+MHz+CL46",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/crucial-pro-32-go-2x16-go-ddr5-5600-mhz-cl46.html",
+      "page_url": "https://radarhardware.pages.dev/produit/crucial-pro-32-go-2x16-go-ddr5-5600-mhz-cl46.html",
       "chart_path": "dist/assets/social/crucial-pro-32-go-2x16-go-ddr5-5600-mhz-cl46-alert.png",
       "social_path": "dist/assets/social/crucial-pro-32-go-2x16-go-ddr5-5600-mhz-cl46-alert.png"
     },
@@ -1900,7 +1900,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=G.Skill+Trident+Z5+RGB+32+Go+%282x16+Go%29+DDR5+6400+MHz+CL32",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/g-skill-trident-z5-rgb-32-go-2x16-go-ddr5-6400-mhz-cl32.html",
+      "page_url": "https://radarhardware.pages.dev/produit/g-skill-trident-z5-rgb-32-go-2x16-go-ddr5-6400-mhz-cl32.html",
       "chart_path": "dist/assets/social/g-skill-trident-z5-rgb-32-go-2x16-go-ddr5-6400-mhz-cl32-alert.png",
       "social_path": "dist/assets/social/g-skill-trident-z5-rgb-32-go-2x16-go-ddr5-6400-mhz-cl32-alert.png"
     },
@@ -1919,7 +1919,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Corsair+Dominator+Titanium+32+Go+%282x16+Go%29+DDR5+6000+MHz+CL30",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/corsair-dominator-titanium-32-go-2x16-go-ddr5-6000-mhz-cl30.html",
+      "page_url": "https://radarhardware.pages.dev/produit/corsair-dominator-titanium-32-go-2x16-go-ddr5-6000-mhz-cl30.html",
       "chart_path": "dist/assets/social/corsair-dominator-titanium-32-go-2x16-go-ddr5-6000-mhz-cl30-alert.png",
       "social_path": "dist/assets/social/corsair-dominator-titanium-32-go-2x16-go-ddr5-6000-mhz-cl30-alert.png"
     },
@@ -1938,7 +1938,7 @@
       "best_merchant": "computeruniverse",
       "best_merchant_name": "ComputerUniverse",
       "best_url": "https://www.computeruniverse.net/de/search?query=Corsair+Vengeance+64+Go+%282x32+Go%29+DDR5+6000+MHz+CL30",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/corsair-vengeance-64-go-2x32-go-ddr5-6000-mhz-cl30.html",
+      "page_url": "https://radarhardware.pages.dev/produit/corsair-vengeance-64-go-2x32-go-ddr5-6000-mhz-cl30.html",
       "chart_path": "dist/assets/social/corsair-vengeance-64-go-2x32-go-ddr5-6000-mhz-cl30-alert.png",
       "social_path": "dist/assets/social/corsair-vengeance-64-go-2x32-go-ddr5-6000-mhz-cl30-alert.png"
     },
@@ -1957,7 +1957,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=G.Skill+Trident+Z5+RGB+64+Go+%282x32+Go%29+DDR5+6400+MHz+CL32",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/g-skill-trident-z5-rgb-64-go-2x32-go-ddr5-6400-mhz-cl32.html",
+      "page_url": "https://radarhardware.pages.dev/produit/g-skill-trident-z5-rgb-64-go-2x32-go-ddr5-6400-mhz-cl32.html",
       "chart_path": "dist/assets/social/g-skill-trident-z5-rgb-64-go-2x32-go-ddr5-6400-mhz-cl32-alert.png",
       "social_path": "dist/assets/social/g-skill-trident-z5-rgb-64-go-2x32-go-ddr5-6400-mhz-cl32-alert.png"
     },
@@ -1976,7 +1976,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Kingston+Fury+Beast+64+Go+%282x32+Go%29+DDR5+5600+MHz+CL36",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/kingston-fury-beast-64-go-2x32-go-ddr5-5600-mhz-cl36.html",
+      "page_url": "https://radarhardware.pages.dev/produit/kingston-fury-beast-64-go-2x32-go-ddr5-5600-mhz-cl36.html",
       "chart_path": "dist/assets/social/kingston-fury-beast-64-go-2x32-go-ddr5-5600-mhz-cl36-alert.png",
       "social_path": "dist/assets/social/kingston-fury-beast-64-go-2x32-go-ddr5-5600-mhz-cl36-alert.png"
     },
@@ -1995,7 +1995,7 @@
       "best_merchant": "computeruniverse",
       "best_merchant_name": "ComputerUniverse",
       "best_url": "https://www.computeruniverse.net/de/search?query=Crucial+Pro+64+Go+%282x32+Go%29+DDR5+5600+MHz+CL46",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/crucial-pro-64-go-2x32-go-ddr5-5600-mhz-cl46.html",
+      "page_url": "https://radarhardware.pages.dev/produit/crucial-pro-64-go-2x32-go-ddr5-5600-mhz-cl46.html",
       "chart_path": "dist/assets/social/crucial-pro-64-go-2x32-go-ddr5-5600-mhz-cl46-alert.png",
       "social_path": "dist/assets/social/crucial-pro-64-go-2x32-go-ddr5-5600-mhz-cl46-alert.png"
     },
@@ -2014,7 +2014,7 @@
       "best_merchant": "amazon_fr",
       "best_merchant_name": "Amazon.fr",
       "best_url": "https://www.amazon.fr/s?k=Samsung+990+PRO+1+To",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/samsung-990-pro-1-to.html",
+      "page_url": "https://radarhardware.pages.dev/produit/samsung-990-pro-1-to.html",
       "chart_path": "dist/assets/social/samsung-990-pro-1-to-alert.png",
       "social_path": "dist/assets/social/samsung-990-pro-1-to-alert.png"
     },
@@ -2033,7 +2033,7 @@
       "best_merchant": "amazon_fr",
       "best_merchant_name": "Amazon.fr",
       "best_url": "https://www.amazon.fr/s?k=8806094215038",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/samsung-990-pro-2to.html",
+      "page_url": "https://radarhardware.pages.dev/produit/samsung-990-pro-2to.html",
       "chart_path": "dist/assets/social/samsung-990-pro-2to-alert.png",
       "social_path": "dist/assets/social/samsung-990-pro-2to-alert.png"
     },
@@ -2052,7 +2052,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Samsung+990+PRO+4+To",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/samsung-990-pro-4-to.html",
+      "page_url": "https://radarhardware.pages.dev/produit/samsung-990-pro-4-to.html",
       "chart_path": "dist/assets/social/samsung-990-pro-4-to-alert.png",
       "social_path": "dist/assets/social/samsung-990-pro-4-to-alert.png"
     },
@@ -2071,7 +2071,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Samsung+9100+PRO+2+To",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/samsung-9100-pro-2-to.html",
+      "page_url": "https://radarhardware.pages.dev/produit/samsung-9100-pro-2-to.html",
       "chart_path": "dist/assets/social/samsung-9100-pro-2-to-alert.png",
       "social_path": "dist/assets/social/samsung-9100-pro-2-to-alert.png"
     },
@@ -2090,7 +2090,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=WD_BLACK+SN850X+1+To",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/wd-black-sn850x-1-to.html",
+      "page_url": "https://radarhardware.pages.dev/produit/wd-black-sn850x-1-to.html",
       "chart_path": "dist/assets/social/wd-black-sn850x-1-to-alert.png",
       "social_path": "dist/assets/social/wd-black-sn850x-1-to-alert.png"
     },
@@ -2109,7 +2109,7 @@
       "best_merchant": "alternate",
       "best_merchant_name": "Alternate",
       "best_url": "https://www.alternate.fr/listing.xhtml?q=WD_BLACK+SN850X+2+To+PCIe+4.0",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/wd-black-sn850x-2to.html",
+      "page_url": "https://radarhardware.pages.dev/produit/wd-black-sn850x-2to.html",
       "chart_path": "dist/assets/social/wd-black-sn850x-2to-alert.png",
       "social_path": "dist/assets/social/wd-black-sn850x-2to-alert.png"
     },
@@ -2128,7 +2128,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=WD_BLACK+SN850X+4+To",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/wd-black-sn850x-4-to.html",
+      "page_url": "https://radarhardware.pages.dev/produit/wd-black-sn850x-4-to.html",
       "chart_path": "dist/assets/social/wd-black-sn850x-4-to-alert.png",
       "social_path": "dist/assets/social/wd-black-sn850x-4-to-alert.png"
     },
@@ -2147,7 +2147,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=WD_BLACK+SN8100+2+To",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/wd-black-sn8100-2-to.html",
+      "page_url": "https://radarhardware.pages.dev/produit/wd-black-sn8100-2-to.html",
       "chart_path": "dist/assets/social/wd-black-sn8100-2-to-alert.png",
       "social_path": "dist/assets/social/wd-black-sn8100-2-to-alert.png"
     },
@@ -2166,7 +2166,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Crucial+T500+1+To",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/crucial-t500-1-to.html",
+      "page_url": "https://radarhardware.pages.dev/produit/crucial-t500-1-to.html",
       "chart_path": "dist/assets/social/crucial-t500-1-to-alert.png",
       "social_path": "dist/assets/social/crucial-t500-1-to-alert.png"
     },
@@ -2185,7 +2185,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Crucial+T500+2+To+PCIe+4.0",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/crucial-t500-2to.html",
+      "page_url": "https://radarhardware.pages.dev/produit/crucial-t500-2to.html",
       "chart_path": "dist/assets/social/crucial-t500-2to-alert.png",
       "social_path": "dist/assets/social/crucial-t500-2to-alert.png"
     },
@@ -2204,7 +2204,7 @@
       "best_merchant": "amazon_de",
       "best_merchant_name": "Amazon.de",
       "best_url": "https://www.amazon.de/s?k=Crucial+T705+2+To",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/crucial-t705-2-to.html",
+      "page_url": "https://radarhardware.pages.dev/produit/crucial-t705-2-to.html",
       "chart_path": "dist/assets/social/crucial-t705-2-to-alert.png",
       "social_path": "dist/assets/social/crucial-t705-2-to-alert.png"
     },
@@ -2223,7 +2223,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Kingston+KC3000+2+To",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/kingston-kc3000-2-to.html",
+      "page_url": "https://radarhardware.pages.dev/produit/kingston-kc3000-2-to.html",
       "chart_path": "dist/assets/social/kingston-kc3000-2-to-alert.png",
       "social_path": "dist/assets/social/kingston-kc3000-2-to-alert.png"
     },
@@ -2242,7 +2242,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Kingston+Fury+Renegade+2+To",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/kingston-fury-renegade-2-to.html",
+      "page_url": "https://radarhardware.pages.dev/produit/kingston-fury-renegade-2-to.html",
       "chart_path": "dist/assets/social/kingston-fury-renegade-2-to-alert.png",
       "social_path": "dist/assets/social/kingston-fury-renegade-2-to-alert.png"
     },
@@ -2261,7 +2261,7 @@
       "best_merchant": "amazon_de",
       "best_merchant_name": "Amazon.de",
       "best_url": "https://www.amazon.de/s?k=Lexar+NM790+2+To",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/lexar-nm790-2-to.html",
+      "page_url": "https://radarhardware.pages.dev/produit/lexar-nm790-2-to.html",
       "chart_path": "dist/assets/social/lexar-nm790-2-to-alert.png",
       "social_path": "dist/assets/social/lexar-nm790-2-to-alert.png"
     },
@@ -2280,7 +2280,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Lexar+NM790+4+To",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/lexar-nm790-4-to.html",
+      "page_url": "https://radarhardware.pages.dev/produit/lexar-nm790-4-to.html",
       "chart_path": "dist/assets/social/lexar-nm790-4-to-alert.png",
       "social_path": "dist/assets/social/lexar-nm790-4-to-alert.png"
     },
@@ -2299,7 +2299,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Thermalright+Peerless+Assassin+120+SE",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/thermalright-peerless-assassin-120-se.html",
+      "page_url": "https://radarhardware.pages.dev/produit/thermalright-peerless-assassin-120-se.html",
       "chart_path": "dist/assets/social/thermalright-peerless-assassin-120-se-alert.png",
       "social_path": "dist/assets/social/thermalright-peerless-assassin-120-se-alert.png"
     },
@@ -2318,7 +2318,7 @@
       "best_merchant": "amazon_fr",
       "best_merchant_name": "Amazon.fr",
       "best_url": "https://www.amazon.fr/s?k=Thermalright+Phantom+Spirit+120+SE",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/thermalright-phantom-spirit-120-se.html",
+      "page_url": "https://radarhardware.pages.dev/produit/thermalright-phantom-spirit-120-se.html",
       "chart_path": "dist/assets/social/thermalright-phantom-spirit-120-se-alert.png",
       "social_path": "dist/assets/social/thermalright-phantom-spirit-120-se-alert.png"
     },
@@ -2337,7 +2337,7 @@
       "best_merchant": "amazon_fr",
       "best_merchant_name": "Amazon.fr",
       "best_url": "https://www.amazon.fr/s?k=Noctua+NH-D15+G2",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/noctua-nh-d15-g2.html",
+      "page_url": "https://radarhardware.pages.dev/produit/noctua-nh-d15-g2.html",
       "chart_path": "dist/assets/social/noctua-nh-d15-g2-alert.png",
       "social_path": "dist/assets/social/noctua-nh-d15-g2-alert.png"
     },
@@ -2356,7 +2356,7 @@
       "best_merchant": "cdiscount",
       "best_merchant_name": "Cdiscount",
       "best_url": "https://www.cdiscount.com/search/10/Noctua+NH-U12S+redux.html",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/noctua-nh-u12s-redux.html",
+      "page_url": "https://radarhardware.pages.dev/produit/noctua-nh-u12s-redux.html",
       "chart_path": "dist/assets/social/noctua-nh-u12s-redux-alert.png",
       "social_path": "dist/assets/social/noctua-nh-u12s-redux-alert.png"
     },
@@ -2375,7 +2375,7 @@
       "best_merchant": "amazon_fr",
       "best_merchant_name": "Amazon.fr",
       "best_url": "https://www.amazon.fr/s?k=be+quiet%21+Dark+Rock+Pro+5",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/be-quiet-dark-rock-pro-5.html",
+      "page_url": "https://radarhardware.pages.dev/produit/be-quiet-dark-rock-pro-5.html",
       "chart_path": "dist/assets/social/be-quiet-dark-rock-pro-5-alert.png",
       "social_path": "dist/assets/social/be-quiet-dark-rock-pro-5-alert.png"
     },
@@ -2394,7 +2394,7 @@
       "best_merchant": "amazon_fr",
       "best_merchant_name": "Amazon.fr",
       "best_url": "https://www.amazon.fr/s?k=be+quiet%21+Dark+Rock+5",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/be-quiet-dark-rock-5.html",
+      "page_url": "https://radarhardware.pages.dev/produit/be-quiet-dark-rock-5.html",
       "chart_path": "dist/assets/social/be-quiet-dark-rock-5-alert.png",
       "social_path": "dist/assets/social/be-quiet-dark-rock-5-alert.png"
     },
@@ -2413,7 +2413,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=be+quiet%21+Pure+Rock+2",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/be-quiet-pure-rock-2.html",
+      "page_url": "https://radarhardware.pages.dev/produit/be-quiet-pure-rock-2.html",
       "chart_path": "dist/assets/social/be-quiet-pure-rock-2-alert.png",
       "social_path": "dist/assets/social/be-quiet-pure-rock-2-alert.png"
     },
@@ -2432,7 +2432,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Arctic+Freezer+36",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/arctic-freezer-36.html",
+      "page_url": "https://radarhardware.pages.dev/produit/arctic-freezer-36.html",
       "chart_path": "dist/assets/social/arctic-freezer-36-alert.png",
       "social_path": "dist/assets/social/arctic-freezer-36-alert.png"
     },
@@ -2451,7 +2451,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=DeepCool+AK620",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/deepcool-ak620.html",
+      "page_url": "https://radarhardware.pages.dev/produit/deepcool-ak620.html",
       "chart_path": "dist/assets/social/deepcool-ak620-alert.png",
       "social_path": "dist/assets/social/deepcool-ak620-alert.png"
     },
@@ -2470,7 +2470,7 @@
       "best_merchant": "amazon_fr",
       "best_merchant_name": "Amazon.fr",
       "best_url": "https://www.amazon.fr/s?k=Arctic+Liquid+Freezer+III+240",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/arctic-liquid-freezer-iii-240.html",
+      "page_url": "https://radarhardware.pages.dev/produit/arctic-liquid-freezer-iii-240.html",
       "chart_path": "dist/assets/social/arctic-liquid-freezer-iii-240-alert.png",
       "social_path": "dist/assets/social/arctic-liquid-freezer-iii-240-alert.png"
     },
@@ -2489,7 +2489,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Arctic+Liquid+Freezer+III+360",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/arctic-liquid-freezer-iii-360.html",
+      "page_url": "https://radarhardware.pages.dev/produit/arctic-liquid-freezer-iii-360.html",
       "chart_path": "dist/assets/social/arctic-liquid-freezer-iii-360-alert.png",
       "social_path": "dist/assets/social/arctic-liquid-freezer-iii-360-alert.png"
     },
@@ -2508,7 +2508,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Corsair+Nautilus+360+RS",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/corsair-nautilus-360-rs.html",
+      "page_url": "https://radarhardware.pages.dev/produit/corsair-nautilus-360-rs.html",
       "chart_path": "dist/assets/social/corsair-nautilus-360-rs-alert.png",
       "social_path": "dist/assets/social/corsair-nautilus-360-rs-alert.png"
     },
@@ -2527,7 +2527,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=NZXT+Kraken+240",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/nzxt-kraken-240.html",
+      "page_url": "https://radarhardware.pages.dev/produit/nzxt-kraken-240.html",
       "chart_path": "dist/assets/social/nzxt-kraken-240-alert.png",
       "social_path": "dist/assets/social/nzxt-kraken-240-alert.png"
     },
@@ -2546,7 +2546,7 @@
       "best_merchant": "amazon_fr",
       "best_merchant_name": "Amazon.fr",
       "best_url": "https://www.amazon.fr/s?k=MSI+MAG+CoreLiquid+E360",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/msi-mag-coreliquid-e360.html",
+      "page_url": "https://radarhardware.pages.dev/produit/msi-mag-coreliquid-e360.html",
       "chart_path": "dist/assets/social/msi-mag-coreliquid-e360-alert.png",
       "social_path": "dist/assets/social/msi-mag-coreliquid-e360-alert.png"
     },
@@ -2565,7 +2565,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Corsair+iCUE+Link+Titan+360+RX",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/corsair-icue-link-titan-360-rx.html",
+      "page_url": "https://radarhardware.pages.dev/produit/corsair-icue-link-titan-360-rx.html",
       "chart_path": "dist/assets/social/corsair-icue-link-titan-360-rx-alert.png",
       "social_path": "dist/assets/social/corsair-icue-link-titan-360-rx-alert.png"
     },
@@ -2584,7 +2584,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Corsair+4000D+Airflow",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/corsair-4000d-airflow.html",
+      "page_url": "https://radarhardware.pages.dev/produit/corsair-4000d-airflow.html",
       "chart_path": "dist/assets/social/corsair-4000d-airflow-alert.png",
       "social_path": "dist/assets/social/corsair-4000d-airflow-alert.png"
     },
@@ -2603,7 +2603,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=NZXT+H5+Flow",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/nzxt-h5-flow.html",
+      "page_url": "https://radarhardware.pages.dev/produit/nzxt-h5-flow.html",
       "chart_path": "dist/assets/social/nzxt-h5-flow-alert.png",
       "social_path": "dist/assets/social/nzxt-h5-flow-alert.png"
     },
@@ -2622,7 +2622,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=NZXT+H6+Flow",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/nzxt-h6-flow.html",
+      "page_url": "https://radarhardware.pages.dev/produit/nzxt-h6-flow.html",
       "chart_path": "dist/assets/social/nzxt-h6-flow-alert.png",
       "social_path": "dist/assets/social/nzxt-h6-flow-alert.png"
     },
@@ -2641,7 +2641,7 @@
       "best_merchant": "amazon_fr",
       "best_merchant_name": "Amazon.fr",
       "best_url": "https://www.amazon.fr/s?k=NZXT+H9+Flow",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/nzxt-h9-flow.html",
+      "page_url": "https://radarhardware.pages.dev/produit/nzxt-h9-flow.html",
       "chart_path": "dist/assets/social/nzxt-h9-flow-alert.png",
       "social_path": "dist/assets/social/nzxt-h9-flow-alert.png"
     },
@@ -2660,7 +2660,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Lian+Li+Lancool+216",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/lian-li-lancool-216.html",
+      "page_url": "https://radarhardware.pages.dev/produit/lian-li-lancool-216.html",
       "chart_path": "dist/assets/social/lian-li-lancool-216-alert.png",
       "social_path": "dist/assets/social/lian-li-lancool-216-alert.png"
     },
@@ -2679,7 +2679,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Lian+Li+Lancool+207",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/lian-li-lancool-207.html",
+      "page_url": "https://radarhardware.pages.dev/produit/lian-li-lancool-207.html",
       "chart_path": "dist/assets/social/lian-li-lancool-207-alert.png",
       "social_path": "dist/assets/social/lian-li-lancool-207-alert.png"
     },
@@ -2698,7 +2698,7 @@
       "best_merchant": "amazon_fr",
       "best_merchant_name": "Amazon.fr",
       "best_url": "https://www.amazon.fr/s?k=Lian+Li+O11+Dynamic+EVO",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/lian-li-o11-dynamic-evo.html",
+      "page_url": "https://radarhardware.pages.dev/produit/lian-li-o11-dynamic-evo.html",
       "chart_path": "dist/assets/social/lian-li-o11-dynamic-evo-alert.png",
       "social_path": "dist/assets/social/lian-li-o11-dynamic-evo-alert.png"
     },
@@ -2717,7 +2717,7 @@
       "best_merchant": "amazon_fr",
       "best_merchant_name": "Amazon.fr",
       "best_url": "https://www.amazon.fr/s?k=Fractal+Design+North",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/fractal-design-north.html",
+      "page_url": "https://radarhardware.pages.dev/produit/fractal-design-north.html",
       "chart_path": "dist/assets/social/fractal-design-north-alert.png",
       "social_path": "dist/assets/social/fractal-design-north-alert.png"
     },
@@ -2736,7 +2736,7 @@
       "best_merchant": "amazon_fr",
       "best_merchant_name": "Amazon.fr",
       "best_url": "https://www.amazon.fr/s?k=Fractal+Design+Pop+Air",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/fractal-design-pop-air.html",
+      "page_url": "https://radarhardware.pages.dev/produit/fractal-design-pop-air.html",
       "chart_path": "dist/assets/social/fractal-design-pop-air-alert.png",
       "social_path": "dist/assets/social/fractal-design-pop-air-alert.png"
     },
@@ -2755,7 +2755,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Montech+AIR+903+Max",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/montech-air-903-max.html",
+      "page_url": "https://radarhardware.pages.dev/produit/montech-air-903-max.html",
       "chart_path": "dist/assets/social/montech-air-903-max-alert.png",
       "social_path": "dist/assets/social/montech-air-903-max-alert.png"
     },
@@ -2774,7 +2774,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Lian+Li+A3-mATX",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/lian-li-a3-matx.html",
+      "page_url": "https://radarhardware.pages.dev/produit/lian-li-a3-matx.html",
       "chart_path": "dist/assets/social/lian-li-a3-matx-alert.png",
       "social_path": "dist/assets/social/lian-li-a3-matx-alert.png"
     },
@@ -2793,7 +2793,7 @@
       "best_merchant": "amazon_fr",
       "best_merchant_name": "Amazon.fr",
       "best_url": "https://www.amazon.fr/s?k=Fractal+Design+Pop+Mini+Air",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/fractal-design-pop-mini-air.html",
+      "page_url": "https://radarhardware.pages.dev/produit/fractal-design-pop-mini-air.html",
       "chart_path": "dist/assets/social/fractal-design-pop-mini-air-alert.png",
       "social_path": "dist/assets/social/fractal-design-pop-mini-air-alert.png"
     },
@@ -2812,7 +2812,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Jonsbo+D31+Mesh",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/jonsbo-d31-mesh.html",
+      "page_url": "https://radarhardware.pages.dev/produit/jonsbo-d31-mesh.html",
       "chart_path": "dist/assets/social/jonsbo-d31-mesh-alert.png",
       "social_path": "dist/assets/social/jonsbo-d31-mesh-alert.png"
     },
@@ -2831,7 +2831,7 @@
       "best_merchant": "amazon_fr",
       "best_merchant_name": "Amazon.fr",
       "best_url": "https://www.amazon.fr/s?k=Cooler+Master+NR200P+V2",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/cooler-master-nr200p-v2.html",
+      "page_url": "https://radarhardware.pages.dev/produit/cooler-master-nr200p-v2.html",
       "chart_path": "dist/assets/social/cooler-master-nr200p-v2-alert.png",
       "social_path": "dist/assets/social/cooler-master-nr200p-v2-alert.png"
     },
@@ -2850,7 +2850,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Corsair+2000D+Airflow",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/corsair-2000d-airflow.html",
+      "page_url": "https://radarhardware.pages.dev/produit/corsair-2000d-airflow.html",
       "chart_path": "dist/assets/social/corsair-2000d-airflow-alert.png",
       "social_path": "dist/assets/social/corsair-2000d-airflow-alert.png"
     },
@@ -2869,7 +2869,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Fractal+Design+Terra",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/fractal-design-terra.html",
+      "page_url": "https://radarhardware.pages.dev/produit/fractal-design-terra.html",
       "chart_path": "dist/assets/social/fractal-design-terra-alert.png",
       "social_path": "dist/assets/social/fractal-design-terra-alert.png"
     },
@@ -2888,7 +2888,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=be+quiet%21+System+Power+10+550W",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/be-quiet-system-power-10-550w.html",
+      "page_url": "https://radarhardware.pages.dev/produit/be-quiet-system-power-10-550w.html",
       "chart_path": "dist/assets/social/be-quiet-system-power-10-550w-alert.png",
       "social_path": "dist/assets/social/be-quiet-system-power-10-550w-alert.png"
     },
@@ -2907,7 +2907,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=MSI+MAG+A650BN",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/msi-mag-a650bn.html",
+      "page_url": "https://radarhardware.pages.dev/produit/msi-mag-a650bn.html",
       "chart_path": "dist/assets/social/msi-mag-a650bn-alert.png",
       "social_path": "dist/assets/social/msi-mag-a650bn-alert.png"
     },
@@ -2926,7 +2926,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Corsair+CX650",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/corsair-cx650.html",
+      "page_url": "https://radarhardware.pages.dev/produit/corsair-cx650.html",
       "chart_path": "dist/assets/social/corsair-cx650-alert.png",
       "social_path": "dist/assets/social/corsair-cx650-alert.png"
     },
@@ -2945,7 +2945,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Corsair+RM650e",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/corsair-rm650e.html",
+      "page_url": "https://radarhardware.pages.dev/produit/corsair-rm650e.html",
       "chart_path": "dist/assets/social/corsair-rm650e-alert.png",
       "social_path": "dist/assets/social/corsair-rm650e-alert.png"
     },
@@ -2964,7 +2964,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Corsair+RM750e",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/corsair-rm750e.html",
+      "page_url": "https://radarhardware.pages.dev/produit/corsair-rm750e.html",
       "chart_path": "dist/assets/social/corsair-rm750e-alert.png",
       "social_path": "dist/assets/social/corsair-rm750e-alert.png"
     },
@@ -2983,7 +2983,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=MSI+MAG+A750GL+PCIE5",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/msi-mag-a750gl-pcie5.html",
+      "page_url": "https://radarhardware.pages.dev/produit/msi-mag-a750gl-pcie5.html",
       "chart_path": "dist/assets/social/msi-mag-a750gl-pcie5-alert.png",
       "social_path": "dist/assets/social/msi-mag-a750gl-pcie5-alert.png"
     },
@@ -3002,7 +3002,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=be+quiet%21+Pure+Power+12+750W",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/be-quiet-pure-power-12-750w.html",
+      "page_url": "https://radarhardware.pages.dev/produit/be-quiet-pure-power-12-750w.html",
       "chart_path": "dist/assets/social/be-quiet-pure-power-12-750w-alert.png",
       "social_path": "dist/assets/social/be-quiet-pure-power-12-750w-alert.png"
     },
@@ -3021,7 +3021,7 @@
       "best_merchant": "topachat",
       "best_merchant_name": "TopAchat",
       "best_url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc=Seasonic+Focus+GX-750+ATX+3",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/seasonic-focus-gx-750-atx-3.html",
+      "page_url": "https://radarhardware.pages.dev/produit/seasonic-focus-gx-750-atx-3.html",
       "chart_path": "dist/assets/social/seasonic-focus-gx-750-atx-3-alert.png",
       "social_path": "dist/assets/social/seasonic-focus-gx-750-atx-3-alert.png"
     },
@@ -3040,7 +3040,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Corsair+RM850e",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/corsair-rm850e.html",
+      "page_url": "https://radarhardware.pages.dev/produit/corsair-rm850e.html",
       "chart_path": "dist/assets/social/corsair-rm850e-alert.png",
       "social_path": "dist/assets/social/corsair-rm850e-alert.png"
     },
@@ -3059,7 +3059,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=MSI+MAG+A850GL+PCIE5",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/msi-mag-a850gl-pcie5.html",
+      "page_url": "https://radarhardware.pages.dev/produit/msi-mag-a850gl-pcie5.html",
       "chart_path": "dist/assets/social/msi-mag-a850gl-pcie5-alert.png",
       "social_path": "dist/assets/social/msi-mag-a850gl-pcie5-alert.png"
     },
@@ -3078,7 +3078,7 @@
       "best_merchant": "cdiscount",
       "best_merchant_name": "Cdiscount",
       "best_url": "https://www.cdiscount.com/search/10/be+quiet%21+Pure+Power+12+850W.html",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/be-quiet-pure-power-12-850w.html",
+      "page_url": "https://radarhardware.pages.dev/produit/be-quiet-pure-power-12-850w.html",
       "chart_path": "dist/assets/social/be-quiet-pure-power-12-850w-alert.png",
       "social_path": "dist/assets/social/be-quiet-pure-power-12-850w-alert.png"
     },
@@ -3097,7 +3097,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=Seasonic+Focus+GX-850+ATX+3",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/seasonic-focus-gx-850-atx-3.html",
+      "page_url": "https://radarhardware.pages.dev/produit/seasonic-focus-gx-850-atx-3.html",
       "chart_path": "dist/assets/social/seasonic-focus-gx-850-atx-3-alert.png",
       "social_path": "dist/assets/social/seasonic-focus-gx-850-atx-3-alert.png"
     },
@@ -3116,7 +3116,7 @@
       "best_merchant": "amazon_fr",
       "best_merchant_name": "Amazon.fr",
       "best_url": "https://www.amazon.fr/s?k=Corsair+RM1000e",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/corsair-rm1000e.html",
+      "page_url": "https://radarhardware.pages.dev/produit/corsair-rm1000e.html",
       "chart_path": "dist/assets/social/corsair-rm1000e-alert.png",
       "social_path": "dist/assets/social/corsair-rm1000e-alert.png"
     },
@@ -3135,7 +3135,7 @@
       "best_merchant": "pccomponentes",
       "best_merchant_name": "PcComponentes",
       "best_url": "https://www.pccomponentes.fr/search/?query=MSI+MPG+A1000G+PCIE5",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/msi-mpg-a1000g-pcie5.html",
+      "page_url": "https://radarhardware.pages.dev/produit/msi-mpg-a1000g-pcie5.html",
       "chart_path": "dist/assets/social/msi-mpg-a1000g-pcie5-alert.png",
       "social_path": "dist/assets/social/msi-mpg-a1000g-pcie5-alert.png"
     },
@@ -3154,7 +3154,7 @@
       "best_merchant": "amazon_fr",
       "best_merchant_name": "Amazon.fr",
       "best_url": "https://www.amazon.fr/s?k=Seasonic+Vertex+GX-1000",
-      "page_url": "https://kikstatoo.github.io/radar-hardware-fr/produit/seasonic-vertex-gx-1000.html",
+      "page_url": "https://radarhardware.pages.dev/produit/seasonic-vertex-gx-1000.html",
       "chart_path": "dist/assets/social/seasonic-vertex-gx-1000-alert.png",
       "social_path": "dist/assets/social/seasonic-vertex-gx-1000-alert.png"
     }

@@ -142,3 +142,10 @@ En mode démonstration, les prix sont des estimations et chaque bouton indique �
 2. **Flux Awin / Effinity** (LDLC, Materiel.net, Rue du Commerce, Fnac, Cdiscount…) : colle l'URL de chaque flux produit dans `config/feeds.json`. Chaque ligne du flux fournit le lien profond vers la fiche, le prix et les frais de port.
 3. **Amazon Creators API** (accessible après 10 ventes qualifiées sur 30 jours) : crée un identifiant dans Associates Central, puis ajoute les secrets `AMAZON_CREATORS_CLIENT_ID` et `AMAZON_CREATORS_CLIENT_SECRET` au dépôt. Le robot récupère alors chaque heure le prix de la Buy Box et le lien `detailPageURL`, et retrouve tout seul l'ASIN des produits qui n'en ont pas (cache `data/asin_cache.json`).
 4. **ASIN manuels** : un ASIN vérifié peut être ajouté dans `data/products.json` (`"asin": {"amazon_fr": "B0…"}`) pour obtenir un lien `/dp/` direct même en mode démo.
+
+## Adresse sans GitHub : Cloudflare Pages (gratuit)
+
+1. Compte gratuit sur dash.cloudflare.com.
+2. My Profile > API Tokens > Create Token > Custom token, permission **Account > Cloudflare Pages > Edit**.
+3. Secrets du dépôt GitHub : `CLOUDFLARE_API_TOKEN` (le token) et `CLOUDFLARE_ACCOUNT_ID` (Account ID affiché dans le tableau de bord).
+4. Le robot crée le projet `radarhardware` et publie le site sur https://radarhardware.pages.dev à chaque mise à jour. Nom différent : variable de dépôt `CLOUDFLARE_PROJECT`. Domaine perso plus tard : variable `SITE_BASE_URL` + domaine ajouté dans le projet Cloudflare.
