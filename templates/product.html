@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import badges, cta, score_ring with context %}
+{% from "_macros.html" import badges, cta, score_ring, light, savings with context %}
 {% set og_type = "product" %}
 {% block content %}
 <div class="wrap">
@@ -11,17 +11,14 @@
       <h1>{{ p.name }} : meilleur prix et historique</h1>
       <p class="muted small">Prix vérifié le {{ updated_label }} chez {{ s.offer_count }} marchands.</p>
     </div>
-    <div class="card buy-box">
-      <div class="buy-top">
-        <div>
-          <p class="small muted">Meilleur prix chez {{ it.best_merchant }}</p>
-          <p class="price price-xxl mono">{{ s.price_current|price }}</p>
-          {% if s.savings_eur > 0 %}<p class="small"><s class="old mono">{{ s.price_avg_30d|price }}</s> <span class="save mono">−{{ s.savings_eur|price }}</span> vs moyenne 30 j</p>{% endif %}
-        </div>
-        {{ score_ring(s.true_deal_score, s.verdict_level) }}
-      </div>
-      <p class="verdict verdict-{{ s.verdict_level }}">{{ s.verdict }}</p>
-      {{ cta(s.best_offer, "Voir l'offre chez " ~ it.best_merchant ~ " →", "btn-block btn-lg") }}
+    <div class="card buy-box buy-{{ s.light }}">
+      {{ light(s, "big") }}
+      <p class="small muted">Meilleur prix chez {{ it.best_merchant }}</p>
+      <p class="price price-xxl mono">{{ s.price_current|price }}</p>
+      {{ savings(s) }}
+      {% if s.best_offer %}<p class="small ship {{ 'ship-free' if it.offers[0].shipping.free }}">🚚 {{ it.offers[0].shipping.label }}</p>{% endif %}
+      {{ cta(s.best_offer, cls="btn-block btn-lg", merchant=it.best_merchant) }}
+      <p class="small muted score-line">Score Vraie Promo : <span class="mono">{{ s.true_deal_score }}/100</span></p>
     </div>
   </section>
 
@@ -43,19 +40,21 @@
     <div class="table-wrap card">
       <table class="table offers">
         <caption class="sr-only">Offres pour le {{ p.name }}, de la moins chère à la plus chère</caption>
-        <thead><tr><th scope="col">Marchand</th><th scope="col">Prix</th><th scope="col">Stock</th><th scope="col"><span class="sr-only">Action</span></th></tr></thead>
+        <thead><tr><th scope="col">Marchand</th><th scope="col">Prix</th><th scope="col" class="col-ship">Livraison</th><th scope="col">Stock</th><th scope="col"><span class="sr-only">Action</span></th></tr></thead>
         <tbody>
         {% for o in it.offers %}
           <tr{% if o.is_best %} class="row-best"{% endif %}>
-            <td><span class="dot" style="background: {{ o.color }}"></span>{{ o.merchant_name }}{% if o.is_best %} <span class="badge badge-best">Meilleur prix</span>{% endif %}</td>
-            <td class="mono nowrap">{{ o.price|price }}</td>
+            <td><span class="dot" style="background: {{ o.color }}"></span>{{ o.merchant_name }}{% if o.is_best %} <span class="badge badge-best">Meilleur prix</span>{% endif %}<span class="ship-sm small {{ 'ship-free' if o.shipping.free else 'muted' }}">{{ o.shipping.label }}</span></td>
+            <td class="nowrap"><span class="mono">{{ o.price|price }}</span>{% if o.saving >= 1 and o.in_stock %}<br><span class="save-pill small">Économisez <span class="mono">{{ o.saving|price }}</span></span>{% endif %}</td>
+            <td class="col-ship small {{ 'ship-free' if o.shipping.free else 'muted' }}">{{ o.shipping.label }}</td>
             <td>{% if o.in_stock %}<span class="stock-ok" title="En stock"><span class="hide-sm">En stock</span></span>{% else %}<span class="stock-ko" title="Rupture"><span class="hide-sm">Rupture</span></span>{% endif %}</td>
-            <td><a class="btn {{ 'btn-cta' if o.in_stock else 'btn-ghost' }} btn-sm" href="{{ o.url }}" rel="nofollow sponsored noopener" target="_blank">Voir<span class="hide-sm">&nbsp;l'offre</span>&nbsp;→</a></td>
+            <td><a class="btn {{ 'btn-cta' if o.in_stock else 'btn-ghost' }} btn-sm" href="{{ o.url }}" rel="nofollow sponsored noopener" target="_blank">Voir<span class="hide-sm">&nbsp;l'offre chez {{ o.merchant_name }}</span>&nbsp;→</a></td>
           </tr>
         {% endfor %}
         </tbody>
       </table>
     </div>
+    <p class="small muted">Frais de port estimés à titre indicatif : vérifiez le montant exact sur le site du marchand.</p>
   </section>
 
   <section class="card prose" aria-labelledby="analyse-title">

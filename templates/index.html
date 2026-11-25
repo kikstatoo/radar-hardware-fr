@@ -1,12 +1,11 @@
 {% extends "base.html" %}
-{% from "_macros.html" import product_card, filters, badges, cta with context %}
+{% from "_macros.html" import product_card, filters, badges, cta, light, savings with context %}
 {% block content %}
 <section class="hero wrap">
-  <div class="hero-text">
-    <p class="eyebrow mono">● RADAR ACTIF — MIS À JOUR TOUTES LES HEURES</p>
-    <h1>Comparateur de prix hardware PC Gamer : les <span class="accent">vraies promos</span>, pas les faux prix barrés</h1>
-    <p class="lead">Nous comparons {{ items|length }} composants stars chez Amazon, TopAchat, Rue du Commerce, Cdiscount et Fnac, avec historique 30 jours et score anti-arnaque. <strong class="mono">{{ deals_count }}</strong> vraie{{ 's' if deals_count > 1 }} promo{{ 's' if deals_count > 1 }} détectée{{ 's' if deals_count > 1 }} en ce moment.</p>
-  </div>
+  <h1>Payez vos composants PC au <span class="accent">vrai prix bas.</span></h1>
+  <p class="lead">Surveillance automatique toutes les heures sur Amazon, TopAchat et Rue du Commerce. Zéro fausse promo.</p>
+  <a class="btn btn-cta btn-lg" href="#tous" id="cta-deals" data-min-discount="10">Voir les vraies baisses du jour (−10&nbsp;% min)</a>
+  <p class="small muted hero-legend"><span class="light light-green xs"><span class="light-dot"></span>Acheter</span> <span class="light light-yellow xs"><span class="light-dot"></span>Prix normal</span> <span class="light light-red xs"><span class="light-dot"></span>Attendre</span> — notre verdict sur chaque composant, calculé sur 30 jours d'historique.</p>
 </section>
 
 <section class="wrap" aria-labelledby="deals-title">
@@ -18,30 +17,55 @@
     {% for it in hero %}
     {% set s = it.s %}
     <article class="card deal-card{% if s.is_true_deal %} is-deal{% endif %}">
-      <div class="badges">{{ badges(s, threshold) }}{% if not s.is_true_deal %}<span class="badge badge-neutral">Suivi</span>{% endif %}</div>
+      {{ light(s) }}
+      <div class="badges">{{ badges(s, threshold) }}</div>
       <h3 class="card-title"><a href="{{ root }}{{ it.url }}">{{ it.p.name }}</a></h3>
       {{ it.spark|safe }}
-      <div class="card-price">
-        <span class="price price-xl mono">{{ s.price_current|price }}</span>
-        {% if s.savings_eur > 0 %}<s class="old mono">{{ s.price_avg_30d|price }}</s>{% endif %}
-      </div>
-      <p class="small">{% if s.savings_eur > 0 %}<span class="save mono">−{{ s.savings_eur|price }}</span> vs moyenne 30 j · {% endif %}<span class="muted">{{ it.best_merchant }}</span></p>
-      {{ cta(s.best_offer, "Voir l'offre →", "btn-block") }}
+      <div class="card-price"><span class="price price-xl mono">{{ s.price_current|price }}</span></div>
+      {{ savings(s) }}
+      {{ cta(s.best_offer, cls="btn-block", merchant=it.best_merchant) }}
     </article>
     {% endfor %}
   </div>
 </section>
 
-<section class="wrap" aria-labelledby="all-title">
+<section class="wrap" aria-labelledby="all-title" id="tous">
   <div class="section-head">
     <h2 id="all-title">Tous les composants suivis</h2>
+  </div>
+  <div class="profiles" role="group" aria-label="Profils d'achat en 1 clic">
+    <button type="button" class="pill" data-profile="deals" aria-pressed="false">🔥 Vraies promos du jour</button>
+    <button type="button" class="pill" data-profile="upgrade" aria-pressed="false">🎮 Upgrade Gaming 1080p/1440p</button>
+    <button type="button" class="pill" data-profile="sans-compromis" aria-pressed="false">🚀 Config Sans Compromis (X3D / RTX 5070+)</button>
+    <button type="button" class="pill" data-profile="ratio" aria-pressed="false">⚡ Meilleur rapport FPS / Euro</button>
+    <button type="button" class="pill pill-reset" id="profiles-reset" hidden>✕ Réinitialiser</button>
   </div>
   {{ filters(brands, max_price, true, categories) }}
   <div class="product-grid" id="grid">
     {% for it in items %}{{ product_card(it, root, threshold) }}{% endfor %}
   </div>
-  <p class="empty muted" id="empty" hidden>Aucun composant ne correspond à ces filtres.</p>
+  <p class="empty muted" id="empty" hidden>Aucun composant ne correspond à ces filtres. <button type="button" class="linklike" id="empty-reset">Tout afficher</button></p>
 </section>
+
+{% if noblika %}
+<section class="wrap" aria-labelledby="noblika-title">
+  <div class="card noblika">
+    <h2 id="noblika-title">{{ noblika.title }}</h2>
+    <p class="muted">{{ noblika.description }}</p>
+    <div class="noblika-grid">
+      {% for it in noblika.picks %}
+      <a class="noblika-item" href="{{ root }}{{ it.url }}">
+        <span class="small muted">{{ it.cat.label }}</span>
+        <span class="noblika-name">{{ it.p.name }}</span>
+        <span class="mono accent">{{ it.s.price_current|price }}</span>
+        {{ light(it.s, "xs") }}
+      </a>
+      {% endfor %}
+    </div>
+    <p class="small muted">Total actuel des 4 pièces : <span class="mono">{{ noblika.total|price }}</span></p>
+  </div>
+</section>
+{% endif %}
 
 <section class="wrap cat-tiles" aria-labelledby="cats-title">
   <h2 id="cats-title">Comparatifs prix / performance par catégorie</h2>

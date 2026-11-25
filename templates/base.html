@@ -71,6 +71,14 @@
         {% for key, c in categories.items() %}<li><a href="{{ root }}categorie/{{ c.slug }}.html">{{ c.label }}</a></li>{% endfor %}
       </ul>
     </div>
+    {% if noblika %}
+    <div>
+      <p class="footer-title">🎮 La config live de Noblika</p>
+      <ul class="footer-links">
+        {% for it in noblika.picks %}<li><a href="{{ root }}{{ it.url }}">{{ it.p.name }}</a></li>{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
     <div class="legal">
       <p class="footer-title">Transparence</p>
       <p class="small muted">Ce site participe à des programmes d'affiliation (Amazon, Awin, Effinity, AliExpress). Lorsque vous achetez via nos liens « Voir l'offre », nous pouvons percevoir une commission, sans aucun surcoût pour vous. Les prix peuvent évoluer : seul le prix affiché sur le site du marchand fait foi.{% if amazon_enabled %} En tant que Partenaire Amazon, nous réalisons un bénéfice sur les achats remplissant les conditions requises.{% endif %}</p>

@@ -27,7 +27,7 @@ import matplotlib.ticker  # noqa: E402
 from jinja2 import Environment, FileSystemLoader, select_autoescape  # noqa: E402
 from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
-from common import (DIST_DIR, HISTORY_FILE, OFFERS_FILE, SITE_STATS_FILE, STATIC_DIR,  # noqa: E402
+from common import (CONFIG_DIR, DIST_DIR, HISTORY_FILE, OFFERS_FILE, SITE_STATS_FILE, STATIC_DIR,  # noqa: E402
                     TEMPLATES_DIR, date_fr, fmt_pct, fmt_price, get_base_url, iso, load_affiliates,
                     load_catalog, load_json, load_settings, log, month_year_fr, now_ts, save_json)
 
@@ -98,7 +98,8 @@ def compute_stats(product: dict, offers: list[dict], entry: dict, settings: dict
     if current is None:
         s.update(discount_vs_avg=0.0, discount_vs_median=0.0, true_deal_score=0, is_true_deal=False,
                  is_all_time_low=False, savings_eur=0.0, price_per_perf=None, perf_per_100eur=None,
-                 trend_7d=0.0, verdict="Indisponible", verdict_level="none")
+                 trend_7d=0.0, verdict="Indisponible", verdict_level="none",
+                 light="none", light_label="Indisponible")
         return s
 
     avg, med, atl_price = s["price_avg_30d"], s["price_median_30d"], s["price_min_all_time"] or current
@@ -126,6 +127,14 @@ def compute_stats(product: dict, offers: list[dict], entry: dict, settings: dict
     perf = float(product.get("perf_score") or 0)
     s["price_per_perf"] = round(current / perf, 2) if perf else None
     s["perf_per_100eur"] = round(perf / current * 100, 2) if perf else None
+
+    # --- Verdict « feu tricolore » (lisible par un débutant) ---------------
+    if s["discount_vs_avg"] >= threshold or current <= atl_price + 0.01:
+        s["light"], s["light_label"] = "green", "Acheter maintenant"
+    elif current > avg * 1.04:
+        s["light"], s["light_label"] = "red", "Attendre"
+    else:
+        s["light"], s["light_label"] = "yellow", "Prix normal"
 
     sc = s["true_deal_score"]
     if sc >= 75:
@@ -303,7 +312,7 @@ def seo_paragraphs(p: dict, s: dict, cat: dict, merchant_name: str) -> list[str]
         out.append(f"Le plus bas historique enregistré est de {fmt_price(atl)}" +
                    (f" (le {s['price_min_all_time_date']})" if s.get("price_min_all_time_date") else "") +
                    f". Avec un score Vraie Promo de {s['true_deal_score']}/100, notre verdict : "
-                   f"« {s['verdict'].lower()} ».")
+                   f"« {s['light_label'].lower()} ».")
     t = s["trend_7d"]
     if t <= -2:
         out.append(f"La tendance de la semaine est à la baisse ({fmt_pct(t, 1)} par rapport à la moyenne 7 jours).")
@@ -325,14 +334,14 @@ def faq_items(p: dict, s: dict, merchant_name: str, best_cat: dict | None) -> li
                       f"Le meilleur prix actuel du {name} est de {fmt_price(cur)} chez {merchant_name}. "
                       f"Le prix moyen sur 30 jours est de {fmt_price(s['price_avg_30d'])} et le plus bas historique "
                       f"de {fmt_price(s['price_min_all_time'])}."))
-        if s["is_true_deal"]:
-            ans = (f"Oui. Le prix actuel est {fmt_pct(s['discount_vs_avg'], 1)} sous la moyenne des 30 derniers jours, "
+        if s["light"] == "green":
+            ans = (f"Oui, notre verdict est « Acheter maintenant ». Le prix actuel est {fmt_pct(s['discount_vs_avg'], 1)} sous la moyenne des 30 derniers jours, "
                    f"avec un score Vraie Promo de {s['true_deal_score']}/100.")
-        elif s["discount_vs_avg"] > 0:
-            ans = (f"C'est un prix correct, légèrement sous la moyenne 30 jours ({fmt_pct(s['discount_vs_avg'], 1)}), "
-                   f"mais pas encore une vraie promo. Score : {s['true_deal_score']}/100.")
+        elif s["light"] == "yellow":
+            ans = (f"Prix normal : c'est un tarif dans la fourchette habituelle, légèrement de ces 30 derniers jours "
+                   f"(moyenne {fmt_price(s['price_avg_30d'])}), mais pas une vraie promo. Score : {s['true_deal_score']}/100.")
         else:
-            ans = (f"Pas vraiment : le prix est au-dessus ou au niveau de la moyenne 30 jours "
+            ans = (f"Mieux vaut attendre : le prix est gonflé de plus de 4 % par rapport à la moyenne 30 jours "
                    f"({fmt_price(s['price_avg_30d'])}). Mieux vaut patienter ou activer une alerte.")
         items.append((f"Est-ce le bon moment pour acheter le {name} ?", ans))
         items.append((f"Le {name} a-t-il déjà été moins cher ?",
@@ -346,6 +355,17 @@ def faq_items(p: dict, s: dict, merchant_name: str, best_cat: dict | None) -> li
                       f"En ce moment, c'est le {best_cat['name']} qui offre le meilleur ratio prix / performance "
                       f"de sa catégorie."))
     return items
+
+
+def shipping_info(merchant: dict, price: float) -> dict:
+    """Estimation des frais de port selon les règles de config/affiliates.json."""
+    rule = merchant.get("shipping") or {}
+    free_from, base = rule.get("free_from"), rule.get("from")
+    if base == 0 or (free_from is not None and price >= free_from):
+        return {"free": True, "label": "Livraison gratuite"}
+    if base is None:
+        return {"free": False, "label": "Frais de port : voir le site"}
+    return {"free": False, "label": f"Livraison dès {fmt_price(base)}"}
 
 
 def json_ld(data) -> str:
@@ -422,7 +442,9 @@ def main() -> int:
         p["_merchant_names"] = [mname(m) for m in p.get("merchants", [])]
         offers_view = []
         for o in sorted(offers, key=lambda o: (not o["in_stock"], o["price"])):
-            offers_view.append({**o, "merchant_name": mname(o["merchant"]),
+            ship = shipping_info(merchants.get(o["merchant"], {}), o["price"])
+            offers_view.append({**o, "merchant_name": mname(o["merchant"]), "shipping": ship,
+                                "saving": round(s["price_avg_30d"] - o["price"], 2) if s["price_avg_30d"] and o["price"] < s["price_avg_30d"] - 0.5 else 0,
                                 "color": merchants.get(o["merchant"], {}).get("color", "#38BDF8"),
                                 "is_best": s["best_offer"] is not None and o is s["best_offer"]})
         items.append({"p": p, "s": s, "cat": cat, "offers": offers_view, "entry": entry,
@@ -439,8 +461,10 @@ def main() -> int:
     best_ratio = {}
     for ck, lst in by_cat.items():
         ranked = sorted([i for i in lst if i["s"]["price_per_perf"]], key=lambda i: i["s"]["price_per_perf"])
+        best = ranked[0]["s"]["price_per_perf"] if ranked else None
         for rank, it in enumerate(ranked, 1):
             it["ratio_rank"] = rank
+            it["ratio_index"] = round(it["s"]["price_per_perf"] / best, 3)
         best_ratio[ck] = ranked[0]["p"] if ranked else None
 
     # --- Versus ---
@@ -478,6 +502,13 @@ def main() -> int:
         "threshold": settings.get("deal_threshold_percent", 8.0),
         "amazon_enabled": bool(affiliates.get("amazon_tag")),
     }
+    noblika_cfg = load_json(CONFIG_DIR / "noblika.json", {}) or {}
+    common_ctx["noblika"] = None
+    if noblika_cfg.get("enabled"):
+        picks = [by_slug[sl] for sl in noblika_cfg.get("products", []) if sl in by_slug]
+        if picks:
+            common_ctx["noblika"] = {"title": noblika_cfg.get("title", ""), "description": noblika_cfg.get("description", ""),
+                                     "picks": picks, "total": round(sum(i["s"]["price_current"] or 0 for i in picks), 2)}
     pages = []
 
     def render(template: str, rel_path: str, depth: int, **ctx):
@@ -491,7 +522,7 @@ def main() -> int:
 
     brands = sorted({i["p"]["brand"] for i in items})
     max_price = max((i["s"]["price_current"] or 0 for i in items), default=1000)
-    render("index.html", "index.html", 0, items=items, hero=hero, brands=brands, max_price=int(max_price) + 1,
+    render("index.html", "index.html", 0, items=items, hero=hero, brands=brands, max_price=int(max_price // 10 + 1) * 10,
            deals_count=deals_count, versus=versus[:12], by_cat=by_cat,
            page_title="Comparateur Prix Hardware PC Gamer France - Meilleurs Tarifs & Historique",
            meta_description=(f"Comparez les prix des processeurs, cartes graphiques, RAM DDR5 et SSD chez Amazon, TopAchat, "
@@ -504,7 +535,7 @@ def main() -> int:
         ranked = sorted(lst, key=lambda i: i["s"]["price_per_perf"] or 1e9)
         cat_brands = sorted({i["p"]["brand"] for i in lst})
         render("category.html", f"categorie/{cat['slug']}.html", 1, cat=cat, cat_key=ck, items=lst, ranked=ranked,
-               brands=cat_brands, max_price=int(max((i["s"]["price_current"] or 0 for i in lst), default=1000)) + 1,
+               brands=cat_brands, max_price=int(max((i["s"]["price_current"] or 0 for i in lst), default=1000) // 10 + 1) * 10,
                versus=[v for v in versus if v["a"]["p"]["category"] == ck],
                page_title=f"{cat['label']} gaming : comparatif prix / performance ({month_year_fr(build_dt)}) | {site_name}",
                meta_description=(f"Meilleurs {cat['label'].lower()} pour PC gamer classés par rapport prix/performance. "

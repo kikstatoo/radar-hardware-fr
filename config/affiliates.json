@@ -15,40 +15,65 @@
       "name": "Amazon.fr",
       "network": "amazon",
       "search_url": "https://www.amazon.fr/s?k={query}",
-      "color": "#FF9900"
+      "color": "#FF9900",
+      "shipping": {
+        "free_from": 35,
+        "from": 4.99
+      }
     },
     "topachat": {
       "name": "TopAchat",
       "network": "awin",
       "awin_mid": "0000",
       "search_url": "https://www.topachat.com/pages/recherche.php?cat=accueil&etou=0&mc={query}",
-      "color": "#E30613"
+      "color": "#E30613",
+      "shipping": {
+        "free_from": null,
+        "from": 4.99
+      }
     },
     "rueducommerce": {
       "name": "Rue du Commerce",
       "network": "awin",
       "awin_mid": "0000",
       "search_url": "https://www.rueducommerce.fr/r/{query}",
-      "color": "#E2001A"
+      "color": "#E2001A",
+      "shipping": {
+        "free_from": null,
+        "from": 4.99
+      }
     },
     "cdiscount": {
       "name": "Cdiscount",
       "network": "effiliation",
       "search_url": "https://www.cdiscount.com/search/10/{query}.html",
-      "color": "#0F4C81"
+      "color": "#0F4C81",
+      "shipping": {
+        "free_from": null,
+        "from": 4.99
+      }
     },
     "fnac": {
       "name": "Fnac",
       "network": "awin",
       "awin_mid": "0000",
       "search_url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search={query}",
-      "color": "#E1A925"
+      "color": "#E1A925",
+      "shipping": {
+        "free_from": null,
+        "from": 4.99
+      }
     },
     "aliexpress": {
       "name": "AliExpress",
       "network": "aliexpress",
       "search_url": "https://fr.aliexpress.com/w/wholesale-{query}.html",
-      "color": "#FF4747"
+      "color": "#FF4747",
+      "shipping": {
+        "free_from": 0,
+        "from": 0
+      }
     }
-  }
+  },
+  "_livraison": "shipping : estimation affichée sur le site. 'free_from' = livraison offerte à partir de ce montant (null = jamais), 'from' = frais de port minimum sinon (0 = toujours gratuit). Ce sont des ESTIMATIONS : vérifie les conditions de chaque marchand et ajuste ici."
 }

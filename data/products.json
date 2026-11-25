@@ -71,7 +71,10 @@
         "Socket": "AM5",
         "TDP": "120 W",
         "iGPU": "Radeon (2 CU)"
-      }
+      },
+      "profiles": [
+        "sans-compromis"
+      ]
     },
     {
       "slug": "ryzen-7-9700x",
@@ -111,7 +114,10 @@
         "Socket": "AM5",
         "TDP": "65 W",
         "iGPU": "Radeon (2 CU)"
-      }
+      },
+      "profiles": [
+        "upgrade"
+      ]
     },
     {
       "slug": "ryzen-7-7800x3d",
@@ -151,7 +157,10 @@
         "Socket": "AM5",
         "TDP": "120 W",
         "iGPU": "Radeon (2 CU)"
-      }
+      },
+      "profiles": [
+        "sans-compromis"
+      ]
     },
     {
       "slug": "ryzen-5-9600x",
@@ -192,7 +201,10 @@
         "Socket": "AM5",
         "TDP": "65 W",
         "iGPU": "Radeon (2 CU)"
-      }
+      },
+      "profiles": [
+        "upgrade"
+      ]
     },
     {
       "slug": "ryzen-5-9500f",
@@ -232,7 +244,10 @@
         "Socket": "AM5",
         "TDP": "65 W",
         "iGPU": "Non"
-      }
+      },
+      "profiles": [
+        "upgrade"
+      ]
     },
     {
       "slug": "core-ultra-7-265k",
@@ -273,7 +288,10 @@
         "Socket": "LGA 1851",
         "TDP": "125 W",
         "iGPU": "Intel Graphics (4 Xe)"
-      }
+      },
+      "profiles": [
+        "upgrade"
+      ]
     },
     {
       "slug": "core-ultra-5-245kf",
@@ -313,7 +331,10 @@
         "Socket": "LGA 1851",
         "TDP": "125 W",
         "iGPU": "Non"
-      }
+      },
+      "profiles": [
+        "upgrade"
+      ]
     },
     {
       "slug": "rtx-5080-16go",
@@ -351,7 +372,10 @@
         "Bus mémoire": "256 bits",
         "Consommation (TGP)": "360 W",
         "Architecture": "Blackwell"
-      }
+      },
+      "profiles": [
+        "sans-compromis"
+      ]
     },
     {
       "slug": "rtx-5070-ti-16go",
@@ -389,7 +413,10 @@
         "Bus mémoire": "256 bits",
         "Consommation (TGP)": "300 W",
         "Architecture": "Blackwell"
-      }
+      },
+      "profiles": [
+        "sans-compromis"
+      ]
     },
     {
       "slug": "rtx-5070-12go",
@@ -428,7 +455,10 @@
         "Bus mémoire": "192 bits",
         "Consommation (TGP)": "250 W",
         "Architecture": "Blackwell"
-      }
+      },
+      "profiles": [
+        "sans-compromis"
+      ]
     },
     {
       "slug": "rtx-5060-ti-16go",
@@ -469,7 +499,10 @@
         "Bus mémoire": "128 bits",
         "Consommation (TGP)": "180 W",
         "Architecture": "Blackwell"
-      }
+      },
+      "profiles": [
+        "upgrade"
+      ]
     },
     {
       "slug": "rtx-5060-ti-8go",
@@ -510,7 +543,10 @@
         "Bus mémoire": "128 bits",
         "Consommation (TGP)": "180 W",
         "Architecture": "Blackwell"
-      }
+      },
+      "profiles": [
+        "upgrade"
+      ]
     },
     {
       "slug": "rtx-5060-8go",
@@ -548,7 +584,10 @@
         "Bus mémoire": "128 bits",
         "Consommation (TGP)": "145 W",
         "Architecture": "Blackwell"
-      }
+      },
+      "profiles": [
+        "upgrade"
+      ]
     },
     {
       "slug": "rx-9070-xt-16go",
@@ -585,7 +624,10 @@
         "Bus mémoire": "256 bits",
         "Consommation (TGP)": "304 W",
         "Architecture": "RDNA 4"
-      }
+      },
+      "profiles": [
+        "sans-compromis"
+      ]
     },
     {
       "slug": "rx-9070-16go",
@@ -625,7 +667,10 @@
         "Bus mémoire": "256 bits",
         "Consommation (TGP)": "220 W",
         "Architecture": "RDNA 4"
-      }
+      },
+      "profiles": [
+        "sans-compromis"
+      ]
     },
     {
       "slug": "rx-9060-xt-16go",
@@ -666,7 +711,10 @@
         "Bus mémoire": "128 bits",
         "Consommation (TGP)": "160 W",
         "Architecture": "RDNA 4"
-      }
+      },
+      "profiles": [
+        "upgrade"
+      ]
     },
     {
       "slug": "corsair-vengeance-32go-ddr5-6000-cl30",
@@ -704,7 +752,10 @@
         "Tension": "1,40 V",
         "RGB": "Non",
         "Profils": "Intel XMP 3.0"
-      }
+      },
+      "profiles": [
+        "upgrade"
+      ]
     },
     {
       "slug": "gskill-trident-z5-neo-rgb-32go-ddr5-6000-cl30",
@@ -741,7 +792,10 @@
         "Tension": "1,35 V",
         "RGB": "Oui",
         "Profils": "AMD EXPO"
-      }
+      },
+      "profiles": [
+        "upgrade"
+      ]
     },
     {
       "slug": "kingston-fury-beast-32go-ddr5-6000-cl30",
@@ -779,7 +833,10 @@
         "Tension": "1,40 V",
         "RGB": "Non",
         "Profils": "AMD EXPO + Intel XMP 3.0"
-      }
+      },
+      "profiles": [
+        "upgrade"
+      ]
     },
     {
       "slug": "samsung-990-pro-2to",
@@ -816,7 +873,10 @@
         "Écriture séquentielle": "6 900 Mo/s",
         "Endurance": "1 200 To écrits",
         "Format": "M.2 2280"
-      }
+      },
+      "profiles": [
+        "upgrade"
+      ]
     },
     {
       "slug": "wd-black-sn850x-2to",
@@ -853,7 +913,10 @@
         "Écriture séquentielle": "6 600 Mo/s",
         "Endurance": "1 200 To écrits",
         "Format": "M.2 2280"
-      }
+      },
+      "profiles": [
+        "upgrade"
+      ]
     },
     {
       "slug": "crucial-t500-2to",
@@ -890,7 +953,10 @@
         "Écriture séquentielle": "7 000 Mo/s",
         "Endurance": "1 200 To écrits",
         "Format": "M.2 2280"
-      }
+      },
+      "profiles": [
+        "upgrade"
+      ]
     },
     {
       "slug": "msi-b850-gaming-plus-wifi",
@@ -927,7 +993,10 @@
         "Mémoire": "4 x DDR5 (jusqu'à 256 Go)",
         "Emplacements M.2": "3 (1x PCIe 5.0 x4, 1x PCIe 4.0 x4, 1x PCIe 4.0 x2)",
         "Réseau": "Wi-Fi 7 + Bluetooth 5.4, LAN 5 Gb/s"
-      }
+      },
+      "profiles": [
+        "upgrade"
+      ]
     },
     {
       "slug": "asus-tuf-gaming-b650-plus-wifi",
@@ -963,7 +1032,11 @@
         "Mémoire": "4 x DDR5 (jusqu'à 128 Go)",
         "Emplacements M.2": "3 (1x PCIe 5.0, 2x PCIe 4.0)",
         "Réseau": "Wi-Fi 6, LAN 2,5 Gb/s"
-      }
+      },
+      "profiles": [
+        "upgrade"
+      ]
     }
-  ]
+  ],
+  "_aide_profils": "profiles : 'upgrade' (Upgrade Gaming 1080p/1440p) et/ou 'sans-compromis' (Config Sans Compromis). Utilisé par les filtres rapides de l'accueil."
 }

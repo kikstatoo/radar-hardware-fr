@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import product_card, filters, badges, cta with context %}
+{% from "_macros.html" import product_card, filters, badges, cta, light with context %}
 {% block content %}
 <div class="wrap">
   <nav class="crumbs small" aria-label="Fil d'Ariane"><a href="{{ root }}index.html">Accueil</a> › <span>{{ cat.label }}</span></nav>
@@ -9,7 +9,7 @@
   <div class="table-wrap card">
     <table class="table">
       <caption class="sr-only">Classement prix / performance — {{ cat.label }}</caption>
-      <thead><tr><th scope="col">#</th><th scope="col">Composant</th><th scope="col">Prix</th><th scope="col">Perf.</th><th scope="col">€ / point</th><th scope="col">Score</th><th scope="col"><span class="sr-only">Action</span></th></tr></thead>
+      <thead><tr><th scope="col">#</th><th scope="col">Composant</th><th scope="col">Prix</th><th scope="col">Perf.</th><th scope="col">€ / point</th><th scope="col">Verdict</th><th scope="col"><span class="sr-only">Action</span></th></tr></thead>
       <tbody>
       {% for it in ranked %}
         <tr{% if loop.first %} class="row-best"{% endif %}>
@@ -18,7 +18,7 @@
           <td class="mono nowrap">{{ it.s.price_current|price }}</td>
           <td class="mono">{{ it.p.perf_score }}</td>
           <td class="mono nowrap">{{ it.s.price_per_perf|price }}</td>
-          <td class="mono">{{ it.s.true_deal_score }}</td>
+          <td>{{ light(it.s, "xs") }}</td>
           <td>{{ cta(it.s.best_offer, "Voir →", "btn-sm") }}</td>
         </tr>
       {% endfor %}
@@ -31,7 +31,7 @@
   <div class="product-grid" id="grid">
     {% for it in items %}{{ product_card(it, root, threshold) }}{% endfor %}
   </div>
-  <p class="empty muted" id="empty" hidden>Aucun composant ne correspond à ces filtres.</p>
+  <p class="empty muted" id="empty" hidden>Aucun composant ne correspond à ces filtres. <button type="button" class="linklike" id="empty-reset">Tout afficher</button></p>
 
   {% if versus %}
   <h2>Comparatifs {{ cat.label|lower }}</h2>
