@@ -62,7 +62,7 @@ def pick_alerts(stats: dict, alerts: dict, settings: dict) -> list[dict]:
 
 
 def headline(p: dict) -> str:
-    return "🏆 PLUS BAS HISTORIQUE" if p["is_all_time_low"] else f"🔥 VRAIE PROMO -{p['discount_vs_avg']:.0f} %"
+    return "PLUS BAS HISTORIQUE" if p["is_all_time_low"] else f"VRAIE PROMO -{p['discount_vs_avg']:.0f} %"
 
 
 # =============================================================================
@@ -74,7 +74,7 @@ def send_discord(p: dict, webhook: str, site_name: str) -> bool:
         "title": plain(f"{headline(p)} — {p['name']}"),
         "url": p["page_url"],
         "color": 0x00E599,
-        "description": plain(f"~~{fmt_price(p['price_avg_30d'])}~~ ➜ **{fmt_price(p['price_current'])}** "
+        "description": plain(f"~~{fmt_price(p['price_avg_30d'])}~~ → **{fmt_price(p['price_current'])}** "
                              f"chez **{p['best_merchant_name']}**\nÉconomie : **{fmt_price(p['savings_eur'])}** "
                              f"vs moyenne 30 jours."),
         "fields": [
@@ -120,11 +120,11 @@ def _html(text: str) -> str:
 def send_telegram(p: dict, token: str, chat_id: str) -> bool:
     caption = plain(
         f"<b>{_html(headline(p))}</b>\n<b>{_html(p['name'])}</b>\n\n"
-        f"<s>{fmt_price(p['price_avg_30d'])}</s> ➜ <b>{fmt_price(p['price_current'])}</b> chez {_html(p['best_merchant_name'])}\n"
+        f"<s>{fmt_price(p['price_avg_30d'])}</s> → <b>{fmt_price(p['price_current'])}</b> chez {_html(p['best_merchant_name'])}\n"
         f"Économie : {fmt_price(p['savings_eur'])} vs moyenne 30 j • Score {p['true_deal_score']}/100\n\n"
         f"#PCGamer #BonPlanPC #Hardware")
     markup = {"inline_keyboard": [[{"text": "Voir l'offre →", "url": p["best_url"]}],
-                                  [{"text": "📈 Historique des prix", "url": p["page_url"]}]]}
+                                  [{"text": "Historique des prix", "url": p["page_url"]}]]}
     social = ROOT / p["social_path"]
     try:
         if social.exists():
@@ -191,7 +191,7 @@ def x_upload_media(path: Path, keys: dict) -> str | None:
 
 def send_x(p: dict, keys: dict) -> bool:
     text = plain(f"{headline(p)}\n{p['name']} à {fmt_price(p['price_current'])} chez {p['best_merchant_name']} "
-                 f"(moy. 30 j : {fmt_price(p['price_avg_30d'])})\n\n📈 {p['page_url']}\n\n#PCGamer #BonPlanPC #Hardware")
+                 f"(moy. 30 j : {fmt_price(p['price_avg_30d'])})\n\n{p['page_url']}\n\n#PCGamer #BonPlanPC #Hardware")
     if len(text) > 280:
         text = text[:277] + "…"
     payload = {"text": text}
@@ -243,7 +243,7 @@ def main() -> int:
         log(f"Aucune baisse ≥ {settings.get('min_drop_percent', 10)} % hors cooldown. Canaux prêts : {', '.join(channels)}.")
         return 0
 
-    site_name = stats.get("site_name", "Radar Hardware FR")
+    site_name = stats.get("site_name", "Radar Hardware Europe")
     for p in todo:
         log(f"→ Alerte {p['name']} ({fmt_price(p['price_current'])}, -{p['discount_vs_avg']} %)")
         sent = []
@@ -255,7 +255,7 @@ def main() -> int:
             sent.append("x")
         if sent:
             alerts[p["slug"]] = {"ts": now_ts(), "price": p["price_current"], "channels": sent}
-            log(f"  ✓ envoyée sur {', '.join(sent)}")
+            log(f"  OK - envoyée sur {', '.join(sent)}")
     # Purge des verrous de plus de 30 jours
     horizon = now_ts() - 30 * 86400
     alerts = {k: v for k, v in alerts.items() if v.get("ts", 0) >= horizon}

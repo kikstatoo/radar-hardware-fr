@@ -21,15 +21,12 @@ from itertools import combinations
 import matplotlib
 
 matplotlib.use("Agg")  # rendu sans écran (GitHub Actions, serveur)
-import matplotlib.dates as mdates  # noqa: E402
-import matplotlib.pyplot as plt  # noqa: E402
-import matplotlib.ticker  # noqa: E402
 from jinja2 import Environment, FileSystemLoader, select_autoescape  # noqa: E402
 from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
-from visuals import product_svg  # noqa: E402
+from visuals import icon_svg, product_svg  # noqa: E402
 
-from common import (FLAGS, DIST_DIR, HISTORY_FILE, OFFERS_FILE, SITE_STATS_FILE, STATIC_DIR,  # noqa: E402
+from common import (ROOT, DIST_DIR, HISTORY_FILE, OFFERS_FILE, SITE_STATS_FILE, STATIC_DIR,  # noqa: E402
                     TEMPLATES_DIR, date_fr, fmt_pct, fmt_price, get_base_url, iso, load_affiliates,
                     load_catalog, load_json, load_settings, log, month_year_fr, now_ts, save_json)
 
@@ -132,11 +129,11 @@ def compute_stats(product: dict, offers: list[dict], entry: dict, settings: dict
 
     # --- Verdict « feu tricolore » (lisible par un débutant) ---------------
     if s["discount_vs_avg"] >= threshold or current <= atl_price + 0.01:
-        s["light"], s["light_label"] = "green", "Acheter maintenant"
+        s["light"], s["light_label"] = "green", "Meilleur moment pour acheter"
     elif current > avg * 1.04:
-        s["light"], s["light_label"] = "red", "Attendre"
+        s["light"], s["light_label"] = "red", "Prix élevé"
     else:
-        s["light"], s["light_label"] = "yellow", "Prix normal"
+        s["light"], s["light_label"] = "yellow", "Prix standard"
 
     sc = s["true_deal_score"]
     if sc >= 75:
@@ -163,37 +160,49 @@ def _load_font(kind: str, size: int):
         return ImageFont.load_default()
 
 
-def make_chart(product: dict, entry: dict, stats: dict, out_path) -> None:
-    pts = [(datetime.fromtimestamp(t, PARIS), p) for t, p in entry.get("points", []) if p is not None]
-    fig, ax = plt.subplots(figsize=(10, 4), dpi=120)
-    fig.patch.set_facecolor(COLORS["surface"])
-    ax.set_facecolor(COLORS["surface"])
-    if pts:
-        xs, ys = zip(*pts)
-        ax.plot(xs, ys, color=COLORS["cyan"], linewidth=2.2, solid_joinstyle="round")
-        ax.fill_between(xs, ys, min(ys) * 0.97, color=COLORS["cyan"], alpha=0.08)
-        if stats.get("price_avg_30d"):
-            ax.axhline(stats["price_avg_30d"], color=COLORS["green"], linestyle=(0, (5, 4)), linewidth=1.4,
-                       label=f"Moyenne 30 j : {fmt_price(stats['price_avg_30d'])}")
-        i_min = min(range(len(ys)), key=lambda i: ys[i])
-        ax.scatter([xs[i_min]], [ys[i_min]], color=COLORS["amber"], s=46, zorder=5,
-                   label=f"Plus bas 30 j : {fmt_price(ys[i_min])}")
-        ax.scatter([xs[-1]], [ys[-1]], color=COLORS["cyan"], edgecolor="white", s=50, zorder=6)
-        lo, hi = min(ys), max(ys)
-        pad = max((hi - lo) * 0.25, hi * 0.02)
-        ax.set_ylim(lo - pad, hi + pad)
-        leg = ax.legend(loc="upper left", frameon=False, fontsize=10)
-        for text in leg.get_texts():
-            text.set_color(COLORS["text"])
-    ax.grid(True, color=COLORS["border"], linewidth=0.8, alpha=0.9)
-    for side in ("top", "right", "left", "bottom"):
-        ax.spines[side].set_visible(False)
-    ax.tick_params(colors=COLORS["muted"], labelsize=9, length=0)
-    ax.xaxis.set_major_formatter(mdates.DateFormatter("%d/%m", tz=PARIS))
-    ax.yaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:,.0f} €".replace(",", " ")))
-    fig.tight_layout(pad=1.2)
-    fig.savefig(out_path, facecolor=fig.get_facecolor())
-    plt.close(fig)
+def chart_svg(entry: dict, stats: dict) -> tuple[str, str]:
+    """Graphique SVG vectoriel (net à toutes les tailles) + données JSON pour l'infobulle."""
+    pts = [(t, p) for t, p in entry.get("points", []) if p is not None]
+    if len(pts) < 2:
+        return "", "[]"
+    step = max(1, len(pts) // 240)  # ~240 points suffisent pour 30 jours
+    pts = pts[::step] + ([pts[-1]] if (len(pts) - 1) % step else [])
+    W, H, L, R, T, B = 900, 300, 64, 16, 16, 34
+    ys = [p for _, p in pts]
+    lo, hi = min(ys), max(ys)
+    pad = max((hi - lo) * 0.18, hi * 0.01)
+    lo, hi = lo - pad, hi + pad
+    t0, t1 = pts[0][0], pts[-1][0]
+    X = lambda t: L + (t - t0) / max(1, t1 - t0) * (W - L - R)
+    Y = lambda v: T + (hi - v) / (hi - lo) * (H - T - B)
+    line = " ".join(f"{X(t):.1f},{Y(v):.1f}" for t, v in pts)
+    area = f"{X(t0):.1f},{H - B} {line} {X(t1):.1f},{H - B}"
+    grid = ""
+    for i in range(5):
+        v = lo + (hi - lo) * i / 4
+        grid += (f'<line x1="{L}" x2="{W - R}" y1="{Y(v):.1f}" y2="{Y(v):.1f}" class="ch-grid"/>'
+                 f'<text x="{L - 8}" y="{Y(v) + 4:.1f}" text-anchor="end" class="ch-ax">{v:,.0f} €</text>'.replace(",", " "))
+    for i in range(6):
+        t = t0 + (t1 - t0) * i / 5
+        d = datetime.fromtimestamp(t, PARIS)
+        grid += f'<text x="{X(t):.1f}" y="{H - 10}" text-anchor="middle" class="ch-ax">{d:%d/%m}</text>'
+    avg = stats.get("price_avg_30d")
+    avg_line = (f'<line x1="{L}" x2="{W - R}" y1="{Y(avg):.1f}" y2="{Y(avg):.1f}" class="ch-avg"/>'
+                f'<text x="{W - R}" y="{Y(avg) - 6:.1f}" text-anchor="end" class="ch-avg-t">Moyenne 30 j</text>') if avg else ""
+    i_min = min(range(len(ys)), key=lambda i: ys[i])
+    svg = (f'<svg class="chart" viewBox="0 0 {W} {H}" preserveAspectRatio="none" role="img" '
+           f'aria-label="Évolution du meilleur prix sur 30 jours" data-l="{L}" data-r="{R}" data-t="{T}" data-b="{B}" '
+           f'data-lo="{lo:.2f}" data-hi="{hi:.2f}">'
+           f'<defs><linearGradient id="chg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#10B981" stop-opacity=".28"/>'
+           f'<stop offset="1" stop-color="#10B981" stop-opacity="0"/></linearGradient></defs>'
+           f'{grid}<polygon points="{area}" fill="url(#chg)"/>{avg_line}'
+           f'<polyline points="{line}" class="ch-line"/>'
+           f'<circle cx="{X(pts[i_min][0]):.1f}" cy="{Y(ys[i_min]):.1f}" r="4.5" class="ch-min"/>'
+           f'<circle cx="{X(pts[-1][0]):.1f}" cy="{Y(ys[-1]):.1f}" r="4.5" class="ch-last"/>'
+           f'<line class="ch-cursor" x1="0" x2="0" y1="{T}" y2="{H - B}" visibility="hidden"/>'
+           f'<circle class="ch-dot" r="5" cx="0" cy="0" visibility="hidden"/></svg>')
+    data = json.dumps([[t, round(v, 2)] for t, v in pts], separators=(",", ":"))
+    return svg, data
 
 
 def _wrap(draw, text: str, font, max_width: int) -> list[str]:
@@ -337,13 +346,13 @@ def faq_items(p: dict, s: dict, merchant_name: str, best_cat: dict | None) -> li
                       f"Le prix moyen sur 30 jours est de {fmt_price(s['price_avg_30d'])} et le plus bas historique "
                       f"de {fmt_price(s['price_min_all_time'])}."))
         if s["light"] == "green":
-            ans = (f"Oui, notre verdict est « Acheter maintenant ». Le prix actuel est {fmt_pct(s['discount_vs_avg'], 1)} sous la moyenne des 30 derniers jours, "
+            ans = (f"Oui, notre verdict est « Meilleur moment pour acheter ». Le prix actuel est {fmt_pct(s['discount_vs_avg'], 1)} sous la moyenne des 30 derniers jours, "
                    f"avec un score Vraie Promo de {s['true_deal_score']}/100.")
         elif s["light"] == "yellow":
-            ans = (f"Prix normal : c'est un tarif dans la fourchette habituelle, légèrement de ces 30 derniers jours "
+            ans = (f"Prix standard : c'est un tarif dans la fourchette habituelle, légèrement de ces 30 derniers jours "
                    f"(moyenne {fmt_price(s['price_avg_30d'])}), mais pas une vraie promo. Score : {s['true_deal_score']}/100.")
         else:
-            ans = (f"Mieux vaut attendre : le prix est gonflé de plus de 4 % par rapport à la moyenne 30 jours "
+            ans = (f"Prix élevé : mieux vaut attendre, le prix est gonflé de plus de 4 % par rapport à la moyenne 30 jours "
                    f"({fmt_price(s['price_avg_30d'])}). Mieux vaut patienter ou activer une alerte.")
         items.append((f"Est-ce le bon moment pour acheter le {name} ?", ans))
         items.append((f"Le {name} a-t-il déjà été moins cher ?",
@@ -382,7 +391,8 @@ def select_versus(products: list[dict], settings: dict) -> list[tuple[dict, dict
     per_cat = int(seo.get("versus_max_per_category", 20))
     by_cat: dict[str, list[dict]] = {}
     for p in products:
-        by_cat.setdefault(p["category"], []).append(p)
+        if p.get("perf_score"):  # pas de duel pour boîtiers, alimentations, refroidissement
+            by_cat.setdefault(p["category"], []).append(p)
     pairs = []
     for items in by_cat.values():
         cands = []
@@ -401,12 +411,12 @@ def main() -> int:
     products, categories = catalog.get("products", []), catalog.get("categories", {})
     offers_doc = load_json(OFFERS_FILE, None)
     if not offers_doc:
-        log("✗ data/offers_latest.json absent : lance d'abord scripts/fetch_prices.py")
+        log("ERREUR - data/offers_latest.json absent : lance d'abord scripts/fetch_prices.py")
         return 1
 
     mode = offers_doc.get("mode", "simulation")
     demo = mode != "live"
-    site_name = affiliates.get("site_name", "Radar Hardware FR")
+    site_name = affiliates.get("site_name", "Radar Hardware Europe")
     base_url = get_base_url(affiliates)
     merchants = affiliates.get("merchants", {})
     mname = lambda k: merchants.get(k, {}).get("name", "Bon plan" if k == "bonplan" else k.capitalize())
@@ -414,7 +424,7 @@ def main() -> int:
     # --- Historique & stats ---
     history = update_history(load_json(HISTORY_FILE, {}) or {}, offers_doc, products, settings)
     save_json(HISTORY_FILE, history, compact=True)
-    log(f"✓ Historique mis à jour ({len(products)} produits)")
+    log(f"OK - Historique mis à jour ({len(products)} produits)")
 
     build_ts = now_ts()
     build_dt = datetime.fromtimestamp(build_ts, PARIS)
@@ -423,10 +433,12 @@ def main() -> int:
     # --- Préparation du dossier dist/ ---
     if DIST_DIR.exists():
         shutil.rmtree(DIST_DIR)
-    for sub in ("assets/charts", "assets/social", "assets/products", "assets/css", "assets/js", "produit", "categorie", "comparatif"):
+    for sub in ("assets/social", "assets/products", "assets/css", "assets/js", "produit", "categorie", "comparatif"):
         (DIST_DIR / sub).mkdir(parents=True, exist_ok=True)
     shutil.copy(STATIC_DIR / "css" / "style.css", DIST_DIR / "assets/css/style.css")
     shutil.copy(STATIC_DIR / "js" / "app.js", DIST_DIR / "assets/js/app.js")
+    shutil.copy(STATIC_DIR / "js" / "configurator.js", DIST_DIR / "assets/js/configurator.js")
+    cached_dir = ROOT / "assets" / "products"  # images mises en cache par download_images.py
     shutil.copy(STATIC_DIR / "favicon.svg", DIST_DIR / "favicon.svg")
     inline_css = (STATIC_DIR / "css" / "style.css").read_text(encoding="utf-8")
 
@@ -445,25 +457,29 @@ def main() -> int:
             m = merchants.get(o["merchant"], {})
             label, free = shipping_label(o.get("shipping"))
             offers_view.append({**o, "merchant_name": mname(o["merchant"]), "country": m.get("country", "FR"),
-                                "flag": FLAGS.get(m.get("country", "FR"), "🇪🇺"), "ship_label": label, "ship_free": free,
+                                "ship_label": label, "ship_free": free,
                                 "item_price": o.get("item_price", o["price"]),
                                 "saving": round(s["price_avg_30d"] - o["price"], 2) if s["price_avg_30d"] and o["price"] < s["price_avg_30d"] - 0.5 else 0,
                                 "color": m.get("color", "#38BDF8"), "is_best": bo is not None and o is bo})
         fr_offers = [o for o in offers_view if o["in_stock"] and o["country"] == "FR"]
         best_fr = min(fr_offers, key=lambda o: o["price"]) if fr_offers else None
         best_view = next((o for o in offers_view if o["is_best"]), None)
-        # Image : officielle (catalogue ou flux marchand) sinon visuel généré
-        image = p.get("image_url") if str(p.get("image_url", "")).startswith("https://") else ""
-        image = image or next((o["image"] for o in offers if o.get("image")), "")
-        if not image:
+        # Image : copie locale en cache (servie par GitHub Pages) sinon visuel neutre
+        cached = cached_dir / f"{p['slug']}.webp"
+        if cached.exists():
+            shutil.copy(cached, DIST_DIR / "assets/products" / cached.name)
+            image = f"assets/products/{cached.name}"
+        else:
             (DIST_DIR / "assets/products" / f"{p['slug']}.svg").write_text(product_svg(p), encoding="utf-8")
+            image = f"assets/products/{p['slug']}.svg"
+        chart, chart_data = chart_svg(entry, s)
         items.append({"p": p, "s": s, "cat": cat, "offers": offers_view, "entry": entry,
                       "best_merchant": best_merchant, "best_view": best_view, "best_fr": best_fr,
-                      "image": image, "image_local": not image, "spark": sparkline_svg(entry),
+                      "image": image, "has_photo": cached.exists(), "spark": sparkline_svg(entry),
+                      "chart": chart, "chart_data": chart_data,
                       "url": f"produit/{p['slug']}.html"})
-        make_chart(p, entry, s, DIST_DIR / "assets/charts" / f"{p['slug']}.png")
         make_social_image(p, entry, s, best_merchant, site_name, DIST_DIR / "assets/social" / f"{p['slug']}-alert.png")
-    log(f"✓ {len(items) * 2} images générées (graphiques + vignettes sociales)")
+    log(f"OK - {len(items)} vignettes sociales, {sum(1 for i in items if i['has_photo'])} photos produits en cache")
 
     by_slug = {it["p"]["slug"]: it for it in items}
     by_cat: dict[str, list[dict]] = {}
@@ -497,7 +513,7 @@ def main() -> int:
 
     # --- Hero : Top 4 des plus grosses baisses réelles ---
     with_price = [i for i in items if i["s"]["price_current"] is not None]
-    hero = sorted(with_price, key=lambda i: (i["s"]["is_true_deal"], i["s"]["discount_vs_avg"]), reverse=True)[:5]
+    hero = sorted(with_price, key=lambda i: (i["s"]["is_true_deal"], i["s"]["discount_vs_avg"]), reverse=True)[:6]
     deals_count = sum(1 for i in items if i["s"]["is_true_deal"])
 
     # --- Rendu Jinja ---
@@ -506,6 +522,7 @@ def main() -> int:
     env.filters["price"] = fmt_price
     env.filters["pct"] = fmt_pct
     env.filters["num"] = lambda v, d=1: "—" if v is None else f"{v:.{d}f}".replace(".", ",")
+    env.globals["icon"] = icon_svg
     common_ctx = {
         "site_name": site_name, "base_url": base_url, "demo": demo, "noindex": demo and settings.get("seo", {}).get("noindex_in_simulation_mode", True),
         "updated_label": updated_label, "updated_iso": iso(build_ts), "month_year": month_year_fr(build_dt),
@@ -513,12 +530,13 @@ def main() -> int:
         "threshold": settings.get("deal_threshold_percent", 8.0),
         "amazon_enabled": bool(affiliates.get("amazon_tag")),
     }
-    common_ctx["search_index"] = json_ld([{"n": i["p"]["name"], "u": i["url"], "c": i["cat"]["label"],
+    common_ctx["search_index"] = json_ld([{"n": i["p"]["name"], "u": i["url"], "c": i["cat"]["label"], "i": i["image"],
                                            "p": fmt_price(i["s"]["price_current"]), "l": i["s"]["light"]} for i in items])
     common_ctx["amazon_enabled"] = any(affiliates.get(k) for k in ("amazon_tag", "amazon_tag_de", "amazon_tag_es"))
     common_ctx["merchant_count"] = len(merchants)
-    common_ctx["merchant_list"] = [{"name": m["name"], "flag": FLAGS.get(m.get("country", "FR"), "🇪🇺"), "color": m.get("color")}
+    common_ctx["merchant_list"] = [{"name": m["name"], "country": m.get("country", "FR"), "color": m.get("color")}
                                    for m in merchants.values()]
+    common_ctx["product_count"] = len(items)
     pages = []
 
     def render(template: str, rel_path: str, depth: int, **ctx):
@@ -537,20 +555,21 @@ def main() -> int:
     render("index.html", "index.html", 0, items=items, hero=hero, brands=brands, max_price=int(max_price // 10 + 1) * 10,
            deals_count=deals_count, versus=versus[:12], by_cat=by_cat,
            page_title="Comparateur Prix Hardware PC Gamer France & Europe - Meilleurs Tarifs & Historique",
-           meta_description=(f"Comparez les prix livrés en France des processeurs, cartes graphiques, RAM DDR5, SSD et cartes mères "
-                             f"chez {len(merchants)} marchands français et européens (Amazon, LDLC, Alternate, Caseking…). "
+           meta_description=(f"Comparez les prix livrés en France de {len(items)} composants PC (processeurs, cartes graphiques, RAM, SSD, "
+                             f"cartes mères, boîtiers, alimentations) chez {len(merchants)} marchands français et européens. Configurateur PC, "
                              f"Historique 30 jours et détection des vraies promos ({month_year_fr(build_dt)})."),
            og_image=f"{base_url}/assets/social/{hero[0]['p']['slug']}-alert.png" if hero else None)
 
     for ck, cat in categories.items():
         lst = by_cat.get(ck, [])
-        ranked = sorted(lst, key=lambda i: i["s"]["price_per_perf"] or 1e9)
+        has_perf = bool(cat.get("perf_label"))
+        ranked = sorted(lst, key=lambda i: (i["s"]["price_per_perf"] or 1e9) if has_perf else (i["s"]["price_current"] or 1e9))
         cat_brands = sorted({i["p"]["brand"] for i in lst})
-        render("category.html", f"categorie/{cat['slug']}.html", 1, cat=cat, cat_key=ck, items=lst, ranked=ranked,
+        render("category.html", f"categorie/{cat['slug']}.html", 1, cat=cat, cat_key=ck, items=lst, ranked=ranked, has_perf=has_perf,
                brands=cat_brands, max_price=int(top_price(lst) // 10 + 1) * 10,
                versus=[v for v in versus if v["a"]["p"]["category"] == ck],
-               page_title=f"{cat['label']} gaming : comparatif prix / performance ({month_year_fr(build_dt)}) | {site_name}",
-               meta_description=(f"Meilleurs {cat['label'].lower()} pour PC gamer classés par rapport prix/performance. "
+               page_title=f"{cat['label']} : comparatif des prix en France et en Europe ({month_year_fr(build_dt)}) | {site_name}",
+               meta_description=(f"{len(lst)} {cat['label'].lower()} comparés au meilleur prix livré en France. "
                                  f"Prix mis à jour toutes les heures chez les marchands français, historique et vraies promos."),
                og_image=f"{base_url}/assets/social/{ranked[0]['p']['slug']}-alert.png" if ranked else None)
 
@@ -561,7 +580,7 @@ def main() -> int:
         prod_url = f"{base_url}/produit/{p['slug']}.html"
         product_ld = {"@context": "https://schema.org", "@type": "Product", "name": p["name"],
                       "brand": {"@type": "Brand", "name": p["brand"]}, "category": cat["label"],
-                      "image": f"{base_url}/assets/social/{p['slug']}-alert.png", "url": prod_url,
+                      "image": f"{base_url}/{it['image']}" if it["has_photo"] else f"{base_url}/assets/social/{p['slug']}-alert.png", "url": prod_url,
                       "description": f"{p['name']} : comparatif de prix, historique 30 jours et caractéristiques."}
         if p.get("mpn"):
             product_ld["mpn"] = p["mpn"]
@@ -601,6 +620,23 @@ def main() -> int:
                                  f"performances et meilleur rapport prix/performance. Vainqueur : {v['winner']['p']['name']}."),
                og_image=f"{base_url}/assets/social/{v['winner']['p']['slug']}-alert.png")
 
+    # --- Configurateur PC : données compactes embarquées dans la page ---
+    steps = [("cpu", "Processeur"), ("motherboard", "Carte mère"), ("ram", "Mémoire vive"), ("gpu", "Carte graphique"),
+             ("ssd", "Stockage SSD"), ("cooler", "Refroidissement"), ("case", "Boîtier"), ("psu", "Alimentation")]
+    cfg_items = []
+    for it in items:
+        bv, bf = it["best_view"], it["best_fr"]
+        cfg_items.append({"s": it["p"]["slug"], "c": it["p"]["category"], "n": it["p"]["name"], "b": it["p"]["brand"],
+                          "u": it["url"], "i": it["image"], "k": it["p"].get("compat", {}),
+                          "e": [bv["price"], bv["merchant_name"], bv["country"], bv["url"]] if bv else None,
+                          "f": [bf["price"], bf["merchant_name"], bf["country"], bf["url"]] if bf else None,
+                          "a": it["s"]["price_avg_30d"], "l": it["s"]["light"]})
+    render("configurateur.html", "configurateur.html", 0, steps=steps, cfg_json=json_ld({"steps": steps, "items": cfg_items}),
+           page_title=f"Configurateur PC gamer : compatibilité et meilleurs prix européens ({month_year_fr(build_dt)})",
+           meta_description=("Assemblez votre PC pièce par pièce : vérification automatique de compatibilité (socket, RAM, format, "
+                             "dimensions, alimentation) et meilleur prix livré en France pour chaque composant."),
+           og_image=None, page_kind="config")
+
     render("404.html", "404.html", 0, root=f"{base_url}/", page_title=f"Page introuvable | {site_name}",
            meta_description="Cette page n'existe pas ou plus.", og_image=None)
     pages.remove("404.html")
@@ -628,11 +664,11 @@ def main() -> int:
             "is_true_deal": s["is_true_deal"], "is_all_time_low": s["is_all_time_low"],
             "best_merchant": bo["merchant"] if bo else None, "best_merchant_name": it["best_merchant"],
             "best_url": bo["url"] if bo else None, "page_url": f"{base_url}/{it['url']}",
-            "chart_path": f"dist/assets/charts/{it['p']['slug']}.png",
+            "chart_path": f"dist/assets/social/{it['p']['slug']}-alert.png",
             "social_path": f"dist/assets/social/{it['p']['slug']}-alert.png",
         })
     save_json(SITE_STATS_FILE, stats_out)
-    log(f"✓ Site généré : {len(pages)} pages indexables dans dist/ ({len(versus)} comparatifs, {deals_count} vraies promos)"
+    log(f"OK - Site généré : {len(pages)} pages indexables dans dist/ ({len(versus)} comparatifs, {deals_count} vraies promos)"
         + (" — MODE DÉMO" if demo else ""))
     return 0
 

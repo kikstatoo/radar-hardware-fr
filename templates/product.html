@@ -1,114 +1,103 @@
 {% extends "base.html" %}
-{% from "_macros.html" import light, mbadge, deal_badges, pimg, price_block, cta_pair with context %}
+{% from "_macros.html" import ui, light, mbadge, deal_badges, pimg, price_block, cta_pair with context %}
 {% set og_type = "product" %}
 {% block content %}
 <div class="wrap">
-  <nav class="crumbs small" aria-label="Fil d'Ariane"><a href="{{ root }}index.html">Accueil</a> › <a href="{{ root }}categorie/{{ cat.slug }}.html">{{ cat.label }}</a> › <span>{{ p.name }}</span></nav>
+  <nav class="crumbs" aria-label="Fil d'Ariane"><a href="{{ root }}index.html">Accueil</a>{{ ui('chev-r', 14) }}<a href="{{ root }}categorie/{{ cat.slug }}.html">{{ cat.label }}</a>{{ ui('chev-r', 14) }}<span>{{ p.name }}</span></nav>
 
   <section class="phead">
-    <div class="phead-img">{{ pimg(it, root, eager=true) }}<span class="pcard-flags">{{ deal_badges(s) }}</span></div>
+    <div class="phead-media">{{ pimg(it, root, eager=true) }}<span class="pcard-tags">{{ deal_badges(s) }}</span></div>
     <div class="phead-info">
-      <p class="small muted">{{ p.brand }} · {{ cat.label }}{% if p.mpn %} · <span class="mono">{{ p.mpn }}</span>{% endif %}</p>
+      <p class="phead-meta"><span>{{ p.brand }}</span><span>{{ cat.label }}</span>{% if p.mpn %}<span class="mono">{{ p.mpn }}</span>{% endif %}</p>
       <h1>{{ p.name }}</h1>
-      <div class="card buy-box buy-{{ s.light }}">
-        {{ light(s, "big") }}
-        <p class="small muted only-eu">Meilleur prix livré en France · {{ it.offers|length }} offres en Europe</p>
-        <p class="small muted only-fr">Meilleur prix chez un marchand français</p>
-        {{ price_block(it, "price-xxl") }}
-        {% if it.best_view %}<p class="small muted only-eu breakdown">Article <span class="mono">{{ it.best_view.item_price|price }}</span> + livraison <span class="{{ 'ship-free' if it.best_view.ship_free }}">{{ it.best_view.ship_label }}</span></p>{% endif %}
-        {% if it.best_fr %}<p class="small muted only-fr breakdown">Article <span class="mono">{{ it.best_fr.item_price|price }}</span> + livraison <span class="{{ 'ship-free' if it.best_fr.ship_free }}">{{ it.best_fr.ship_label }}</span></p>{% endif %}
-        {{ cta_pair(it, "Voir le meilleur prix →", "btn-block btn-lg") }}
+      {{ light(s) }}
+      <div class="bestbox bestbox-{{ s.light }}">
+        <p class="bestbox-label only-eu">Meilleur prix actuel, livraison en France incluse</p>
+        <p class="bestbox-label only-fr">Meilleur prix actuel chez un marchand français</p>
+        {{ price_block(it, "price-hero") }}
+        {% if it.best_view %}<p class="breakdown only-eu">Article <span class="mono">{{ it.best_view.item_price|price }}</span> · Livraison <span class="{{ 'ok' if it.best_view.ship_free }}">{{ it.best_view.ship_label }}</span></p>{% endif %}
+        {% if it.best_fr %}<p class="breakdown only-fr">Article <span class="mono">{{ it.best_fr.item_price|price }}</span> · Livraison <span class="{{ 'ok' if it.best_fr.ship_free }}">{{ it.best_fr.ship_label }}</span></p>{% endif %}
+        {% if it.best_view %}<a class="btn btn-primary btn-lg btn-block only-eu" href="{{ it.best_view.url }}" rel="nofollow sponsored noopener" target="_blank">Acheter chez {{ it.best_view.merchant_name }}{{ ui('external', 17) }}</a>{% endif %}
+        {% if it.best_fr %}<a class="btn btn-primary btn-lg btn-block only-fr" href="{{ it.best_fr.url }}" rel="nofollow sponsored noopener" target="_blank">Acheter chez {{ it.best_fr.merchant_name }}{{ ui('external', 17) }}</a>{% endif %}
         {% if it.best_fr and it.best_view and it.best_view.country != 'FR' %}
-        <p class="small only-eu alt-fr">🇫🇷 Meilleur prix en France : <b class="mono">{{ it.best_fr.price|price }}</b> chez {{ it.best_fr.merchant_name }} (+{{ (it.best_fr.price - it.best_view.price)|price }})</p>
+        <p class="alt-fr only-eu">Meilleur prix chez un marchand français : <b class="mono">{{ it.best_fr.price|price }}</b> chez {{ it.best_fr.merchant_name }} (+{{ (it.best_fr.price - it.best_view.price)|price }})</p>
         {% endif %}
       </div>
-      <p class="small muted">Prix vérifiés le {{ updated_label }}.</p>
+      <dl class="kpis">
+        <div><dt>Moyenne 30 jours</dt><dd class="mono">{{ s.price_avg_30d|price }}</dd></div>
+        <div><dt>Plus bas historique</dt><dd class="mono">{{ s.price_min_all_time|price }}</dd></div>
+        <div><dt>Écart à la moyenne</dt><dd class="mono {{ 'pos' if s.discount_vs_avg > 0 else 'neg' }}">{{ '−' if s.discount_vs_avg > 0 else '+' }}{{ (s.discount_vs_avg|abs)|num(1) }}&nbsp;%</dd></div>
+        <div><dt>Offres comparées</dt><dd class="mono">{{ it.offers|length }}</dd></div>
+      </dl>
     </div>
   </section>
 
-  <section class="stats" aria-label="Statistiques de prix">
-    <div class="card stat"><span class="small muted">Prix actuel</span><span class="mono stat-v accent">{{ s.price_current|price }}</span></div>
-    <div class="card stat"><span class="small muted">Moyenne 30 j</span><span class="mono stat-v">{{ s.price_avg_30d|price }}</span></div>
-    <div class="card stat"><span class="small muted">Plus bas historique</span><span class="mono stat-v amber">{{ s.price_min_all_time|price }}</span></div>
-    <div class="card stat"><span class="small muted">Écart vs moyenne</span><span class="mono stat-v {{ 'accent' if s.discount_vs_avg > 0 else 'rose' }}">{{ '−' if s.discount_vs_avg > 0 else '+' }}{{ (s.discount_vs_avg|abs)|num(1) }}&nbsp;%</span></div>
-    <div class="card stat"><span class="small muted">Score Vraie Promo</span><span class="mono stat-v cyan">{{ s.true_deal_score }}<small>/100</small></span></div>
-  </section>
-
   <section aria-labelledby="offers-title">
-    <h2 id="offers-title">Comparatif des {{ it.offers|length }} offres <span class="small muted">(classées par prix total livré en France)</span></h2>
-    <div class="table-wrap card">
+    <div class="section-head"><h2 id="offers-title">Tous les revendeurs</h2><p class="muted small">Triés du moins cher au plus cher, frais de port vers la France inclus.</p></div>
+    <div class="table-card">
       <table class="table offers">
-        <caption class="sr-only">Offres pour le {{ p.name }}, de la moins chère à la plus chère, frais de port compris</caption>
-        <thead><tr><th scope="col">Marchand</th><th scope="col" class="hide-sm">Disponibilité</th><th scope="col" class="hide-sm">Prix article</th><th scope="col" class="hide-sm">Livraison FR</th><th scope="col">Total livré</th><th scope="col"><span class="sr-only">Action</span></th></tr></thead>
+        <caption class="sr-only">Offres pour {{ p.name }}</caption>
+        <thead><tr><th scope="col">Marchand</th><th scope="col" class="hide-sm">Pays</th><th scope="col" class="hide-sm">Disponibilité</th><th scope="col" class="hide-sm">Prix</th><th scope="col" class="hide-sm">Livraison</th><th scope="col">Total</th><th scope="col"><span class="sr-only">Action</span></th></tr></thead>
         <tbody>
         {% for o in it.offers %}
           <tr class="{{ 'row-best' if o.is_best }} {{ 'row-eu' if o.country != 'FR' }} {{ 'row-oos' if not o.in_stock }}">
-            <td>{{ mbadge(o) }}{% if o.is_best %} <span class="badge badge-best only-eu">Meilleur prix</span>{% endif %}{% if it.best_fr and o is sameas it.best_fr %} <span class="badge badge-best only-fr">Meilleur prix</span>{% endif %}
-              <span class="show-sm small {{ 'stock-ok' if o.in_stock else 'stock-ko' }}">{{ 'En stock' if o.in_stock else 'Rupture' }}</span><span class="show-sm small muted"> · {{ o.ship_label }}</span></td>
-            <td class="hide-sm">{% if o.in_stock %}<span class="stock-ok">En stock</span>{% else %}<span class="stock-ko">Rupture</span>{% endif %}</td>
+            <td><span class="m-name">{{ o.merchant_name }}</span>{% if o.is_best %}<span class="tagb tagb-best only-eu">Meilleur prix</span>{% endif %}{% if it.best_fr and o is sameas it.best_fr %}<span class="tagb tagb-best only-fr">Meilleur prix</span>{% endif %}
+              <span class="show-sm m-sub"><span class="cc">{{ o.country }}</span> {{ 'En stock' if o.in_stock else 'Rupture' }} · {{ o.ship_label }}</span></td>
+            <td class="hide-sm"><span class="cc">{{ o.country }}</span></td>
+            <td class="hide-sm">{% if o.in_stock %}<span class="stock ok">{{ ui('check', 15) }}En stock</span>{% else %}<span class="stock">{{ ui('x', 15) }}Rupture</span>{% endif %}</td>
             <td class="hide-sm mono nowrap">{{ o.item_price|price }}</td>
-            <td class="hide-sm small nowrap {{ 'ship-free' if o.ship_free else 'muted' }}">{{ o.ship_label }}</td>
-            <td class="nowrap"><b class="mono total">{{ o.price|price }}</b>{% if o.saving >= 1 and o.in_stock %}<br><span class="save-pill xs">−{{ o.saving|price }}</span>{% endif %}</td>
-            <td><a class="btn {{ 'btn-cta' if o.in_stock else 'btn-ghost' }} btn-sm" href="{{ o.url }}" rel="nofollow sponsored noopener" target="_blank">Aller sur {{ o.merchant_name }}&nbsp;↗</a></td>
+            <td class="hide-sm nowrap {{ 'ok' if o.ship_free else 'muted' }}">{{ o.ship_label }}</td>
+            <td class="nowrap"><b class="mono total">{{ o.price|price }}</b></td>
+            <td class="ta-r"><a class="btn {{ 'btn-primary' if o.in_stock else 'btn-ghost' }} btn-sm" href="{{ o.url }}" rel="nofollow sponsored noopener" target="_blank">Voir chez {{ o.merchant_name }}</a></td>
           </tr>
         {% endfor %}
         </tbody>
       </table>
     </div>
-    <p class="small muted">Frais de port vers la France estimés à titre indicatif. Vérifiez le montant exact et les délais sur le site du marchand.</p>
-  </section>
-
-  <section class="card chart-card" aria-labelledby="chart-title">
-    <h2 id="chart-title">Historique du meilleur prix livré sur 30 jours</h2>
-    <img src="{{ root }}assets/charts/{{ p.slug }}.png" width="1200" height="480" alt="Courbe d'évolution du prix du {{ p.name }} sur 30 jours" loading="lazy" decoding="async">
+    <p class="note">Frais de port vers la France estimés à titre indicatif. Vérifiez le montant exact et les délais sur le site du marchand.</p>
   </section>
 
   <div class="two-col">
-    <section class="card prose" aria-labelledby="analyse-title">
-      <h2 id="analyse-title">Analyse du prix ({{ month_year }})</h2>
-      {% for para in seo_text %}<p>{{ para }}</p>{% endfor %}
-    </section>
     <section aria-labelledby="specs-title">
-      <h2 id="specs-title" class="mt0">Caractéristiques techniques</h2>
-      <div class="table-wrap card">
-        <table class="table specs">
-          <tbody>
-            <tr><th scope="row">Marque</th><td>{{ p.brand }}</td></tr>
-            {% for k, v in p.specs.items() %}<tr><th scope="row">{{ k }}</th><td>{{ v }}</td></tr>{% endfor %}
-            <tr><th scope="row">{{ cat.perf_label }}</th><td class="mono">{{ p.perf_score }}</td></tr>
-            {% if p.mpn %}<tr><th scope="row">Référence fabricant</th><td class="mono">{{ p.mpn }}</td></tr>{% endif %}
-            {% if p.ean %}<tr><th scope="row">EAN</th><td class="mono">{{ p.ean }}</td></tr>{% endif %}
-          </tbody>
-        </table>
+      <div class="section-head"><h2 id="specs-title">Fiche technique</h2></div>
+      <div class="table-card">
+        <table class="table specs"><tbody>
+          <tr><th scope="row">Marque</th><td>{{ p.brand }}</td></tr>
+          {% for k, v in p.specs.items() %}<tr><th scope="row">{{ k }}</th><td>{{ v }}</td></tr>{% endfor %}
+          {% if p.perf_score and cat.perf_label %}<tr><th scope="row">{{ cat.perf_label }}</th><td class="mono">{{ p.perf_score }}</td></tr>{% endif %}
+          {% if p.mpn %}<tr><th scope="row">Référence fabricant</th><td class="mono">{{ p.mpn }}</td></tr>{% endif %}
+          {% if p.ean %}<tr><th scope="row">EAN</th><td class="mono">{{ p.ean }}</td></tr>{% endif %}
+        </tbody></table>
       </div>
+    </section>
+    <section aria-labelledby="chart-title">
+      <div class="section-head"><h2 id="chart-title">Évolution du prix sur 30 jours</h2></div>
+      <div class="chart-card" data-points='{{ it.chart_data }}'>
+        <div class="chart-legend"><span class="lg lg-line"></span>Meilleur prix livré<span class="lg lg-avg"></span>Moyenne 30 j<span class="lg lg-min"></span>Plus bas</div>
+        <div class="chart-wrap">{{ it.chart|safe }}<div class="chart-tip" hidden></div></div>
+      </div>
+      <section class="prose">
+        <h3>Analyse du prix ({{ month_year }})</h3>
+        {% for para in seo_text %}<p>{{ para }}</p>{% endfor %}
+      </section>
     </section>
   </div>
 
   <section class="faq" aria-labelledby="faq-title">
-    <h2 id="faq-title">Questions fréquentes</h2>
-    {% for q, a in faq %}
-    <details class="card"{% if loop.first %} open{% endif %}><summary>{{ q }}</summary><p>{{ a }}</p></details>
-    {% endfor %}
+    <div class="section-head"><h2 id="faq-title">Questions fréquentes</h2></div>
+    {% for q, a in faq %}<details{% if loop.first %} open{% endif %}><summary>{{ q }}{{ ui('chev-d', 18) }}</summary><p>{{ a }}</p></details>{% endfor %}
   </section>
 
   {% if versus %}
-  <section aria-labelledby="vs-title">
-    <h2 id="vs-title">Comparer le {{ p.name }}</h2>
-    <ul class="vs-list">
-      {% for v in versus %}<li><a href="{{ root }}{{ v.url }}">{{ v.a.p.name }} <span class="vs mono">VS</span> {{ v.b.p.name }}</a></li>{% endfor %}
-    </ul>
-  </section>
+  <section><div class="section-head"><h2>Comparer avec</h2></div>
+    <ul class="vs-list">{% for v in versus %}<li><a href="{{ root }}{{ v.url }}">{{ v.a.p.name }}<span class="vs">vs</span>{{ v.b.p.name }}</a></li>{% endfor %}</ul></section>
   {% endif %}
 
   {% if similar %}
-  <section aria-labelledby="sim-title">
-    <h2 id="sim-title">Alternatives à prix proche</h2>
-    <div class="mini-grid">
-      {% for o in similar %}
-      <a class="card mini" href="{{ root }}{{ o.url }}"><span class="mini-img">{{ pimg(o, root) }}</span><span>{{ o.p.name }}</span><span class="mono accent">{{ o.s.price_current|price }}</span>{{ light(o.s, "xs") }}</a>
-      {% endfor %}
-    </div>
-  </section>
+  <section><div class="section-head"><h2>Alternatives à prix proche</h2></div>
+    <div class="mini-grid">{% for o in similar %}
+      <a class="mini" href="{{ root }}{{ o.url }}"><span class="mini-media">{{ pimg(o, root) }}</span><span class="mini-name">{{ o.p.name }}</span><span class="mono strong">{{ o.s.price_current|price }}</span></a>
+    {% endfor %}</div></section>
   {% endif %}
 </div>
 {% endblock %}

@@ -1,40 +1,66 @@
+{# ---------- Icônes au trait (style Lucide, 1.5 px) ---------- #}
+{% macro ui(name, size=18) %}
+{% set paths = {
+  'search': '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
+  'arrow': '<path d="M5 12h14M13 6l6 6-6 6"/>',
+  'external': '<path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>',
+  'chev-l': '<path d="m15 6-6 6 6 6"/>', 'chev-r': '<path d="m9 6 6 6-6 6"/>', 'chev-d': '<path d="m6 9 6 6 6-6"/>',
+  'check': '<path d="M5 12.5l4.5 4.5L19 7.5"/>', 'x': '<path d="M6 6l12 12M18 6 6 18"/>',
+  'alert': '<path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4M12 17.5v.01"/>',
+  'tag': '<path d="M3 12V4h8l9 9-8 8-9-9Z"/><circle cx="7.5" cy="8.5" r="1.2"/>',
+  'gamepad': '<rect x="2.5" y="7" width="19" height="11" rx="4"/><path d="M7 11v3M5.5 12.5h3M15.5 11.5h.01M17.5 13.5h.01"/>',
+  'zap': '<path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/>',
+  'gauge': '<path d="M12 14l4-4"/><path d="M3.5 18a9 9 0 1 1 17 0"/>',
+  'truck': '<path d="M2 6h11v10H2zM13 9h4l4 4v3h-8z"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/>',
+  'trend': '<path d="M3 7l6 6 4-4 8 8"/><path d="M21 11v6h-6"/>',
+  'share': '<circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/>',
+  'cart': '<circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3h3l2.5 12h11.5l2-8H6.5"/>',
+  'wrench': '<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5 2.5-2.5Z"/>',
+  'grid': '<rect x="3.5" y="3.5" width="7" height="7" rx="1"/><rect x="13.5" y="3.5" width="7" height="7" rx="1"/><rect x="3.5" y="13.5" width="7" height="7" rx="1"/><rect x="13.5" y="13.5" width="7" height="7" rx="1"/>',
+  'globe': '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',
+  'clock': '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+  'shield': '<path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/>',
+  'plus': '<path d="M12 5v14M5 12h14"/>', 'refresh': '<path d="M20 11a8 8 0 0 0-14.6-4.5L3 9M4 13a8 8 0 0 0 14.6 4.5L21 15"/><path d="M3 4v5h5M21 20v-5h-5"/>'
+} %}
+<svg class="ico" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{{ paths.get(name, '')|safe }}</svg>
+{% endmacro %}
+
 {% macro light(s, size="") %}
-<span class="light light-{{ s.light }} {{ size }}" title="Verdict calculé sur l'historique des 30 derniers jours"><span class="light-dot" aria-hidden="true"></span>{{ s.light_label }}</span>
+<span class="verdict verdict-{{ s.light }} {{ size }}" title="Verdict calculé sur l'historique des 30 derniers jours"><span class="verdict-dot" aria-hidden="true"></span>{{ s.light_label }}</span>
 {% endmacro %}
 
 {% macro mbadge(o) %}
-<span class="mbadge" style="--mc: {{ o.color }}">{{ o.flag }} {{ o.merchant_name }}</span>
+<span class="mbadge"><span class="cc">{{ o.country }}</span>{{ o.merchant_name }}</span>
 {% endmacro %}
 
 {% macro deal_badges(s) %}
-{% if s.is_all_time_low %}<span class="badge badge-atl">Plus bas historique</span>{% endif %}
-{% if s.is_true_deal %}<span class="badge badge-deal">Vraie promo −{{ s.discount_vs_avg|num(0) }}&nbsp;%</span>{% endif %}
+{% if s.is_all_time_low %}<span class="tagb tagb-atl">Plus bas historique</span>{% endif %}
+{% if s.is_true_deal %}<span class="tagb tagb-deal">Vraie promo −{{ s.discount_vs_avg|num(0) }}&nbsp;%</span>{% endif %}
 {% endmacro %}
 
-{% macro pimg(it, root, cls="", eager=false) %}
-<img class="{{ cls }}" src="{% if it.image_local %}{{ root }}assets/products/{{ it.p.slug }}.svg{% else %}{{ it.image }}{% endif %}" alt="{{ it.p.name }}" width="400" height="300" {% if not eager %}loading="lazy" {% endif %}decoding="async">
+{% macro pimg(it, root, eager=false) %}
+<img src="{{ root }}{{ it.image }}" alt="{{ it.p.name }}" width="800" height="600" {% if not eager %}loading="lazy" {% endif %}decoding="async">
 {% endmacro %}
 
-{# Bloc prix : version Europe (meilleur prix livré) et version France uniquement #}
 {% macro price_block(it, size="") %}
 {% set s = it.s %}
 <div class="pblock only-eu">
   {% if it.best_view %}
-  <div class="pblock-row"><span class="price {{ size }} mono">{{ it.best_view.price|price }}</span>{{ mbadge(it.best_view) }}</div>
-  {% if s.savings_eur >= 1 %}<p class="saving-line"><s class="old mono">{{ s.price_avg_30d|price }}</s><span class="save-pill">Économisez <b class="mono">{{ s.savings_eur|price }}</b></span></p>{% endif %}
+  <div class="pblock-row"><span class="price {{ size }}">{{ it.best_view.price|price }}</span>{{ mbadge(it.best_view) }}</div>
+  {% if s.savings_eur >= 1 %}<p class="saving"><s>{{ s.price_avg_30d|price }}</s><span class="saving-amt">−{{ s.savings_eur|price }}</span></p>{% endif %}
   {% else %}<p class="muted">Rupture de stock</p>{% endif %}
 </div>
 <div class="pblock only-fr">
   {% if it.best_fr %}
-  <div class="pblock-row"><span class="price {{ size }} mono">{{ it.best_fr.price|price }}</span>{{ mbadge(it.best_fr) }}</div>
-  {% if it.best_fr.saving >= 1 %}<p class="saving-line"><s class="old mono">{{ s.price_avg_30d|price }}</s><span class="save-pill">Économisez <b class="mono">{{ it.best_fr.saving|price }}</b></span></p>{% endif %}
+  <div class="pblock-row"><span class="price {{ size }}">{{ it.best_fr.price|price }}</span>{{ mbadge(it.best_fr) }}</div>
+  {% if it.best_fr.saving >= 1 %}<p class="saving"><s>{{ s.price_avg_30d|price }}</s><span class="saving-amt">−{{ it.best_fr.saving|price }}</span></p>{% endif %}
   {% else %}<p class="muted">Pas d'offre en stock en France</p>{% endif %}
 </div>
 {% endmacro %}
 
-{% macro cta_pair(it, label="Voir le meilleur prix →", cls="") %}
-{% if it.best_view %}<a class="btn btn-cta only-eu {{ cls }}" href="{{ it.best_view.url }}" rel="nofollow sponsored noopener" target="_blank">{{ label }}</a>{% else %}<span class="btn btn-disabled only-eu {{ cls }}">Rupture</span>{% endif %}
-{% if it.best_fr %}<a class="btn btn-cta only-fr {{ cls }}" href="{{ it.best_fr.url }}" rel="nofollow sponsored noopener" target="_blank">{{ label }}</a>{% else %}<span class="btn btn-disabled only-fr {{ cls }}">Rupture en France</span>{% endif %}
+{% macro cta_pair(it, label="Voir l'offre", cls="") %}
+{% if it.best_view %}<a class="btn btn-primary only-eu {{ cls }}" href="{{ it.best_view.url }}" rel="nofollow sponsored noopener" target="_blank">{{ label }}{{ ui('arrow', 16) }}</a>{% else %}<span class="btn btn-disabled only-eu {{ cls }}">Rupture</span>{% endif %}
+{% if it.best_fr %}<a class="btn btn-primary only-fr {{ cls }}" href="{{ it.best_fr.url }}" rel="nofollow sponsored noopener" target="_blank">{{ label }}{{ ui('arrow', 16) }}</a>{% else %}<span class="btn btn-disabled only-fr {{ cls }}">Rupture en France</span>{% endif %}
 {% endmacro %}
 
 {% macro product_card(it, root) %}
@@ -45,19 +71,17 @@
   data-deal="{{ 1 if s.is_true_deal else 0 }}" data-discount="{{ s.discount_vs_avg }}"
   data-ratio="{{ it.ratio_index|default(9) }}" data-score="{{ s.true_deal_score }}"
   data-profiles="{{ it.p.profiles|default([])|join(' ') }}">
-  <a class="pcard-img" href="{{ root }}{{ it.url }}" tabindex="-1" aria-hidden="true">
+  <a class="pcard-media" href="{{ root }}{{ it.url }}" tabindex="-1" aria-hidden="true">
     {{ pimg(it, root) }}
-    <span class="pcard-flags">{{ deal_badges(s) }}</span>
+    <span class="pcard-tags">{{ deal_badges(s) }}</span>
   </a>
   <div class="pcard-body">
-    {{ light(s) }}
+    {{ light(s, "sm") }}
     <h3 class="pcard-title"><a href="{{ root }}{{ it.url }}">{{ it.p.name }}</a></h3>
-    <p class="pcard-cat small muted">{{ it.cat.label }}{% if it.ratio_rank is defined and it.ratio_rank == 1 %} · <span class="ratio-best">⚡ Meilleur FPS/€</span>{% endif %}</p>
+    <p class="pcard-meta">{{ it.cat.label }}{% if it.ratio_rank is defined and it.ratio_rank == 1 %}<span class="pcard-best">Meilleur rapport perf/prix</span>{% endif %}</p>
     <div class="pcard-price">{{ price_block(it) }}</div>
-    <div class="pcard-actions">
-      {{ cta_pair(it, cls="btn-block") }}
-      <a class="pcard-more small" href="{{ root }}{{ it.url }}">Comparer les {{ it.offers|length }} offres &amp; l'historique</a>
-    </div>
+    {{ cta_pair(it, "Voir l'offre", "btn-block") }}
+    <a class="pcard-more" href="{{ root }}{{ it.url }}">{{ it.offers|length }} offres · historique</a>
   </div>
 </article>
 {% endmacro %}
@@ -65,33 +89,33 @@
 {% macro toolbar(brands, max_price, categories=None, with_profiles=true) %}
 <div class="toolbar" id="filters">
   {% if with_profiles %}
-  <div class="profiles" role="group" aria-label="Filtres rapides">
-    <button type="button" class="pill" data-profile="deals" aria-pressed="false">🔥 Vraies promos</button>
-    <button type="button" class="pill" data-profile="upgrade" aria-pressed="false">🎮 Gaming 1080p/1440p</button>
-    <button type="button" class="pill" data-profile="sans-compromis" aria-pressed="false">🚀 Haut de gamme X3D/RTX 50</button>
-    <button type="button" class="pill" data-profile="ratio" aria-pressed="false">⚡ Meilleur FPS/€</button>
+  <div class="chips" role="group" aria-label="Filtres rapides">
+    <button type="button" class="chip-btn" data-profile="deals" aria-pressed="false">{{ ui('tag', 16) }}Vraies promos</button>
+    <button type="button" class="chip-btn" data-profile="upgrade" aria-pressed="false">{{ ui('gamepad', 16) }}Gaming 1080p/1440p</button>
+    <button type="button" class="chip-btn" data-profile="sans-compromis" aria-pressed="false">{{ ui('zap', 16) }}Haut de gamme</button>
+    <button type="button" class="chip-btn" data-profile="ratio" aria-pressed="false">{{ ui('gauge', 16) }}Meilleur perf/prix</button>
   </div>
   {% endif %}
   <div class="toolbar-row">
-    <label class="tfield"><span>Rechercher</span><input id="f-q" type="search" placeholder="Nom, modèle…" autocomplete="off"></label>
+    <label class="field field-q"><span>Filtrer</span><input id="f-q" type="search" placeholder="Nom, modèle, marque" autocomplete="off"></label>
     {% if categories %}
-    <label class="tfield"><span>Catégorie</span>
+    <label class="field"><span>Catégorie</span>
       <select id="f-cat"><option value="">Toutes</option>{% for key, c in categories.items() %}<option value="{{ key }}">{{ c.label }}</option>{% endfor %}</select></label>
     {% endif %}
-    <label class="tfield"><span>Marque</span>
+    <label class="field"><span>Marque</span>
       <select id="f-brand"><option value="">Toutes</option>{% for b in brands %}<option value="{{ b }}">{{ b }}</option>{% endfor %}</select></label>
-    <label class="tfield"><span>Trier par</span>
+    <label class="field"><span>Trier par</span>
       <select id="f-sort">
-        <option value="score">Pertinence (score promo)</option>
+        <option value="score">Pertinence</option>
         <option value="price-asc">Prix croissant</option>
-        <option value="discount">Plus grosse réduction %</option>
-        <option value="ratio">Meilleur score FPS/€</option>
+        <option value="discount">Plus grosse réduction</option>
+        <option value="ratio">Meilleur perf/prix</option>
         <option value="price-desc">Prix décroissant</option>
       </select></label>
-    <label class="tfield tfield-range"><span>Budget max : <output id="f-price-out" class="mono">{{ max_price }} €</output></span>
+    <label class="field field-range"><span>Budget max <output id="f-price-out" class="mono">{{ max_price }} €</output></span>
       <input id="f-price" type="range" min="0" max="{{ max_price }}" step="10" value="{{ max_price }}"></label>
-    <label class="check"><input id="f-deals" type="checkbox"> Vraies promos uniquement</label>
+    <label class="check"><input id="f-deals" type="checkbox"><span>Vraies promos uniquement</span></label>
   </div>
-  <div class="toolbar-foot"><p class="small muted" id="f-count" aria-live="polite"></p><button type="button" class="linklike small" id="profiles-reset" hidden>✕ Réinitialiser les filtres</button></div>
+  <div class="toolbar-foot"><p id="f-count" aria-live="polite"></p><button type="button" class="linkbtn" id="profiles-reset" hidden>Réinitialiser</button></div>
 </div>
 {% endmacro %}

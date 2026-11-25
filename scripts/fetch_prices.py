@@ -129,7 +129,7 @@ def fetch_product_feeds(feeds_cfg: dict, products: list[dict], settings: dict, a
         log(f"→ Flux {merchant} ({feed.get('format', 'csv')})")
         raw = http_get(url, settings, binary=True)
         if raw is None:
-            log(f"  ✗ flux {merchant} indisponible, on continue.")
+            log(f"  ERREUR - flux {merchant} indisponible, on continue.")
             continue
         try:
             text = _decompress(raw).decode("utf-8-sig", errors="replace")
@@ -171,9 +171,9 @@ def fetch_product_feeds(feeds_cfg: dict, products: list[dict], settings: dict, a
                 elif (offer["in_stock"], -offer["price"]) > (existing["in_stock"], -existing["price"]):
                     bucket[bucket.index(existing)] = offer  # garde la meilleure offre du marchand
             feeds_ok += 1
-            log(f"  ✓ {matched} produits du catalogue trouvés chez {merchant}")
+            log(f"  OK - {matched} produits du catalogue trouvés chez {merchant}")
         except (ET.ParseError, csv.Error, UnicodeError, ValueError) as exc:
-            log(f"  ✗ flux {merchant} illisible : {exc}")
+            log(f"  ERREUR - flux {merchant} illisible : {exc}")
     return offers, feeds_ok
 
 
@@ -199,7 +199,7 @@ def fetch_rss_deals(feeds_cfg: dict, products: list[dict], settings: dict, affil
         try:
             root = ET.fromstring(text.encode("utf-8"))
         except ET.ParseError as exc:
-            log(f"  ✗ RSS illisible : {exc}")
+            log(f"  ERREUR - RSS illisible : {exc}")
             continue
         max_age = float(feed.get("max_age_hours", 48)) * 3600
         for item in root.iter():
@@ -229,7 +229,7 @@ def fetch_rss_deals(feeds_cfg: dict, products: list[dict], settings: dict, affil
                 "url": affiliate_url(merchant, link, affiliates), "source": "rss",
             })
             count += 1
-        log(f"  ✓ {count} bons plans rapprochés du catalogue")
+        log(f"  OK - {count} bons plans rapprochés du catalogue")
     return offers
 
 
@@ -349,7 +349,7 @@ def main() -> int:
     settings, affiliates, feeds_cfg = load_settings(), load_affiliates(), load_feeds()
     products = load_catalog().get("products", [])
     if not products:
-        log("✗ Catalogue vide (data/products.json).")
+        log("ERREUR - Catalogue vide (data/products.json).")
         return 1
 
     if has_real_sources(feeds_cfg):
@@ -361,7 +361,7 @@ def main() -> int:
         previous = load_json(OFFERS_FILE, {}) or {}
         if not offers and previous.get("mode") == "live":
             # Panne réseau générale : on garde les dernières offres connues plutôt qu'un site vide
-            log("⚠ Aucune offre récupérée : conservation des offres précédentes (marquées 'stale').")
+            log("ATTENTION - Aucune offre récupérée : conservation des offres précédentes (marquées 'stale').")
             offers = {slug: [{**o, "stale": True} for o in items]
                       for slug, items in previous.get("products", {}).items()}
         # Passage démo → réel : on efface l'historique simulé pour ne jamais mélanger faux et vrais prix
@@ -382,7 +382,7 @@ def main() -> int:
         items.sort(key=lambda o: (not o["in_stock"], o["price"]))
     save_json(OFFERS_FILE, {"generated_at": ts, "generated_at_iso": iso(ts), "mode": mode, "products": offers})
     total = sum(len(v) for v in offers.values())
-    log(f"✓ {total} offres enregistrées pour {len(offers)} produits → data/offers_latest.json")
+    log(f"OK - {total} offres enregistrées pour {len(offers)} produits → data/offers_latest.json")
     return 0
 
 

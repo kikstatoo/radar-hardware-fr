@@ -1,54 +1,42 @@
 {% extends "base.html" %}
-{% from "_macros.html" import light, mbadge, deal_badges, pimg, price_block, cta_pair with context %}
+{% from "_macros.html" import ui, light, mbadge, pimg, price_block, cta_pair with context %}
 {% block content %}
 <div class="wrap">
-  <nav class="crumbs small" aria-label="Fil d'Ariane"><a href="{{ root }}index.html">Accueil</a> › <a href="{{ root }}categorie/{{ cat.slug }}.html">{{ cat.label }}</a> › <span>Comparatif</span></nav>
-  <h1>{{ a.p.name }} vs {{ b.p.name }} : lequel choisir en {{ month_year }} ?</h1>
-  <p class="lead">Duel chiffré : meilleurs prix livrés en France, performances ({{ cat.perf_label }}) et rapport prix / performance.</p>
-
+  <nav class="crumbs" aria-label="Fil d'Ariane"><a href="{{ root }}index.html">Accueil</a>{{ ui('chev-r', 14) }}<a href="{{ root }}categorie/{{ cat.slug }}.html">{{ cat.label }}</a>{{ ui('chev-r', 14) }}<span>Comparatif</span></nav>
+  <header class="page-head"><div>
+    <h1>{{ a.p.name }} vs {{ b.p.name }} : lequel choisir en {{ month_year }} ?</h1>
+    <p class="muted">Meilleurs prix livrés en France, performances ({{ cat.perf_label }}) et rapport performance / prix.</p>
+  </div></header>
   <div class="vs-cards">
     {% for side in [a, b] %}
-    <article class="card vs-card{% if side is sameas v.winner %} is-winner{% endif %}">
-      {% if side is sameas v.winner %}<span class="badge badge-best vs-crown">🏆 Meilleur rapport prix / perf</span>{% endif %}
-      <a class="vs-img" href="{{ root }}{{ side.url }}">{{ pimg(side, root, eager=true) }}</a>
-      {{ light(side.s) }}
-      <h2 class="card-title"><a href="{{ root }}{{ side.url }}">{{ side.p.name }}</a></h2>
-      {{ price_block(side, "price-xl") }}
-      {{ cta_pair(side, "Voir le meilleur prix →", "btn-block") }}
+    <article class="vs-card{% if side is sameas v.winner %} is-winner{% endif %}">
+      {% if side is sameas v.winner %}<span class="tagb tagb-best">Meilleur rapport perf/prix</span>{% endif %}
+      <a class="vs-media" href="{{ root }}{{ side.url }}">{{ pimg(side, root, eager=true) }}</a>
+      {{ light(side.s, "sm") }}
+      <h2 class="vs-name"><a href="{{ root }}{{ side.url }}">{{ side.p.name }}</a></h2>
+      {{ price_block(side, "price-lg") }}
+      {{ cta_pair(side, "Voir l'offre", "btn-block") }}
     </article>
-    {% if loop.first %}<div class="vs-sep mono" aria-hidden="true">VS</div>{% endif %}
+    {% if loop.first %}<div class="vs-sep" aria-hidden="true">VS</div>{% endif %}
     {% endfor %}
   </div>
-
-  <div class="table-wrap card">
+  <div class="table-card">
     <table class="table vs-table">
       <thead><tr><th scope="col">Critère</th><th scope="col">{{ a.p.name }}</th><th scope="col">{{ b.p.name }}</th></tr></thead>
       <tbody>
-        <tr><th scope="row">Verdict</th><td>{{ light(a.s, "xs") }}</td><td>{{ light(b.s, "xs") }}</td></tr>
-        <tr><th scope="row">Meilleur prix livré</th>
-          <td class="mono{% if (a.s.price_current or 1e9) <= (b.s.price_current or 1e9) %} win{% endif %}">{{ a.s.price_current|price }}</td>
-          <td class="mono{% if (b.s.price_current or 1e9) < (a.s.price_current or 1e9) %} win{% endif %}">{{ b.s.price_current|price }}</td></tr>
-        <tr><th scope="row">{{ cat.perf_label }}</th>
-          <td class="mono{% if a.p.perf_score >= b.p.perf_score %} win{% endif %}">{{ a.p.perf_score }}</td>
-          <td class="mono{% if b.p.perf_score > a.p.perf_score %} win{% endif %}">{{ b.p.perf_score }}</td></tr>
-        <tr><th scope="row">Prix par point de perf.</th>
-          <td class="mono{% if a is sameas v.winner %} win{% endif %}">{{ a.s.price_per_perf|price }}</td>
-          <td class="mono{% if b is sameas v.winner %} win{% endif %}">{{ b.s.price_per_perf|price }}</td></tr>
+        <tr><th scope="row">Meilleur prix livré</th><td class="mono{% if (a.s.price_current or 1e9) <= (b.s.price_current or 1e9) %} win{% endif %}">{{ a.s.price_current|price }}</td><td class="mono{% if (b.s.price_current or 1e9) < (a.s.price_current or 1e9) %} win{% endif %}">{{ b.s.price_current|price }}</td></tr>
+        <tr><th scope="row">{{ cat.perf_label }}</th><td class="mono{% if a.p.perf_score >= b.p.perf_score %} win{% endif %}">{{ a.p.perf_score }}</td><td class="mono{% if b.p.perf_score > a.p.perf_score %} win{% endif %}">{{ b.p.perf_score }}</td></tr>
+        <tr><th scope="row">Prix par point de performance</th><td class="mono{% if a is sameas v.winner %} win{% endif %}">{{ a.s.price_per_perf|price }}</td><td class="mono{% if b is sameas v.winner %} win{% endif %}">{{ b.s.price_per_perf|price }}</td></tr>
         <tr><th scope="row">Moyenne 30 jours</th><td class="mono">{{ a.s.price_avg_30d|price }}</td><td class="mono">{{ b.s.price_avg_30d|price }}</td></tr>
-        <tr><th scope="row">Plus bas historique</th><td class="mono">{{ a.s.price_min_all_time|price }}</td><td class="mono">{{ b.s.price_min_all_time|price }}</td></tr>
-        {% for k in v.spec_keys %}
-        <tr><th scope="row">{{ k }}</th><td>{{ a.p.specs.get(k, '—') }}</td><td>{{ b.p.specs.get(k, '—') }}</td></tr>
-        {% endfor %}
+        {% for k in v.spec_keys %}<tr><th scope="row">{{ k }}</th><td>{{ a.p.specs.get(k, '—') }}</td><td>{{ b.p.specs.get(k, '—') }}</td></tr>{% endfor %}
       </tbody>
     </table>
   </div>
-
-  <section class="card prose">
+  <section class="prose card-pad">
     <h2>Verdict</h2>
-    <p>Au prix du jour, le <strong>{{ v.winner.p.name }}</strong> offre le meilleur rapport prix / performance ({{ v.winner.s.price_per_perf|price }} par point).
-    {% if v.faster is sameas v.winner %}Il est aussi le plus performant des deux : c'est le choix le plus logique.{% else %}Le <strong>{{ v.faster.p.name }}</strong> reste plus performant ({{ v.faster.p.perf_score }} contre {{ v.winner.p.perf_score }}) : à privilégier si votre budget le permet.{% endif %}</p>
-    {% set diff = ((a.s.price_current or 0) - (b.s.price_current or 0))|abs %}
-    <p>L'écart de prix actuel, livraison comprise, est de <span class="mono">{{ diff|price }}</span>. Les prix sont vérifiés toutes les heures : ce verdict peut évoluer avec les promotions.</p>
+    <p>Au prix du jour, le <strong>{{ v.winner.p.name }}</strong> offre le meilleur rapport performance / prix ({{ v.winner.s.price_per_perf|price }} par point).
+    {% if v.faster is sameas v.winner %}Il est aussi le plus performant des deux.{% else %}Le <strong>{{ v.faster.p.name }}</strong> reste plus performant ({{ v.faster.p.perf_score }} contre {{ v.winner.p.perf_score }}).{% endif %}</p>
+    <p>Écart de prix actuel, livraison comprise : <span class="mono">{{ ((a.s.price_current or 0) - (b.s.price_current or 0))|abs|price }}</span>.</p>
   </section>
 </div>
 {% endblock %}

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% from "_macros.html" import ui with context %}
+{% block content %}
+<div class="wrap">
+  <nav class="crumbs" aria-label="Fil d'Ariane"><a href="{{ root }}index.html">Accueil</a>{{ ui('chev-r', 14) }}<span>Configurateur PC</span></nav>
+  <header class="page-head"><span class="page-ico">{{ ui('wrench', 26) }}</span><div>
+    <h1>Configurateur PC</h1>
+    <p class="muted">Choisis tes composants étape par étape. Les pièces incompatibles avec ta sélection sont masquées automatiquement, et chaque pièce est proposée au meilleur prix livré en France.</p>
+  </div></header>
+  <div class="cfg">
+    <ol class="cfg-steps" id="cfg-steps">
+      {% for key, label in steps %}
+      <li class="cfg-step" data-cat="{{ key }}">
+        <div class="cfg-step-head">
+          <span class="cfg-num">{{ loop.index }}</span>
+          <span class="cfg-ico">{{ icon(key, 20)|safe }}</span>
+          <div class="cfg-sel"><span class="cfg-label">{{ label }}</span><span class="cfg-choice muted">Aucun composant choisi</span></div>
+          <div class="cfg-price mono"></div>
+          <button type="button" class="btn btn-ghost btn-sm cfg-open">{{ ui('plus', 15) }}<span>Choisir</span></button>
+          <button type="button" class="icon-btn cfg-remove" aria-label="Retirer" hidden>{{ ui('x', 16) }}</button>
+        </div>
+        <div class="cfg-picker" hidden>
+          <div class="cfg-picker-bar">
+            <label class="field field-q"><span class="sr-only">Filtrer</span><input type="search" class="cfg-q" placeholder="Filtrer {{ label|lower }}"></label>
+            <select class="cfg-sort" aria-label="Trier"><option value="price">Prix croissant</option><option value="name">Nom</option></select>
+          </div>
+          <p class="cfg-hidden small muted"></p>
+          <ul class="cfg-list"></ul>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+    <aside class="cfg-summary" id="cfg-summary">
+      <div class="cfg-total-card">
+        <p class="cfg-total-label">Total de la configuration</p>
+        <p class="cfg-total mono" id="cfg-total">0,00 €</p>
+        <p class="cfg-save small" id="cfg-save"></p>
+        <dl class="cfg-meta">
+          <div><dt>Pièces choisies</dt><dd id="cfg-count" class="mono">0 / 8</dd></div>
+          <div><dt>Consommation estimée</dt><dd id="cfg-watts" class="mono">—</dd></div>
+          <div><dt>Alimentation conseillée</dt><dd id="cfg-psu" class="mono">—</dd></div>
+        </dl>
+        <ul class="cfg-checks" id="cfg-checks"></ul>
+        <button type="button" class="btn btn-primary btn-block" id="cfg-buy" disabled>{{ ui('cart', 17) }}Acheter chaque pièce au meilleur prix</button>
+        <button type="button" class="btn btn-ghost btn-block" id="cfg-share" disabled>{{ ui('share', 16) }}Partager ma config</button>
+        <button type="button" class="linkbtn small" id="cfg-reset">Recommencer</button>
+        <p class="cfg-toast small" id="cfg-toast" role="status" hidden></p>
+      </div>
+      <div class="cfg-buylist" id="cfg-buylist" hidden></div>
+    </aside>
+  </div>
+  <p class="note">Compatibilité vérifiée sur : socket processeur et carte mère, type de mémoire, format carte mère et boîtier, longueur de la carte graphique, hauteur du ventirad ou taille du radiateur, sockets du refroidissement et puissance de l'alimentation (consommation CPU + GPU + 120 W, avec 25 % de marge). Les dimensions des cartes graphiques varient selon le modèle partenaire : vérifiez la fiche du modèle exact avant achat.</p>
+</div>
+{% endblock %}
+{% block scripts %}
+<script type="application/json" id="cfg-data">{{ cfg_json|safe }}</script>
+<script src="{{ root }}assets/js/configurator.js" defer></script>
+{% endblock %}

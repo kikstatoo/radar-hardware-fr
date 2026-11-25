@@ -1,83 +1,99 @@
 {% extends "base.html" %}
-{% from "_macros.html" import product_card, toolbar, light, mbadge, deal_badges, pimg, price_block, cta_pair with context %}
+{% from "_macros.html" import ui, product_card, toolbar, light, mbadge, deal_badges, pimg, price_block, cta_pair with context %}
 {% set page_kind = "home" %}
 {% block content %}
-<section class="intro wrap">
-  <h1>Payez vos composants PC au <span class="accent">vrai prix bas</span>, en France et en Europe.</h1>
-  <p class="lead">{{ items|length }} composants suivis toutes les heures chez {{ merchant_count }} marchands 🇫🇷 🇩🇪 🇪🇸 🇳🇱. Prix livrés en France, historique 30 jours, zéro fausse promo.</p>
+<div class="wrap">
+<section class="hero-split" aria-label="À la une">
+  <div class="deals">
+    <div class="deals-head">
+      <h1 class="deals-title">Top deals</h1>
+      <span class="live-badge"><span class="live-dot"></span>Mis à jour en temps réel</span>
+      <div class="deals-nav">
+        <button class="icon-btn prev" type="button" aria-label="Offre précédente">{{ ui('chev-l', 18) }}</button>
+        <button class="icon-btn next" type="button" aria-label="Offre suivante">{{ ui('chev-r', 18) }}</button>
+      </div>
+    </div>
+    <div class="carousel" id="carousel" aria-roledescription="carrousel">
+      <div class="carousel-track" id="carousel-track">
+        {% for it in hero %}
+        {% set s = it.s %}
+        <article class="slide" aria-roledescription="diapositive" aria-label="{{ loop.index }} sur {{ hero|length }}">
+          <a class="slide-media" href="{{ root }}{{ it.url }}" tabindex="-1">{{ pimg(it, root, eager=loop.first) }}</a>
+          <div class="slide-body">
+            <div class="slide-tags">{{ deal_badges(s) }}{{ light(s, "sm") }}</div>
+            <p class="slide-cat">{{ it.cat.label }}</p>
+            <h2 class="slide-title"><a href="{{ root }}{{ it.url }}">{{ it.p.name }}</a></h2>
+            {{ price_block(it, "price-hero") }}
+            {{ cta_pair(it, "Voir l'offre", "btn-lg") }}
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+      <div class="carousel-progress" aria-hidden="true"><span id="carousel-bar"></span></div>
+      <div class="carousel-dots" role="tablist">{% for it in hero %}<button type="button" role="tab" aria-label="Offre {{ loop.index }}"{% if loop.first %} aria-selected="true"{% endif %}></button>{% endfor %}</div>
+    </div>
+  </div>
+  <aside class="config-cta">
+    <p class="eyebrow">Nouveau</p>
+    <h2>Crée ta config PC</h2>
+    <p>Assemble ton PC pièce par pièce avec vérification automatique de compatibilité et comparaison des meilleurs prix européens.</p>
+    <svg class="config-art" viewBox="0 0 220 150" aria-hidden="true">
+      <rect x="8" y="8" width="96" height="134" rx="10" fill="none" stroke="#334155" stroke-width="1.5"/>
+      <rect x="22" y="24" width="40" height="40" rx="4" fill="none" stroke="#10B981" stroke-width="1.5"/>
+      <rect x="32" y="34" width="20" height="20" rx="2" fill="rgba(16,185,129,.18)" stroke="#10B981" stroke-width="1.5"/>
+      <path d="M70 24v40M78 24v40" stroke="#3B82F6" stroke-width="3" stroke-linecap="round"/>
+      <rect x="22" y="78" width="70" height="16" rx="3" fill="none" stroke="#94A3B8" stroke-width="1.5"/>
+      <circle cx="40" cy="86" r="4" fill="none" stroke="#94A3B8" stroke-width="1.5"/><circle cx="60" cy="86" r="4" fill="none" stroke="#94A3B8" stroke-width="1.5"/>
+      <rect x="22" y="106" width="70" height="24" rx="3" fill="none" stroke="#334155" stroke-width="1.5"/>
+      <g font-family="Plus Jakarta Sans,sans-serif" font-size="9.5" fill="#CBD5E1">
+        <path d="M118 30h10" stroke="#10B981" stroke-width="1.5"/><text x="134" y="33">Socket</text><text x="200" y="33" fill="#10B981" text-anchor="end">OK</text>
+        <path d="M118 56h10" stroke="#10B981" stroke-width="1.5"/><text x="134" y="59">Mémoire</text><text x="200" y="59" fill="#10B981" text-anchor="end">OK</text>
+        <path d="M118 82h10" stroke="#10B981" stroke-width="1.5"/><text x="134" y="85">Format</text><text x="200" y="85" fill="#10B981" text-anchor="end">OK</text>
+        <path d="M118 108h10" stroke="#10B981" stroke-width="1.5"/><text x="134" y="111">Puissance</text><text x="200" y="111" fill="#10B981" text-anchor="end">OK</text>
+      </g>
+    </svg>
+    <ul class="config-points">
+      <li>{{ ui('check', 16) }}8 étapes, {{ product_count }} composants</li>
+      <li>{{ ui('check', 16) }}Socket, RAM, format, dimensions et puissance vérifiés</li>
+      <li>{{ ui('check', 16) }}Meilleur prix livré pour chaque pièce</li>
+    </ul>
+    <a class="btn btn-primary btn-lg btn-block" href="{{ root }}configurateur.html">Lancer le configurateur{{ ui('arrow', 18) }}</a>
+  </aside>
 </section>
 
-<section class="wrap" aria-labelledby="deals-title">
-  <div class="section-head">
-    <h2 id="deals-title">Top Deals Europe du moment</h2>
-    <p class="small muted">Les 5 plus fortes baisses vérifiées par rapport à la moyenne des 30 derniers jours.</p>
-  </div>
-  <div class="carousel" id="carousel" aria-roledescription="carrousel">
-    <div class="carousel-track" id="carousel-track">
-      {% for it in hero %}
-      {% set s = it.s %}
-      <article class="slide" aria-roledescription="diapositive" aria-label="{{ loop.index }} sur {{ hero|length }}">
-        <a class="slide-img" href="{{ root }}{{ it.url }}" tabindex="-1">{{ pimg(it, root, eager=loop.first) }}</a>
-        <div class="slide-body">
-          <div class="slide-badges">{{ light(s) }}{{ deal_badges(s) }}</div>
-          <h3 class="slide-title"><a href="{{ root }}{{ it.url }}">{{ it.p.name }}</a></h3>
-          <p class="small muted">{{ it.cat.label }} · {{ it.offers|length }} offres comparées</p>
-          {{ price_block(it, "price-xxl") }}
-          {{ cta_pair(it, "Voir le meilleur prix →", "btn-lg") }}
-        </div>
-      </article>
-      {% endfor %}
-    </div>
-    <button class="carousel-btn prev" type="button" aria-label="Offre précédente">‹</button>
-    <button class="carousel-btn next" type="button" aria-label="Offre suivante">›</button>
-    <div class="carousel-dots" role="tablist">
-      {% for it in hero %}<button type="button" role="tab" aria-label="Aller à l'offre {{ loop.index }}"{% if loop.first %} aria-selected="true"{% endif %}></button>{% endfor %}
-    </div>
-  </div>
+<section class="cat-strip" aria-label="Catégories">
+  {% for key, c in categories.items() %}
+  <a class="cat-tile" href="{{ root }}categorie/{{ c.slug }}.html"><span class="cat-ico">{{ icon(key, 22)|safe }}</span><span><b>{{ c.label }}</b><small>{{ by_cat.get(key, [])|length }} produits</small></span></a>
+  {% endfor %}
 </section>
 
-<section class="wrap" aria-labelledby="all-title" id="tous">
+<section id="catalogue" aria-labelledby="all-title">
   <div class="section-head">
-    <h2 id="all-title">Tous les composants</h2>
-    <p class="small legend">{{ light({'light': 'green', 'light_label': 'Acheter'}, 'xs') }}{{ light({'light': 'yellow', 'light_label': 'Prix normal'}, 'xs') }}{{ light({'light': 'red', 'light_label': 'Attendre'}, 'xs') }}</p>
+    <h2 id="all-title">Catalogue</h2>
+    <p class="muted small">Prix livrés en France, triés par pertinence. Le prix barré est la moyenne réelle des 30 derniers jours.</p>
   </div>
   {{ toolbar(brands, max_price, categories) }}
-  <div class="pgrid" id="grid">
+  <div class="pgrid" id="grid" data-page="24">
     {% for it in items %}{{ product_card(it, root) }}{% endfor %}
   </div>
-  <p class="empty muted" id="empty" hidden>Aucun composant ne correspond à ces filtres. <button type="button" class="linklike" id="empty-reset">Tout afficher</button></p>
-</section>
-
-<section class="wrap" aria-labelledby="cats-title">
-  <h2 id="cats-title">Classements prix / performance</h2>
-  <div class="tiles">
-    {% for key, c in categories.items() %}
-    {% set first = by_cat.get(key, [])|first %}
-    <a class="tile" href="{{ root }}categorie/{{ c.slug }}.html">
-      {% if first %}<span class="tile-img">{{ pimg(first, root) }}</span>{% endif %}
-      <span class="tile-title">{{ c.label }}</span>
-      <span class="small muted">{{ by_cat.get(key, [])|length }} composants · classement €/perf</span>
-    </a>
-    {% endfor %}
-  </div>
+  <div class="more-wrap"><button type="button" class="btn btn-ghost" id="show-more" hidden>Afficher plus de composants</button></div>
+  <p class="empty" id="empty" hidden>Aucun composant ne correspond à ces filtres. <button type="button" class="linkbtn" id="empty-reset">Tout afficher</button></p>
 </section>
 
 {% if versus %}
-<section class="wrap" aria-labelledby="vs-title">
-  <h2 id="vs-title">Duels populaires</h2>
-  <ul class="vs-list">
-    {% for v in versus %}<li><a href="{{ root }}{{ v.url }}">{{ v.a.p.name }} <span class="vs mono">VS</span> {{ v.b.p.name }}</a></li>{% endfor %}
-  </ul>
+<section aria-labelledby="vs-title">
+  <div class="section-head"><h2 id="vs-title">Comparatifs populaires</h2></div>
+  <ul class="vs-list">{% for v in versus %}<li><a href="{{ root }}{{ v.url }}">{{ v.a.p.name }}<span class="vs">vs</span>{{ v.b.p.name }}</a></li>{% endfor %}</ul>
 </section>
 {% endif %}
 
-<section class="wrap method" aria-labelledby="method-title">
+<section class="method" aria-labelledby="method-title">
   <h2 id="method-title">Comment lire nos verdicts</h2>
   <div class="method-grid">
-    <div class="method-item">{{ light({'light': 'green', 'light_label': 'Acheter maintenant'}) }}<p class="small">Prix au moins {{ threshold|num(0) }}&nbsp;% sous la moyenne des 30 derniers jours, ou au plus bas historique.</p></div>
-    <div class="method-item">{{ light({'light': 'yellow', 'light_label': 'Prix normal'}) }}<p class="small">Prix dans la fourchette habituelle du mois. Pas d'urgence.</p></div>
-    <div class="method-item">{{ light({'light': 'red', 'light_label': 'Attendre'}) }}<p class="small">Prix gonflé de plus de 4&nbsp;% par rapport à la moyenne : patientez.</p></div>
+    <div class="method-item">{{ light({'light': 'green', 'light_label': 'Meilleur moment pour acheter'}) }}<p>Prix au moins {{ threshold|num(0) }}&nbsp;% sous la moyenne des 30 derniers jours, ou au plus bas historique.</p></div>
+    <div class="method-item">{{ light({'light': 'yellow', 'light_label': 'Prix standard'}) }}<p>Prix dans la fourchette habituelle du mois.</p></div>
+    <div class="method-item">{{ light({'light': 'red', 'light_label': 'Prix élevé'}) }}<p>Prix supérieur de plus de 4&nbsp;% à la moyenne 30 jours.</p></div>
   </div>
-  <p class="small muted">Les prix comparés sont des prix <strong>livrés en France</strong> : prix de l'article + frais de port estimés. Le prix barré affiché est la moyenne réelle des 30 derniers jours, jamais le prix barré du marchand.</p>
 </section>
+</div>
 {% endblock %}

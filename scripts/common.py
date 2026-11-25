@@ -57,7 +57,7 @@ def load_json(path: Path, default=None):
     except FileNotFoundError:
         return default
     except json.JSONDecodeError as exc:
-        log(f"⚠ JSON illisible {path.name} ({exc}) — valeur par défaut utilisée.")
+        log(f"ATTENTION - JSON illisible {path.name} ({exc}) — valeur par défaut utilisée.")
         return default
 
 
@@ -227,7 +227,7 @@ def affiliate_url(merchant_key: str, url: str, affiliates: dict, already_affilia
     return url
 
 
-FLAGS = {"FR": "🇫🇷", "DE": "🇩🇪", "ES": "🇪🇸", "NL": "🇳🇱", "IT": "🇮🇹", "BE": "🇧🇪"}
+COUNTRIES = {"FR": "France", "DE": "Allemagne", "ES": "Espagne", "NL": "Pays-Bas", "IT": "Italie", "BE": "Belgique"}
 
 
 def shipping_cost(merchant: dict, item_price: float) -> float | None:

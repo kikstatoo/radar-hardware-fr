@@ -1,43 +1,46 @@
 {% extends "base.html" %}
-{% from "_macros.html" import product_card, toolbar, light, mbadge, pimg with context %}
+{% from "_macros.html" import ui, product_card, toolbar, light, mbadge, pimg with context %}
 {% block content %}
 <div class="wrap">
-  <nav class="crumbs small" aria-label="Fil d'Ariane"><a href="{{ root }}index.html">Accueil</a> › <span>{{ cat.label }}</span></nav>
-  <h1>{{ cat.label }} gaming : comparatif prix / performance ({{ month_year }})</h1>
-  <p class="lead">{{ items|length }} {{ cat.label|lower }} classés selon leur coût par point de performance ({{ cat.perf_label }}), au meilleur prix livré en France.</p>
+  <nav class="crumbs" aria-label="Fil d'Ariane"><a href="{{ root }}index.html">Accueil</a>{{ ui('chev-r', 14) }}<span>{{ cat.label }}</span></nav>
+  <header class="page-head">
+    <span class="page-ico">{{ icon(cat_key, 26)|safe }}</span>
+    <div>
+      <h1>{{ cat.label }} : comparatif des prix ({{ month_year }})</h1>
+      <p class="muted">{{ items|length }} {{ cat.label|lower }} comparés chez {{ merchant_count }} marchands, au meilleur prix livré en France{% if has_perf %}, classés selon leur coût par point de performance ({{ cat.perf_label }}){% endif %}.</p>
+    </div>
+  </header>
 
-  <div class="table-wrap card">
+  <div class="table-card">
     <table class="table">
-      <caption class="sr-only">Classement prix / performance — {{ cat.label }}</caption>
-      <thead><tr><th scope="col">#</th><th scope="col">Composant</th><th scope="col">Verdict</th><th scope="col">Prix livré</th><th scope="col" class="hide-sm">Perf.</th><th scope="col">€ / point</th><th scope="col"><span class="sr-only">Action</span></th></tr></thead>
+      <caption class="sr-only">Classement — {{ cat.label }}</caption>
+      <thead><tr><th scope="col">#</th><th scope="col">Composant</th><th scope="col">Verdict</th><th scope="col">Meilleur prix livré</th>{% if has_perf %}<th scope="col" class="hide-sm">Indice</th><th scope="col">€ / point</th>{% endif %}<th scope="col"><span class="sr-only">Action</span></th></tr></thead>
       <tbody>
       {% for it in ranked %}
-        <tr{% if loop.first %} class="row-best"{% endif %}>
-          <td class="mono">{{ loop.index }}</td>
-          <td><a class="rank-prod" href="{{ root }}{{ it.url }}"><span class="thumb">{{ pimg(it, root) }}</span><span>{{ it.p.name }}{% if loop.first %}<br><span class="badge badge-best">Meilleur ratio</span>{% endif %}</span></a></td>
-          <td>{{ light(it.s, "xs") }}</td>
-          <td class="nowrap"><span class="mono">{{ it.s.price_current|price }}</span>{% if it.best_view %}<br>{{ mbadge(it.best_view) }}{% endif %}</td>
-          <td class="mono hide-sm">{{ it.p.perf_score }}</td>
-          <td class="mono nowrap">{{ it.s.price_per_perf|price }}</td>
-          <td>{% if it.best_view %}<a class="btn btn-cta btn-sm" href="{{ it.best_view.url }}" rel="nofollow sponsored noopener" target="_blank">Voir →</a>{% endif %}</td>
+        <tr{% if loop.first and has_perf %} class="row-best"{% endif %}>
+          <td class="mono muted">{{ loop.index }}</td>
+          <td><a class="rank-prod" href="{{ root }}{{ it.url }}"><span class="thumb">{{ pimg(it, root) }}</span><span>{{ it.p.name }}{% if loop.first and has_perf %}<span class="tagb tagb-best">Meilleur rapport perf/prix</span>{% endif %}</span></a></td>
+          <td>{{ light(it.s, "sm") }}</td>
+          <td class="nowrap"><span class="mono strong">{{ it.s.price_current|price }}</span>{% if it.best_view %}<br>{{ mbadge(it.best_view) }}{% endif %}</td>
+          {% if has_perf %}<td class="mono hide-sm">{{ it.p.perf_score }}</td><td class="mono nowrap">{{ it.s.price_per_perf|price }}</td>{% endif %}
+          <td>{% if it.best_view %}<a class="btn btn-primary btn-sm" href="{{ it.best_view.url }}" rel="nofollow sponsored noopener" target="_blank">Voir</a>{% endif %}</td>
         </tr>
       {% endfor %}
       </tbody>
     </table>
   </div>
 
-  <h2>Tous les {{ cat.label|lower }}</h2>
+  <div class="section-head"><h2>Tous les produits</h2></div>
   {{ toolbar(brands, max_price, None, false) }}
-  <div class="pgrid" id="grid">
+  <div class="pgrid" id="grid" data-page="40">
     {% for it in items %}{{ product_card(it, root) }}{% endfor %}
   </div>
-  <p class="empty muted" id="empty" hidden>Aucun composant ne correspond à ces filtres. <button type="button" class="linklike" id="empty-reset">Tout afficher</button></p>
+  <div class="more-wrap"><button type="button" class="btn btn-ghost" id="show-more" hidden>Afficher plus</button></div>
+  <p class="empty" id="empty" hidden>Aucun composant ne correspond à ces filtres. <button type="button" class="linkbtn" id="empty-reset">Tout afficher</button></p>
 
   {% if versus %}
-  <h2>Comparatifs {{ cat.label|lower }}</h2>
-  <ul class="vs-list">
-    {% for v in versus %}<li><a href="{{ root }}{{ v.url }}">{{ v.a.p.name }} <span class="vs mono">VS</span> {{ v.b.p.name }}</a></li>{% endfor %}
-  </ul>
+  <div class="section-head"><h2>Comparatifs {{ cat.label|lower }}</h2></div>
+  <ul class="vs-list">{% for v in versus %}<li><a href="{{ root }}{{ v.url }}">{{ v.a.p.name }}<span class="vs">vs</span>{{ v.b.p.name }}</a></li>{% endfor %}</ul>
   {% endif %}
 </div>
 {% endblock %}
